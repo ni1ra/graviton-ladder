@@ -1,0 +1,20 @@
+ l=2  U=-x**2 - y**2 + 2*z**2
+   free parameters left in delta pi: 7
+   T = int_B U tr(delta pi) = 16*pi/35   depends on free parameters: False
+   |T| / int U^2 = 1    paper eq.(1) predicts 2l(l-1)/(l+2) = 1
+   tr(delta pi) (free params = 0) = -3*(2*x**2 + 2*y**2 + z**2 - 1)
+ l=2  U=x*y + 3*y*z
+   free parameters left in delta pi: 7
+   T = int_B U tr(delta pi) = 8*pi/21   depends on free parameters: False
+   |T| / int U^2 = 1    paper eq.(1) predicts 2l(l-1)/(l+2) = 1
+   tr(delta pi) (free params = 0) = -y*(54*x**2*z - x + 54*y**2*z + 54*z**3 - 45*z)
+ l=3  U=2*z**3 - 3*z*(x**2 + y**2)
+   free parameters left in delta pi: 13
+   T = int_B U tr(delta pi) = 64*pi/105   depends on free parameters: False
+   |T| / int U^2 = 12/5    paper eq.(1) predicts 2l(l-1)/(l+2) = 12/5
+   tr(delta pi) (free params = 0) = -12*z*(2*x**2 + 2*y**2 + z**2 - 1)
+ l=3  U=x**3 - 3*x*y**2 + x*y*z
+   free parameters left in delta pi: 13
+   T = int_B U tr(delta pi) = 16*pi/63   depends on free parameters: False
+   |T| / int U^2 = 12/5    paper eq.(1) predicts 2l(l-1)/(l+2) = 12/5
+   tr(delta pi) (free params = 0) = -4*x*(22*x**2*y*z - 3*x**2 + 22*y**3*z + 9*y**2 + 22*y*z**3 - 21*y*z)/5

@@ -236,7 +236,7 @@
    "kind": "COMPUTED",
    "text": "scope-family identities M1-M8 (K TT harmonic, K_nn = 0, dE = (l+1)K, Ric_3(2NK) = (l+2)K, cut vector, pairing, A, S), l = 2..5, four harmonics each",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/s1_modular_side.json",
    "key_true": "ALL_PASS",
    "here": true,
    "need_plants": true
@@ -245,7 +245,7 @@
    "kind": "COMPUTED",
    "text": "area-side identities B1-B6 (Green, k = 2, constraint, total = A in three second-order gauges, no drive, displacement form)",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/s2_area_side.json",
    "key_true": "ALL_PASS",
    "here": true,
    "need_plants": true
@@ -254,7 +254,7 @@
    "kind": "COMPUTED",
    "text": "account identities W1-W3 (transfer formula = direct value; A = c_l E_2; non-stationary odd data)",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/s3_account.json",
    "key_true": "ALL_PASS",
    "here": true,
    "need_plants": true
@@ -263,7 +263,7 @@
    "kind": "COMPUTED",
    "text": "KMS criterion normalisation on a finite-dimensional standard subspace",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/s4_kms_toy.json",
    "key_true": "ALL_PASS",
    "here": true,
    "need_plants": true
@@ -272,7 +272,7 @@
    "kind": "COMPUTED",
    "text": "wave69/duality S1: Cotton-York identities and the Lemma B chain, exact",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/upstream/duality_s1.json",
    "key_true": "S1_ALL_PASS",
    "here": false,
    "need_plants": false
@@ -281,7 +281,7 @@
    "kind": "COMPUTED",
    "text": "wave70/modflow S1: conformal invariance of the tensor two-point function, 11 generators, exact",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/upstream/modflow_s1.json",
    "key_true": "b_pass",
    "here": false,
    "need_plants": false
@@ -290,7 +290,7 @@
    "kind": "COMPUTED",
    "text": "wave70/modflow S5: boost generator diagonalisable with integer weights, exp(i pi M) real",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/upstream/modflow_s5.json",
    "key_true": "exp_i_pi_M_is_real",
    "here": false,
    "need_plants": false
@@ -299,7 +299,7 @@
    "kind": "COMPUTED",
    "text": "wave69/bclose P1: every term linear in h2 of the Iyer-Wald generator is the smeared constraint, k = 2, 600 probes",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/upstream/bclose_p1_enum.json",
    "key_true": "ALL_PASS",
    "here": false,
    "need_plants": false
@@ -308,7 +308,7 @@
    "kind": "COMPUTED",
    "text": "wave69/bclose P2: exact polynomial h2 with all ten Ricci components zero through O(eps^2); E_can = A_l",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/upstream/bclose_p2_solve.json",
    "key_true": "ALL_PASS",
    "here": false,
    "need_plants": false
@@ -317,7 +317,7 @@
    "kind": "COMPUTED",
    "text": "wave64/btheorem S1-S2: Green identity and corner invariance",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/upstream/btheorem_s1s2.json",
    "key_true": null,
    "here": false,
    "need_plants": false
@@ -326,7 +326,7 @@
    "kind": "COMPUTED",
    "text": "wave45/truthcond check_E2: the two flow rates at l = 2..6",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/final/out/upstream/truthcond_check_E2.json",
    "key_true": "ALL_PASS",
    "here": false,
    "need_plants": false
@@ -335,7 +335,7 @@
    "kind": "COMPUTED",
    "text": "wave69/bclose P2 numerics: extremum of A - 2V on g_eps at finite eps gives Delta_2/A_l = 1 within 5e-10, six members",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave69/bclose/out/p2_geo.json",
    "key_true": "ALL_PASS",
    "here": false,
    "need_plants": false,
@@ -346,7 +346,7 @@
    "kind": "COMPUTED",
    "text": "wave70/modflow S2: geometry of the special conformal map and finite covariance to 2e-29",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave70/modflow/out/s2_out_fix.json",
    "key_true": "b_pass_1e-12",
    "here": false,
    "need_plants": false,
@@ -357,7 +357,7 @@
    "kind": "COMPUTED",
    "text": "wave70/modflow S3: radial sector of the tensor two-point function reproduces 1/c_l at l = 2, 3, 4",
    "deps": [],
-   "out": "<local path>",
+   "out": "wave70/modflow/out/s3_out.json",
    "key_true": "pass",
    "here": false,
    "need_plants": false,
