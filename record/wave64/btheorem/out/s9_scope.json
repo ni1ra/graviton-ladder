@@ -1,0 +1,36 @@
+{
+ "(a)_R_order_eps2_equals_Rlin": true,
+ "(a)_no_order_eps1": true,
+ "l=2": {
+  "traceless": true,
+  "transverse": true,
+  "harmonic": true,
+  "A=int N|K|^2": "16*pi/35",
+  "oint|K|^2": "16*pi",
+  "A_over_flux": "1/35",
+  "A_over_flux_equals_1/((2l+1)(2l+3))": true,
+  "Rlin_q2_equals_K2": true,
+  "-2 d(A-2V)[q2]": "16*pi/35",
+  "area_side_equals_A": true,
+  "Rlin_unchanged": true,
+  "area_side_unchanged_by_homog+gauge": true,
+  "plant_dA_alone_moves": true
+ },
+ "l=3": {
+  "traceless": true,
+  "transverse": true,
+  "harmonic": true,
+  "A=int N|K|^2": "128*pi/105",
+  "oint|K|^2": "384*pi/5",
+  "A_over_flux": "1/63",
+  "A_over_flux_equals_1/((2l+1)(2l+3))": true,
+  "Rlin_q2_equals_K2": true,
+  "-2 d(A-2V)[q2]": "128*pi/105",
+  "area_side_equals_A": true,
+  "Rlin_unchanged": true,
+  "area_side_unchanged_by_homog+gauge": true,
+  "plant_dA_alone_moves": true
+ },
+ "paper_A_unit_flux_gate_l2_equals_1/35": true,
+ "ALL_PASS": true
+}

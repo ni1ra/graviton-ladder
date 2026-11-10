@@ -1,0 +1,13 @@
+{
+ "eigenvalues": {
+  "0": 4,
+  "-1": 2,
+  "1": 2,
+  "-2": 2,
+  "2": 2
+ },
+ "diagonalisable": true,
+ "exp_i_pi_M_is_real": true,
+ "exp_i_pi_M_equals_R_conjugation": true,
+ "exp_i_pi_MT_equals_its_transpose_target": true
+}

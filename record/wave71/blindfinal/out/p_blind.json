@@ -1,0 +1,515 @@
+{
+ "script": "p_blind",
+ "ALL_PASS": true,
+ "n_checks": 62,
+ "n_plants": 39,
+ "checks": [
+  {
+   "label": "SQ toy: sample vectors are fixed by J Delta^(1/2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "SQ (a): Im<J h, k> = 0 on H",
+   "pass": true,
+   "detail": "8.881784197001252e-16"
+  },
+  {
+   "label": "SQ (c): omega(V(h) sigma_{t-i}(V(k))) = omega(sigma_t(V(k)) V(h)), beta = -1",
+   "pass": true,
+   "detail": "2.416106516409301e-14"
+  },
+  {
+   "label": "SQ (d): ||Gamma(Delta^(1/2)) A Omega||^2 = ||A* Omega||^2",
+   "pass": true,
+   "detail": "1.780502463357117e-15"
+  },
+  {
+   "label": "SQ (d): <Exp(w), Gamma(-J) Gamma(Delta^(1/2)) Exp(h)> = <Exp(w), Exp(-h)>",
+   "pass": true,
+   "detail": "2.91261673054264e-15"
+  },
+  {
+   "label": "M K6: C f = 2 curl(Ric_3 f - delta R_lin f / 4) on a generic polynomial f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M K6: R_lin = trace of Ric_3",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M K4 at l=6: Ric_3(2NK) = (l+2)K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M K3 at l=6: 2 sym(x cross (-curl K)) = (l+1)K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M K4 at l=7: Ric_3(2NK) = (l+2)K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M K3 at l=7: 2 sym(x cross (-curl K)) = (l+1)K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M K6 at l=6 directly: C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=l cos: delta_zeta(E,B) at weight 3 solves the field equations",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=l cos: on the slice delta E = (l+1)K, delta B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=0: delta_zeta(E,B) at weight 3 solves the field equations",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=0: on the slice delta E = (l+1)K, delta B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=l cos: delta_zeta(E,B) at weight 3 solves the field equations",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=l cos: on the slice delta E = (l+1)K, delta B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=0: delta_zeta(E,B) at weight 3 solves the field equations",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=0: on the slice delta E = (l+1)K, delta B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=l cos: delta_zeta(E,B) at weight 3 solves the field equations",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=l cos: on the slice delta E = (l+1)K, delta B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=0: delta_zeta(E,B) at weight 3 solves the field equations",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=0: on the slice delta E = (l+1)K, delta B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=2: Ric_3(K) = 0 inside, so K 1_B has no curvature in the open ball",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=2: K.x is tangent and divergence-free, so R_lin[K 1_B] = 0 as a distribution",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=2: radial transform of the jump profile is j_l(k)/k",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=2: radial transform of the lapse profile N is j_(l+1)(k)/k^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=2: H^(1/2) norm of the cut vector converges (decade tails fall by 100)",
+   "pass": true,
+   "detail": "[np.float64(0.002328388418095592), np.float64(2.4962258917509868e-05), np.float64(2.4726940902410173e-07)]"
+  },
+  {
+   "label": "M edge l=3: Ric_3(K) = 0 inside, so K 1_B has no curvature in the open ball",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=3: K.x is tangent and divergence-free, so R_lin[K 1_B] = 0 as a distribution",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=3: radial transform of the jump profile is j_l(k)/k",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=3: radial transform of the lapse profile N is j_(l+1)(k)/k^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=3: H^(1/2) norm of the cut vector converges (decade tails fall by 100)",
+   "pass": true,
+   "detail": "[np.float64(0.002658238959077068), np.float64(2.4569774304302036e-05), np.float64(2.477318309727429e-07)]"
+  },
+  {
+   "label": "C toy: Phi(1 - s) = 0 and Phi(m) = Phi(s m s), s != 1",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "C toy: Phi o iota = id",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "C toy: S_M = S_A when H1-H3 hold and the support is not 1",
+   "pass": true,
+   "detail": "(np.float64(0.4732999941045628), np.float64(0.47329999410456225))"
+  },
+  {
+   "label": "B zero modes: Q vanishes on a translation of the ball",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B zero modes: Q vanishes on a boost of the ball (tau = b n1, s = b x)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B zero modes: sigma form (j-1)(j+2)/2 from j(j+1)/2 - 1; tau form -j(j-1)/2 from -j(j+1)/2 + j",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=2 m=l cos: translation gradient -(1/2) int_B x_a |K|^2 = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=2 m=l cos: it equals int_B N d_a |K|^2 (parts, N = 0 on S)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=2 m=0: translation gradient -(1/2) int_B x_a |K|^2 = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=2 m=0: it equals int_B N d_a |K|^2 (parts, N = 0 on S)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=2 mixed: translation gradient -(1/2) int_B x_a |K|^2 = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=2 mixed: it equals int_B N d_a |K|^2 (parts, N = 0 on S)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=3 m=l cos: translation gradient -(1/2) int_B x_a |K|^2 = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=3 m=l cos: it equals int_B N d_a |K|^2 (parts, N = 0 on S)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=3 m=0: translation gradient -(1/2) int_B x_a |K|^2 = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=3 m=0: it equals int_B N d_a |K|^2 (parts, N = 0 on S)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=3 mixed: translation gradient -(1/2) int_B x_a |K|^2 = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B-e l=3 mixed: it equals int_B N d_a |K|^2 (parts, N = 0 on S)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "R Lemma 4 item 3: <v, e^(2 pi A) u> = <u, v> on K",
+   "pass": true,
+   "detail": "2.286089127109703e-15"
+  },
+  {
+   "label": "R Lemma 4 item 4: J0 = e^(pi A) S is antilinear and isometric on K + iK",
+   "pass": true,
+   "detail": "7.051445875294789e-15"
+  },
+  {
+   "label": "R Lemma 4 item 5: graph norm of S on K + iK is sqrt 2 times the norm of K (+) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "R Lemma 5: |e^(i p.Lambda_{-z} x)| <= 1 on the closed strip 0 <= theta <= pi, x in the wedge",
+   "pass": true,
+   "detail": "0.9995695253751775"
+  },
+  {
+   "label": "R Lemma 5: |grad psi|^2 = |q|^2 (Euclidean), uniformly in theta",
+   "pass": true,
+   "detail": "5.684341886080802e-14"
+  },
+  {
+   "label": "R Lemma 5: Lambda_{i pi} = diag(-1,-1,1,1)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "R Lemma A: T = C f is symmetric, traceless, transverse",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "R Lemma A: its mean over the ball is zero (Fourier transform vanishes at k = 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "R Lemma B: a curl of a potential supported in the torus has zero period",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "label": "R Step 6: D kappa . zeta = X_W o kappa, X_W = -(x1 - 1/2) d_t - t d_1",
+   "pass": true,
+   "detail": null
+  }
+ ],
+ "plants": [
+  {
+   "label": "SQ (a) plant: i J H is not in the symplectic complement",
+   "caught": true,
+   "detail": "3.199478483308167"
+  },
+  {
+   "label": "SQ (c) plant: beta = +1 (continue into the upper strip) fails",
+   "caught": true,
+   "detail": "228.80406990915174"
+  },
+  {
+   "label": "SQ (d) plant: Delta^(-1/2) in place of Delta^(1/2)",
+   "caught": true,
+   "detail": "244.97086507485935"
+  },
+  {
+   "label": "SQ (d) plant: Gamma(+J) is not the modular conjugation in this Weyl convention",
+   "caught": true,
+   "detail": "23.89165404709239"
+  },
+  {
+   "label": "M K6 plant: coefficient 1/2 in place of 1/4",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=l cos plant: weight 2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=l cos plant: weight 4",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=l cos plant: boost term with the opposite sign",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=0 plant: weight 2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=0 plant: weight 4",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=2 m=0 plant: boost term with the opposite sign",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=l cos plant: weight 2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=l cos plant: weight 4",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=l cos plant: boost term with the opposite sign",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=0 plant: weight 2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=0 plant: weight 4",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=3 m=0 plant: boost term with the opposite sign",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=l cos plant: weight 2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=l cos plant: weight 4",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=l cos plant: boost term with the opposite sign",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=0 plant: weight 2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=0 plant: weight 4",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M weight l=4 m=0 plant: boost term with the opposite sign",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "M edge l=2 plant: adding a K 1_B to the cut vector would change S by a int_B |K|^2 / 16G",
+   "caught": true,
+   "detail": "16*pi/5"
+  },
+  {
+   "label": "M edge l=2 plant: the edge vector K 1_B has finite norm (each decade adds (1/2) ln 10 instead)",
+   "caught": true,
+   "detail": "[np.float64(1.1871700971003967), np.float64(1.1490211081970072), np.float64(1.1515106853533874)]"
+  },
+  {
+   "label": "M edge l=3 plant: adding a K 1_B to the cut vector would change S by a int_B |K|^2 / 16G",
+   "caught": true,
+   "detail": "384*pi/35"
+  },
+  {
+   "label": "M edge l=3 plant: the edge vector K 1_B has finite norm (each decade adds (1/2) ln 10 instead)",
+   "caught": true,
+   "detail": "[np.float64(1.143540639187438), np.float64(1.1537035157861453), np.float64(1.1510772089110817)]"
+  },
+  {
+   "label": "C plant: H3 fails (Phi followed by a pinching, no left inverse): S_M drops strictly",
+   "caught": true,
+   "detail": "(np.float64(0.09328351180184771), np.float64(0.47329999410456225))"
+  },
+  {
+   "label": "C plant: H1 fails (a different channel for the vacuum): S_M can exceed S_A",
+   "caught": true,
+   "detail": "(np.float64(2.0805521506022475), np.float64(0.47329999410456225))"
+  },
+  {
+   "label": "B plant: tau coefficient -1 instead of -1/2 in Q breaks boost invariance",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "B-e plant: a mixture of l = 2 and l = 3 drives the translation mode (single l is needed)",
+   "caught": true,
+   "detail": "[-256*pi/35, 0, 768*pi/7]"
+  },
+  {
+   "label": "B-d plant: an electric datum K = Hess phi has K_nn != 0, so L_K does not vanish",
+   "caught": true,
+   "detail": "16*pi/5"
+  },
+  {
+   "label": "R Lemma 4 plant: rate 1.1 (e^(1.1 pi A) S) is not isometric",
+   "caught": true,
+   "detail": "0.3136981658895879"
+  },
+  {
+   "label": "R Lemma 4 plant: opposite direction (Delta^(-1) at -2 pi i)",
+   "caught": true,
+   "detail": "8.646287829106633"
+  },
+  {
+   "label": "R Lemma 5 plant: continuing into the other half-plane (theta < 0) is unbounded",
+   "caught": true,
+   "detail": "491794710873.1499"
+  },
+  {
+   "label": "R Lemma 5 plant: at theta = pi/2 the point is complex, so no real test field and no reality",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "R Lemma A plant: a compactly supported field that is not transverse has non-zero mean, hence infinite H^(-3/2) norm",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "R Lemma B plant: in a solid torus a divergence-free toroidal field is not such a curl",
+   "caught": true,
+   "detail": "pi**2/2"
+  },
+  {
+   "label": "R Step 6 plant: wedge with apex at x1 = 1 instead of 1/2",
+   "caught": true,
+   "detail": null
+  }
+ ]
+}

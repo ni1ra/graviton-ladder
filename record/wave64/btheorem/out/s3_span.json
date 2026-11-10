@@ -1,0 +1,14 @@
+{
+ "traceless_on_shell": true,
+ "T00_on_data_(0,g)": "g(x, y, z)**2/2",
+ "T00_equals_half_g2": true,
+ "T0i_on_data_(0,g)": [
+  "0",
+  "0",
+  "0"
+ ],
+ "T0i_zero": true,
+ "Wald_term_phi2_on_S": "phi = 0 on Sigma, so the conformal-coupling Wald term -2 pi xi \\oint phi^2 vanishes",
+ "span_identity": true,
+ "ALL_PASS": true
+}

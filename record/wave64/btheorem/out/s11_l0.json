@@ -1,0 +1,16 @@
+{
+ "spatial_gauge_removes_a": true,
+ "lapse_gauge_removes_c": true,
+ "hess_formula_check": true,
+ "beta_invariant": true,
+ "gamma_invariant": true,
+ "general_spatial_gauge_form": true,
+ "Rlin_beta": "2*(r*Derivative(beta(r), r) + beta(r))/r**2",
+ "Rlin_equals_2_over_r2_(r beta)'": true,
+ "n_div_pi": "2*gamma(r)/r",
+ "n_div_pi_equals_2gamma_over_r": true,
+ "div_pi_tangential_zero": true,
+ "inversion": true,
+ "homogeneous_is_C_over_r": true,
+ "ALL_PASS": true
+}

@@ -1,0 +1,168 @@
+{
+ "cases": [
+  {
+   "l": 2,
+   "harmonic": "Re(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "3",
+   "Ric3_2NK_over_K": "4",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 2,
+   "harmonic": "Im(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "3",
+   "Ric3_2NK_over_K": "4",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 2,
+   "harmonic": "mixed incl. m=0",
+   "K_TT": true,
+   "dEmod_over_K": "3",
+   "Ric3_2NK_over_K": "4",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 3,
+   "harmonic": "Re(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "4",
+   "Ric3_2NK_over_K": "5",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 3,
+   "harmonic": "Im(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "4",
+   "Ric3_2NK_over_K": "5",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 3,
+   "harmonic": "mixed incl. m=0",
+   "K_TT": true,
+   "dEmod_over_K": "4",
+   "Ric3_2NK_over_K": "5",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 4,
+   "harmonic": "Re(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "5",
+   "Ric3_2NK_over_K": "6",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 4,
+   "harmonic": "Im(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "5",
+   "Ric3_2NK_over_K": "6",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 4,
+   "harmonic": "mixed incl. m=0",
+   "K_TT": true,
+   "dEmod_over_K": "5",
+   "Ric3_2NK_over_K": "6",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 5,
+   "harmonic": "Re(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "6",
+   "Ric3_2NK_over_K": "7",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 5,
+   "harmonic": "Im(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "6",
+   "Ric3_2NK_over_K": "7",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 5,
+   "harmonic": "mixed incl. m=0",
+   "K_TT": true,
+   "dEmod_over_K": "6",
+   "Ric3_2NK_over_K": "7",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 6,
+   "harmonic": "Re(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "7",
+   "Ric3_2NK_over_K": "8",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 6,
+   "harmonic": "Im(x+iy)^l",
+   "K_TT": true,
+   "dEmod_over_K": "7",
+   "Ric3_2NK_over_K": "8",
+   "difference": "1",
+   "pass": true
+  },
+  {
+   "l": 6,
+   "harmonic": "mixed incl. m=0",
+   "K_TT": true,
+   "dEmod_over_K": "7",
+   "Ric3_2NK_over_K": "8",
+   "difference": "1",
+   "pass": true
+  }
+ ],
+ "plants": {
+  "N_x1.1_Ric3_over_K": "22/5",
+  "caught_N": true,
+  "B_x1.1_dEmod_over_K": "33/10",
+  "caught_B": true
+ },
+ "chain_ratio": {
+  "2": {
+   "A_over_Echain": "4/3",
+   "pass": true
+  },
+  "3": {
+   "A_over_Echain": "5/4",
+   "pass": true
+  },
+  "4": {
+   "A_over_Echain": "6/5",
+   "pass": true
+  },
+  "5": {
+   "A_over_Echain": "7/6",
+   "pass": true
+  },
+  "6": {
+   "A_over_Echain": "8/7",
+   "pass": true
+  }
+ },
+ "ALL_PASS": true
+}

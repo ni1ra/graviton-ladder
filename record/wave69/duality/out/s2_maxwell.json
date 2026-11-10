@@ -1,0 +1,860 @@
+{
+ "results": {
+  "maxwell": {
+   "ball": {
+    "0": {
+     "sites_V": 123,
+     "sites_Vw": 123,
+     "dimZ": 171,
+     "dimB_w": 171,
+     "D_w": 0,
+     "sec": 0.0
+    },
+    "1": {
+     "sites_V": 123,
+     "sites_Vw": 257,
+     "dimZ": 171,
+     "dimB_w": 171,
+     "D_w": 0,
+     "sec": 0.1
+    },
+    "2": {
+     "sites_V": 123,
+     "sites_Vw": 515,
+     "dimZ": 171,
+     "dimB_w": 171,
+     "D_w": 0,
+     "sec": 0.2
+    }
+   },
+   "cube": {
+    "0": {
+     "sites_V": 125,
+     "sites_Vw": 125,
+     "dimZ": 176,
+     "dimB_w": 176,
+     "D_w": 0,
+     "sec": 0.0
+    },
+    "1": {
+     "sites_V": 125,
+     "sites_Vw": 343,
+     "dimZ": 176,
+     "dimB_w": 176,
+     "D_w": 0,
+     "sec": 0.1
+    },
+    "2": {
+     "sites_V": 125,
+     "sites_Vw": 729,
+     "dimZ": 176,
+     "dimB_w": 176,
+     "D_w": 0,
+     "sec": 0.5
+    }
+   },
+   "shell": {
+    "0": {
+     "sites_V": 224,
+     "sites_Vw": 224,
+     "dimZ": 310,
+     "dimB_w": 310,
+     "D_w": 0,
+     "sec": 0.0
+    },
+    "1": {
+     "sites_V": 224,
+     "sites_Vw": 496,
+     "dimZ": 310,
+     "dimB_w": 310,
+     "D_w": 0,
+     "sec": 0.2
+    },
+    "2": {
+     "sites_V": 224,
+     "sites_Vw": 918,
+     "dimZ": 310,
+     "dimB_w": 310,
+     "D_w": 0,
+     "sec": 0.4
+    }
+   },
+   "ring": {
+    "0": {
+     "sites_V": 88,
+     "sites_Vw": 88,
+     "dimZ": 46,
+     "dimB_w": 45,
+     "D_w": 1,
+     "sec": 0.0
+    },
+    "1": {
+     "sites_V": 88,
+     "sites_Vw": 528,
+     "dimZ": 46,
+     "dimB_w": 45,
+     "D_w": 1,
+     "sec": 0.3
+    },
+    "2": {
+     "sites_V": 88,
+     "sites_Vw": 1320,
+     "dimZ": 46,
+     "dimB_w": 45,
+     "D_w": 1,
+     "sec": 1.9
+    }
+   },
+   "filled": {
+    "0": {
+     "sites_V": 88,
+     "sites_Vw": 169,
+     "dimZ": 46,
+     "dimB_w": 46,
+     "D_w": 0,
+     "sec": 0.1
+    },
+    "1": {
+     "sites_V": 88,
+     "sites_Vw": 675,
+     "dimZ": 46,
+     "dimB_w": 46,
+     "D_w": 0,
+     "sec": 0.5
+    },
+    "2": {
+     "sites_V": 88,
+     "sites_Vw": 1445,
+     "dimZ": 46,
+     "dimB_w": 46,
+     "D_w": 0,
+     "sec": 2.6
+    }
+   }
+  }
+ },
+ "rank_log": [
+  {
+   "what": "maxwell/ball/w0 div|V",
+   "shape": [
+    199,
+    369
+   ],
+   "rank_modp": 198,
+   "rank_gram": 198,
+   "gram_gap": {
+    "smallest_kept": 0.016069726737830317,
+    "largest_dropped": 1.3404703130046266e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w0 C I_w",
+   "shape": [
+    597,
+    369
+   ],
+   "rank_modp": 306,
+   "rank_gram": 306,
+   "gram_gap": {
+    "smallest_kept": 0.03585599077330194,
+    "largest_dropped": 4.794169173294071e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w0 R_out C I_w",
+   "shape": [
+    228,
+    369
+   ],
+   "rank_modp": 135,
+   "rank_gram": 135,
+   "gram_gap": {
+    "smallest_kept": 0.33333333333333326,
+    "largest_dropped": 3.700743415417188e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w1 div|V",
+   "shape": [
+    199,
+    369
+   ],
+   "rank_modp": 198,
+   "rank_gram": 198,
+   "gram_gap": {
+    "smallest_kept": 0.016069726737830317,
+    "largest_dropped": 1.3404703130046266e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w1 C I_w",
+   "shape": [
+    1122,
+    771
+   ],
+   "rank_modp": 611,
+   "rank_gram": 611,
+   "gram_gap": {
+    "smallest_kept": 0.027523910339828716,
+    "largest_dropped": 5.034501449074516e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w1 R_out C I_w",
+   "shape": [
+    753,
+    771
+   ],
+   "rank_modp": 440,
+   "rank_gram": 440,
+   "gram_gap": {
+    "smallest_kept": 0.043101890916873345,
+    "largest_dropped": 4.524306373753893e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w2 div|V",
+   "shape": [
+    199,
+    369
+   ],
+   "rank_modp": 198,
+   "rank_gram": 198,
+   "gram_gap": {
+    "smallest_kept": 0.016069726737830317,
+    "largest_dropped": 1.3404703130046266e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w2 C I_w",
+   "shape": [
+    2106,
+    1545
+   ],
+   "rank_modp": 1192,
+   "rank_gram": 1192,
+   "gram_gap": {
+    "smallest_kept": 0.01875763295278941,
+    "largest_dropped": 5.9816761184954e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.1,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ball/w2 R_out C I_w",
+   "shape": [
+    1737,
+    1545
+   ],
+   "rank_modp": 1021,
+   "rank_gram": 1021,
+   "gram_gap": {
+    "smallest_kept": 0.026491427717123234,
+    "largest_dropped": 5.786342712269765e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w0 div|V",
+   "shape": [
+    200,
+    375
+   ],
+   "rank_modp": 199,
+   "rank_gram": 199,
+   "gram_gap": {
+    "smallest_kept": 0.016733838775436678,
+    "largest_dropped": 1.9286579309819526e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w0 C I_w",
+   "shape": [
+    600,
+    375
+   ],
+   "rank_modp": 311,
+   "rank_gram": 311,
+   "gram_gap": {
+    "smallest_kept": 0.03295842379471386,
+    "largest_dropped": 4.589044777723079e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w0 R_out C I_w",
+   "shape": [
+    225,
+    375
+   ],
+   "rank_modp": 135,
+   "rank_gram": 135,
+   "gram_gap": {
+    "smallest_kept": 0.5,
+    "largest_dropped": 0.0,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w1 div|V",
+   "shape": [
+    200,
+    375
+   ],
+   "rank_modp": 199,
+   "rank_gram": 199,
+   "gram_gap": {
+    "smallest_kept": 0.016733838775436678,
+    "largest_dropped": 1.9286579309819526e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w1 C I_w",
+   "shape": [
+    1470,
+    1029
+   ],
+   "rank_modp": 813,
+   "rank_gram": 813,
+   "gram_gap": {
+    "smallest_kept": 0.020623009350616332,
+    "largest_dropped": 5.485843479523564e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w1 R_out C I_w",
+   "shape": [
+    1095,
+    1029
+   ],
+   "rank_modp": 637,
+   "rank_gram": 637,
+   "gram_gap": {
+    "smallest_kept": 0.030950353446816427,
+    "largest_dropped": 4.141619572691747e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w2 div|V",
+   "shape": [
+    200,
+    375
+   ],
+   "rank_modp": 199,
+   "rank_gram": 199,
+   "gram_gap": {
+    "smallest_kept": 0.016733838775436678,
+    "largest_dropped": 1.9286579309819526e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/cube/w2 C I_w",
+   "shape": [
+    2916,
+    2187
+   ],
+   "rank_modp": 1675,
+   "rank_gram": 1675,
+   "gram_gap": {
+    "smallest_kept": 0.014001983731327996,
+    "largest_dropped": 9.501283153478928e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.2,
+   "sec_gram": 0.1
+  },
+  {
+   "what": "maxwell/cube/w2 R_out C I_w",
+   "shape": [
+    2541,
+    2187
+   ],
+   "rank_modp": 1499,
+   "rank_gram": 1499,
+   "gram_gap": {
+    "smallest_kept": 0.017055775361060795,
+    "largest_dropped": 6.995674914676513e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.1,
+   "sec_gram": 0.1
+  },
+  {
+   "what": "maxwell/shell/w0 div|V",
+   "shape": [
+    363,
+    672
+   ],
+   "rank_modp": 362,
+   "rank_gram": 362,
+   "gram_gap": {
+    "smallest_kept": 0.009705038106270178,
+    "largest_dropped": 6.595174364183011e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/shell/w0 C I_w",
+   "shape": [
+    1089,
+    672
+   ],
+   "rank_modp": 577,
+   "rank_gram": 577,
+   "gram_gap": {
+    "smallest_kept": 0.010142043017340894,
+    "largest_dropped": 6.049849147609075e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/shell/w0 R_out C I_w",
+   "shape": [
+    417,
+    672
+   ],
+   "rank_modp": 267,
+   "rank_gram": 267,
+   "gram_gap": {
+    "smallest_kept": 0.3333333333333332,
+    "largest_dropped": 1.4802973661668753e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/shell/w1 div|V",
+   "shape": [
+    363,
+    672
+   ],
+   "rank_modp": 362,
+   "rank_gram": 362,
+   "gram_gap": {
+    "smallest_kept": 0.009705038106270178,
+    "largest_dropped": 6.595174364183011e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/shell/w1 C I_w",
+   "shape": [
+    2094,
+    1488
+   ],
+   "rank_modp": 1175,
+   "rank_gram": 1175,
+   "gram_gap": {
+    "smallest_kept": 0.012142177074758152,
+    "largest_dropped": 7.1484978222372e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.1,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/shell/w1 R_out C I_w",
+   "shape": [
+    1422,
+    1488
+   ],
+   "rank_modp": 865,
+   "rank_gram": 865,
+   "gram_gap": {
+    "smallest_kept": 0.04087839158416987,
+    "largest_dropped": 6.129012507144017e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/shell/w2 div|V",
+   "shape": [
+    363,
+    672
+   ],
+   "rank_modp": 362,
+   "rank_gram": 362,
+   "gram_gap": {
+    "smallest_kept": 0.009705038106270178,
+    "largest_dropped": 6.595174364183011e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/shell/w2 C I_w",
+   "shape": [
+    3582,
+    2754
+   ],
+   "rank_modp": null,
+   "rank_gram": 2087,
+   "gram_gap": {
+    "smallest_kept": 0.011676203025878792,
+    "largest_dropped": 1.730552355941618e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.2
+  },
+  {
+   "what": "maxwell/shell/w2 R_out C I_w",
+   "shape": [
+    2910,
+    2754
+   ],
+   "rank_modp": null,
+   "rank_gram": 1777,
+   "gram_gap": {
+    "smallest_kept": 0.02316663008612165,
+    "largest_dropped": 7.7252813038655e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.2
+  },
+  {
+   "what": "maxwell/ring/w0 div|V",
+   "shape": [
+    219,
+    264
+   ],
+   "rank_modp": 218,
+   "rank_gram": 218,
+   "gram_gap": {
+    "smallest_kept": 0.001076319065940812,
+    "largest_dropped": 8.221317456823898e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ring/w0 C I_w",
+   "shape": [
+    657,
+    264
+   ],
+   "rank_modp": 264,
+   "rank_gram": 264,
+   "gram_gap": {
+    "smallest_kept": 0.0536665585662172,
+    "largest_dropped": 0.0,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ring/w0 R_out C I_w",
+   "shape": [
+    393,
+    264
+   ],
+   "rank_modp": 219,
+   "rank_gram": 219,
+   "gram_gap": {
+    "smallest_kept": 0.3333333333333333,
+    "largest_dropped": 0.0,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ring/w1 div|V",
+   "shape": [
+    219,
+    264
+   ],
+   "rank_modp": 218,
+   "rank_gram": 218,
+   "gram_gap": {
+    "smallest_kept": 0.001076319065940812,
+    "largest_dropped": 8.221317456823898e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ring/w1 C I_w",
+   "shape": [
+    2499,
+    1584
+   ],
+   "rank_modp": 1318,
+   "rank_gram": 1318,
+   "gram_gap": {
+    "smallest_kept": 0.02335030986917446,
+    "largest_dropped": 6.971739369548988e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.1,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ring/w1 R_out C I_w",
+   "shape": [
+    2235,
+    1584
+   ],
+   "rank_modp": 1273,
+   "rank_gram": 1273,
+   "gram_gap": {
+    "smallest_kept": 0.01672333051508611,
+    "largest_dropped": 5.836444258098348e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.1,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ring/w2 div|V",
+   "shape": [
+    219,
+    264
+   ],
+   "rank_modp": 218,
+   "rank_gram": 218,
+   "gram_gap": {
+    "smallest_kept": 0.001076319065940812,
+    "largest_dropped": 8.221317456823898e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/ring/w2 C I_w",
+   "shape": [
+    5397,
+    3960
+   ],
+   "rank_modp": null,
+   "rank_gram": 3076,
+   "gram_gap": {
+    "smallest_kept": 0.012248411926083563,
+    "largest_dropped": 1.5758472621431985e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.7
+  },
+  {
+   "what": "maxwell/ring/w2 R_out C I_w",
+   "shape": [
+    5133,
+    3960
+   ],
+   "rank_modp": null,
+   "rank_gram": 3031,
+   "gram_gap": {
+    "smallest_kept": 0.005985827629904425,
+    "largest_dropped": 9.120613976351157e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 1.2
+  },
+  {
+   "what": "maxwell/filled/w0 div|V",
+   "shape": [
+    219,
+    264
+   ],
+   "rank_modp": 218,
+   "rank_gram": 218,
+   "gram_gap": {
+    "smallest_kept": 0.001076319065940812,
+    "largest_dropped": 8.221317456823898e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/filled/w0 C I_w",
+   "shape": [
+    1092,
+    507
+   ],
+   "rank_modp": 507,
+   "rank_gram": 507,
+   "gram_gap": {
+    "smallest_kept": 0.005315304245271683,
+    "largest_dropped": 0.0,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/filled/w0 R_out C I_w",
+   "shape": [
+    828,
+    507
+   ],
+   "rank_modp": 461,
+   "rank_gram": 461,
+   "gram_gap": {
+    "smallest_kept": 0.004467015078558421,
+    "largest_dropped": 1.4995735969977966e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/filled/w1 div|V",
+   "shape": [
+    219,
+    264
+   ],
+   "rank_modp": 218,
+   "rank_gram": 218,
+   "gram_gap": {
+    "smallest_kept": 0.001076319065940812,
+    "largest_dropped": 8.221317456823898e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/filled/w1 C I_w",
+   "shape": [
+    2970,
+    2025
+   ],
+   "rank_modp": 1633,
+   "rank_gram": 1633,
+   "gram_gap": {
+    "smallest_kept": 0.005135703579666938,
+    "largest_dropped": 7.065006231026574e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.2,
+   "sec_gram": 0.1
+  },
+  {
+   "what": "maxwell/filled/w1 R_out C I_w",
+   "shape": [
+    2706,
+    2025
+   ],
+   "rank_modp": 1587,
+   "rank_gram": 1587,
+   "gram_gap": {
+    "smallest_kept": 0.005060163999273855,
+    "largest_dropped": 6.963926637113199e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.1,
+   "sec_gram": 0.1
+  },
+  {
+   "what": "maxwell/filled/w2 div|V",
+   "shape": [
+    219,
+    264
+   ],
+   "rank_modp": 218,
+   "rank_gram": 218,
+   "gram_gap": {
+    "smallest_kept": 0.001076319065940812,
+    "largest_dropped": 8.221317456823898e-17,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 0.0
+  },
+  {
+   "what": "maxwell/filled/w2 C I_w",
+   "shape": [
+    5712,
+    4335
+   ],
+   "rank_modp": null,
+   "rank_gram": 3311,
+   "gram_gap": {
+    "smallest_kept": 0.004341255947757789,
+    "largest_dropped": 1.4324083349367845e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 1.4
+  },
+  {
+   "what": "maxwell/filled/w2 R_out C I_w",
+   "shape": [
+    5448,
+    4335
+   ],
+   "rank_modp": null,
+   "rank_gram": 3265,
+   "gram_gap": {
+    "smallest_kept": 0.00456427533473644,
+    "largest_dropped": 1.0971431671263891e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 1.1
+  }
+ ],
+ "prime": 2147483629,
+ "exact_limit": 2600
+}

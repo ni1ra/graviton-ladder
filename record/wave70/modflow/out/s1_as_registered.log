@@ -1,0 +1,25 @@
+a {'BB_equals_EE': True, 'BE_equals_minus_EB': True, 'symmetric_each_pair': True, 'traceless_each_pair': True, 'transverse_each_pair': True, 'W_ab(xi)_equals_W_ba(-xi)': True, 'Edot_eq_curlB_first_slot': True, 'Bdot_eq_minus_curlE_first_slot': True, 'box_W_zero': True} 1.9
+('D', 3, -1, 0, 324)
+('N1', 3, -1, 276, 324)
+('N2', 3, -1, 276, 324)
+('N3', 3, -1, 276, 324)
+('J12', 3, -1, 0, 324)
+('J13', 3, -1, 0, 324)
+('J23', 3, -1, 0, 324)
+('K0', 3, -1, 294, 324)
+('K1', 3, -1, 304, 324)
+('K2', 3, -1, 304, 324)
+('K3', 3, -1, 304, 324)
+('D', 2, -1, 294, 324)
+('K0', 2, -1, 294, 324)
+('K1', 2, -1, 322, 324)
+('D', 4, -1, 294, 324)
+('K0', 4, -1, 294, 324)
+('K1', 4, -1, 322, 324)
+('N1', 3, 1, 0, 324)
+('K0', 3, 1, 0, 324)
+('K1', 3, 1, 0, 324)
+c {'pairs': 105, 'failing_pairs': []}
+b_pass False plants {'w=2': True, 'w=4': True, 's=+1': False} 11.3
+
+[exited with code 0]

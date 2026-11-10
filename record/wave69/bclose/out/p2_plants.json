@@ -1,0 +1,165 @@
+{
+ "geometry base": {
+  "L_Y": 4,
+  "d_T": 3,
+  "quadrature (n_theta, n_phi, n_rho)": [
+   20,
+   40,
+   16
+  ],
+  "parameters": 45,
+  "flat-Hessian zero modes": 7,
+  "largest zero-mode |eigenvalue|": 7.118041858329969e-06,
+  "smallest nonzero |eigenvalue|": 0.5400311676180447
+ },
+ "CHECK flat Hessian has exactly 7 zero modes (Poincare)": true,
+ "F0 quadrature error": 1.7763568394002505e-15,
+ "PLANT-FLAT": [
+  {
+   "eps": 0.1,
+   "F*-F0 (located)": 1.7763568394002505e-15,
+   "F_fixed-F0 (coordinate corner and slice)": -0.00522356452419892,
+   "newton_iterations": 4,
+   "final_gradient_norm": 6.646519966755906e-10,
+   "max|T coeff|/eps": 0.5000000006667819,
+   "max|Y coeff|": 9.53221714957133e-08
+  },
+  {
+   "eps": 0.2,
+   "F*-F0 (located)": 1.7763568394002505e-15,
+   "F_fixed-F0 (coordinate corner and slice)": -0.020944993143451995,
+   "newton_iterations": 5,
+   "final_gradient_norm": 6.526751874723623e-10,
+   "max|T coeff|/eps": 0.5000000003576083,
+   "max|Y coeff|": 1.9064434229252107e-07
+  },
+  {
+   "eps": 0.3,
+   "F*-F0 (located)": 1.7763568394002505e-15,
+   "F_fixed-F0 (coordinate corner and slice)": -0.04731915156103028,
+   "newton_iterations": 5,
+   "final_gradient_norm": 6.404745341607526e-10,
+   "max|T coeff|/eps": 0.49999999973924303,
+   "max|Y coeff|": 2.8596651328262516e-07
+  }
+ ],
+ "CHECK PLANT-FLAT: located |F* - F0| <= 1e-9 at the largest eps": 1.0,
+ "CHECK PLANT-FLAT: fixed corner is caught (|F_fixed - F0| > 1e-5)": 1.0,
+ "PLANT-SRC": {
+  "rows": [
+   {
+    "eps_unit": 0.1,
+    "F*-F0": -0.00015713265847061564,
+    "F_fixed-F0": -0.00015714343494543925,
+    "newton_iterations": 4,
+    "final_gradient_norm": 6.993522670038195e-10,
+    "max|Y coeff|": 3.282375183439675e-05,
+    "max|T coeff|": 6.612917058099807e-07,
+    "zero-mode gradient / eps_unit^2": 1.5373012239319123e-08
+   },
+   {
+    "eps_unit": -0.1,
+    "F*-F0": -0.00015713265847061564,
+    "F_fixed-F0": -0.00015714343494543925,
+    "newton_iterations": 4,
+    "final_gradient_norm": 9.187391648287105e-10,
+    "max|Y coeff|": 3.282375200417559e-05,
+    "max|T coeff|": 6.615539396859327e-07,
+    "zero-mode gradient / eps_unit^2": 1.538212074577313e-08
+   },
+   {
+    "eps_unit": 0.15,
+    "F*-F0": -0.00035351980252151805,
+    "F_fixed-F0": -0.00035357435370997337,
+    "newton_iterations": 4,
+    "final_gradient_norm": 7.742959940986603e-10,
+    "max|Y coeff|": 7.384780046439522e-05,
+    "max|T coeff|": 2.2322621582169103e-06,
+    "zero-mode gradient / eps_unit^2": 3.947459642707034e-09
+   },
+   {
+    "eps_unit": -0.15,
+    "F*-F0": -0.00035351980252151805,
+    "F_fixed-F0": -0.00035357435370997337,
+    "newton_iterations": 4,
+    "final_gradient_norm": 6.217249922018035e-10,
+    "max|Y coeff|": 7.384780103782091e-05,
+    "max|T coeff|": 2.2321409043727393e-06,
+    "zero-mode gradient / eps_unit^2": 4.563529405324976e-09
+   },
+   {
+    "eps_unit": 0.2,
+    "F*-F0": -0.0006284082856371498,
+    "F_fixed-F0": -0.0006285806735295552,
+    "newton_iterations": 4,
+    "final_gradient_norm": 1.2592107241977558e-09,
+    "max|Y coeff|": 0.00013127103268278288,
+    "max|T coeff|": 5.290858274113257e-06,
+    "zero-mode gradient / eps_unit^2": 3.4402724695958828e-09
+   },
+   {
+    "eps_unit": -0.2,
+    "F*-F0": -0.0006284082856353734,
+    "F_fixed-F0": -0.0006285806735295552,
+    "newton_iterations": 4,
+    "final_gradient_norm": 1.4941472815723295e-09,
+    "max|Y coeff|": 0.00013127102697429985,
+    "max|T coeff|": 5.2907937026958135e-06,
+    "zero-mode gradient / eps_unit^2": 4.440892097648754e-09
+   },
+   {
+    "eps_unit": 0.25,
+    "F*-F0": -0.0009817446244788641,
+    "F_fixed-F0": -0.0009821654280735004,
+    "newton_iterations": 5,
+    "final_gradient_norm": 7.588603973685965e-10,
+    "max|Y coeff|": 0.00020508299500359648,
+    "max|T coeff|": 1.0328122408137725e-05,
+    "zero-mode gradient / eps_unit^2": 2.8725466342227674e-09
+   },
+   {
+    "eps_unit": -0.25,
+    "F*-F0": -0.0009817446244770878,
+    "F_fixed-F0": -0.0009821654280735004,
+    "newton_iterations": 5,
+    "final_gradient_norm": 7.049695616818029e-10,
+    "max|Y coeff|": 0.000205082990589187,
+    "max|T coeff|": 1.0328059793980688e-05,
+    "zero-mode gradient / eps_unit^2": 4.102470852340054e-09
+   },
+   {
+    "eps_unit": 0.3,
+    "F*-F0": -0.0014134601050468376,
+    "F_fixed-F0": -0.0014143325179549748,
+    "newton_iterations": 5,
+    "final_gradient_norm": 1.3673333249530626e-09,
+    "max|Y coeff|": 0.0002952702760236984,
+    "max|T coeff|": 1.7841776090981324e-05,
+    "zero-mode gradient / eps_unit^2": 1.9743000921616904e-09
+   },
+   {
+    "eps_unit": -0.3,
+    "F*-F0": -0.001413460105048614,
+    "F_fixed-F0": -0.0014143325179549748,
+    "newton_iterations": 5,
+    "final_gradient_norm": 1.3557455523728086e-09,
+    "max|Y coeff|": 0.00029527027353969164,
+    "max|T coeff|": 1.784190791753117e-05,
+    "zero-mode gradient / eps_unit^2": 1.972258284887691e-09
+   }
+  ],
+  "fit_degree": 6,
+  "c1 (O(eps) coefficient, unit-flux eps)": 5.430653154979932e-15,
+  "c2": -0.01571428571385368,
+  "fit max residual": 1.0213184464813452e-15,
+  "Delta_2 (raw units) = -2 c2 * flux": 1.5797723057617201,
+  "A_l": 1.4361566416410483,
+  "Delta_2/A_l": 1.0999999999697574,
+  "|Delta_2/A_l - 1|": 0.09999999996975739,
+  "c1 / (A_l/flux)": 1.9007286042429762e-13,
+  "all newton runs converged": true
+ },
+ "CHECK PLANT-SRC: Delta_2/A_l = 1.1 within 1e-4 (the broken constraint is seen)": true,
+ "seconds": 24.49130606651306,
+ "ALL_PASS": true
+}

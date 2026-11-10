@@ -1,0 +1,37 @@
+== controls ==
+PASS C1 first-law identity, seed 1  d(A-2V) = 4*pi/35
+PASS C1 first-law identity, seed 2  d(A-2V) = -12*pi/35
+PASS C1 first-law identity, seed 3  d(A-2V) = -16*pi/35
+PASS C2 psi/phi and A = c_l E_2, l=2 zonal  psi/phi = -3
+PASS C2 psi/phi and A = c_l E_2, l=2 tess  psi/phi = -3
+PASS C2 psi/phi and A = c_l E_2, l=3 zonal  psi/phi = -12
+PASS C2 psi/phi and A = c_l E_2, l=3 tess  psi/phi = -12
+PASS C2 psi/phi and A = c_l E_2, l=4 zonal  psi/phi = -30
+PASS C2 psi/phi and A = c_l E_2, l=4 tess  psi/phi = -30
+PASS C3 Weyl slice R = 0 through eps^2, l=2
+PASS C3 Weyl slice R = 0 through eps^2, l=3
+PASS C4 l=1 (Rindler) second-order change is 0  F2* = 0, beta = 0
+== electric area side ==
+PASS l=2: F0 = 4pi/3 and F1 = 0
+  l=2: area side (1/8G) = 4*pi/35   a* = 1/2   X_l = 3   bin = MOD
+PASS l=3: F0 = 4pi/3 and F1 = 0
+  l=3: area side (1/8G) = 16*pi/105   a* = 2/5   X_l = 4   bin = MOD
+PASS l=4: F0 = 4pi/3 and F1 = 0
+  l=4: area side (1/8G) = 16*pi/99   a* = 1/3   X_l = 5   bin = MOD
+PASS l=5: F0 = 4pi/3 and F1 = 0
+  l=5: area side (1/8G) = 160*pi/1001   a* = 2/7   X_l = 6   bin = MOD
+PASS l=6: F0 = 4pi/3 and F1 = 0
+  l=6: area side (1/8G) = 2*pi/13   a* = 1/4   X_l = 7   bin = MOD
+== C5 plants (each must change X_l) ==
+PASS C5 plant nok, l=2 changes X  X = -9 (base 3)
+PASS C5 plant noshift, l=2 changes X  X = -18 (base 3)
+PASS C5 plant conf, l=2 changes X  X = 39/4 (base 3)
+PASS C5 plant nok, l=3 changes X  X = -6 (base 4)
+PASS C5 plant noshift, l=3 changes X  X = -20 (base 4)
+PASS C5 plant conf, l=3 changes X  X = 17/2 (base 4)
+== summary ==
+bins: {'MOD'} | controls failed: []
+
+real	0m13.624s
+user	0m13.316s
+sys	0m0.112s

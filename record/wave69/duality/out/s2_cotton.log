@@ -1,0 +1,18 @@
+cotton ball w= 0 {'sites_V': 123, 'sites_Vw': 123, 'dimZ': 55, 'dimB_w': 55, 'D_w': 0, 'sec': 13.5}
+cotton ball w= 1 {'sites_V': 123, 'sites_Vw': 257, 'dimZ': 55, 'dimB_w': 55, 'D_w': 0, 'sec': 22.8}
+cotton ball w= 2 {'sites_V': 123, 'sites_Vw': 515, 'dimZ': 55, 'dimB_w': 55, 'D_w': 0, 'sec': 9.8}
+cotton ball w= 3 {'sites_V': 123, 'sites_Vw': 925, 'dimZ': 55, 'dimB_w': 55, 'D_w': 0, 'sec': 3.2}
+cotton cube w= 0 {'sites_V': 125, 'sites_Vw': 125, 'dimZ': 58, 'dimB_w': 58, 'D_w': 0, 'sec': 0.2}
+cotton cube w= 1 {'sites_V': 125, 'sites_Vw': 343, 'dimZ': 58, 'dimB_w': 58, 'D_w': 0, 'sec': 11.5}
+cotton cube w= 2 {'sites_V': 125, 'sites_Vw': 729, 'dimZ': 58, 'dimB_w': 58, 'D_w': 0, 'sec': 34.5}
+cotton cube w= 3 {'sites_V': 125, 'sites_Vw': 1331, 'dimZ': 58, 'dimB_w': 58, 'D_w': 0, 'sec': 62.5}
+cotton shell w= 0 {'sites_V': 224, 'sites_Vw': 224, 'dimZ': 58, 'dimB_w': 58, 'D_w': 0, 'sec': 10.7}
+cotton shell w= 1 {'sites_V': 224, 'sites_Vw': 496, 'dimZ': 58, 'dimB_w': 58, 'D_w': 0, 'sec': 2.9}
+cotton shell w= 2 {'sites_V': 224, 'sites_Vw': 918, 'dimZ': 58, 'dimB_w': 58, 'D_w': 0, 'sec': 3.2}
+cotton ring w= 0 {'sites_V': 88, 'sites_Vw': 88, 'dimZ': 0, 'dimB_w': 0, 'D_w': 0, 'sec': 0.1}
+cotton ring w= 1 {'sites_V': 88, 'sites_Vw': 528, 'dimZ': 0, 'dimB_w': 0, 'D_w': 0, 'sec': 0.4}
+cotton ring w= 2 {'sites_V': 88, 'sites_Vw': 1320, 'dimZ': 0, 'dimB_w': 0, 'D_w': 0, 'sec': 10.8}
+cotton filled w= 0 {'sites_V': 88, 'sites_Vw': 169, 'dimZ': 0, 'dimB_w': 0, 'D_w': 0, 'sec': 0.5}
+cotton filled w= 1 {'sites_V': 88, 'sites_Vw': 675, 'dimZ': 0, 'dimB_w': 0, 'D_w': 0, 'sec': 0.9}
+cotton filled w= 2 {'sites_V': 88, 'sites_Vw': 1445, 'dimZ': 0, 'dimB_w': 0, 'D_w': 0, 'sec': 15.4}
+rank method mismatches: 0

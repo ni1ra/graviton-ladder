@@ -1,0 +1,587 @@
+{
+ "script": "s2_area_side",
+ "ALL_PASS": true,
+ "n_checks": 81,
+ "n_plants": 32,
+ "checks": [
+  {
+   "label": "B1 Green identity, random q #1",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B1 Green identity, random q #2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B1 Green identity, random q #3",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B2 d(A-2V) kills sym grad xi, xi free on S, #11",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B2 dA alone is not invariant (or xi_n has zero mean), #11",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B2 d(A-2V) kills sym grad xi, xi free on S, #12",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B2 dA alone is not invariant (or xi_n has zero mean), #12",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B2 d(A-2V) kills sym grad xi, xi free on S, #13",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B2 dA alone is not invariant (or xi_n has zero mean), #13",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B2 dilation: dA = 8 pi /10, dV = 4 pi /10",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B3 scalar curvature of delta + e q is e R_lin[q] + O(e^2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(16*pi/35, 16*pi/35)"
+  },
+  {
+   "label": "l=2 m=l cos: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(12*pi/35, 12*pi/35)"
+  },
+  {
+   "label": "l=2 m=0: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(388*pi/35, 388*pi/35)"
+  },
+  {
+   "label": "l=2 mixed: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(128*pi/105, 128*pi/105)"
+  },
+  {
+   "label": "l=3 m=l cos: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(16*pi/21, 16*pi/21)"
+  },
+  {
+   "label": "l=3 m=0: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(4768*pi/105, 4768*pi/105)"
+  },
+  {
+   "label": "l=3 mixed: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(512*pi/231, 512*pi/231)"
+  },
+  {
+   "label": "l=4 m=l cos: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(40*pi/33, 40*pi/33)"
+  },
+  {
+   "label": "l=4 m=0: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: B5 tr K = 0 and x.K.x = 0: no eps-linear drive of corner time shift or slice",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: B3 R_lin[q2] = |K|^2 for q2 = u delta",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: B4 -2 d(A-2V)[q2] = A",
+   "pass": true,
+   "detail": "(8944*pi/77, 8944*pi/77)"
+  },
+  {
+   "label": "l=4 mixed: gauge probe has nonzero flux through S",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: B4 other second-order gauges still solve the constraint",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: B4 total unchanged by gauge + harmonic conformal + TT additions",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: B4 -2 dA alone does move (the split is gauge dependent)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B6 radial shift: second-order density of A - 2V is |grad sigma|^2/2 - sigma^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B6 radial shift: first-order density of A - 2V vanishes (k = 2 is the mean curvature)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B6 corner time shift: second-order area density is -|grad tau|^2/2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B6 harmonic extension energy int_B |grad(r^j Y)|^2 = j oint Y^2, j=2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B6 harmonic extension energy int_B |grad(r^j Y)|^2 = j oint Y^2, j=3",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B6 harmonic extension energy int_B |grad(r^j Y)|^2 = j oint Y^2, j=4",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "B6 Hessians (j-1)(j+2)/2 and -j(j-1)/2: zero only at j = 1 (sigma) and j = 0, 1 (tau): 3 + 4 = 7 Poincare modes",
+   "pass": true,
+   "detail": null
+  }
+ ],
+ "plants": [
+  {
+   "label": "P lapse N + (1-r^2)^2 breaks the Green identity, q #1",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "P lapse N + (1-r^2)^2 breaks the Green identity, q #2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "P lapse N + (1-r^2)^2 breaks the Green identity, q #3",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "P k = 2.2: d(A - 2.2V) of a pure-gauge dilation is nonzero",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "P Z1L1 (fixed zeta on a moved corner) = -6 dA + 14 dV: nonzero on a pure-gauge dilation",
+   "caught": true,
+   "detail": "4*pi/5"
+  },
+  {
+   "label": "l=2 m=l cos: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "32*pi/35"
+  },
+  {
+   "label": "l=2 m=0: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "32*pi/35"
+  },
+  {
+   "label": "l=2 mixed: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "32*pi/35"
+  },
+  {
+   "label": "l=3 m=l cos: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "64*pi/21"
+  },
+  {
+   "label": "l=3 m=0: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "64*pi/21"
+  },
+  {
+   "label": "l=3 mixed: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "64*pi/21"
+  },
+  {
+   "label": "l=4 m=l cos: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "1664*pi/105"
+  },
+  {
+   "label": "l=4 m=0: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "1664*pi/105"
+  },
+  {
+   "label": "l=4 mixed: P source x 11/10: total is 1.1 A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: P k = 2.2 on the on-shell q2b differs from q2",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: P Z1L1 total is gauge dependent on shell",
+   "caught": true,
+   "detail": "1664*pi/105"
+  }
+ ],
+ "values": {
+  "Z1L1 on a 10 per cent dilation": "4*pi/5",
+  "l=2 m=l cos: A": "16*pi/35",
+  "l=2 m=0: A": "12*pi/35",
+  "l=2 mixed: A": "388*pi/35",
+  "l=3 m=l cos: A": "128*pi/105",
+  "l=3 m=0: A": "16*pi/21",
+  "l=3 mixed: A": "4768*pi/105",
+  "l=4 m=l cos: A": "512*pi/231",
+  "l=4 m=0: A": "40*pi/33",
+  "l=4 mixed: A": "8944*pi/77"
+ }
+}

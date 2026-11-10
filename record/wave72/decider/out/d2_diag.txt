@@ -1,0 +1,18 @@
+24 data; wedge modular rate M = 0 on 16; plant uncaught on 16
+  uncaught: hess deg=2 #0 | M = 0: True | G = 0: True
+  uncaught: curl deg=2 #0 | M = 0: True | G = 0: True
+  uncaught: hess deg=2 #1 | M = 0: True | G = 0: True
+  uncaught: curl deg=2 #1 | M = 0: True | G = 0: True
+  uncaught: hess deg=3 #0 | M = 0: True | G = 0: True
+  uncaught: curl deg=3 #0 | M = 0: True | G = 0: True
+  uncaught: hess deg=3 #1 | M = 0: True | G = 0: True
+  uncaught: curl deg=3 #1 | M = 0: True | G = 0: True
+  uncaught: hess deg=4 #0 | M = 0: True | G = 0: True
+  uncaught: curl deg=4 #0 | M = 0: True | G = 0: True
+  uncaught: hess deg=4 #1 | M = 0: True | G = 0: True
+  uncaught: curl deg=4 #1 | M = 0: True | G = 0: True
+  uncaught: hess deg=5 #0 | M = 0: True | G = 0: True
+  uncaught: curl deg=5 #0 | M = 0: True | G = 0: True
+  uncaught: hess deg=5 #1 | M = 0: True | G = 0: True
+  uncaught: curl deg=5 #1 | M = 0: True | G = 0: True
+plant caught on every datum with M != 0, and every uncaught datum has M = G = 0: True

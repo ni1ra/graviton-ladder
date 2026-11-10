@@ -1,0 +1,2210 @@
+{
+ "geometry base": {
+  "L_Y": 4,
+  "d_T": 3,
+  "quadrature (n_theta, n_phi, n_rho)": [
+   20,
+   40,
+   16
+  ],
+  "parameters": 45,
+  "flat-Hessian zero modes": 7,
+  "largest zero-mode |eigenvalue|": 7.118041858329969e-06,
+  "smallest nonzero |eigenvalue|": 0.5400311676180447
+ },
+ "CHECK flat Hessian has exactly 7 zero modes (Poincare)": true,
+ "F0 quadrature error": 1.7763568394002505e-15,
+ "geometry raised basis": {
+  "L_Y": 6,
+  "d_T": 4,
+  "quadrature (n_theta, n_phi, n_rho)": [
+   20,
+   40,
+   16
+  ],
+  "parameters": 84,
+  "flat-Hessian zero modes": 7,
+  "largest zero-mode |eigenvalue|": 7.118576948663997e-06,
+  "smallest nonzero |eigenvalue|": 0.055321017087256175
+ },
+ "geometry raised quadrature": {
+  "L_Y": 4,
+  "d_T": 3,
+  "quadrature (n_theta, n_phi, n_rho)": [
+   26,
+   52,
+   22
+  ],
+  "parameters": 45,
+  "flat-Hessian zero modes": 7,
+  "largest zero-mode |eigenvalue|": 7.126330290434235e-06,
+  "smallest nonzero |eigenvalue|": 0.5400311629158316
+ },
+ "CHECK M1 l=2 m=2: |Delta_2/A_l - 1| <= 1e-4": true,
+ "CHECK M1 l=2 m=2: converged; basis and quadrature changes <= 1e-5 A_l": true,
+ "CHECK M1 l=2 m=2: O(eps) coefficient zero (|c1| <= 1e-6 in units of A_l/flux)": true,
+ "CHECK M2 l=3 m=3: |Delta_2/A_l - 1| <= 1e-4": true,
+ "CHECK M2 l=3 m=3: converged; basis and quadrature changes <= 1e-5 A_l": true,
+ "CHECK M2 l=3 m=3: O(eps) coefficient zero (|c1| <= 1e-6 in units of A_l/flux)": true,
+ "CHECK M3 l=4 m=4: |Delta_2/A_l - 1| <= 1e-4": true,
+ "CHECK M3 l=4 m=4: converged; basis and quadrature changes <= 1e-5 A_l": true,
+ "CHECK M3 l=4 m=4: O(eps) coefficient zero (|c1| <= 1e-6 in units of A_l/flux)": true,
+ "CHECK M4 l=2 m=0: |Delta_2/A_l - 1| <= 1e-4": true,
+ "CHECK M4 l=2 m=0: converged; basis and quadrature changes <= 1e-5 A_l": true,
+ "CHECK M4 l=2 m=0: O(eps) coefficient zero (|c1| <= 1e-6 in units of A_l/flux)": true,
+ "CHECK M5 l=2 mixed m: |Delta_2/A_l - 1| <= 1e-4": true,
+ "CHECK M5 l=2 mixed m: converged; basis and quadrature changes <= 1e-5 A_l": true,
+ "CHECK M5 l=2 mixed m: O(eps) coefficient zero (|c1| <= 1e-6 in units of A_l/flux)": true,
+ "CHECK M6 M1 dressed: |Delta_2/A_l - 1| <= 1e-4": true,
+ "CHECK M6 M1 dressed: converged; basis and quadrature changes <= 1e-5 A_l": true,
+ "CHECK M6 M1 dressed: O(eps) coefficient zero (|c1| <= 1e-6 in units of A_l/flux)": true,
+ "summary": {
+  "M1 l=2 m=2": {
+   "A_l": 1.4361566416410483,
+   "Delta_2/A_l": 0.9999999999780161,
+   "|Delta_2/A_l - 1|": 2.1983859177510112e-11,
+   "change with raised basis (units of A_l)": 1.3604672943756668e-12,
+   "change with raised quadrature (units of A_l)": 6.204736724413351e-11,
+   "c1 / (A_l/flux)": 3.714149245938921e-13,
+   "max zero-mode gradient / eps_unit^2": 2.564600936405113e-08,
+   "max |Y coeff| at eps_unit = 0.3": 0.0002684408386070316,
+   "max |T coeff| at eps_unit = 0.3": 1.6219950095669624e-05,
+   "F_fixed - F* at eps_unit = 0.3": 7.210516468347805e-07,
+   "converged": true
+  },
+  "M2 l=3 m=3": {
+   "A_l": 3.829751044376129,
+   "Delta_2/A_l": 0.9999999997823069,
+   "|Delta_2/A_l - 1|": 2.17693085780013e-10,
+   "change with raised basis (units of A_l)": 6.140865593806666e-12,
+   "change with raised quadrature (units of A_l)": 1.1942336008985421e-10,
+   "c1 / (A_l/flux)": -3.1823603629275463e-13,
+   "max zero-mode gradient / eps_unit^2": 2.2194898947677718e-08,
+   "max |Y coeff| at eps_unit = 0.3": 0.0002129231943705919,
+   "max |T coeff| at eps_unit = 0.3": 1.1667268853080828e-10,
+   "F_fixed - F* at eps_unit = 0.3": 5.497939490339832e-07,
+   "converged": true
+  },
+  "M3 l=4 m=4": {
+   "A_l": 6.963183717047507,
+   "Delta_2/A_l": 0.9999999997616996,
+   "|Delta_2/A_l - 1|": 2.383003794292904e-10,
+   "change with raised basis (units of A_l)": 2.10997885830011e-12,
+   "change with raised quadrature (units of A_l)": 1.6291412663349547e-10,
+   "c1 / (A_l/flux)": -7.187776632929394e-13,
+   "max zero-mode gradient / eps_unit^2": 8.88178419609082e-09,
+   "max |Y coeff| at eps_unit = 0.3": 0.0001738810021679088,
+   "max |T coeff| at eps_unit = 0.3": 1.2248540649878562e-10,
+   "F_fixed - F* at eps_unit = 0.3": 3.344086305645533e-07,
+   "converged": true
+  },
+  "M4 l=2 m=0": {
+   "A_l": 1.0771174812307862,
+   "Delta_2/A_l": 0.999999999974559,
+   "|Delta_2/A_l - 1|": 2.5440982653890387e-11,
+   "change with raised basis (units of A_l)": 3.70492525547661e-12,
+   "change with raised quadrature (units of A_l)": 5.561506810636274e-11,
+   "c1 / (A_l/flux)": -3.694601433413245e-14,
+   "max zero-mode gradient / eps_unit^2": 2.8204022952559603e-08,
+   "max |Y coeff| at eps_unit = 0.3": 0.00026844083650991147,
+   "max |T coeff| at eps_unit = 0.3": 2.173128399651643e-10,
+   "F_fixed - F* at eps_unit = 0.3": 7.210787238420835e-07,
+   "converged": true
+  },
+  "M5 l=2 mixed m": {
+   "A_l": 3.5405250540456397,
+   "Delta_2/A_l": 0.9999999999735572,
+   "|Delta_2/A_l - 1|": 2.644284791131213e-11,
+   "change with raised basis (units of A_l)": 3.6338709819006e-12,
+   "change with raised quadrature (units of A_l)": 6.012257358634088e-11,
+   "c1 / (A_l/flux)": 7.44110367569383e-13,
+   "max zero-mode gradient / eps_unit^2": 1.834448870959117e-08,
+   "max |Y coeff| at eps_unit = 0.3": 0.00027217419644488496,
+   "max |T coeff| at eps_unit = 0.3": 5.965538838800329e-06,
+   "F_fixed - F* at eps_unit = 0.3": 7.21054329133608e-07,
+   "converged": true
+  },
+  "M6 M1 dressed": {
+   "A_l": 1.4361566416410483,
+   "Delta_2/A_l": 1.0000000005074343,
+   "|Delta_2/A_l - 1|": 5.074343167876805e-10,
+   "change with raised basis (units of A_l)": 2.8160362930407246e-11,
+   "change with raised quadrature (units of A_l)": 6.050115963773806e-11,
+   "c1 / (A_l/flux)": -6.620612186141453e-10,
+   "max zero-mode gradient / eps_unit^2": 0.0006807512578861948,
+   "max |Y coeff| at eps_unit = 0.3": 0.0006612416395696886,
+   "max |T coeff| at eps_unit = 0.3": 0.00044731941418635416,
+   "F_fixed - F* at eps_unit = 0.3": 9.441125108367032e-07,
+   "converged": true
+  }
+ },
+ "detail": {
+  "M1 l=2 m=2": {
+   "base": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.0001428487141339474,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.342861729326379e-10,
+      "max|Y coeff|": 2.983993920524612e-05,
+      "max|T coeff|": 6.011967657102282e-07,
+      "zero-mode gradient / eps_unit^2": 1.1461640572740316e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014284871413572375,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.993523690297676e-10,
+      "max|Y coeff|": 2.9839942893740384e-05,
+      "max|T coeff|": 6.011765426068527e-07,
+      "zero-mode gradient / eps_unit^2": 2.564600936405113e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032138590449726223,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.769961370164834e-10,
+      "max|Y coeff|": 6.713520449600603e-05,
+      "max|T coeff|": 2.029205542194076e-06,
+      "zero-mode gradient / eps_unit^2": 5.699839302394006e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0003213859044990386,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.431035059621916e-10,
+      "max|Y coeff|": 6.713520148351776e-05,
+      "max|T coeff|": 2.029376429581077e-06,
+      "zero-mode gradient / eps_unit^2": 5.9249086134839505e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937382167382,
+      "F_fixed-F0": -0.000571436211876275,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.2623389047066784e-09,
+      "max|Y coeff|": 0.00011933993105490055,
+      "max|T coeff|": 4.809904878183951e-06,
+      "zero-mode gradient / eps_unit^2": 2.8657672579550275e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937382167382,
+      "F_fixed-F0": -0.000571436211876275,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.3411199552995652e-09,
+      "max|Y coeff|": 0.00011933993582474906,
+      "max|T coeff|": 4.809823716660803e-06,
+      "zero-mode gradient / eps_unit^2": 4.440899087727094e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925280084053355,
+      "F_fixed-F0": -0.0008928757964721257,
+      "newton_iterations": 5,
+      "final_gradient_norm": 6.993526160385742e-10,
+      "max|Y coeff|": 0.0001864455030556547,
+      "max|T coeff|": 9.389190908776161e-06,
+      "zero-mode gradient / eps_unit^2": 2.0512873982043814e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008925280084053355,
+      "F_fixed-F0": -0.0008928757964721257,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.844180615858983e-10,
+      "max|Y coeff|": 0.00018644550193390284,
+      "max|T coeff|": 9.389156548292365e-06,
+      "zero-mode gradient / eps_unit^2": 1.6400539170621639e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850319146391342,
+      "F_fixed-F0": -0.0012857529662841927,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.326333210356389e-09,
+      "max|Y coeff|": 0.00026844083443986947,
+      "max|T coeff|": 1.6219886326420882e-05,
+      "zero-mode gradient / eps_unit^2": 9.86864910848226e-10
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850319146373579,
+      "F_fixed-F0": -0.0012857529662841927,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.1783017240312165e-09,
+      "max|Y coeff|": 0.0002684408386070316,
+      "max|T coeff|": 1.6219950095669624e-05,
+      "zero-mode gradient / eps_unit^2": 1.273254009815747e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": 1.0611854988396917e-14,
+    "c2": -0.014285714285400231,
+    "fit max residual": 8.991288616422288e-16,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.436156641609476,
+    "A_l": 1.4361566416410483,
+    "Delta_2/A_l": 0.9999999999780161,
+    "|Delta_2/A_l - 1|": 2.1983859177510112e-11,
+    "c1 / (A_l/flux)": 3.714149245938921e-13,
+    "all newton runs converged": true
+   },
+   "raised basis": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871413572375,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.0950205662618753e-09,
+      "max|Y coeff|": 2.9839939205397123e-05,
+      "max|T coeff|": 6.013204548857143e-07,
+      "zero-mode gradient / eps_unit^2": 1.3749602545792495e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014284871413572375,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.769964324702556e-10,
+      "max|Y coeff|": 2.983994289437494e-05,
+      "max|T coeff|": 6.013002313508333e-07,
+      "zero-mode gradient / eps_unit^2": 1.025256846656491e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.0003213859044954859,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.850375779568967e-10,
+      "max|Y coeff|": 6.713520449593982e-05,
+      "max|T coeff|": 2.029329230133628e-06,
+      "zero-mode gradient / eps_unit^2": 5.698072240916978e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00032138590449726223,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.0204399355883515e-09,
+      "max|Y coeff|": 6.71352050171045e-05,
+      "max|T coeff|": 2.0291290539314123e-06,
+      "zero-mode gradient / eps_unit^2": 7.97508984592745e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937382167382,
+      "F_fixed-F0": -0.000571436211876275,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.5020460747847903e-09,
+      "max|Y coeff|": 0.00011933993458877902,
+      "max|T coeff|": 4.809904877792885e-06,
+      "zero-mode gradient / eps_unit^2": 2.8675322639945177e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937382149619,
+      "F_fixed-F0": -0.000571436211876275,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.4210858940180505e-09,
+      "max|Y coeff|": 0.0001193399393582563,
+      "max|T coeff|": 4.809700027113225e-06,
+      "zero-mode gradient / eps_unit^2": 5.160269209769045e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925280084017828,
+      "F_fixed-F0": -0.0008928757964721257,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.483161831100883e-10,
+      "max|Y coeff|": 0.00018644550305500754,
+      "max|T coeff|": 9.389190908270877e-06,
+      "zero-mode gradient / eps_unit^2": 2.1304717182428767e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008925280084053355,
+      "F_fixed-F0": -0.0008928757964721257,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.969755206318513e-10,
+      "max|Y coeff|": 0.00018644550546785638,
+      "max|T coeff|": 9.389156546675328e-06,
+      "zero-mode gradient / eps_unit^2": 3.3037141963960664e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850319146355815,
+      "F_fixed-F0": -0.0012857529662841927,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.4266256662460364e-09,
+      "max|Y coeff|": 0.0002684408344401584,
+      "max|T coeff|": 1.6219886326182066e-05,
+      "zero-mode gradient / eps_unit^2": 1.5290589821528282e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850319146391342,
+      "F_fixed-F0": -0.0012857529662841927,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.4431186681506065e-09,
+      "max|Y coeff|": 0.0002684408350730226,
+      "max|T coeff|": 1.62200737842621e-05,
+      "zero-mode gradient / eps_unit^2": 3.0578076199923647e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -1.8694837279540012e-16,
+    "c2": -0.014285714285380797,
+    "fit max residual": 1.7009505783038836e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.4361566416075222,
+    "A_l": 1.4361566416410483,
+    "Delta_2/A_l": 0.9999999999766557,
+    "|Delta_2/A_l - 1|": 2.334432647188578e-11,
+    "c1 / (A_l/flux)": -6.543193047839005e-15,
+    "all newton runs converged": true
+   },
+   "raised quadrature": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871414460554,
+      "F_fixed-F0": -0.00014285762038745986,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.049698645246197e-10,
+      "max|Y coeff|": 2.9839942738229594e-05,
+      "max|T coeff|": 6.011965952319431e-07,
+      "zero-mode gradient / eps_unit^2": 1.1260585511312358e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014284871414460554,
+      "F_fixed-F0": -0.00014285762038745986,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.993521616807637e-10,
+      "max|Y coeff|": 2.9839942892952105e-05,
+      "max|T coeff|": 6.013004067985142e-07,
+      "zero-mode gradient / eps_unit^2": 1.1466312119293253e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032138590450792037,
+      "F_fixed-F0": -0.0003214309889028044,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.217248763447691e-10,
+      "max|Y coeff|": 6.71352009596075e-05,
+      "max|T coeff|": 2.029205160773551e-06,
+      "zero-mode gradient / eps_unit^2": 3.947459642739042e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00032138590450969673,
+      "F_fixed-F0": -0.0003214309889028044,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.270054267755206e-10,
+      "max|Y coeff|": 6.713519794751477e-05,
+      "max|T coeff|": 2.029129455146909e-06,
+      "zero-mode gradient / eps_unit^2": 4.472141838378287e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937382273964,
+      "F_fixed-F0": -0.0005714362118869332,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.2370893619528321e-09,
+      "max|Y coeff|": 0.00011933993811832523,
+      "max|T coeff|": 4.80990420480256e-06,
+      "zero-mode gradient / eps_unit^2": 2.7271147583824076e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937382273964,
+      "F_fixed-F0": -0.0005714362118869332,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.3586515398854771e-09,
+      "max|Y coeff|": 0.00011933993228752262,
+      "max|T coeff|": 4.809824435779003e-06,
+      "zero-mode gradient / eps_unit^2": 2.2204460489266307e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925280084159937,
+      "F_fixed-F0": -0.0008928757964792311,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.742961546923479e-10,
+      "max|Y coeff|": 0.00018644551011608065,
+      "max|T coeff|": 9.389066177607518e-06,
+      "zero-mode gradient / eps_unit^2": 2.400863300801436e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008925280084142173,
+      "F_fixed-F0": -0.0008928757964792311,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.536443456782923e-10,
+      "max|Y coeff|": 0.00018644550192906237,
+      "max|T coeff|": 9.38915768146766e-06,
+      "zero-mode gradient / eps_unit^2": 2.842170942906253e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850319146462397,
+      "F_fixed-F0": -0.0012857529662966272,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.2402737174700825e-09,
+      "max|Y coeff|": 0.000268440837962611,
+      "max|T coeff|": 1.6220132217003426e-05,
+      "zero-mode gradient / eps_unit^2": 1.9261307388002906e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.001285031914648016,
+      "F_fixed-F0": -0.0012857529662966272,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.2716780567093053e-09,
+      "max|Y coeff|": 0.00026844083506665726,
+      "max|T coeff|": 1.622019911788746e-05,
+      "zero-mode gradient / eps_unit^2": 1.1115988127516234e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": 1.0593870978715158e-14,
+    "c2": -0.014285714286286623,
+    "fit max residual": 3.718027405050228e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.4361566416985858,
+    "A_l": 1.4361566416410483,
+    "Delta_2/A_l": 1.0000000000400635,
+    "|Delta_2/A_l - 1|": 4.00635080666234e-11,
+    "c1 / (A_l/flux)": 3.7078548425503054e-13,
+    "all newton runs converged": true
+   }
+  },
+  "M2 l=3 m=3": {
+   "base": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -7.93583527105568e-05,
+      "F_fixed-F0": -7.936514714756981e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.284376187021054e-10,
+      "max|Y coeff|": 2.3680950635409953e-05,
+      "max|T coeff|": 1.0675471510408193e-10,
+      "zero-mode gradient / eps_unit^2": 1.538178215414927e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -7.93583527105568e-05,
+      "F_fixed-F0": -7.936514714756981e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.646519185156545e-10,
+      "max|Y coeff|": 2.368095416935074e-05,
+      "max|T coeff|": 2.3011743463543183e-10,
+      "zero-mode gradient / eps_unit^2": 2.2194898947677718e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00017853738032513888,
+      "F_fixed-F0": -0.00017857177173574712,
+      "newton_iterations": 3,
+      "final_gradient_norm": 9.315293219463114e-10,
+      "max|Y coeff|": 5.327407534005992e-05,
+      "max|T coeff|": 1.1938315809606804e-10,
+      "zero-mode gradient / eps_unit^2": 4.555756649382196e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00017853738032336253,
+      "F_fixed-F0": -0.00017857177173574712,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.215595331678048e-10,
+      "max|Y coeff|": 5.327407534004784e-05,
+      "max|T coeff|": 1.1574025609179427e-10,
+      "zero-mode gradient / eps_unit^2": 2.0379428075659946e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0003173527322068992,
+      "F_fixed-F0": -0.0003174614020267086,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.0009263530418327e-09,
+      "max|Y coeff|": 9.468947375463033e-05,
+      "max|T coeff|": 1.9288078608528887e-10,
+      "zero-mode gradient / eps_unit^2": 4.4431034246150954e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.00031735273220867555,
+      "F_fixed-F0": -0.0003174614020267086,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.426000248251929e-10,
+      "max|Y coeff|": 9.468947728850161e-05,
+      "max|T coeff|": 1.0216835847753464e-10,
+      "zero-mode gradient / eps_unit^2": 3.4397544888209316e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0004957691620699478,
+      "F_fixed-F0": -0.0004960343939064416,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.324106469489253e-10,
+      "max|Y coeff|": 0.00014791226441739506,
+      "max|T coeff|": 1.1538151669382859e-10,
+      "zero-mode gradient / eps_unit^2": 2.4621326078340957e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0004957691620699478,
+      "F_fixed-F0": -0.0004960343939064416,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.702336418709904e-10,
+      "max|Y coeff|": 0.00014791226088348988,
+      "max|T coeff|": 1.7000335423609693e-10,
+      "zero-mode gradient / eps_unit^2": 1.64181929230349e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0007137414109958939,
+      "F_fixed-F0": -0.0007142912049449279,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.879798535997691e-10,
+      "max|Y coeff|": 0.0002129231943705919,
+      "max|T coeff|": 9.985123239235478e-11,
+      "zero-mode gradient / eps_unit^2": 1.783996765196042e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0007137414109958939,
+      "F_fixed-F0": -0.0007142912049449279,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.588601452154547e-10,
+      "max|Y coeff|": 0.0002129231873028218,
+      "max|T coeff|": 1.1667268853080828e-10,
+      "zero-mode gradient / eps_unit^2": 1.5286153079394753e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -5.05136565544055e-15,
+    "c2": -0.007936507934780214,
+    "fit max residual": 7.059511395596241e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 3.8297510435424185,
+    "A_l": 3.829751044376129,
+    "Delta_2/A_l": 0.9999999997823069,
+    "|Delta_2/A_l - 1|": 2.17693085780013e-10,
+    "c1 / (A_l/flux)": -3.1823603629275463e-13,
+    "all newton runs converged": true
+   },
+   "raised basis": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -7.93583527105568e-05,
+      "F_fixed-F0": -7.936514714756981e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.6968628611958436e-09,
+      "max|Y coeff|": 2.368095063791969e-05,
+      "max|T coeff|": 5.786620795151983e-08,
+      "zero-mode gradient / eps_unit^2": 1.60494186572987e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -7.93583527105568e-05,
+      "F_fixed-F0": -7.936514714756981e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.7130565680865043e-09,
+      "max|Y coeff|": 2.3680950632921815e-05,
+      "max|T coeff|": 5.7627697595018296e-08,
+      "zero-mode gradient / eps_unit^2": 1.7763568395184844e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00017853738031448074,
+      "F_fixed-F0": -0.00017857177173574712,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.1057731231275989e-09,
+      "max|Y coeff|": 5.32740824170476e-05,
+      "max|T coeff|": 1.9530107296081762e-07,
+      "zero-mode gradient / eps_unit^2": 5.0940731375722e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00017853738031448074,
+      "F_fixed-F0": -0.00017857177173574712,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.810281905406615e-10,
+      "max|Y coeff|": 5.327407886453185e-05,
+      "max|T coeff|": 1.954698868330605e-07,
+      "zero-mode gradient / eps_unit^2": 7.88254576689072e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0003173527321607139,
+      "F_fixed-F0": -0.0003174614020267086,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.483159095110189e-10,
+      "max|Y coeff|": 9.468949497999437e-05,
+      "max|T coeff|": 4.632483376292752e-07,
+      "zero-mode gradient / eps_unit^2": 4.440892098689824e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0003173527321607139,
+      "F_fixed-F0": -0.0003174614020267086,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.425999590285597e-10,
+      "max|Y coeff|": 9.468949847062098e-05,
+      "max|T coeff|": 4.624919845353601e-07,
+      "zero-mode gradient / eps_unit^2": 2.2937203879460718e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0004957691618976412,
+      "F_fixed-F0": -0.0004960343939064416,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.810253231674904e-10,
+      "max|Y coeff|": 0.00014791225739155286,
+      "max|T coeff|": 9.038108047574864e-07,
+      "zero-mode gradient / eps_unit^2": 2.1313611081882e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0004957691618958648,
+      "F_fixed-F0": -0.0004960343939064416,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.524652443721225e-10,
+      "max|Y coeff|": 0.0001479122573075778,
+      "max|T coeff|": 9.036191400098242e-07,
+      "zero-mode gradient / eps_unit^2": 1.2309591439959006e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0007137414104843032,
+      "F_fixed-F0": -0.0007142912049449279,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.230225625250138e-10,
+      "max|Y coeff|": 0.00021292319444346283,
+      "max|T coeff|": 1.5604829129175472e-06,
+      "zero-mode gradient / eps_unit^2": 2.0371474629325757e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0007137414104825268,
+      "F_fixed-F0": -0.0007142912049449279,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.091411604985518e-09,
+      "max|Y coeff|": 0.00021292319429787576,
+      "max|T coeff|": 1.5611921044315327e-06,
+      "zero-mode gradient / eps_unit^2": 1.528203576170412e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": 2.6190242855076964e-15,
+    "c2": -0.007936507934731477,
+    "fit max residual": 6.877744901379046e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 3.8297510435189004,
+    "A_l": 3.829751044376129,
+    "Delta_2/A_l": 0.999999999776166,
+    "|Delta_2/A_l - 1|": 2.2383395137381967e-10,
+    "c1 / (A_l/flux)": 1.6499852998698488e-13,
+    "all newton runs converged": true
+   },
+   "raised quadrature": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -7.93583527229913e-05,
+      "F_fixed-F0": -7.936514715822796e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.140288751625272e-10,
+      "max|Y coeff|": 2.368095063371364e-05,
+      "max|T coeff|": 1.289914221639381e-10,
+      "zero-mode gradient / eps_unit^2": 2.0356003545026597e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -7.93583527229913e-05,
+      "F_fixed-F0": -7.936514715822796e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.936897834177441e-10,
+      "max|Y coeff|": 2.3680950633801706e-05,
+      "max|T coeff|": 1.0654432653027663e-10,
+      "zero-mode gradient / eps_unit^2": 1.8358193437697486e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00017853738033579702,
+      "F_fixed-F0": -0.00017857177174285255,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.091693724536568e-10,
+      "max|Y coeff|": 5.32740753361627e-05,
+      "max|T coeff|": 1.1326467335906925e-10,
+      "zero-mode gradient / eps_unit^2": 7.134105981643064e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00017853738033579702,
+      "F_fixed-F0": -0.00017857177174285255,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.280367563008365e-10,
+      "max|Y coeff|": 5.3274078870067295e-05,
+      "max|T coeff|": 1.160008620199042e-10,
+      "zero-mode gradient / eps_unit^2": 3.153740082105716e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0003173527322140046,
+      "F_fixed-F0": -0.00031746140203559037,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.705599136879307e-10,
+      "max|Y coeff|": 9.46894808155598e-05,
+      "max|T coeff|": 1.1752154591242285e-10,
+      "zero-mode gradient / eps_unit^2": 3.3170185200001495e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.000317352732215781,
+      "F_fixed-F0": -0.00031746140203559037,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.705598948808308e-10,
+      "max|Y coeff|": 9.468948081557124e-05,
+      "max|T coeff|": 8.445368712817498e-11,
+      "zero-mode gradient / eps_unit^2": 3.4403544961028624e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.000495769162080606,
+      "F_fixed-F0": -0.0004960343939170997,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.691851568360055e-10,
+      "max|Y coeff|": 0.00014791226087267664,
+      "max|T coeff|": 2.0033907451815123e-10,
+      "zero-mode gradient / eps_unit^2": 2.169542791175885e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0004957691620823823,
+      "F_fixed-F0": -0.0004960343939170997,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.7962298458125676e-09,
+      "max|Y coeff|": 0.00014791219726163372,
+      "max|T coeff|": 1.187535210480004e-10,
+      "zero-mode gradient / eps_unit^2": 3.5142719738613023e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0007137414110101048,
+      "F_fixed-F0": -0.0007142912049520334,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.702336385984812e-10,
+      "max|Y coeff|": 0.00021292319435500817,
+      "max|T coeff|": 7.916089059601794e-11,
+      "zero-mode gradient / eps_unit^2": 7.882403127281531e-10
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0007137414110083284,
+      "F_fixed-F0": -0.0007142912049520334,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.324107693598841e-10,
+      "max|Y coeff|": 0.00021292318728714394,
+      "max|T coeff|": 1.552268849466866e-10,
+      "zero-mode gradient / eps_unit^2": 1.2737925948052907e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -5.429580348419245e-15,
+    "c2": -0.007936507935728018,
+    "fit max residual": 1.094935773993111e-14,
+    "Delta_2 (raw units) = -2 c2 * flux": 3.82975104399978,
+    "A_l": 3.829751044376129,
+    "Delta_2/A_l": 0.9999999999017303,
+    "|Delta_2/A_l - 1|": 9.826972569015879e-11,
+    "c1 / (A_l/flux)": -3.420635619504124e-13,
+    "all newton runs converged": true
+   }
+  },
+  "M3 l=4 m=4": {
+   "base": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -5.050093716896242e-05,
+      "F_fixed-F0": -5.0505069994599694e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.879801114056811e-10,
+      "max|Y coeff|": 1.933937334090311e-05,
+      "max|T coeff|": 1.9260857067834997e-10,
+      "zero-mode gradient / eps_unit^2": 8.88178419609082e-09
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -5.0500937167186066e-05,
+      "F_fixed-F0": -5.0505069994599694e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.042797083198297e-10,
+      "max|Y coeff|": 1.9339369806938746e-05,
+      "max|T coeff|": 7.808287551625199e-11,
+      "zero-mode gradient / eps_unit^2": 8.8817841947261e-09
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00011361554330058254,
+      "F_fixed-F0": -0.00011363646232354085,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.944110009304031e-10,
+      "max|Y coeff|": 4.350677567867246e-05,
+      "max|T coeff|": 1.5114681569949745e-10,
+      "zero-mode gradient / eps_unit^2": 7.894919284407617e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0001136155433023589,
+      "F_fixed-F0": -0.00011363646232354085,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.089045145941352e-10,
+      "max|Y coeff|": 4.350677567860118e-05,
+      "max|T coeff|": 1.2595832050913133e-10,
+      "zero-mode gradient / eps_unit^2": 4.557031016383818e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.00020195441463677355,
+      "F_fixed-F0": -0.00020202051391571274,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.379054952298379e-10,
+      "max|Y coeff|": 7.732850437461651e-05,
+      "max|T coeff|": 1.2178879099628113e-10,
+      "zero-mode gradient / eps_unit^2": 4.587258705042795e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0002019544146385499,
+      "F_fixed-F0": -0.00020202051391571274,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.331851771458848e-10,
+      "max|Y coeff|": 7.7328504374648e-05,
+      "max|T coeff|": 1.19988912037515e-10,
+      "zero-mode gradient / eps_unit^2": 2.86636889922962e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.00031549599947311435,
+      "F_fixed-F0": -0.0003156573271230201,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.875718596995242e-09,
+      "max|Y coeff|": 0.00012079192555867151,
+      "max|T coeff|": 7.786921595721294e-11,
+      "zero-mode gradient / eps_unit^2": 3.2821273637767925e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0003154959994748907,
+      "F_fixed-F0": -0.0003156573271230201,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.8071756320777906e-09,
+      "max|Y coeff|": 0.00012079192555870305,
+      "max|T coeff|": 6.429393673906353e-11,
+      "zero-mode gradient / eps_unit^2": 2.936004617808755e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.00045421262490030756,
+      "F_fixed-F0": -0.00045454703352909576,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.879802586221028e-10,
+      "max|Y coeff|": 0.0001738810021679088,
+      "max|T coeff|": 8.237893241902854e-11,
+      "zero-mode gradient / eps_unit^2": 1.9941087499506937e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0004542126248985312,
+      "F_fixed-F0": -0.00045454703352909576,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.042794283672484e-10,
+      "max|Y coeff|": 0.00017388099863386468,
+      "max|T coeff|": 1.2248540649878562e-10,
+      "zero-mode gradient / eps_unit^2": 1.9732390670812348e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -7.260380437302417e-15,
+    "c2": -0.005050505049301513,
+    "fit max residual": 5.1348628040542854e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 6.963183715388177,
+    "A_l": 6.963183717047507,
+    "Delta_2/A_l": 0.9999999997616996,
+    "|Delta_2/A_l - 1|": 2.383003794292904e-10,
+    "c1 / (A_l/flux)": -7.187776632929394e-13,
+    "all newton runs converged": true
+   },
+   "raised basis": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -5.050094491387824e-05,
+      "F_fixed-F0": -5.0505069994599694e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 9.44146661189328e-10,
+      "max|Y coeff|": 1.9339373340939936e-05,
+      "max|T coeff|": 3.163323808143309e-10,
+      "zero-mode gradient / eps_unit^2": 2.0634397162965485e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -5.050094491387824e-05,
+      "F_fixed-F0": -5.0505069994599694e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.1477793757813173e-09,
+      "max|Y coeff|": 1.9339373340916432e-05,
+      "max|T coeff|": 4.128270244885686e-10,
+      "zero-mode gradient / eps_unit^2": 8.884352670826755e-09
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00011361558249056714,
+      "F_fixed-F0": -0.00011363646232354085,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.0357853277233395e-09,
+      "max|Y coeff|": 4.3506807484130735e-05,
+      "max|T coeff|": 6.315610591180652e-10,
+      "zero-mode gradient / eps_unit^2": 9.868625682768071e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00011361558249056714,
+      "F_fixed-F0": -0.00011363646232354085,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.1715880811535294e-09,
+      "max|Y coeff|": 4.350680041670324e-05,
+      "max|T coeff|": 5.32770065527794e-10,
+      "zero-mode gradient / eps_unit^2": 5.924677195326791e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.00020195453843641076,
+      "F_fixed-F0": -0.00020202051391571274,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.2338968854391561e-09,
+      "max|Y coeff|": 7.732858212172272e-05,
+      "max|T coeff|": 3.7599724239939655e-10,
+      "zero-mode gradient / eps_unit^2": 3.4412768176725195e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.00020195453843641076,
+      "F_fixed-F0": -0.00020202051391571274,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.168218457314139e-09,
+      "max|Y coeff|": 7.732858565578166e-05,
+      "max|T coeff|": 4.5551997471283803e-10,
+      "zero-mode gradient / eps_unit^2": 5.158799431758668e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.00031549630151594954,
+      "F_fixed-F0": -0.0003156573271230201,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.9049311228723503e-09,
+      "max|Y coeff|": 0.00012079213406224132,
+      "max|T coeff|": 3.3064491773606333e-10,
+      "zero-mode gradient / eps_unit^2": 1.6404818124837563e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.00031549630151594954,
+      "F_fixed-F0": -0.0003156573271230201,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.913194725837951e-09,
+      "max|Y coeff|": 0.00012079213759644469,
+      "max|T coeff|": 3.563939075407177e-10,
+      "zero-mode gradient / eps_unit^2": 2.0514045272340576e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0004542132507090457,
+      "F_fixed-F0": -0.00045454703352909576,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.0281406026526666e-09,
+      "max|Y coeff|": 0.0001738814333106191,
+      "max|T coeff|": 6.557008665501563e-10,
+      "zero-mode gradient / eps_unit^2": 1.4245427758217065e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0004542132507090457,
+      "F_fixed-F0": -0.00045454703352909576,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.272852925674093e-10,
+      "max|Y coeff|": 0.00017388142624290856,
+      "max|T coeff|": 3.6209763207375256e-10,
+      "zero-mode gradient / eps_unit^2": 1.4806839828561908e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -9.818482366962094e-20,
+    "c2": -0.005050505049312169,
+    "fit max residual": 5.56319042482184e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 6.963183715402869,
+    "A_l": 6.963183717047507,
+    "Delta_2/A_l": 0.9999999997638096,
+    "|Delta_2/A_l - 1|": 2.361904005709903e-10,
+    "c1 / (A_l/flux)": -9.720297543292475e-18,
+    "all newton runs converged": true
+   },
+   "raised quadrature": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -5.050093717784421e-05,
+      "F_fixed-F0": -5.0505070005257835e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.691856107752664e-10,
+      "max|Y coeff|": 1.933937687291093e-05,
+      "max|T coeff|": 1.7837189490053126e-10,
+      "zero-mode gradient / eps_unit^2": 1.8340905053979502e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -5.0500937179620564e-05,
+      "F_fixed-F0": -5.0505070005257835e-05,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.586907316457812e-10,
+      "max|Y coeff|": 1.9339369805111506e-05,
+      "max|T coeff|": 7.55430874827497e-11,
+      "zero-mode gradient / eps_unit^2": 4.897911917942423e-09
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00011361554331124069,
+      "F_fixed-F0": -0.00011363646233242264,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.822228644790956e-10,
+      "max|Y coeff|": 4.350677214043038e-05,
+      "max|T coeff|": 1.5523321884579698e-10,
+      "zero-mode gradient / eps_unit^2": 5.098573506193453e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00011361554330946433,
+      "F_fixed-F0": -0.00011363646233242264,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.091688997376735e-10,
+      "max|Y coeff|": 4.350676860638205e-05,
+      "max|T coeff|": 9.214349443895031e-11,
+      "zero-mode gradient / eps_unit^2": 7.205292201466002e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0002019544146474317,
+      "F_fixed-F0": -0.00020202051392637088,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.691852968654666e-10,
+      "max|Y coeff|": 7.732850436690026e-05,
+      "max|T coeff|": 9.5675663972644e-11,
+      "zero-mode gradient / eps_unit^2": 3.440011758588909e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0002019544146474317,
+      "F_fixed-F0": -0.00020202051392637088,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.426000293519563e-10,
+      "max|Y coeff|": 7.732850083292968e-05,
+      "max|T coeff|": 9.017741021151106e-11,
+      "zero-mode gradient / eps_unit^2": 2.2042926772826538e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0003154959994837725,
+      "F_fixed-F0": -0.00031565732713723094,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.98404035980198e-09,
+      "max|Y coeff|": 0.00012079192554702619,
+      "max|T coeff|": 7.468964714192115e-11,
+      "zero-mode gradient / eps_unit^2": 2.1565283185802315e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0003154959994837725,
+      "F_fixed-F0": -0.00031565732713723094,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.8331795262893613e-09,
+      "max|Y coeff|": 0.00012079192554711101,
+      "max|T coeff|": 5.991818359136794e-11,
+      "zero-mode gradient / eps_unit^2": 3.303154432130607e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.00045421262490918934,
+      "F_fixed-F0": -0.00045454703353797754,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.105426953002843e-10,
+      "max|Y coeff|": 0.00017388100568495622,
+      "max|T coeff|": 7.542758083556536e-11,
+      "zero-mode gradient / eps_unit^2": 1.50647699051747e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.00045421262490918934,
+      "F_fixed-F0": -0.00045454703353797754,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.742960652351077e-10,
+      "max|Y coeff|": 0.0001738810021510154,
+      "max|T coeff|": 1.2173208050289915e-10,
+      "zero-mode gradient / eps_unit^2": 1.7829598792251345e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": 1.8320246485870595e-15,
+    "c2": -0.005050505050124311,
+    "fit max residual": 8.931508419136869e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 6.963183716522578,
+    "A_l": 6.963183717047507,
+    "Delta_2/A_l": 0.9999999999246137,
+    "|Delta_2/A_l - 1|": 7.538625279579492e-11,
+    "c1 / (A_l/flux)": 1.813704402101189e-13,
+    "all newton runs converged": true
+   }
+  },
+  "M4 l=2 m=0": {
+   "base": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871409842026,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.483924537457534e-10,
+      "max|Y coeff|": 2.9839939281070647e-05,
+      "max|T coeff|": 1.0669696988342973e-10,
+      "zero-mode gradient / eps_unit^2": 2.8204022952559603e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014284871409842026,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 3,
+      "final_gradient_norm": 5.891510945632885e-10,
+      "max|Y coeff|": 2.9839939281058287e-05,
+      "max|T coeff|": 1.0669696261482587e-10,
+      "zero-mode gradient / eps_unit^2": 1.5386494176019447e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032138590407271295,
+      "F_fixed-F0": -0.0003214309888921463,
+      "newton_iterations": 3,
+      "final_gradient_norm": 4.782987197807176e-10,
+      "max|Y coeff|": 6.713520475328563e-05,
+      "max|T coeff|": 8.53284266046823e-11,
+      "zero-mode gradient / eps_unit^2": 4.560601678267428e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0003213859040709366,
+      "F_fixed-F0": -0.0003214309888921463,
+      "newton_iterations": 3,
+      "final_gradient_norm": 8.331854905815155e-10,
+      "max|Y coeff|": 6.71352012194373e-05,
+      "max|T coeff|": 8.532761380148736e-11,
+      "zero-mode gradient / eps_unit^2": 6.840793162469983e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937358239856,
+      "F_fixed-F0": -0.0005714362118602878,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.049703156620639e-10,
+      "max|Y coeff|": 0.00011933992813283424,
+      "max|T coeff|": 7.703615094606977e-11,
+      "zero-mode gradient / eps_unit^2": 3.844075892659632e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937358239856,
+      "F_fixed-F0": -0.0005714362118602878,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.049697385116691e-10,
+      "max|Y coeff|": 0.00011933992106501209,
+      "max|T coeff|": 1.2417251386181047e-10,
+      "zero-mode gradient / eps_unit^2": 1.9235367516807383e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925279992748614,
+      "F_fixed-F0": -0.0008928757964010714,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.0509068213842102e-09,
+      "max|Y coeff|": 0.00018644550071844238,
+      "max|T coeff|": 8.884262043467696e-11,
+      "zero-mode gradient / eps_unit^2": 3.690684200664483e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.000892527999273085,
+      "F_fixed-F0": -0.0008928757964010714,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.123466730327643e-09,
+      "max|Y coeff|": 0.0001864454971844804,
+      "max|T coeff|": 1.61657054554411e-10,
+      "zero-mode gradient / eps_unit^2": 1.4215366794851875e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850318873613986,
+      "F_fixed-F0": -0.0012857529660852407,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.270052579515941e-10,
+      "max|Y coeff|": 0.0002684408188400678,
+      "max|T coeff|": 9.362223785816905e-11,
+      "zero-mode gradient / eps_unit^2": 2.848608373522569e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850318873613986,
+      "F_fixed-F0": -0.0012857529660852407,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.993522347301356e-10,
+      "max|Y coeff|": 0.00026844083650991147,
+      "max|T coeff|": 2.173128399651643e-10,
+      "zero-mode gradient / eps_unit^2": 1.1396941258406189e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -1.0556004095466414e-15,
+    "c2": -0.014285714285350842,
+    "fit max residual": 1.6607537827589836e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.0771174812033832,
+    "A_l": 1.0771174812307862,
+    "Delta_2/A_l": 0.999999999974559,
+    "|Delta_2/A_l - 1|": 2.5440982653890387e-11,
+    "c1 / (A_l/flux)": -3.694601433413245e-14,
+    "all newton runs converged": true
+   },
+   "raised basis": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871409842026,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 3,
+      "final_gradient_norm": 9.52466478097277e-10,
+      "max|Y coeff|": 2.9839942815076166e-05,
+      "max|T coeff|": 4.104703733705011e-10,
+      "zero-mode gradient / eps_unit^2": 1.8335378214571375e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.0001428487140966439,
+      "F_fixed-F0": -0.00014285762037680172,
+      "newton_iterations": 3,
+      "final_gradient_norm": 9.648082141407725e-10,
+      "max|Y coeff|": 2.9839939281016765e-05,
+      "max|T coeff|": 4.793620617941882e-10,
+      "zero-mode gradient / eps_unit^2": 1.6053893599468902e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032138590407271295,
+      "F_fixed-F0": -0.0003214309888921463,
+      "newton_iterations": 3,
+      "final_gradient_norm": 9.688881946948203e-10,
+      "max|Y coeff|": 6.713519415144797e-05,
+      "max|T coeff|": 3.048600285760376e-10,
+      "zero-mode gradient / eps_unit^2": 7.97494155489118e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0003213859040709366,
+      "F_fixed-F0": -0.0003214309888921463,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.1443410929229003e-09,
+      "max|Y coeff|": 6.713519768520688e-05,
+      "max|T coeff|": 6.347206853403188e-10,
+      "zero-mode gradient / eps_unit^2": 8.149536954472556e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937358222092,
+      "F_fixed-F0": -0.0005714362118602878,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.0621073350981882e-09,
+      "max|Y coeff|": 0.00011933992813311948,
+      "max|T coeff|": 5.666306475434133e-10,
+      "zero-mode gradient / eps_unit^2": 2.565214729958808e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937358239856,
+      "F_fixed-F0": -0.0005714362118602878,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.2338969062168505e-09,
+      "max|Y coeff|": 0.0001193399316669909,
+      "max|T coeff|": 1.005952787180191e-09,
+      "zero-mode gradient / eps_unit^2": 3.845124228667715e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.000892527999273085,
+      "F_fixed-F0": -0.0008928757964010714,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.2370895217066325e-09,
+      "max|Y coeff|": 0.00018644549718405313,
+      "max|T coeff|": 7.330416816301844e-10,
+      "zero-mode gradient / eps_unit^2": 2.200655340525246e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008925279992748614,
+      "F_fixed-F0": -0.0008928757964010714,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.2145656882186162e-09,
+      "max|Y coeff|": 0.0001864455007183545,
+      "max|T coeff|": 4.058824613827735e-10,
+      "zero-mode gradient / eps_unit^2": 1.4204218039795474e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850318873613986,
+      "F_fixed-F0": -0.0012857529660852407,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.881775835634183e-10,
+      "max|Y coeff|": 0.000268440832975931,
+      "max|T coeff|": 3.1558817172310124e-10,
+      "zero-mode gradient / eps_unit^2": 1.2740871288718174e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850318873613986,
+      "F_fixed-F0": -0.0012857529660852407,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.0204400174317425e-09,
+      "max|Y coeff|": 0.00026844082237439726,
+      "max|T coeff|": 6.340626296297527e-10,
+      "zero-mode gradient / eps_unit^2": 1.7097324527271928e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -1.6046542592245008e-14,
+    "c2": -0.014285714285297917,
+    "fit max residual": 1.5190756638694403e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.0771174811993927,
+    "A_l": 1.0771174812307862,
+    "Delta_2/A_l": 0.9999999999708541,
+    "|Delta_2/A_l - 1|": 2.9145907909367e-11,
+    "c1 / (A_l/flux)": -5.616289907285753e-13,
+    "all newton runs converged": true
+   },
+   "raised quadrature": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871410730204,
+      "F_fixed-F0": -0.00014285762038745986,
+      "newton_iterations": 3,
+      "final_gradient_norm": 5.958079413880481e-10,
+      "max|Y coeff|": 2.983993927783557e-05,
+      "max|T coeff|": 9.302370870880802e-11,
+      "zero-mode gradient / eps_unit^2": 1.375610356055632e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.0001428487141090784,
+      "F_fixed-F0": -0.00014285762038745986,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.4839235993372e-10,
+      "max|Y coeff|": 2.9839939277800805e-05,
+      "max|T coeff|": 1.2712065124849942e-10,
+      "zero-mode gradient / eps_unit^2": 1.348334948773707e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032138590408159473,
+      "F_fixed-F0": -0.0003214309889028044,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.536442046850768e-10,
+      "max|Y coeff|": 6.713520474608317e-05,
+      "max|T coeff|": 9.53677342670365e-11,
+      "zero-mode gradient / eps_unit^2": 5.09733511043121e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00032138590408159473,
+      "F_fixed-F0": -0.0003214309889028044,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.342861554019322e-10,
+      "max|Y coeff|": 6.713520474609318e-05,
+      "max|T coeff|": 9.536798792449496e-11,
+      "zero-mode gradient / eps_unit^2": 2.174464002549806e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937358346437,
+      "F_fixed-F0": -0.0005714362118673932,
+      "newton_iterations": 3,
+      "final_gradient_norm": 7.844175679192184e-10,
+      "max|Y coeff|": 0.00011933993165396828,
+      "max|T coeff|": 9.14784945628884e-11,
+      "zero-mode gradient / eps_unit^2": 3.4405845324868844e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937358328674,
+      "F_fixed-F0": -0.0005714362118673932,
+      "newton_iterations": 3,
+      "final_gradient_norm": 6.87979950055482e-10,
+      "max|Y coeff|": 0.0001193399316539409,
+      "max|T coeff|": 9.147830189281346e-11,
+      "zero-mode gradient / eps_unit^2": 5.735123931974371e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925279992837432,
+      "F_fixed-F0": -0.0008928757964117295,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.123466643828986e-09,
+      "max|Y coeff|": 0.0001864454971643125,
+      "max|T coeff|": 1.6089853954811593e-10,
+      "zero-mode gradient / eps_unit^2": 2.9568859252022664e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008925279992855195,
+      "F_fixed-F0": -0.0008928757964117295,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.1128844864349694e-09,
+      "max|Y coeff|": 0.00018644549716419854,
+      "max|T coeff|": 8.862467227362665e-11,
+      "zero-mode gradient / eps_unit^2": 2.3495676268254605e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850318873702804,
+      "F_fixed-F0": -0.0012857529660941225,
+      "newton_iterations": 3,
+      "final_gradient_norm": 1.9979079381725786e-09,
+      "max|Y coeff|": 0.0002684408046753377,
+      "max|T coeff|": 1.1823155283449664e-10,
+      "zero-mode gradient / eps_unit^2": 2.0287505923247837e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850318873702804,
+      "F_fixed-F0": -0.0012857529660941225,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.611209191636011e-10,
+      "max|Y coeff|": 0.00026844082941286673,
+      "max|T coeff|": 1.571089153226529e-10,
+      "zero-mode gradient / eps_unit^2": 1.2735328167358363e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": 2.82806515217877e-15,
+    "c2": -0.014285714286145345,
+    "fit max residual": 5.535638137113552e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.0771174812632873,
+    "A_l": 1.0771174812307862,
+    "Delta_2/A_l": 1.000000000030174,
+    "|Delta_2/A_l - 1|": 3.0174085452472355e-11,
+    "c1 / (A_l/flux)": 9.898228032625695e-14,
+    "all newton runs converged": true
+   }
+  },
+  "M5 l=2 mixed m": {
+   "base": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871413039468,
+      "F_fixed-F0": -0.00014285762037857808,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.74295794957275e-10,
+      "max|Y coeff|": 3.0259621109181217e-05,
+      "max|T coeff|": 2.2112723959400513e-07,
+      "zero-mode gradient / eps_unit^2": 1.834448870959117e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014284871413217104,
+      "F_fixed-F0": -0.00014285762037857808,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.215594387662819e-10,
+      "max|Y coeff|": 3.0259621081707686e-05,
+      "max|T coeff|": 2.2121257479863272e-07,
+      "zero-mode gradient / eps_unit^2": 1.025613480421501e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032138590445462967,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.536443985045052e-10,
+      "max|Y coeff|": 6.807775327255047e-05,
+      "max|T coeff|": 7.463891885918746e-07,
+      "zero-mode gradient / eps_unit^2": 6.118486288199546e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0003213859044581824,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.140289403688697e-10,
+      "max|Y coeff|": 6.807775317948282e-05,
+      "max|T coeff|": 7.46372400125568e-07,
+      "zero-mode gradient / eps_unit^2": 4.557300012839223e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937379769301,
+      "F_fixed-F0": -0.0005714362118744987,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.644929522992838e-09,
+      "max|Y coeff|": 0.00012101139677382384,
+      "max|T coeff|": 1.7690031996103772e-06,
+      "zero-mode gradient / eps_unit^2": 3.3292159502279025e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937379787064,
+      "F_fixed-F0": -0.0005714362118744987,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.7176552159531963e-09,
+      "max|Y coeff|": 0.00012101134354462799,
+      "max|T coeff|": 1.768973183433381e-06,
+      "zero-mode gradient / eps_unit^2": 2.566011733517804e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925280075029463,
+      "F_fixed-F0": -0.0008928757964650202,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.324106447345617e-10,
+      "max|Y coeff|": 0.00018904851852757196,
+      "max|T coeff|": 3.4533509131016935e-06,
+      "zero-mode gradient / eps_unit^2": 2.8421709436496197e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008925280075011699,
+      "F_fixed-F0": -0.0008928757964650202,
+      "newton_iterations": 5,
+      "final_gradient_norm": 8.188602933686811e-10,
+      "max|Y coeff|": 0.00018904854460261968,
+      "max|T coeff|": 3.453210905874439e-06,
+      "zero-mode gradient / eps_unit^2": 2.130327670506288e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850319119355191,
+      "F_fixed-F0": -0.0012857529662646527,
+      "newton_iterations": 5,
+      "final_gradient_norm": 8.565281987293889e-10,
+      "max|Y coeff|": 0.00027217419644488496,
+      "max|T coeff|": 5.965452856141697e-06,
+      "zero-mode gradient / eps_unit^2": 5.093863597157548e-10
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850319119355191,
+      "F_fixed-F0": -0.0012857529662646527,
+      "newton_iterations": 5,
+      "final_gradient_norm": 8.565285813849648e-10,
+      "max|Y coeff|": 0.0002721741691977551,
+      "max|T coeff|": 5.965538838800329e-06,
+      "zero-mode gradient / eps_unit^2": 2.466857923446808e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": 2.1260296216268085e-14,
+    "c2": -0.01428571428533653,
+    "fit max residual": 2.674076238218248e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 3.540525053952018,
+    "A_l": 3.5405250540456397,
+    "Delta_2/A_l": 0.9999999999735572,
+    "|Delta_2/A_l - 1|": 2.644284791131213e-11,
+    "c1 / (A_l/flux)": 7.44110367569383e-13,
+    "all newton runs converged": true
+   },
+   "raised basis": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871413039468,
+      "F_fixed-F0": -0.00014285762037857808,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.065813507741641e-09,
+      "max|Y coeff|": 3.025959460409869e-05,
+      "max|T coeff|": 2.2115816142028407e-07,
+      "zero-mode gradient / eps_unit^2": 8.881784196546503e-09
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014284871413039468,
+      "F_fixed-F0": -0.00014285762037857808,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.31529433942681e-10,
+      "max|Y coeff|": 3.0259621081964815e-05,
+      "max|T coeff|": 2.2111980863277456e-07,
+      "zero-mode gradient / eps_unit^2": 2.22029905161602e-08
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.000321385904456406,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.076859022448803e-09,
+      "max|Y coeff|": 6.807777977781913e-05,
+      "max|T coeff|": 7.46296422497131e-07,
+      "zero-mode gradient / eps_unit^2": 7.894919286914684e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.000321385904456406,
+      "F_fixed-F0": -0.000321430988895699,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.0877915509459835e-09,
+      "max|Y coeff|": 6.807780618841692e-05,
+      "max|T coeff|": 7.463414783010761e-07,
+      "zero-mode gradient / eps_unit^2": 1.0258725751591453e-08
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937379804828,
+      "F_fixed-F0": -0.0005714362118744987,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.719950022069961e-09,
+      "max|Y coeff|": 0.00012101134376408664,
+      "max|T coeff|": 1.7689413567620866e-06,
+      "zero-mode gradient / eps_unit^2": 4.015767547094928e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937379787064,
+      "F_fixed-F0": -0.0005714362118744987,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.0009270169689455e-09,
+      "max|Y coeff|": 0.00012101139655368928,
+      "max|T coeff|": 1.7684475089916268e-06,
+      "zero-mode gradient / eps_unit^2": 5.732711143745661e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925280075011699,
+      "F_fixed-F0": -0.0008928757964650202,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.85037736215883e-10,
+      "max|Y coeff|": 0.00018904859804098315,
+      "max|T coeff|": 3.4532272245913365e-06,
+      "zero-mode gradient / eps_unit^2": 1.4669492601201953e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008925280075011699,
+      "F_fixed-F0": -0.0008928757964650202,
+      "newton_iterations": 5,
+      "final_gradient_norm": 8.837278946266337e-10,
+      "max|Y coeff|": 0.00018904854460259908,
+      "max|T coeff|": 3.4532109059706166e-06,
+      "zero-mode gradient / eps_unit^2": 1.8358256335578842e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850319119372955,
+      "F_fixed-F0": -0.0012857529662646527,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.2992929488598662e-09,
+      "max|Y coeff|": 0.0002721741434357149,
+      "max|T coeff|": 5.965483778243056e-06,
+      "zero-mode gradient / eps_unit^2": 9.865621835350994e-10
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850319119390718,
+      "F_fixed-F0": -0.0012857529662646527,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.1269721429861844e-09,
+      "max|Y coeff|": 0.00027217416919834633,
+      "max|T coeff|": 5.965446073284404e-06,
+      "zero-mode gradient / eps_unit^2": 1.0196590625353647e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": 1.3778336652920754e-15,
+    "c2": -0.014285714285388443,
+    "fit max residual": 1.0707580655466842e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 3.540525053964884,
+    "A_l": 3.5405250540456397,
+    "Delta_2/A_l": 0.999999999977191,
+    "|Delta_2/A_l - 1|": 2.280897692941153e-11,
+    "c1 / (A_l/flux)": 4.822417828522264e-14,
+    "all newton runs converged": true
+   },
+   "raised quadrature": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014284871414105282,
+      "F_fixed-F0": -0.00014285762038745986,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.793736124391095e-10,
+      "max|Y coeff|": 3.0259647620126386e-05,
+      "max|T coeff|": 2.2115814567080292e-07,
+      "zero-mode gradient / eps_unit^2": 1.58027574253926e-08
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014284871413927647,
+      "F_fixed-F0": -0.00014285762038745986,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.526752038225073e-10,
+      "max|Y coeff|": 3.0259568078109472e-05,
+      "max|T coeff|": 2.2111982416829325e-07,
+      "zero-mode gradient / eps_unit^2": 8.881784196023128e-09
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032138590446706417,
+      "F_fixed-F0": -0.00032143098890635713,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.140289364755022e-10,
+      "max|Y coeff|": 6.807775328637213e-05,
+      "max|T coeff|": 7.463891521943049e-07,
+      "zero-mode gradient / eps_unit^2": 8.701863402011475e-09
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0003213859044652878,
+      "F_fixed-F0": -0.00032143098890635713,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.837264236849585e-10,
+      "max|Y coeff|": 6.807772668773296e-05,
+      "max|T coeff|": 7.463105910832491e-07,
+      "zero-mode gradient / eps_unit^2": 5.097824888619146e-09
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005712937379893646,
+      "F_fixed-F0": -0.0005714362118833805,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.7015052872431724e-09,
+      "max|Y coeff|": 0.00012101134378940464,
+      "max|T coeff|": 1.7689412918895956e-06,
+      "zero-mode gradient / eps_unit^2": 3.2674048297189235e-09
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005712937379875882,
+      "F_fixed-F0": -0.0005714362118833805,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.8223896944663094e-09,
+      "max|Y coeff|": 0.00012101137007109589,
+      "max|T coeff|": 1.7690041676323146e-06,
+      "zero-mode gradient / eps_unit^2": 4.440892098195488e-09
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008925280075100517,
+      "F_fixed-F0": -0.0008928757964721257,
+      "newton_iterations": 5,
+      "final_gradient_norm": 6.705599820058802e-10,
+      "max|Y coeff|": 0.00018904854507205407,
+      "max|T coeff|": 3.4532580469083934e-06,
+      "zero-mode gradient / eps_unit^2": 1.6108958637639492e-09
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.000892528007511828,
+      "F_fixed-F0": -0.0008928757964721257,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.793730360785021e-10,
+      "max|Y coeff|": 0.00018904851813162437,
+      "max|T coeff|": 3.4531800801079293e-06,
+      "zero-mode gradient / eps_unit^2": 1.467455586681312e-09
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012850319119461773,
+      "F_fixed-F0": -0.0012857529662770872,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.810251554858124e-10,
+      "max|Y coeff|": 0.0002721741169890296,
+      "max|T coeff|": 5.965390866667204e-06,
+      "zero-mode gradient / eps_unit^2": 1.801221606336469e-09
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012850319119479536,
+      "F_fixed-F0": -0.0012857529662770872,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.441466661859959e-10,
+      "max|Y coeff|": 0.0002721741957505615,
+      "max|T coeff|": 5.965477131770385e-06,
+      "zero-mode gradient / eps_unit^2": 1.25099914386273e-09
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -1.4724860057795583e-14,
+    "c2": -0.014285714286195425,
+    "fit max residual": 3.3176586478056436e-15,
+    "Delta_2 (raw units) = -2 c2 * flux": 3.540525054164884,
+    "A_l": 3.5405250540456397,
+    "Delta_2/A_l": 1.0000000000336797,
+    "|Delta_2/A_l - 1|": 3.367972567502875e-11,
+    "c1 / (A_l/flux)": -5.153701020228454e-13,
+    "all newton runs converged": true
+   }
+  },
+  "M6 M1 dressed": {
+   "base": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.0001428397440310647,
+      "F_fixed-F0": -0.00014285135523905979,
+      "newton_iterations": 4,
+      "final_gradient_norm": 6.97136002991333e-10,
+      "max|Y coeff|": 7.270525174018006e-05,
+      "max|T coeff|": 4.973206080120556e-05,
+      "zero-mode gradient / eps_unit^2": 0.00022184920568971955
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014283979921714263,
+      "F_fixed-F0": -0.00014285135523905979,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.618084850084103e-10,
+      "max|Y coeff|": 7.315416823306192e-05,
+      "max|T coeff|": 4.97321711468657e-05,
+      "zero-mode gradient / eps_unit^2": 0.00021702639687018243
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032134042844589317,
+      "F_fixed-F0": -0.00032139927181162875,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.0192008703256011e-09,
+      "max|Y coeff|": 0.00016328885013133662,
+      "max|T coeff|": 0.00011188651931642478,
+      "zero-mode gradient / eps_unit^2": 0.0003346458912705386
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0003213408470958967,
+      "F_fixed-F0": -0.00032139927181162875,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.151426712067723e-09,
+      "max|Y coeff|": 0.00016480324754631243,
+      "max|T coeff|": 0.00011188674595396339,
+      "zero-mode gradient / eps_unit^2": 0.0003237982721699813
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005711498131297787,
+      "F_fixed-F0": -0.0005713359710330934,
+      "newton_iterations": 5,
+      "final_gradient_norm": 6.05582335470332e-10,
+      "max|Y coeff|": 0.00028972991748272355,
+      "max|T coeff|": 0.0001988826404632342,
+      "zero-mode gradient / eps_unit^2": 0.000448701076328947
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005711515748245688,
+      "F_fixed-F0": -0.0005713359710330934,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.219794082688452e-10,
+      "max|Y coeff|": 0.0002933171802184891,
+      "max|T coeff|": 0.00019888343000877434,
+      "zero-mode gradient / eps_unit^2": 0.0004294298250652189
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008921761620914737,
+      "F_fixed-F0": -0.0008926310703802898,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.626911342564713e-10,
+      "max|Y coeff|": 0.0004517764322867691,
+      "max|T coeff|": 0.0003106999678285749,
+      "zero-mode gradient / eps_unit^2": 0.0005640657719121918
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008921815286360157,
+      "F_fixed-F0": -0.0008926310703802898,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.857923947222199e-10,
+      "max|Y coeff|": 0.0004587778174486182,
+      "max|T coeff|": 0.00031070271086159403,
+      "zero-mode gradient / eps_unit^2": 0.0005339572340235213
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.001284301396182741,
+      "F_fixed-F0": -0.0012852455086935777,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.716176231705745e-10,
+      "max|Y coeff|": 0.0006491534316456816,
+      "max|T coeff|": 0.00044731278717825867,
+      "zero-mode gradient / eps_unit^2": 0.0006807512578861948
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.001284314720360058,
+      "F_fixed-F0": -0.0012852455086935777,
+      "newton_iterations": 5,
+      "final_gradient_norm": 8.977439359126189e-10,
+      "max|Y coeff|": 0.0006612416395696886,
+      "max|T coeff|": 0.00044731941418635416,
+      "zero-mode gradient / eps_unit^2": 0.0006373972954856686
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -1.8916034817547008e-11,
+    "c2": -0.01428571429296335,
+    "fit max residual": 6.502811527100971e-13,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.4361566423698036,
+    "A_l": 1.4361566416410483,
+    "Delta_2/A_l": 1.0000000005074343,
+    "|Delta_2/A_l - 1|": 5.074343167876805e-10,
+    "c1 / (A_l/flux)": -6.620612186141453e-10,
+    "all newton runs converged": true
+   },
+   "raised basis": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014283974417672596,
+      "F_fixed-F0": -0.00014285135523905979,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.1590181729638952e-09,
+      "max|Y coeff|": 7.270584522699747e-05,
+      "max|T coeff|": 4.973030148603466e-05,
+      "zero-mode gradient / eps_unit^2": 0.0002218492056849258
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.00014283979935925117,
+      "F_fixed-F0": -0.00014285135523905979,
+      "newton_iterations": 4,
+      "final_gradient_norm": 9.79100388281352e-10,
+      "max|Y coeff|": 7.315461372360714e-05,
+      "max|T coeff|": 4.973011932518665e-05,
+      "zero-mode gradient / eps_unit^2": 0.00021702639686544772
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032134043008902324,
+      "F_fixed-F0": -0.00032139927181162875,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.3875872747664209e-09,
+      "max|Y coeff|": 0.0001632912242084833,
+      "max|T coeff|": 0.00011187606324171648,
+      "zero-mode gradient / eps_unit^2": 0.0003346103641265328
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.00032134084866619617,
+      "F_fixed-F0": -0.00032139927181162875,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.4320782670613985e-09,
+      "max|Y coeff|": 0.0001648057715001652,
+      "max|T coeff|": 0.00011187630162378996,
+      "zero-mode gradient / eps_unit^2": 0.0003237706399454075
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005711498224041378,
+      "F_fixed-F0": -0.0005713359710330934,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.676261157110637e-10,
+      "max|Y coeff|": 0.0002897379307213465,
+      "max|T coeff|": 0.0001988498832949537,
+      "zero-mode gradient / eps_unit^2": 0.00044864778561412295
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005711515836122061,
+      "F_fixed-F0": -0.0005713359710330934,
+      "newton_iterations": 5,
+      "final_gradient_norm": 9.961000905371708e-10,
+      "max|Y coeff|": 0.0002933249000466742,
+      "max|T coeff|": 0.00019884953452820527,
+      "zero-mode gradient / eps_unit^2": 0.00042937875479670095
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008921761976772302,
+      "F_fixed-F0": -0.0008926310703802898,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.123045214147403e-09,
+      "max|Y coeff|": 0.00045179542734146734,
+      "max|T coeff|": 0.0003106193314091225,
+      "zero-mode gradient / eps_unit^2": 0.0005639606115752224
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008921815619675755,
+      "F_fixed-F0": -0.0008926310703802898,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.1055021598241526e-09,
+      "max|Y coeff|": 0.0004587966708010462,
+      "max|T coeff|": 0.0003106204668503133,
+      "zero-mode gradient / eps_unit^2": 0.000533856336943372
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012843015030838956,
+      "F_fixed-F0": -0.0012852455086935777,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.1779649828745504e-09,
+      "max|Y coeff|": 0.0006491930553408661,
+      "max|T coeff|": 0.00044714577718220615,
+      "zero-mode gradient / eps_unit^2": 0.0006805696747280936
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.001284314819333332,
+      "F_fixed-F0": -0.0012852455086935777,
+      "newton_iterations": 5,
+      "final_gradient_norm": 1.3574991652340988e-09,
+      "max|Y coeff|": 0.00066128053276143,
+      "max|T coeff|": 0.00044714881257995246,
+      "zero-mode gradient / eps_unit^2": 0.0006372236072474414
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -2.040770804267884e-11,
+    "c2": -0.014285714293365639,
+    "fit max residual": 6.992296281913002e-13,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.436156642410246,
+    "A_l": 1.4361566416410483,
+    "Delta_2/A_l": 1.0000000005355947,
+    "|Delta_2/A_l - 1|": 5.355946797180877e-10,
+    "c1 / (A_l/flux)": -7.142697814937594e-10,
+    "all newton runs converged": true
+   },
+   "raised quadrature": {
+    "rows": [
+     {
+      "eps_unit": 0.1,
+      "F*-F0": -0.00014283974404172284,
+      "F_fixed-F0": -0.00014285135524794157,
+      "newton_iterations": 4,
+      "final_gradient_norm": 8.495695354726357e-10,
+      "max|Y coeff|": 7.270517743401417e-05,
+      "max|T coeff|": 4.973216695725053e-05,
+      "zero-mode gradient / eps_unit^2": 0.00022184032387633567
+     },
+     {
+      "eps_unit": -0.1,
+      "F*-F0": -0.0001428397992260244,
+      "F_fixed-F0": -0.00014285135524794157,
+      "newton_iterations": 4,
+      "final_gradient_norm": 7.190399916916445e-10,
+      "max|Y coeff|": 7.315409392537925e-05,
+      "max|T coeff|": 4.973211825309174e-05,
+      "zero-mode gradient / eps_unit^2": 0.0002170175150575419
+     },
+     {
+      "eps_unit": 0.15,
+      "F*-F0": -0.00032134042845832766,
+      "F_fixed-F0": -0.00032139927182051053,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.1861444848258646e-09,
+      "max|Y coeff|": 0.0001632889241356677,
+      "max|T coeff|": 0.0001118865726467242,
+      "zero-mode gradient / eps_unit^2": 0.0003346340488475534
+     },
+     {
+      "eps_unit": -0.15,
+      "F*-F0": -0.0003213408471047785,
+      "F_fixed-F0": -0.00032139927182051053,
+      "newton_iterations": 4,
+      "final_gradient_norm": 1.0587721596626031e-09,
+      "max|Y coeff|": 0.00016480324733195558,
+      "max|T coeff|": 0.00011188669319266708,
+      "zero-mode gradient / eps_unit^2": 0.0003237982721276155
+     },
+     {
+      "eps_unit": 0.2,
+      "F*-F0": -0.0005711498131404369,
+      "F_fixed-F0": -0.0005713359710419752,
+      "newton_iterations": 5,
+      "final_gradient_norm": 6.484097588193803e-10,
+      "max|Y coeff|": 0.0002897299171256604,
+      "max|T coeff|": 0.0001988825350593685,
+      "zero-mode gradient / eps_unit^2": 0.00044870551716196254
+     },
+     {
+      "eps_unit": -0.2,
+      "F*-F0": -0.0005711515748352269,
+      "F_fixed-F0": -0.0005713359710419752,
+      "newton_iterations": 5,
+      "final_gradient_norm": 5.457846156410317e-10,
+      "max|Y coeff|": 0.0002933172540374569,
+      "max|T coeff|": 0.000198883430402103,
+      "zero-mode gradient / eps_unit^2": 0.0004294298250091387
+     },
+     {
+      "eps_unit": 0.25,
+      "F*-F0": -0.0008921761621003554,
+      "F_fixed-F0": -0.0008926310703945006,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.37760523565698e-10,
+      "max|Y coeff|": 0.0004517762833103196,
+      "max|T coeff|": 0.0003107000218378094,
+      "zero-mode gradient / eps_unit^2": 0.0005640643507524447
+     },
+     {
+      "eps_unit": -0.25,
+      "F*-F0": -0.0008921815286484502,
+      "F_fixed-F0": -0.0008926310703945006,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.005427909834165e-10,
+      "max|Y coeff|": 0.00045877789103933314,
+      "max|T coeff|": 0.00031070271142967737,
+      "zero-mode gradient / eps_unit^2": 0.0005339586550394125
+     },
+     {
+      "eps_unit": 0.3,
+      "F*-F0": -0.0012843013961916228,
+      "F_fixed-F0": -0.0012852455087060122,
+      "newton_iterations": 5,
+      "final_gradient_norm": 7.448649550448068e-10,
+      "max|Y coeff|": 0.0006491533566508291,
+      "max|T coeff|": 0.0004473126826568378,
+      "zero-mode gradient / eps_unit^2": 0.0006807502709316622
+     },
+     {
+      "eps_unit": -0.3,
+      "F*-F0": -0.0012843147203707161,
+      "F_fixed-F0": -0.0012852455087060122,
+      "newton_iterations": 5,
+      "final_gradient_norm": 8.719446260623958e-10,
+      "max|Y coeff|": 0.0006612417128779029,
+      "max|T coeff|": 0.00044731936192734975,
+      "zero-mode gradient / eps_unit^2": 0.0006373982822677173
+     }
+    ],
+    "fit_degree": 6,
+    "c1 (O(eps) coefficient, unit-flux eps)": -1.8939857236416225e-11,
+    "c2": -0.014285714293827651,
+    "fit max residual": 6.487823516268532e-13,
+    "Delta_2 (raw units) = -2 c2 * flux": 1.4361566424566927,
+    "A_l": 1.4361566416410483,
+    "Delta_2/A_l": 1.0000000005679355,
+    "|Delta_2/A_l - 1|": 5.679354764254185e-10,
+    "c1 / (A_l/flux)": -6.628950032745679e-10,
+    "all newton runs converged": true
+   }
+  }
+ },
+ "seconds": 712.9509394168854,
+ "ALL_PASS": true,
+ "PART2_BIN": "P2-PASS"
+}

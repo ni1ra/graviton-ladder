@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use or discuss this work, please cite it as below."
+title: "Entropy cannot tell electric tides from magnetic ones. Area can. An exact second-order mismatch for free gravitons in a flat ball"
+type: software
+authors:
+  - family-names: Houg
+    given-names: Andreas
+date-released: 2026-11-10
+version: "0.1.0"
+abstract: "Exact comparison, in free linearised gravity on a flat ball, of the relative entropy of a graviton tidal state with the second-order change of the stationary value of Area minus twice Volume. They agree on static electric multipoles and differ by the factor (l+1)/(l+2) on stationary magnetic multipoles. Proofs, pre-registrations and rerunnable checks."
+keywords:
+  - linearised gravity
+  - relative entropy
+  - modular theory
+  - causal diamonds
+  - entanglement equilibrium
+license: MIT

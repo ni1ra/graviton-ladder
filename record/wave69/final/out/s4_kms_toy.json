@@ -1,0 +1,48 @@
+{
+ "script": "s4_kms_toy",
+ "ALL_PASS": true,
+ "n_checks": 4,
+ "n_plants": 3,
+ "checks": [
+  {
+   "label": "S = J Delta^(1/2) fixes the sample vectors (they lie in K)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "K is real-linear but not complex: i u is not fixed",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "V(s) = Delta^(i s/2 pi): <v, V(s - i pi) u> is real on K",
+   "pass": true,
+   "detail": "1.1542064120758152e-14"
+  },
+  {
+   "label": "V(s) K = K",
+   "pass": true,
+   "detail": null
+  }
+ ],
+ "plants": [
+  {
+   "label": "P rate 1.1/(2 pi): boundary value not real",
+   "caught": true,
+   "detail": "0.7337124772103537"
+  },
+  {
+   "label": "P opposite sign: boundary value not real",
+   "caught": true,
+   "detail": "0.9996647275277375"
+  },
+  {
+   "label": "P rate 1/pi (pi for 2 pi): boundary value not real",
+   "caught": true,
+   "detail": "0.999689180404935"
+  }
+ ],
+ "values": {
+  "worst relative imaginary part, correct rate": "1.1542064120758152e-14"
+ }
+}

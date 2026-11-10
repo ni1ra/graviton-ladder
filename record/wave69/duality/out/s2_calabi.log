@@ -1,0 +1,20 @@
+calabi ball w= 0 {'sites_V': 123, 'sites_Vw': 123, 'dimZ': 165, 'dimB_w': 165, 'D_w': 0, 'sec': 0.1}
+calabi ball w= 1 {'sites_V': 123, 'sites_Vw': 257, 'dimZ': 165, 'dimB_w': 165, 'D_w': 0, 'sec': 0.4}
+calabi ball w= 2 {'sites_V': 123, 'sites_Vw': 515, 'dimZ': 165, 'dimB_w': 165, 'D_w': 0, 'sec': 0.6}
+calabi ball w= 3 {'sites_V': 123, 'sites_Vw': 925, 'dimZ': 165, 'dimB_w': 165, 'D_w': 0, 'sec': 10.4}
+calabi cube w= 0 {'sites_V': 125, 'sites_Vw': 125, 'dimZ': 171, 'dimB_w': 171, 'D_w': 0, 'sec': 0.1}
+calabi cube w= 1 {'sites_V': 125, 'sites_Vw': 343, 'dimZ': 171, 'dimB_w': 171, 'D_w': 0, 'sec': 0.7}
+calabi cube w= 2 {'sites_V': 125, 'sites_Vw': 729, 'dimZ': 171, 'dimB_w': 171, 'D_w': 0, 'sec': 2.3}
+calabi cube w= 3 {'sites_V': 125, 'sites_Vw': 1331, 'dimZ': 171, 'dimB_w': 171, 'D_w': 0, 'sec': 27.6}
+calabi shell w= 0 {'sites_V': 224, 'sites_Vw': 224, 'dimZ': 270, 'dimB_w': 270, 'D_w': 0, 'sec': 0.4}
+calabi shell w= 1 {'sites_V': 224, 'sites_Vw': 496, 'dimZ': 270, 'dimB_w': 270, 'D_w': 0, 'sec': 0.7}
+calabi shell w= 2 {'sites_V': 224, 'sites_Vw': 918, 'dimZ': 270, 'dimB_w': 270, 'D_w': 0, 'sec': 6.7}
+calabi ring w= 0 {'sites_V': 88, 'sites_Vw': 88, 'dimZ': 6, 'dimB_w': 3, 'D_w': 3, 'sec': 1.6}
+calabi ring w= 1 {'sites_V': 88, 'sites_Vw': 528, 'dimZ': 6, 'dimB_w': 3, 'D_w': 3, 'sec': 2.1}
+calabi ring w= 2 {'sites_V': 88, 'sites_Vw': 1320, 'dimZ': 6, 'dimB_w': 3, 'D_w': 3, 'sec': 36.0}
+calabi ring w= 3 {'sites_V': 88, 'sites_Vw': 2464, 'dimZ': 6, 'dimB_w': 3, 'D_w': 3, 'sec': 296.1}
+calabi filled w= 0 {'sites_V': 88, 'sites_Vw': 169, 'dimZ': 6, 'dimB_w': 6, 'D_w': 0, 'sec': 12.8}
+calabi filled w= 1 {'sites_V': 88, 'sites_Vw': 675, 'dimZ': 6, 'dimB_w': 6, 'D_w': 0, 'sec': 9.6}
+calabi filled w= 2 {'sites_V': 88, 'sites_Vw': 1445, 'dimZ': 6, 'dimB_w': 6, 'D_w': 0, 'sec': 44.0}
+calabi filled w= 3 {'sites_V': 88, 'sites_Vw': 2527, 'dimZ': 6, 'dimB_w': 6, 'D_w': 0, 'sec': 494.4}
+rank method mismatches: 0

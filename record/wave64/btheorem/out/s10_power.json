@@ -1,0 +1,269 @@
+{
+ "configs": {
+  "M1": {
+   "source_check_Rlin=4pi*rho": true,
+   "FL1_value": "68*pi**2/189",
+   "dA": "-52*pi**2/63",
+   "dV": "-44*pi**2/189"
+  },
+  "M2": {
+   "source_check_Rlin=4pi*rho": true,
+   "FL1_value": "4*pi**2/105",
+   "dA": "-pi**2/15",
+   "dV": "-pi**2/70"
+  },
+  "E1": {
+   "source_check_Rlin=4pi*rho": true,
+   "FL1_value": "0",
+   "dA": "0",
+   "dV": "0"
+  },
+  "G1_dilation": {
+   "source_check_Rlin=4pi*rho": true,
+   "FL1_value": "0",
+   "dA": "8*pi",
+   "dV": "4*pi"
+  },
+  "G2_l2_corner": {
+   "source_check_Rlin=4pi*rho": true,
+   "FL1_value": "0",
+   "dA": "0",
+   "dV": "0"
+  },
+  "M3": {
+   "source_check_Rlin=4pi*rho": true,
+   "FL1_value": "68*pi**2/189",
+   "dA": "-52*pi**2/63",
+   "dV": "-44*pi**2/189"
+  },
+  "M1_JSS_slice": {
+   "source_check_Rlin=4pi*rho": true,
+   "FL1_value": "68*pi**2/189",
+   "dA": "-68*pi**2/189",
+   "dV": "0"
+  }
+ },
+ "rivals": {
+  "F0 = -d(A-2V) (BMSV functional)": {
+   "M1": {
+    "value": "68*pi**2/189",
+    "FL1_holds": true
+   },
+   "M2": {
+    "value": "4*pi**2/105",
+    "FL1_holds": true
+   },
+   "E1": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G1_dilation": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G2_l2_corner": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "M3": {
+    "value": "68*pi**2/189",
+    "FL1_holds": true
+   },
+   "M1_JSS_slice": {
+    "value": "68*pi**2/189",
+    "FL1_holds": true
+   }
+  },
+  "R1 angle-dependent area charge F0 + oint Y20 q_AA": {
+   "M1": {
+    "value": "-8*pi**2/15",
+    "FL1_holds": false
+   },
+   "M2": {
+    "value": "-4*pi**2/35",
+    "FL1_holds": false
+   },
+   "E1": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G1_dilation": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G2_l2_corner": {
+    "value": "-64*pi/5",
+    "FL1_holds": false
+   },
+   "M3": {
+    "value": "-8*pi**2/15",
+    "FL1_holds": false
+   },
+   "M1_JSS_slice": {
+    "value": "-8*pi**2/15",
+    "FL1_holds": false
+   }
+  },
+  "R2 corner monopole F0 + dA": {
+   "M1": {
+    "value": "-88*pi**2/189",
+    "FL1_holds": false
+   },
+   "M2": {
+    "value": "-pi**2/35",
+    "FL1_holds": false
+   },
+   "E1": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G1_dilation": {
+    "value": "8*pi",
+    "FL1_holds": false
+   },
+   "G2_l2_corner": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "M3": {
+    "value": "-88*pi**2/189",
+    "FL1_holds": false
+   },
+   "M1_JSS_slice": {
+    "value": "0",
+    "FL1_holds": false
+   }
+  },
+  "R3 weight N + (1-r^2)^2": {
+   "M1": {
+    "value": "172*pi**2/231",
+    "FL1_holds": false
+   },
+   "M2": {
+    "value": "68*pi**2/945",
+    "FL1_holds": false
+   },
+   "E1": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G1_dilation": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G2_l2_corner": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "M3": {
+    "value": "172*pi**2/231",
+    "FL1_holds": false
+   },
+   "M1_JSS_slice": {
+    "value": "172*pi**2/231",
+    "FL1_holds": false
+   }
+  },
+  "R4 corner jet F0 + oint R_lin|_S": {
+   "M1": {
+    "value": "14956*pi**2/945",
+    "FL1_holds": false
+   },
+   "M2": {
+    "value": "284*pi**2/105",
+    "FL1_holds": false
+   },
+   "E1": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G1_dilation": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G2_l2_corner": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "M3": {
+    "value": "14956*pi**2/945",
+    "FL1_holds": false
+   },
+   "M1_JSS_slice": {
+    "value": "14956*pi**2/945",
+    "FL1_holds": false
+   }
+  },
+  "R6 normalisation 11/10 F0": {
+   "M1": {
+    "value": "374*pi**2/945",
+    "FL1_holds": false
+   },
+   "M2": {
+    "value": "22*pi**2/525",
+    "FL1_holds": false
+   },
+   "E1": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G1_dilation": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G2_l2_corner": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "M3": {
+    "value": "374*pi**2/945",
+    "FL1_holds": false
+   },
+   "M1_JSS_slice": {
+    "value": "374*pi**2/945",
+    "FL1_holds": false
+   }
+  },
+  "JSS functional -dA (valid on its slice only)": {
+   "M1": {
+    "value": "52*pi**2/63",
+    "FL1_holds": false
+   },
+   "M2": {
+    "value": "pi**2/15",
+    "FL1_holds": false
+   },
+   "E1": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "G1_dilation": {
+    "value": "-8*pi",
+    "FL1_holds": false
+   },
+   "G2_l2_corner": {
+    "value": "0",
+    "FL1_holds": true
+   },
+   "M3": {
+    "value": "52*pi**2/63",
+    "FL1_holds": false
+   },
+   "M1_JSS_slice": {
+    "value": "68*pi**2/189",
+    "FL1_holds": true
+   }
+  },
+  "R5 T-odd F0 + int p_kk": "not seen by FL1 (p = 0 on every FL1 configuration); excluded by (T): D(q,p) = D(q,-p)"
+ },
+ "F0_passes_all": true,
+ "rivals_caught": {
+  "R1 angle-dependent area charge F0 + oint Y20 q_AA": true,
+  "R2 corner monopole F0 + dA": true,
+  "R3 weight N + (1-r^2)^2": true,
+  "R4 corner jet F0 + oint R_lin|_S": true,
+  "R6 normalisation 11/10 F0": true
+ },
+ "JSS_functional_passes_on_its_slice": true,
+ "ALL_PASS": true
+}

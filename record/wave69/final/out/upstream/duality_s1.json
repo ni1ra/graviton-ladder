@@ -1,0 +1,43 @@
+{
+ "C": {
+  "a_symmetric": true,
+  "a_traceless": true,
+  "a_divergence_free": true,
+  "b_kills_Killing_Kv": true,
+  "b_kills_pure_trace": true,
+  "c_formally_self_adjoint": true
+ },
+ "C_bad_plant": {
+  "a_symmetric": false,
+  "a_traceless": true,
+  "a_divergence_free": true,
+  "b_kills_Killing_Kv": true,
+  "b_kills_pure_trace": false,
+  "c_formally_self_adjoint": true
+ },
+ "d": {
+  "PTT_output_is_TT": true,
+  "curl_curl_equals_minus_lap_on_TT": true,
+  "curl_of_TT_is_symmetric_TT": true,
+  "c_constant_in_curl_lap_PTT_eq_c_times_C": "-1",
+  "curl_lap_PTT_f_equals_c_C_f": true,
+  "C_of_TT_part_equals_C": true
+ },
+ "e": {
+  "e1_trace_curlA_is_div_of_dual": true,
+  "e2_curl_of_gradient_vanishes": true,
+  "e2_dual_of_gradient_is_curl_v": true,
+  "e3_symmetry_of_curlA_iff_div_condition": true,
+  "e3b_same_identity_general_potential": true,
+  "e4_curl_M_equals_inc_of_symmetric_part": true,
+  "e4_inc_is_symmetric_and_div_free": true,
+  "e5_inverse_trace_shift": true
+ },
+ "f": {
+  "ckv_10_parameter_family_has_no_symmetric_traceless_gradient": true,
+  "parameters": 10
+ },
+ "S1_ALL_PASS": true,
+ "S1_PLANT_CAUGHT": true,
+ "verdict": "PASS"
+}

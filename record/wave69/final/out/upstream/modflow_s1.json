@@ -1,0 +1,169 @@
+{
+ "a_structure": {
+  "BB_equals_EE": true,
+  "BE_equals_minus_EB": true,
+  "symmetric_each_pair": true,
+  "traceless_each_pair": true,
+  "transverse_each_pair": true,
+  "W_ab(xi)_equals_W_ba(-xi)": true,
+  "Edot_eq_curlB_first_slot": true,
+  "Bdot_eq_minus_curlE_first_slot": true,
+  "box_W_zero": true
+ },
+ "b_invariance": [
+  {
+   "generator": "D",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "N1",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "N2",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "N3",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "J12",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "J13",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "J23",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "K0",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "K1",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "K2",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  },
+  {
+   "generator": "K3",
+   "w": 3,
+   "s": 1,
+   "nonzero_components": 0,
+   "components": 324
+  }
+ ],
+ "plants": [
+  {
+   "generator": "D",
+   "w": 2,
+   "s": 1,
+   "nonzero_components": 294,
+   "components": 324
+  },
+  {
+   "generator": "K0",
+   "w": 2,
+   "s": 1,
+   "nonzero_components": 294,
+   "components": 324
+  },
+  {
+   "generator": "K1",
+   "w": 2,
+   "s": 1,
+   "nonzero_components": 294,
+   "components": 324
+  },
+  {
+   "generator": "D",
+   "w": 4,
+   "s": 1,
+   "nonzero_components": 294,
+   "components": 324
+  },
+  {
+   "generator": "K0",
+   "w": 4,
+   "s": 1,
+   "nonzero_components": 294,
+   "components": 324
+  },
+  {
+   "generator": "K1",
+   "w": 4,
+   "s": 1,
+   "nonzero_components": 294,
+   "components": 324
+  },
+  {
+   "generator": "N1",
+   "w": 3,
+   "s": -1,
+   "nonzero_components": 276,
+   "components": 324
+  },
+  {
+   "generator": "K0",
+   "w": 3,
+   "s": -1,
+   "nonzero_components": 294,
+   "components": 324
+  },
+  {
+   "generator": "K1",
+   "w": 3,
+   "s": -1,
+   "nonzero_components": 304,
+   "components": 324
+  }
+ ],
+ "c_lie_algebra": {
+  "pairs": 105,
+  "failing_pairs": []
+ },
+ "b_pass": true,
+ "plants_caught": {
+  "w=2": true,
+  "w=4": true,
+  "opposite_boost_sign": true
+ },
+ "boost_sign_used": 1,
+ "seconds": 12.4
+}

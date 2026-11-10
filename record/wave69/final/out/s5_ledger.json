@@ -1,0 +1,675 @@
+{
+ "script": "s5_ledger",
+ "ALL_PASS": true,
+ "problems": [],
+ "n_nodes": 62,
+ "ladder_leaves_by_kind": {
+  "HYP": [
+   "H0",
+   "H1",
+   "H2",
+   "H3",
+   "H4",
+   "H5"
+  ],
+  "IMPORT": [
+   "I1",
+   "I1b",
+   "I3",
+   "I4"
+  ],
+  "PROOF": [
+   "SQ",
+   "p_A_thm1",
+   "p_B",
+   "p_Bz",
+   "p_C",
+   "p_Ma",
+   "p_Mb",
+   "p_Mc",
+   "p_Md",
+   "p_Mf",
+   "p_dual_7",
+   "p_dual_A",
+   "p_dual_B",
+   "p_dual_cv",
+   "p_mf_12",
+   "p_mf_3",
+   "p_mf_4",
+   "p_mf_5",
+   "p_mf_67"
+  ],
+  "TEXTBOOK": [
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T6",
+   "T7"
+  ],
+  "COMPUTED": [
+   "c_s1",
+   "c_s2",
+   "c_s3",
+   "c_s4",
+   "st_mod_s2",
+   "st_mod_s3",
+   "u_dual_s1",
+   "u_mod_s1",
+   "u_mod_s5"
+  ]
+ },
+ "clause_leaves": {
+  "B": [
+   "H4",
+   "H5",
+   "T5",
+   "c_s1",
+   "c_s2",
+   "p_B",
+   "p_Bz"
+  ],
+  "C": [
+   "H0",
+   "H1",
+   "H2",
+   "H3",
+   "I3",
+   "SQ",
+   "T1",
+   "T4",
+   "T6",
+   "T7",
+   "p_C",
+   "p_dual_7",
+   "p_dual_A",
+   "p_dual_B",
+   "p_dual_cv",
+   "u_dual_s1"
+  ],
+  "M_direct": [
+   "I1",
+   "I1b",
+   "I3",
+   "SQ",
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "T6",
+   "T7",
+   "c_s1",
+   "c_s4",
+   "p_Ma",
+   "p_Mb",
+   "p_Mc",
+   "p_Md",
+   "p_Mf",
+   "p_dual_7",
+   "p_dual_A",
+   "p_dual_B",
+   "p_dual_cv",
+   "p_mf_12",
+   "p_mf_3",
+   "p_mf_4",
+   "p_mf_5",
+   "p_mf_67",
+   "st_mod_s2",
+   "u_dual_s1",
+   "u_mod_s1",
+   "u_mod_s5"
+  ],
+  "M_transfer": [
+   "I1",
+   "I1b",
+   "I3",
+   "I4",
+   "SQ",
+   "T6",
+   "T7",
+   "c_s3",
+   "p_A_thm1",
+   "st_mod_s3"
+  ]
+ },
+ "M_is_OR_of_two_routes": [
+  "M_direct",
+  "M_transfer"
+ ],
+ "stored_sha256": {
+  "st_geo": "713eb009e0bfa55df867ada6ea25cc8f2e32da64747719b04ac1a24d774ef36d",
+  "st_mod_s2": "52999fb4fe6ab30a792df8ce15ed8a518e9d1b24483074823e16844d81ac64e2",
+  "st_mod_s3": "958e01e8441d33fd67f509e41cd2e0ad7a3a61aa67f1b26b7e359095b221fad9"
+ },
+ "nodes": {
+  "H0": {
+   "kind": "HYP",
+   "text": "Scope (a definition, the author 10 Nov): the theory is free linearised gravity at order G^0 on Minkowski space, d = 4, the free helicity-2 curvature net on the TT Fock space; the region is the unit ball; the state is a stationary magnetic multipole, l >= 2",
+   "deps": []
+  },
+  "H1": {
+   "kind": "HYP",
+   "text": "(A1) the ball's states are the image of the world's states under one normal unital completely positive map Phi: M -> B(F)",
+   "deps": []
+  },
+  "H2": {
+   "kind": "HYP",
+   "text": "(A2) no signalling: Phi(M) commutes with every curvature observable in the causal complement of the diamond",
+   "deps": []
+  },
+  "H3": {
+   "kind": "HYP",
+   "text": "(A3) M contains the interior curvature observables: a normal unital *-homomorphism iota: A(D) -> M with Phi iota = id",
+   "deps": []
+  },
+  "H4": {
+   "kind": "HYP",
+   "text": "(GEO) the gravitational side of the second-order first law is the extremal value of (Area - 2 Volume)/4G, a diffeomorphism-invariant functional of the metric",
+   "deps": []
+  },
+  "H5": {
+   "kind": "HYP",
+   "text": "(EIN) the family g_eps solves the vacuum Einstein equations through O(eps^2); only the second-order Hamiltonian constraint is used",
+   "deps": []
+  },
+  "I1": {
+   "kind": "IMPORT",
+   "text": "Ciolli-Longo-Ruzzi Thm 4.5: on R(H), H standard and factorial, S(coherent state of k || vacuum) = -Im(k, P_H i log Delta_H k) for every vector k; literal for k in Dom(log Delta_H) (Cor. 2.3)",
+   "deps": [],
+   "locator": "arXiv 1906.01707 Thm 2.2, Cor. 2.3, Prop. 2.4-2.5, Thm 4.5 (pdf p7-10, p21); read line by line, PRINT_READ.md I1"
+  },
+  "I1b": {
+   "kind": "IMPORT",
+   "text": "Araki: the relative entropy is defined by the relative modular operator and is lower semicontinuous (consumed inside I1)",
+   "deps": [],
+   "locator": "Araki, Publ. RIMS 11 (1976) 809, eq. (1.4); statement read, proof not read, PRINT_READ.md I1"
+  },
+  "I3": {
+   "kind": "IMPORT",
+   "text": "Uhlmann monotonicity for a unital 2-positive Schwarz map, first state a vector state of a cyclic vector",
+   "deps": [],
+   "locator": "Reible arXiv 2501.04564 Thm IV.3.7 (pdf p68-71); proof read line by line except its textbook inequalities and Sec. III.4, PRINT_READ.md I3"
+  },
+  "I4": {
+   "kind": "IMPORT",
+   "text": "Hislop-Longo and Longo-Morsella: modular group and coherent-state relative entropy of the massless scalar on the ball (used only by the second proof of M)",
+   "deps": [],
+   "locator": "CMP 84 (1982) 71 Thm 1-2, Cor. 2; arXiv 2012.00565 Thm 4.7, 5.4, Cor. 5.5; read, coefficient pi D re-derived, PRINT_READ.md I4-I5"
+  },
+  "T6": {
+   "kind": "TEXTBOOK",
+   "text": "Tomita-Takesaki theorem: J M J = M' and Delta^{it} M Delta^{-it} = M (Bratteli-Robinson 1, Thm 2.5.14; book not on file)",
+   "deps": []
+  },
+  "T7": {
+   "kind": "TEXTBOOK",
+   "text": "Takesaki: a faithful normal state is KMS at beta = -1 for exactly one sigma-weakly continuous group, its modular group; the condition may be checked on a sigma-weakly dense invariant *-subalgebra (Bratteli-Robinson 2, Thm 5.3.10 with Def. 5.3.1 and Cor. 5.3.4; book not on file)",
+   "deps": []
+  },
+  "T1": {
+   "kind": "TEXTBOOK",
+   "text": "finite propagation speed and uniqueness for the wave equation with smooth data",
+   "deps": []
+  },
+  "T2": {
+   "kind": "TEXTBOOK",
+   "text": "three-lines theorem, Schwarz reflection, uniqueness of the polar decomposition, Stone's theorem",
+   "deps": []
+  },
+  "T3": {
+   "kind": "TEXTBOOK",
+   "text": "the massless scalar two-point function is the boundary value of -1/(4 pi^2 z^2) from the forward tube",
+   "deps": []
+  },
+  "T4": {
+   "kind": "TEXTBOOK",
+   "text": "compactly supported Poincare lemma in a ball; Helmholtz decomposition of symmetric tensors in Fourier space",
+   "deps": []
+  },
+  "T5": {
+   "kind": "TEXTBOOK",
+   "text": "first and second variation of area and volume of a hypersurface (used for the displacement quadratic form)",
+   "deps": []
+  },
+  "c_s1": {
+   "kind": "COMPUTED",
+   "text": "scope-family identities M1-M8 (K TT harmonic, K_nn = 0, dE = (l+1)K, Ric_3(2NK) = (l+2)K, cut vector, pairing, A, S), l = 2..5, four harmonics each",
+   "deps": [],
+   "out": "wave69/final/out/s1_modular_side.json",
+   "key_true": "ALL_PASS",
+   "here": true,
+   "need_plants": true
+  },
+  "c_s2": {
+   "kind": "COMPUTED",
+   "text": "area-side identities B1-B6 (Green, k = 2, constraint, total = A in three second-order gauges, no drive, displacement form)",
+   "deps": [],
+   "out": "wave69/final/out/s2_area_side.json",
+   "key_true": "ALL_PASS",
+   "here": true,
+   "need_plants": true
+  },
+  "c_s3": {
+   "kind": "COMPUTED",
+   "text": "account identities W1-W3 (transfer formula = direct value; A = c_l E_2; non-stationary odd data)",
+   "deps": [],
+   "out": "wave69/final/out/s3_account.json",
+   "key_true": "ALL_PASS",
+   "here": true,
+   "need_plants": true
+  },
+  "c_s4": {
+   "kind": "COMPUTED",
+   "text": "KMS criterion normalisation on a finite-dimensional standard subspace",
+   "deps": [],
+   "out": "wave69/final/out/s4_kms_toy.json",
+   "key_true": "ALL_PASS",
+   "here": true,
+   "need_plants": true
+  },
+  "u_dual_s1": {
+   "kind": "COMPUTED",
+   "text": "wave69/duality S1: Cotton-York identities and the Lemma B chain, exact",
+   "deps": [],
+   "out": "wave69/final/out/upstream/duality_s1.json",
+   "key_true": "S1_ALL_PASS",
+   "here": false,
+   "need_plants": false
+  },
+  "u_mod_s1": {
+   "kind": "COMPUTED",
+   "text": "wave70/modflow S1: conformal invariance of the tensor two-point function, 11 generators, exact",
+   "deps": [],
+   "out": "wave69/final/out/upstream/modflow_s1.json",
+   "key_true": "b_pass",
+   "here": false,
+   "need_plants": false
+  },
+  "u_mod_s5": {
+   "kind": "COMPUTED",
+   "text": "wave70/modflow S5: boost generator diagonalisable with integer weights, exp(i pi M) real",
+   "deps": [],
+   "out": "wave69/final/out/upstream/modflow_s5.json",
+   "key_true": "exp_i_pi_M_is_real",
+   "here": false,
+   "need_plants": false
+  },
+  "u_bclose_p1": {
+   "kind": "COMPUTED",
+   "text": "wave69/bclose P1: every term linear in h2 of the Iyer-Wald generator is the smeared constraint, k = 2, 600 probes",
+   "deps": [],
+   "out": "wave69/final/out/upstream/bclose_p1_enum.json",
+   "key_true": "ALL_PASS",
+   "here": false,
+   "need_plants": false
+  },
+  "u_bclose_p2s": {
+   "kind": "COMPUTED",
+   "text": "wave69/bclose P2: exact polynomial h2 with all ten Ricci components zero through O(eps^2); E_can = A_l",
+   "deps": [],
+   "out": "wave69/final/out/upstream/bclose_p2_solve.json",
+   "key_true": "ALL_PASS",
+   "here": false,
+   "need_plants": false
+  },
+  "u_bth_s1": {
+   "kind": "COMPUTED",
+   "text": "wave64/btheorem S1-S2: Green identity and corner invariance",
+   "deps": [],
+   "out": "wave69/final/out/upstream/btheorem_s1s2.json",
+   "key_true": null,
+   "here": false,
+   "need_plants": false
+  },
+  "u_E2": {
+   "kind": "COMPUTED",
+   "text": "wave45/truthcond check_E2: the two flow rates at l = 2..6",
+   "deps": [],
+   "out": "wave69/final/out/upstream/truthcond_check_E2.json",
+   "key_true": "ALL_PASS",
+   "here": false,
+   "need_plants": false
+  },
+  "st_geo": {
+   "kind": "COMPUTED",
+   "text": "wave69/bclose P2 numerics: extremum of A - 2V on g_eps at finite eps gives Delta_2/A_l = 1 within 5e-10, six members",
+   "deps": [],
+   "out": "wave69/bclose/out/p2_geo.json",
+   "key_true": "ALL_PASS",
+   "here": false,
+   "need_plants": false,
+   "sha": null,
+   "stored": true
+  },
+  "st_mod_s2": {
+   "kind": "COMPUTED",
+   "text": "wave70/modflow S2: geometry of the special conformal map and finite covariance to 2e-29",
+   "deps": [],
+   "out": "wave70/modflow/out/s2_out_fix.json",
+   "key_true": "b_pass_1e-12",
+   "here": false,
+   "need_plants": false,
+   "sha": null,
+   "stored": true
+  },
+  "st_mod_s3": {
+   "kind": "COMPUTED",
+   "text": "wave70/modflow S3: radial sector of the tensor two-point function reproduces 1/c_l at l = 2, 3, 4",
+   "deps": [],
+   "out": "wave70/modflow/out/s3_out.json",
+   "key_true": "pass",
+   "here": false,
+   "need_plants": false,
+   "sha": null,
+   "stored": true
+  },
+  "SQ": {
+   "kind": "PROOF",
+   "text": "second quantisation of a standard subspace: Omega cyclic and separating, Delta_R(K) = Gamma(Delta_K), R(K)' = R(K'), R of a closed span is the generated algebra",
+   "deps": [
+    "T6",
+    "T7"
+   ],
+   "where": "THEOREM.md Sec. 4",
+   "status": ""
+  },
+  "p_dual_cv": {
+   "kind": "PROOF",
+   "text": "vectors of smeared E and B; L(U)' = N(complement of U)",
+   "deps": [
+    "u_dual_s1"
+   ],
+   "where": "wave69/duality/REPORT.md Steps 0-2",
+   "status": "read here"
+  },
+  "p_dual_A": {
+   "kind": "PROOF",
+   "text": "Lemma A: data supported in the closed ball are limits of data supported in the open ball (dilation and mollifier)",
+   "deps": [],
+   "where": "wave69/duality/REPORT.md Step 3",
+   "status": "read here"
+  },
+  "p_dual_B": {
+   "kind": "PROOF",
+   "text": "Lemma B: a smooth TT field compactly supported in the ball is C f with f supported in the ball",
+   "deps": [
+    "u_dual_s1",
+    "T4"
+   ],
+   "where": "wave69/duality/REPORT.md Step 4",
+   "status": "read here"
+  },
+  "p_dual_7": {
+   "kind": "PROOF",
+   "text": "from time zero to the double cone",
+   "deps": [
+    "T1"
+   ],
+   "where": "wave69/duality/REPORT.md Step 7",
+   "status": "read here"
+  },
+  "DUAL1": {
+   "kind": "AND",
+   "text": "one-particle duality and C1: K(O) = N(closed ball), K(O') = K(O)'",
+   "deps": [
+    "p_dual_cv",
+    "p_dual_A",
+    "p_dual_B",
+    "p_dual_7"
+   ]
+  },
+  "DUAL": {
+   "kind": "AND",
+   "text": "Haag duality for the ball: A(O)' = A(O')",
+   "deps": [
+    "DUAL1",
+    "SQ"
+   ]
+  },
+  "p_mf_12": {
+   "kind": "PROOF",
+   "text": "Lemmas 1, 1', 2: infinitesimal and finite conformal covariance of the two-point function",
+   "deps": [
+    "u_mod_s1",
+    "T3"
+   ],
+   "where": "wave70/modflow/REPORT.md Steps 0-2",
+   "status": "read here"
+  },
+  "p_mf_3": {
+   "kind": "PROOF",
+   "text": "Lemma 3: one-particle Reeh-Schlieder",
+   "deps": [
+    "p_dual_cv"
+   ],
+   "where": "wave70/modflow/REPORT.md Step 3",
+   "status": "read here"
+  },
+  "p_mf_4": {
+   "kind": "PROOF",
+   "text": "Lemma 4: KMS criterion for standard subspaces",
+   "deps": [
+    "T2",
+    "c_s4"
+   ],
+   "where": "wave70/modflow/REPORT.md Step 4; re-derived line by line in THEOREM.md Sec. 9",
+   "status": "checked here"
+  },
+  "p_mf_5": {
+   "kind": "PROOF",
+   "text": "Lemma 5: one-particle Bisognano-Wichmann for the wedge",
+   "deps": [
+    "p_mf_12",
+    "p_mf_3",
+    "p_mf_4",
+    "u_mod_s5"
+   ],
+   "where": "wave70/modflow/REPORT.md Step 5; re-derived in THEOREM.md Sec. 9",
+   "status": "checked here"
+  },
+  "p_mf_67": {
+   "kind": "PROOF",
+   "text": "Steps 6-7: the special conformal map carries the diamond onto a wedge; the locally defined isometry is unitary",
+   "deps": [
+    "p_mf_12",
+    "p_mf_3",
+    "st_mod_s2"
+   ],
+   "where": "wave70/modflow/REPORT.md Steps 6-7",
+   "status": "read here"
+  },
+  "MODFLOW": {
+   "kind": "AND",
+   "text": "the modular group of K(O) is the conformal flow: Delta^{it} e_F = e_{Lambda_{-2 pi t *} F}, F in the diamond",
+   "deps": [
+    "p_mf_5",
+    "p_mf_67"
+   ]
+  },
+  "p_Ma": {
+   "kind": "PROOF",
+   "text": "the coherent state of the datum exists and is unique on A(O): explicit vector v_f, f = -(2/(l+2)) chi r^2 K",
+   "deps": [
+    "c_s1",
+    "p_dual_cv"
+   ],
+   "where": "THEOREM.md Sec. 5, M-a",
+   "status": ""
+  },
+  "p_Mb": {
+   "kind": "PROOF",
+   "text": "extension lemma and generator: v_f is in the domain of log Delta and the curvature of its image is 2 pi times the conformal flow",
+   "deps": [
+    "MODFLOW",
+    "p_mf_12",
+    "p_mf_3",
+    "T2"
+   ],
+   "where": "THEOREM.md Sec. 5, M-b",
+   "status": ""
+  },
+  "p_Mc": {
+   "kind": "PROOF",
+   "text": "the cutting projection of the image is 2 pi times the cut vector c 2NK 1_B",
+   "deps": [
+    "c_s1",
+    "DUAL1",
+    "p_Mb",
+    "T4"
+   ],
+   "where": "THEOREM.md Sec. 5, M-c",
+   "status": ""
+  },
+  "p_Mf": {
+   "kind": "PROOF",
+   "text": "K(O) is factorial: the boost group has no invariant vector",
+   "deps": [
+    "MODFLOW"
+   ],
+   "where": "THEOREM.md Sec. 5, M-c",
+   "status": ""
+  },
+  "p_Md": {
+   "kind": "PROOF",
+   "text": "S = 2 pi |Im(k, v_K)| = (l+1)/(l+2) A / 8G",
+   "deps": [
+    "c_s1",
+    "I1",
+    "I1b",
+    "I3",
+    "SQ",
+    "p_Ma",
+    "p_Mc",
+    "p_Mf"
+   ],
+   "where": "THEOREM.md Sec. 5, M-d",
+   "status": ""
+  },
+  "M_direct": {
+   "kind": "AND",
+   "text": "modular side by the direct route",
+   "deps": [
+    "p_Ma",
+    "p_Mb",
+    "p_Mc",
+    "p_Mf",
+    "p_Md"
+   ]
+  },
+  "p_A_thm1": {
+   "kind": "PROOF",
+   "text": "Paper A r18 Theorem 1 (scalar transfer) with Proposition 1 and Lemma 3; blind-confirmed twice in the record",
+   "deps": [
+    "I1",
+    "I1b",
+    "I3",
+    "SQ",
+    "I4",
+    "st_mod_s3"
+   ],
+   "where": "wave36/reviseA18/NOTE.md Sec. 2-3",
+   "status": "record"
+  },
+  "M_transfer": {
+   "kind": "AND",
+   "text": "modular side by the transfer route, evaluated on the scope family",
+   "deps": [
+    "p_A_thm1",
+    "c_s3"
+   ]
+  },
+  "M": {
+   "kind": "OR",
+   "text": "S_free = (l+1)/(l+2) A/8G: the relative entropy of the free net",
+   "deps": [
+    "M_direct",
+    "M_transfer"
+   ]
+  },
+  "p_C": {
+   "kind": "PROOF",
+   "text": "every algebra obeying A1-A3 has the free net's relative entropy: duality plus monotonicity both ways",
+   "deps": [
+    "DUAL",
+    "I3"
+   ],
+   "where": "THEOREM.md Sec. 6",
+   "status": ""
+  },
+  "C": {
+   "kind": "AND",
+   "text": "modular side = S_free",
+   "deps": [
+    "H0",
+    "H1",
+    "H2",
+    "H3",
+    "p_C"
+   ]
+  },
+  "p_B": {
+   "kind": "PROOF",
+   "text": "the extremal value of A - 2V has second-order coefficient -A/2 on every vacuum family with first-order part 2tK plus gauge",
+   "deps": [
+    "c_s2",
+    "c_s1",
+    "T5"
+   ],
+   "where": "THEOREM.md Sec. 7",
+   "status": ""
+  },
+  "p_Bz": {
+   "kind": "PROOF",
+   "text": "the seven Poincare zero modes are not driven at O(eps^2) on a single-l stationary datum (parity and time reflection)",
+   "deps": [],
+   "where": "THEOREM.md Sec. 7, B-e",
+   "status": ""
+  },
+  "B_math": {
+   "kind": "AND",
+   "text": "geometric area side = A",
+   "deps": [
+    "p_B",
+    "p_Bz",
+    "H5"
+   ]
+  },
+  "B_conf": {
+   "kind": "AND",
+   "text": "independent confirmations of the area side (not needed by the proof)",
+   "deps": [
+    "st_geo",
+    "u_bclose_p1",
+    "u_bclose_p2s",
+    "u_bth_s1"
+   ]
+  },
+  "B": {
+   "kind": "AND",
+   "text": "area side = A/8G",
+   "deps": [
+    "H4",
+    "B_math"
+   ]
+  },
+  "LADDER": {
+   "kind": "AND",
+   "text": "area side - modular side = A/((l+2) 8G) at O(eps^2); modular/area = (l+1)/(l+2)",
+   "deps": [
+    "B",
+    "C",
+    "M"
+   ]
+  },
+  "W": {
+   "kind": "AND",
+   "text": "mechanism: the two flow rates, and the weights (2, 1)",
+   "deps": [
+    "c_s1",
+    "c_s3",
+    "u_E2"
+   ]
+  }
+ }
+}

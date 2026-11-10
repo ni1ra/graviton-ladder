@@ -1,0 +1,37 @@
+g1_E2 7 c B 3.1692635232248705
+g2_B2 7 c B 3.1810812731468703
+g3_E3 7 c B 13.189943208624387
+g4_E23 7 c B 16.359206731849252
+g5_E4 7 c B 16.240555547294367
+g6_EB 7 c B 6.350344796371741
+c1_E 7 c B 0.13013158412753809
+c2_B 7 c B 0.26130426854786837
+d1_E2 7 c B 0.32390393232579373
+d2_B2 7 c B 0.7220509593282307
+d3_E3 7 c B 0.1276102809254853
+{'n_q': 2596, 'n_p': 3098, 'rank': 2596, 'cq': 0, 'cp': 502, 'sigma_min': 0.09084672461041018, 'nu_min': 0.49999999999998906} max null 1.2188213713094954e-12 W leak 1.1102230246251565e-16 norm 1.5950704416674582e-14
+sectors [(708, 714), (764, 833), (764, 833), (826, 970), (764, 833), (826, 970), (826, 970), (894, 1128)]
+done 7 c B 17.961674213409424 n_e 6372 n_b 7251
+	Command being timed: "python3 run2.py 7 c ../out/rows <tmp>"
+	User time (seconds): 21.17
+	System time (seconds): 2.32
+	Percent of CPU this job got: 127%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:18.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 416432
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 911940
+	Voluntary context switches: 132
+	Involuntary context switches: 212
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

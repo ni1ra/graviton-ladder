@@ -1,0 +1,128 @@
+{
+ "S1": [
+  {
+   "trial": 0,
+   "int_N_Rlin": "464*pi/75",
+   "minus2_dA_plus4_dV": "464*pi/75",
+   "pass": true
+  },
+  {
+   "trial": 1,
+   "int_N_Rlin": "-5914*pi/1575",
+   "minus2_dA_plus4_dV": "-5914*pi/1575",
+   "pass": true
+  },
+  {
+   "trial": 2,
+   "int_N_Rlin": "104*pi/75",
+   "minus2_dA_plus4_dV": "104*pi/75",
+   "pass": true
+  }
+ ],
+ "S1_general_w": [
+  {
+   "trial": 0,
+   "pass": true
+  },
+  {
+   "trial": 1,
+   "pass": true
+  },
+  {
+   "trial": 2,
+   "pass": true
+  }
+ ],
+ "S1_plant_k22": [
+  {
+   "trial": 0,
+   "caught": true
+  },
+  {
+   "trial": 1,
+   "caught": true
+  },
+  {
+   "trial": 2,
+   "caught": true
+  }
+ ],
+ "S2": [
+  {
+   "trial": 0,
+   "dA": "-2818*pi/225",
+   "dV": "-1409*pi/225",
+   "d(A-2V)": "0",
+   "pass_invariant": true,
+   "dA_alone_moves": true,
+   "dV_alone_moves": true,
+   "Rlin_zero": true
+  },
+  {
+   "trial": 1,
+   "dA": "14*pi/15",
+   "dV": "7*pi/15",
+   "d(A-2V)": "0",
+   "pass_invariant": true,
+   "dA_alone_moves": true,
+   "dV_alone_moves": true,
+   "Rlin_zero": true
+  },
+  {
+   "trial": 2,
+   "dA": "-148*pi/75",
+   "dV": "-74*pi/75",
+   "d(A-2V)": "0",
+   "pass_invariant": true,
+   "dA_alone_moves": true,
+   "dV_alone_moves": true,
+   "Rlin_zero": true
+  },
+  {
+   "trial": 3,
+   "dA": "604*pi/75",
+   "dV": "302*pi/75",
+   "d(A-2V)": "0",
+   "pass_invariant": true,
+   "dA_alone_moves": true,
+   "dV_alone_moves": true,
+   "Rlin_zero": true
+  },
+  {
+   "explicit": "dilation",
+   "dA": "8*pi",
+   "dV": "4*pi",
+   "pass_invariant": true
+  },
+  {
+   "explicit": "grad_r2Y20",
+   "dA": "0",
+   "dV": "0",
+   "pass_invariant": true
+  }
+ ],
+ "S2_plants": [
+  {
+   "trial": 0,
+   "k=2.2_caught": true
+  },
+  {
+   "trial": 1,
+   "k=2.2_caught": true
+  },
+  {
+   "trial": 2,
+   "k=2.2_caught": true
+  },
+  {
+   "trial": 3,
+   "k=2.2_caught": true
+  },
+  {
+   "radius_2": true,
+   "A-1*V_invariant": true,
+   "A-2V_at_R2_caught": true
+  }
+ ],
+ "ALL_PASS": true
+}

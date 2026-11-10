@@ -1,0 +1,90 @@
+{
+ "M1 l=2 m=2": {
+  "A_l/pi": "16/35",
+  "flux/pi": "16",
+  "A_l/flux": "1/35",
+  "h2 max power of t": "4",
+  "h2 total degree": 4,
+  "W/pi = int omega^t(h1, L_zeta h1)": "32/35",
+  "E_can/pi = |W|/2": "16/35"
+ },
+ "CHECK M1 l=2 m=2: Ricci vanishes at O(eps), all 10 components": true,
+ "CHECK M1 l=2 m=2: Ricci vanishes at O(eps^2), all 10 components (full nonlinear)": true,
+ "CHECK M1 l=2 m=2: E_can = |W|/2 = A_l exactly": true,
+ "CHECK M1 l=2 m=2: A_l/flux = 1/((2l+1)(2l+3))": true,
+ "M2 l=3 m=3": {
+  "A_l/pi": "128/105",
+  "flux/pi": "384/5",
+  "A_l/flux": "1/63",
+  "h2 max power of t": "6",
+  "h2 total degree": 6,
+  "W/pi = int omega^t(h1, L_zeta h1)": "256/105",
+  "E_can/pi = |W|/2": "128/105"
+ },
+ "CHECK M2 l=3 m=3: Ricci vanishes at O(eps), all 10 components": true,
+ "CHECK M2 l=3 m=3: Ricci vanishes at O(eps^2), all 10 components (full nonlinear)": true,
+ "CHECK M2 l=3 m=3: E_can = |W|/2 = A_l exactly": true,
+ "CHECK M2 l=3 m=3: A_l/flux = 1/((2l+1)(2l+3))": true,
+ "M3 l=4 m=4": {
+  "A_l/pi": "512/231",
+  "flux/pi": "1536/7",
+  "A_l/flux": "1/99",
+  "h2 max power of t": "8",
+  "h2 total degree": 8,
+  "W/pi = int omega^t(h1, L_zeta h1)": "1024/231",
+  "E_can/pi = |W|/2": "512/231"
+ },
+ "CHECK M3 l=4 m=4: Ricci vanishes at O(eps), all 10 components": true,
+ "CHECK M3 l=4 m=4: Ricci vanishes at O(eps^2), all 10 components (full nonlinear)": true,
+ "CHECK M3 l=4 m=4: E_can = |W|/2 = A_l exactly": true,
+ "CHECK M3 l=4 m=4: A_l/flux = 1/((2l+1)(2l+3))": true,
+ "M4 l=2 m=0": {
+  "A_l/pi": "12/35",
+  "flux/pi": "12",
+  "A_l/flux": "1/35",
+  "h2 max power of t": "4",
+  "h2 total degree": 4,
+  "W/pi = int omega^t(h1, L_zeta h1)": "24/35",
+  "E_can/pi = |W|/2": "12/35"
+ },
+ "CHECK M4 l=2 m=0: Ricci vanishes at O(eps), all 10 components": true,
+ "CHECK M4 l=2 m=0: Ricci vanishes at O(eps^2), all 10 components (full nonlinear)": true,
+ "CHECK M4 l=2 m=0: E_can = |W|/2 = A_l exactly": true,
+ "CHECK M4 l=2 m=0: A_l/flux = 1/((2l+1)(2l+3))": true,
+ "M5 l=2 mixed m": {
+  "A_l/pi": "71/63",
+  "flux/pi": "355/9",
+  "A_l/flux": "1/35",
+  "h2 max power of t": "4",
+  "h2 total degree": 4,
+  "W/pi = int omega^t(h1, L_zeta h1)": "142/63",
+  "E_can/pi = |W|/2": "71/63"
+ },
+ "CHECK M5 l=2 mixed m: Ricci vanishes at O(eps), all 10 components": true,
+ "CHECK M5 l=2 mixed m: Ricci vanishes at O(eps^2), all 10 components (full nonlinear)": true,
+ "CHECK M5 l=2 mixed m: E_can = |W|/2 = A_l exactly": true,
+ "CHECK M5 l=2 mixed m: A_l/flux = 1/((2l+1)(2l+3))": true,
+ "M6 M1 dressed": {
+  "A_l/pi": "16/35",
+  "Xi (t,x,y,z components)": [
+   "t*z/5 + x*y/4 + z**2/10",
+   "t*x/7 + x/8 + y*z/6",
+   "t**2/6 + x**2/7 - y/9",
+   "-t*y/8 + x*y/5 + z/10"
+  ],
+  "radial part of Xi on S is nonzero": true,
+  "h2_tt, h2_ti nonzero": true,
+  "d_t h2_ij at t=0 nonzero (not time-symmetric)": true
+ },
+ "CHECK M6 M1 dressed: Ricci vanishes at O(eps^2), all 10 components (full nonlinear)": true,
+ "PLANT-SRC": {
+  "is a solution at O(eps^2)": false
+ },
+ "CHECK PLANT-SRC is not a solution (exact Ricci check rejects it)": true,
+ "PLANT-FLAT": {
+  "f": "x**2*z/2 - x**2/12 + x*y/3 - y**2*z/2 - y**2/12 + z**2/6",
+  "exact pullback": "g = -(dt + eps df)^2 + dx^2"
+ },
+ "CHECK PLANT-FLAT: Ricci vanishes at O(eps) and O(eps^2)": true,
+ "ALL_PASS": true
+}

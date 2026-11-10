@@ -1,0 +1,239 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem*{result}{Result}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\sym}{\operatorname{sym}}
+\newcommand{\Area}{\operatorname{Area}}
+\newcommand{\Vol}{\operatorname{Vol}}
+
+\title{Entropy cannot tell electric tides from magnetic ones.\\ Area can.\\[4pt]
+\large An exact second-order mismatch for free gravitons in a flat ball}
+\author{Andreas Houg}
+\date{10 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Take a ball in flat space and put a weak tidal gravitational field through it. Two quantities respond at second order in the field: the entanglement (relative) entropy of the gravitons inside the ball, and the area of the ball's surface. The first law of causal diamonds, carried to second order, would make the two responses equal. We compute both exactly in free linearised gravity. For a static electric tidal field they agree, at every multipole order $l$. For a stationary magnetic tidal field the entropy is only $(l+1)/(l+2)$ of the area term. For a uniform field in a ball of radius $R$,
+\[
+S=\frac{\pi R^{6}}{420\,G}\bigl(\cE_{ij}\cE_{ij}+\cB_{ij}\cB_{ij}\bigr),\qquad
+\text{area term}=\frac{\pi R^{6}}{420\,G}\bigl(\cE_{ij}\cE_{ij}+\tfrac43\,\cB_{ij}\cB_{ij}\bigr).
+\]
+The entropy is blind to electric--magnetic duality; the area is not. The mismatch is proportional to $\cB^2$ alone, so it is not a Lorentz scalar and cannot be absorbed the way the known correction for non-conformal matter is. We state the assumptions the result rests on and what would refute it.
+\end{abstract}
+
+\section{The result}
+
+Units: $\hbar=c=1$, Newton's constant $G$ kept. Let $B$ be the unit ball in the slice $t=0$ of Minkowski space and $D$ its causal diamond. Let the spacetime carry a weak vacuum tidal field of amplitude $\varepsilon$, with electric and magnetic parts
+\[
+\cE_{ij}=R_{0i0j},\qquad \cB_{ij}=\tfrac12\,\epsilon_{ikl}\,R_{0j}{}^{kl}.
+\]
+We compare two numbers, both of order $\varepsilon^2$.
+
+\begin{itemize}
+\item \textbf{The entropy side.} Quantise the linearised field. The tidal field is a coherent state of gravitons. $S$ is its relative entropy to the vacuum, both restricted to the observables in $D$. It measures how well an observer confined to the diamond can tell the tidal field from empty space.
+\item \textbf{The area side.} Let $F=\Area(\mathcal S)-2\Vol(\Sigma)$ for a closed surface $\mathcal S$ near the unit sphere and a slice $\Sigma$ it bounds. The unit ball makes $F$ stationary in flat space. The area side is $-\Delta F/4G$, the drop of the stationary value of $F$ in the perturbed spacetime, in Bekenstein--Hawking units.
+\end{itemize}
+
+For matter in a fixed diamond the two are equal at first order: this is the first law of causal diamonds~\cite{JV}, and it is the content of Jacobson's derivation of the Einstein equation from entanglement~\cite{J}. Gravitons first appear at second order in the metric perturbation, so for them the comparison is a second-order one.
+
+Write $\psi=x_ix_j\cE_{ij}$ or $x_ix_j\cB_{ij}$ for the tidal potential of a multipole of degree $l\ge2$ (a harmonic polynomial of degree $l$), and $c_l=4\,(l-2)!/(l+2)!$.
+
+\begin{result}
+In free linearised gravity on the flat unit ball, for a static electric multipole and a stationary magnetic multipole of the same degree $l\ge 2$:
+\begin{align}
+8G\,S &= c_l\,\frac{l+1}{2}\int_B\bigl(\psi_{\cE}^2+\psi_{\cB}^2\bigr), \label{eq:S}\\
+8G\,(\text{area side}) &= c_l\,\frac{l+1}{2}\int_B\psi_{\cE}^2\;+\;c_l\,\frac{l+2}{2}\int_B\psi_{\cB}^2 . \label{eq:A}
+\end{align}
+So the first law holds on electric data and fails on magnetic data, where
+\[
+\frac{\text{entropy}}{\text{area side}}=\frac{l+1}{l+2}=\frac34,\ \frac45,\ \frac56,\ \dots
+\]
+\end{result}
+
+Both lines are exact at order $\varepsilon^2$, and \eqref{eq:S} is exact to all orders, because the state is coherent and the theory is free. There is no cross term between the two sectors: it would be odd under parity. For $l=2$ the fields are uniform, $\int_B\psi^2=\tfrac{8\pi}{105}\cE_{ij}\cE_{ij}$, and \eqref{eq:S}--\eqref{eq:A} become the formulas in the abstract; the powers of $R$ follow by dilation.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+ & entropy & area side & first law at $O(\varepsilon^2)$\\
+\midrule
+electric multipole, degree $l$ & $l+1$ & $l+1$ & holds\\
+magnetic multipole, degree $l$ & $l+1$ & $l+2$ & misses by one part in $l+2$\\
+\bottomrule
+\end{tabular}
+
+\smallskip
+{\small In units of $(c_l/16G)\int_B\psi^2$.}
+\end{center}
+
+\section{The two tidal fields}
+
+\paragraph{Electric.} A static Newtonian potential $\Phi=\varepsilon U$, with $U$ a harmonic polynomial of degree $l$:
+\[
+ds^2=-(1+2\Phi)\,dt^2+(1-2\Phi)\,d\mathbf x^2+O(\varepsilon^2),\qquad \cE_{ij}=\partial_i\partial_j\Phi,\quad \cB=0,\quad \psi_\cE=l(l-1)\Phi .
+\]
+This is the tide raised by distant masses.
+
+\paragraph{Magnetic.} Let $\varphi$ be a harmonic polynomial of degree $l$, $v=x\times\nabla\varphi$ and $K=\sym\nabla v$. The perturbation is $h_{ij}=2\varepsilon t\,K_{ij}$: the slice $t=0$ is intrinsically flat and has extrinsic curvature $\varepsilon K$. Then
+\[
+\cE=0,\qquad \cB=-\varepsilon\,\operatorname{curl}K\ \ \text{(static)},\qquad \psi_\cB=\tfrac12(l-1)l(l+1)\,\varepsilon\varphi .
+\]
+This is the gravitomagnetic tide of distant rotating masses. $K$ is transverse, traceless and harmonic, and $x\!\cdot\! K\!\cdot\! x=0$. We write
+\[
+A=\int_B N\,|K|^2,\qquad N=\tfrac12(1-r^2).
+\]
+$N$ is the lapse of the conformal Killing vector $\zeta=\tfrac12(1-t^2-r^2)\partial_t-t\,x\!\cdot\!\partial$ whose flow maps the diamond to itself. In this notation the magnetic rows of the table read: area side $=\varepsilon^2A/8G$, entropy $=\frac{l+1}{l+2}\,\varepsilon^2A/8G$.
+
+\section{The entropy side}
+
+The observables of the free graviton field are the linearised curvature components smeared with test functions; the algebra of the diamond is generated by those smeared inside $D$. Three facts give $S$.
+
+\paragraph{(a) Relative entropy of a coherent state.} For a free field, the relative entropy between the vacuum displaced by a classical solution $k$ and the vacuum is~\cite{CLR}
+\begin{equation}\label{eq:clr}
+S=-\operatorname{Im}\bigl\langle k,\;P\,i\log\Delta\;k\bigr\rangle .
+\end{equation}
+Here $\Delta^{it}$ is the modular group of the diamond and $P$ cuts a solution down to the part that lives in the diamond. In words: flow the classical solution by the modular flow, keep the part of the velocity that lives in the ball, and take its symplectic product with the solution itself. The symplectic product of two solutions with data $(h,p=\tfrac12\partial_th)$ is $\frac{1}{32\pi G}\int(h\!\cdot\! p'-h'\!\cdot\! p)$.
+
+\paragraph{(b) The modular flow is geometric.} In the vacuum, the modular group of a diamond acts on the curvature as the flow of $\zeta$, at rate $2\pi$. For the scalar field this is the theorem of Hislop and Longo~\cite{HL}, a conformal image of Bisognano and Wichmann's~\cite{BW}. For the helicity-2 curvature field we prove it directly, together with Haag duality for the ball (what commutes with everything outside the diamond is exactly the diamond's algebra); see the companion notes~\cite{T}. On the slice the flow reads
+\begin{equation}\label{eq:flow}
+\delta_\zeta\cE=N\,\partial_t\cE+2\sym(x\times\cB),\qquad \delta_\zeta\cB=N\,\partial_t\cB-2\sym(x\times\cE).
+\end{equation}
+
+\paragraph{(c) The computation.} For the magnetic multipole the fields are static, so the flow only rotates $\cB$ into $\cE$, and one line of algebra gives
+\[
+2\sym(x\times\cB)=(l+1)\,\varepsilon K .
+\]
+The flowed solution has electric curvature $2\pi(l+1)\varepsilon K$ in the ball. To pair it with $k$ in \eqref{eq:clr} we need a metric perturbation supported in the ball with that curvature. The profile $2NK$ vanishes on the sphere and its spatial Ricci tensor is
+\[
+\operatorname{Ric}\,(2NK)=(l+2)K ,
+\]
+so the cut velocity is $2\pi\cdot\frac{l+1}{l+2}\cdot 2NK$, and
+\[
+S=\frac{2\pi}{32\pi G}\int_B\frac{l+1}{l+2}\,2N\,\varepsilon K\!\cdot\!\varepsilon K=\frac{l+1}{l+2}\,\frac{\varepsilon^2A}{8G}.
+\]
+The two integers have plain meanings: $l+1$ is the rate at which the modular flow turns $\cB$ into $\cE$; $l+2$ is the curvature that the lapse profile $NK$ carries.
+
+\paragraph{Second route.} Independently, each multipole sector of the graviton can be carried unitarily onto scalar partial waves, local subspaces included, where Longo and Morsella's formula for the scalar~\cite{LM} applies~\cite{A}. This gives \eqref{eq:S} for all $l$ and agrees with the direct route. The two routes share fact (a) and differ in everything else.
+
+\paragraph{Electric data.} A duality rotation of $(\cE,\cB)$ is a unitary symmetry of the free field. It maps the vacuum to itself and each local algebra to itself, so it commutes with the modular group. Hence $S$ is the same function of $\psi_\cE$ as of $\psi_\cB$, which is \eqref{eq:S}.
+
+\section{The area side}
+
+\paragraph{A piece of pure geometry.} For any small change $q_{ij}$ of the flat metric on the ball, Green's identity with $\nabla\nabla N=-\delta$ and $N=0$ on the sphere gives
+\begin{equation}\label{eq:green}
+\delta\Area-2\,\delta\Vol=-\tfrac12\int_B N\,R_{\rm lin}[q],
+\end{equation}
+with $R_{\rm lin}$ the linearised scalar curvature. With the Hamiltonian constraint $R=16\pi G\,T_{00}$ this is the first law of causal diamonds, $-\delta F/4G=2\pi\int_B N\,T_{00}$.
+
+\paragraph{Magnetic.} The slice $t=0$ has metric $\delta+\varepsilon^2q_2$ and extrinsic curvature $\varepsilon K$. The vacuum Hamiltonian constraint at second order is $R_{\rm lin}[q_2]=|K|^2$: the magnetic field acts as its own energy density. By \eqref{eq:green},
+\[
+F=F_0-\tfrac12\,\varepsilon^2A ,\qquad\text{so}\qquad -\frac{\Delta F}{4G}=\frac{\varepsilon^2A}{8G},
+\]
+whatever the second-order metric is. It remains to show that the unit ball is still the stationary configuration. It is: the magnetic data do not push the surface at first order (because $K_{nn}=0$ and $\operatorname{tr}K=0$), the flat-space second variation is non-degenerate except along translations and boosts, and parity and time reversal forbid a push along those. A numerical search for the extremum on exact second-order vacuum solutions confirms the value to $5\times10^{-10}$~\cite{T}.
+
+\paragraph{Electric.} Here the slice itself is curved at first order and the surface moves, so we use an exact solution instead of perturbation theory in a chosen gauge. The static axisymmetric vacuum metrics are Weyl's,
+\[
+ds^2=-e^{2U}dt^2+e^{-2U}\bigl[e^{2k}(d\rho^2+dz^2)+\rho^2d\phi^2\bigr],
+\]
+with $U$ harmonic in flat space and $k$ given by $k_\rho=\rho(U_\rho^2-U_z^2)$, $k_z=2\rho\,U_\rho U_z$. Take $U=\varepsilon\,r^lP_l(\cos\theta)$. The slice $t=0$ is time symmetric, so the stationary surface lies in it. Expanding $F$ on the surface $r=1+\varepsilon a\,P_l$ to order $\varepsilon^2$ in exact arithmetic and making it stationary in $a$ gives $a=2/(l+2)$ and
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+$l$ & 2 & 3 & 4 & 5 & 6\\
+\midrule
+area side, units $\varepsilon^2/8G$ & $\dfrac{4\pi}{35}$ & $\dfrac{16\pi}{105}$ & $\dfrac{16\pi}{99}$ & $\dfrac{160\pi}{1001}$ & $\dfrac{2\pi}{13}$\\[6pt]
+same, in units of the table in \S1 & 3 & 4 & 5 & 6 & 7\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent These equal the entropy \eqref{eq:S} exactly. A stationary value of $F$ does not depend on coordinates, so no gauge choice enters. The script takes 14 seconds; it also checks \eqref{eq:green}, checks that the slice is scalar-flat, returns exactly zero for $l=1$ (which is flat space in accelerated coordinates), and fails when any one ingredient is deliberately altered. Other $m$ at the same $l$ follow from rotation invariance.
+
+\section{What the mismatch is not}
+
+\paragraph{Not a scalar.} A local Lorentz-invariant correction at this order must be built from $R_{abcd}R^{abcd}\propto\cE^2-\cB^2$ (the other invariant, $\cE\!\cdot\!\cB$, is odd under parity). The mismatch found here is proportional to $\cB^2$ alone. Jacobson's proposal for non-conformal matter is that the modular energy differs from the stress-energy flux by a local scalar, which the cosmological-constant term absorbs~\cite{J}; Casini, Galante and Myers showed when that works~\cite{CGM}. That route is closed here.
+
+\paragraph{Not the scalar-field effect.} For comparison, take a minimally coupled massless scalar with a static harmonic profile $\varphi$. By \eqref{eq:green} the area side is $2\pi\cdot\tfrac12\int N|\nabla\varphi|^2$, while the entropy is $2\pi\bigl(\tfrac12\int N|\nabla\varphi|^2+\tfrac12\int\varphi^2\bigr)$~\cite{LM}. There the entropy \emph{exceeds} the area side, by the integral of a scalar density. For gravitons the entropy falls \emph{short}, and by something that is not a scalar density. (For a conformally coupled scalar the Wald term $-\tfrac{\pi}{3}\oint\varphi^2$ restores the balance.)
+
+\paragraph{Not an edge-mode ambiguity.} Any algebra one assigns to the ball that (i) is related to the full theory by a fixed quantum channel, (ii) cannot signal to the outside, and (iii) contains the interior curvature observables, has the same relative entropy~\cite{T}. Centres and edge modes of this kind do not move $S$.
+
+\paragraph{Related results in print.} Jacobson, Senovilla and Speranza found that the second-order area deficit of a small geodesic ball in vacuum is not proportional to the Bel--Robinson energy and treats $\cE^2$ and $\cB^2$ differently~\cite{JSS17}. That is the area side, with a different prescription for the ball. Benedetti and Casini computed the vacuum entanglement entropy of gravitons in a sphere~\cite{BC}. Our searches did not find the relative entropy of a graviton tidal state in a ball, or a comparison of it with a second-order area term. These are search results, not a priority claim.
+
+\section{One picture for both integers}
+
+Define, for a function $\psi$ on the ball, $Q_w[\psi]=\tfrac12\int_BN|\nabla\psi|^2+\tfrac w2\int_B\psi^2$. For a harmonic polynomial of degree $l$, $\int_BN|\nabla\psi|^2=l\int_B\psi^2$, so $Q_w=\tfrac{l+w}{2}\int_B\psi^2$. Then
+\[
+8G\,S=c_l\,Q_1[\psi]\ \ \text{(both sectors)},\qquad
+8G\,(\text{area side})=c_l\,Q_1[\psi_\cE]\ \text{ or }\ c_l\,Q_2[\psi_\cB].
+\]
+The entropy weighs the tidal potential with weight 1 in both sectors. The geometry weighs a magnetic potential with weight 2. The whole mismatch is $\tfrac{c_l}{2}\int_B\psi_\cB^2$.
+
+\paragraph{Where the extra 1 comes from.} For any lapse function $N$ and any transverse, traceless, harmonic $K$,
+\begin{equation}\label{eq:killing}
+\underbrace{\operatorname{Ric}\,(2NK)}_{\text{geometric rate}}-\underbrace{2\sym(\nabla N\times\operatorname{curl}K)}_{\text{modular rate}}
+=2\sym(K\!\cdot\!\nabla\nabla N)-(\Delta N)\,K .
+\end{equation}
+For the Rindler wedge $N=x_1$ is the lapse of a boost, a true symmetry, $\nabla\nabla N=0$, and the two rates are equal: no mismatch, as must be the case on a Killing horizon. For the ball $\nabla\nabla N=-\delta$ and the right side is exactly $K$. The mismatch is the failure of $\zeta$ to be a Killing vector, and nothing else. In line with this, $(l+1)/(l+2)\to1$ as $l\to\infty$, where the field hugs the sphere and the diamond looks locally like a wedge.
+
+\section{How it was checked}
+
+\begin{center}
+\begin{tabular}{p{0.32\textwidth}p{0.6\textwidth}}
+\toprule
+Claim & Support\\
+\midrule
+Entropy formula \eqref{eq:S} & Two proofs with different ingredients; they agree for every $l$.\\
+Modular flow and duality for helicity 2 & Proved in the companion notes; a separate adversarial read, instructed to break them, found no broken step.\\
+Entropy, numerically & A three-dimensional lattice of the graviton field with no multipole reduction. For the uniform magnetic field it converges to $0.999$ of \eqref{eq:S}, bracket $[0.89,\,1.02]$; if entropy equalled the area side it would read $1.33$. Electric rows: $1.02$, $1.01$, $0.99$.\\
+Area side, magnetic & Exact identity \eqref{eq:green} and the constraint; confirmed on exact nonlinear solutions to $5\times10^{-10}$.\\
+Area side, electric & Exact Weyl solution, $l=2$ to $6$; three earlier routes gave the same $l=2,3$ values.\\
+Killing limit & Identity \eqref{eq:killing}, checked on random data: the same machinery gives no mismatch on the Rindler wedge.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every number is produced by a script that also contains a deliberately planted error it must catch. All checks so far are internal to this programme. No outside referee has read the proofs.
+
+\section{Assumptions, and what would refute the result}
+
+\begin{enumerate}
+\item \textbf{Scope.} Free linearised gravity at order $G^0$, four dimensions, a flat ball, one multipole order at a time, static electric or stationary magnetic data. Whether the ball algebra of full quantum gravity reduces to this free algebra as $G\to0$ is not claimed. Constructions that add an observer or a clock~\cite{JSS23} may change the answer, and this is the assumption we consider most open.
+\item \textbf{The area side.} That the gravitational term of the first law at this order is $-\Delta F/4G$ at the stationary configuration. This is what the first law gives for matter~\cite{JV} and what the generalised-entropy construction of~\cite{JSS23} proposes. At this order it also equals the area deficit at fixed volume of the isoperimetric surface, the prescription of~\cite{J}. With a surface that is not stationary, such as a geodesic ball of fixed radius, the second-order numbers change~\cite{JSS17}.
+\item \textbf{The algebra.} The three conditions (i)--(iii) above.
+\item \textbf{Einstein's equations} hold through second order. Only the Hamiltonian constraint on the slice is used.
+\end{enumerate}
+
+\noindent The result would be refuted by: an error in the proof that the helicity-2 modular flow is \eqref{eq:flow}; a second-order first law in print that balances on magnetic data with the same area prescription; or a demonstration that the stationary surface for magnetic data is not the one used here. Mixtures of different $l$ push the ball sideways at second order and are not covered.
+
+\section{Questions}
+
+\begin{enumerate}
+\item Is the stationary value of $\Area-2\Vol$ the right gravitational term at second order, or is there a prescription under which the magnetic case balances and the electric case still does?
+\item Is a magnetic-only failure of the second-order first law known, in this or another language?
+\item If the mismatch is real, it says that for gravitons ``area plus entropy'' is not stationary in flat space under magnetic tidal deformations. Is that a statement about entanglement equilibrium, or about the limit $G\to0$?
+\end{enumerate}
+
+\begin{thebibliography}{99}\small
+\bibitem{JV} T.~Jacobson and M.~Visser, \emph{Gravitational thermodynamics of causal diamonds in (A)dS}, arXiv:1812.01596.
+\bibitem{J} T.~Jacobson, \emph{Entanglement equilibrium and the Einstein equation}, arXiv:1505.04753.
+\bibitem{CLR} F.~Ciolli, R.~Longo and G.~Ruzzi, \emph{The information in a wave}, arXiv:1906.01707.
+\bibitem{HL} P.~D.~Hislop and R.~Longo, \emph{Modular structure of the local algebras associated with the free massless scalar field theory}, Commun.\ Math.\ Phys.\ 84 (1982) 71.
+\bibitem{BW} J.~J.~Bisognano and E.~H.~Wichmann, J.\ Math.\ Phys.\ 16 (1975) 985; 17 (1976) 303.
+\bibitem{LM} R.~Longo and G.~Morsella, \emph{The massless modular Hamiltonian}, arXiv:2012.00565.
+\bibitem{CGM} H.~Casini, D.~A.~Galante and R.~C.~Myers, \emph{Comments on Jacobson's ``Entanglement equilibrium and the Einstein equation''}, arXiv:1601.00528.
+\bibitem{JSS17} T.~Jacobson, J.~M.~M.~Senovilla and A.~J.~Speranza, \emph{Area deficits and the Bel--Robinson tensor}, arXiv:1710.07379.
+\bibitem{BC} V.~Benedetti and H.~Casini, \emph{Entanglement entropy of linearized gravitons in a sphere}, arXiv:1908.01800.
+\bibitem{JSS23} K.~Jensen, J.~Sorce and A.~J.~Speranza, \emph{Generalized entropy for general subregions in quantum gravity}, arXiv:2306.01837.
+\bibitem{T} A.~Houg, \emph{The ladder theorem: statement, proof and ledger}, with \emph{Haag duality for the helicity-2 ball} and \emph{The modular group of the helicity-2 ball} (companion notes and scripts, November 2026).
+\bibitem{A} A.~Houg, \emph{Coherent-state relative entropy of free gravitons and photons in a ball} (draft, revision 18, November 2026).
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,40 @@
+{
+ "B0": 0.872,
+ "L0": 37.41,
+ "notB": 0.128,
+ "slices": {
+  "c3": 0.07109,
+  "b4_sc": 0.01667,
+  "b4_q": 0.02539,
+  "b5_geo": 0.00063,
+  "b5_ref": 0.00813,
+  "b5_bw": 0.00609
+ },
+ "P_prem_given_notB": 0.5521,
+ "COMPLETE_pending": {
+  "label": "complete proof, pending blind check",
+  "P_given_B": 0.9,
+  "P_given_notB": 0.5687,
+  "LR": 1.582,
+  "B1": 0.9151,
+  "L1_percent": 39.26
+ },
+ "COMPLETE_blind": {
+  "label": "complete proof, blind-confirmed",
+  "P_given_B": 0.7,
+  "P_given_notB": 0.3577,
+  "LR": 1.957,
+  "B1": 0.9302,
+  "L1_percent": 39.91
+ },
+ "OPEN_step": {
+  "label": "a step open (named)",
+  "LR": 1.0
+ },
+ "FALSE_step": {
+  "label": "a step false",
+  "LR_cap": 0.8
+ },
+ "cap_LR_all_c3_removed": 2.249,
+ "cap_LR_without_c3": 1.224
+}

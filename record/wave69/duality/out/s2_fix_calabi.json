@@ -1,0 +1,410 @@
+{
+ "results": {
+  "calabi": {
+   "ringA": {
+    "0": {
+     "sites_V": 360,
+     "sites_Vw": 360,
+     "dimZ": 417,
+     "dimB_w": 411,
+     "D_w": 6,
+     "sec": 5.9
+    },
+    "1": {
+     "sites_V": 360,
+     "sites_Vw": 1000,
+     "dimZ": 417,
+     "dimB_w": 411,
+     "D_w": 6,
+     "sec": 46.4
+    }
+   },
+   "fillA": {
+    "0": {
+     "sites_V": 360,
+     "sites_Vw": 507,
+     "dimZ": 417,
+     "dimB_w": 417,
+     "D_w": 0,
+     "sec": 19.5
+    },
+    "1": {
+     "sites_V": 360,
+     "sites_Vw": 1125,
+     "dimZ": 417,
+     "dimB_w": 417,
+     "D_w": 0,
+     "sec": 60.0
+    }
+   },
+   "ringB": {
+    "0": {
+     "sites_V": 704,
+     "sites_Vw": 704,
+     "dimZ": 1121,
+     "dimB_w": 1115,
+     "D_w": 6,
+     "sec": 18.7
+    },
+    "1": {
+     "sites_V": 704,
+     "sites_Vw": 1584,
+     "dimZ": 1121,
+     "dimB_w": 1115,
+     "D_w": 6,
+     "sec": 130.1
+    }
+   },
+   "fillB": {
+    "0": {
+     "sites_V": 704,
+     "sites_Vw": 900,
+     "dimZ": 1121,
+     "dimB_w": 1121,
+     "D_w": 0,
+     "sec": 24.8
+    }
+   }
+  }
+ },
+ "rank_log": [
+  {
+   "what": "calabi/ringA/w0 div|V",
+   "shape": [
+    1791,
+    2160
+   ],
+   "rank_modp": 1743,
+   "rank_gram": 1743,
+   "gram_gap": {
+    "smallest_kept": 7.001044089095608e-05,
+    "largest_dropped": 1.1572671749713116e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.6,
+   "sec_gram": 0.9
+  },
+  {
+   "what": "calabi/ringA/w0 C I_w",
+   "shape": [
+    5220,
+    2160
+   ],
+   "rank_modp": 1672,
+   "rank_gram": 1672,
+   "gram_gap": {
+    "smallest_kept": 0.002462190937832236,
+    "largest_dropped": 3.3568592581533826e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.7,
+   "sec_gram": 1.8
+  },
+  {
+   "what": "calabi/ringA/w0 R_out C I_w",
+   "shape": [
+    3060,
+    2160
+   ],
+   "rank_modp": 1261,
+   "rank_gram": 1261,
+   "gram_gap": {
+    "smallest_kept": 0.003341160870730139,
+    "largest_dropped": 2.22165148316982e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.3,
+   "sec_gram": 1.4
+  },
+  {
+   "what": "calabi/ringA/w1 div|V",
+   "shape": [
+    1791,
+    2160
+   ],
+   "rank_modp": 1743,
+   "rank_gram": 1743,
+   "gram_gap": {
+    "smallest_kept": 7.001044089095608e-05,
+    "largest_dropped": 1.1572671749713116e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.2,
+   "sec_gram": 4.1
+  },
+  {
+   "what": "calabi/ringA/w1 C I_w",
+   "shape": [
+    10944,
+    6000
+   ],
+   "rank_modp": null,
+   "rank_gram": 4064,
+   "gram_gap": {
+    "smallest_kept": 0.0007791661476314412,
+    "largest_dropped": 5.747161896537076e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 21.1
+  },
+  {
+   "what": "calabi/ringA/w1 R_out C I_w",
+   "shape": [
+    8784,
+    6000
+   ],
+   "rank_modp": null,
+   "rank_gram": 3653,
+   "gram_gap": {
+    "smallest_kept": 0.00023594787359771993,
+    "largest_dropped": 4.1311717035652447e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 20.9
+  },
+  {
+   "what": "calabi/fillA/w0 div|V",
+   "shape": [
+    1791,
+    2160
+   ],
+   "rank_modp": 1743,
+   "rank_gram": 1743,
+   "gram_gap": {
+    "smallest_kept": 7.001044089095608e-05,
+    "largest_dropped": 1.1572671749713116e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.3,
+   "sec_gram": 5.1
+  },
+  {
+   "what": "calabi/fillA/w0 C I_w",
+   "shape": [
+    6180,
+    3042
+   ],
+   "rank_modp": null,
+   "rank_gram": 2178,
+   "gram_gap": {
+    "smallest_kept": 0.00010348844735509024,
+    "largest_dropped": 4.081323664749168e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 5.3
+  },
+  {
+   "what": "calabi/fillA/w0 R_out C I_w",
+   "shape": [
+    4020,
+    3042
+   ],
+   "rank_modp": null,
+   "rank_gram": 1761,
+   "gram_gap": {
+    "smallest_kept": 6.817208471648385e-05,
+    "largest_dropped": 1.8973622560941484e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 8.8
+  },
+  {
+   "what": "calabi/fillA/w1 div|V",
+   "shape": [
+    1791,
+    2160
+   ],
+   "rank_modp": 1743,
+   "rank_gram": 1743,
+   "gram_gap": {
+    "smallest_kept": 7.001044089095608e-05,
+    "largest_dropped": 1.1572671749713116e-15,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.3,
+   "sec_gram": 0.3
+  },
+  {
+   "what": "calabi/fillA/w1 C I_w",
+   "shape": [
+    11460,
+    6750
+   ],
+   "rank_modp": null,
+   "rank_gram": 4398,
+   "gram_gap": {
+    "smallest_kept": 6.849524285486733e-05,
+    "largest_dropped": 5.558357302378646e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 34.8
+  },
+  {
+   "what": "calabi/fillA/w1 R_out C I_w",
+   "shape": [
+    9300,
+    6750
+   ],
+   "rank_modp": null,
+   "rank_gram": 3981,
+   "gram_gap": {
+    "smallest_kept": 7.718240262494411e-05,
+    "largest_dropped": 4.2035172280627855e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 24.5
+  },
+  {
+   "what": "calabi/ringB/w0 div|V",
+   "shape": [
+    3156,
+    4224
+   ],
+   "rank_modp": null,
+   "rank_gram": 3103,
+   "gram_gap": {
+    "smallest_kept": 9.35831460292913e-05,
+    "largest_dropped": 2.7259382595860194e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 3.2
+  },
+  {
+   "what": "calabi/ringB/w0 C I_w",
+   "shape": [
+    8634,
+    4224
+   ],
+   "rank_modp": null,
+   "rank_gram": 3024,
+   "gram_gap": {
+    "smallest_kept": 0.0013500010410709075,
+    "largest_dropped": 4.480768882925035e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 5.6
+  },
+  {
+   "what": "calabi/ringB/w0 R_out C I_w",
+   "shape": [
+    4410,
+    4224
+   ],
+   "rank_modp": null,
+   "rank_gram": 1909,
+   "gram_gap": {
+    "smallest_kept": 0.0033989872775112982,
+    "largest_dropped": 2.552527446304551e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 9.8
+  },
+  {
+   "what": "calabi/ringB/w1 div|V",
+   "shape": [
+    3156,
+    4224
+   ],
+   "rank_modp": null,
+   "rank_gram": 3103,
+   "gram_gap": {
+    "smallest_kept": 9.35831460292913e-05,
+    "largest_dropped": 2.7259382595860194e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 4.4
+  },
+  {
+   "what": "calabi/ringB/w1 C I_w",
+   "shape": [
+    15990,
+    9504
+   ],
+   "rank_modp": null,
+   "rank_gram": 6184,
+   "gram_gap": {
+    "smallest_kept": 0.0004755745353661716,
+    "largest_dropped": 7.005647262120984e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 69.6
+  },
+  {
+   "what": "calabi/ringB/w1 R_out C I_w",
+   "shape": [
+    11766,
+    9504
+   ],
+   "rank_modp": null,
+   "rank_gram": 5069,
+   "gram_gap": {
+    "smallest_kept": 0.00023873732632178433,
+    "largest_dropped": 4.716337661447224e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 56.0
+  },
+  {
+   "what": "calabi/fillB/w0 div|V",
+   "shape": [
+    3156,
+    4224
+   ],
+   "rank_modp": null,
+   "rank_gram": 3103,
+   "gram_gap": {
+    "smallest_kept": 9.35831460292913e-05,
+    "largest_dropped": 2.7259382595860194e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 5.4
+  },
+  {
+   "what": "calabi/fillB/w0 C I_w",
+   "shape": [
+    9744,
+    5400
+   ],
+   "rank_modp": null,
+   "rank_gram": 3636,
+   "gram_gap": {
+    "smallest_kept": 6.579994387925326e-05,
+    "largest_dropped": 5.063161355556569e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 10.8
+  },
+  {
+   "what": "calabi/fillB/w0 R_out C I_w",
+   "shape": [
+    5520,
+    5400
+   ],
+   "rank_modp": null,
+   "rank_gram": 2515,
+   "gram_gap": {
+    "smallest_kept": 7.265231747682389e-05,
+    "largest_dropped": 2.2716927269146437e-16,
+    "tol": 1e-10
+   },
+   "sec_modp": 0.0,
+   "sec_gram": 8.5
+  }
+ ],
+ "prime": 2147483629,
+ "exact_limit": 2600
+}

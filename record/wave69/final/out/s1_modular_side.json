@@ -1,0 +1,1861 @@
+{
+ "script": "s1_modular_side",
+ "ALL_PASS": true,
+ "n_checks": 304,
+ "n_plants": 56,
+ "checks": [
+  {
+   "label": "l=2 m=l cos: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-8"
+  },
+  {
+   "label": "l=2 m=l sin: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-8"
+  },
+  {
+   "label": "l=2 m=0: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-8"
+  },
+  {
+   "label": "l=2 mixed: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-8"
+  },
+  {
+   "label": "l=3 m=l cos: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-10"
+  },
+  {
+   "label": "l=3 m=l sin: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-10"
+  },
+  {
+   "label": "l=3 m=0: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-10"
+  },
+  {
+   "label": "l=3 mixed: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-10"
+  },
+  {
+   "label": "l=4 m=l cos: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-12"
+  },
+  {
+   "label": "l=4 m=l sin: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-12"
+  },
+  {
+   "label": "l=4 m=0: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-12"
+  },
+  {
+   "label": "l=4 mixed: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-12"
+  },
+  {
+   "label": "l=5 m=l cos: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-14"
+  },
+  {
+   "label": "l=5 m=l sin: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-14"
+  },
+  {
+   "label": "l=5 m=0: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-14"
+  },
+  {
+   "label": "l=5 mixed: phi harmonic, degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M1 tr K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M1 div K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M1 Lap K = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M1 K.x = (l-1)/2 v",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M1 x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M2 curl K symmetric",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M2 B is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M2 d_t E = -sym curl B = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M3 dE = (l+1) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M4 Ric_3(2NK) = (l+2) K",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M5 interior R_lin[h_v] = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M5 surface part of the constraint = 2c x.K.x = 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M5 curvature of h_v inside B = modular flow (E: (l+1)K, B: 0)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M6 int_B Hess f . N K = 0 for three polynomials f",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M7 A = flux/((2l+1)(2l+3))",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M7 S = (l+1)/(l+2) A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M7 A - S = A/(l+2)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: M8 C(r^2 K) = -2(l+2) curl K",
+   "pass": true,
+   "detail": "-14"
+  }
+ ],
+ "plants": [
+  {
+   "label": "l=2 m=l cos: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l sin: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 P4 electric datum: surface constraint term nonzero",
+   "caught": true,
+   "detail": "4*x**2 - 4*y**2"
+  },
+  {
+   "label": "l=2 P4 electric datum: pairing depends on the representative",
+   "caught": true,
+   "detail": "32*pi/15"
+  },
+  {
+   "label": "l=3 m=l cos: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l sin: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 P4 electric datum: surface constraint term nonzero",
+   "caught": true,
+   "detail": "12*x**3 - 36*x*y**2"
+  },
+  {
+   "label": "l=3 P4 electric datum: pairing depends on the representative",
+   "caught": true,
+   "detail": "192*pi/35"
+  },
+  {
+   "label": "l=4 m=l cos: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l sin: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 P4 electric datum: surface constraint term nonzero",
+   "caught": true,
+   "detail": "24*x**4 - 144*x**2*y**2 + 24*y**4"
+  },
+  {
+   "label": "l=4 P4 electric datum: pairing depends on the representative",
+   "caught": true,
+   "detail": "1024*pi/105"
+  },
+  {
+   "label": "l=5 m=l cos: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l cos: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=l sin: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 m=0: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: P1 wrong lapse N + (1-r^2)^2/10: Ric no longer (l+2)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: P2 flow coefficient 1 instead of 2: dE != (l+1)K",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 mixed: P3 wrong rung l/(l+2): S != c A",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=5 P4 electric datum: surface constraint term nonzero",
+   "caught": true,
+   "detail": "40*x**5 - 400*x**3*y**2 + 200*x*y**4"
+  },
+  {
+   "label": "l=5 P4 electric datum: pairing depends on the representative",
+   "caught": true,
+   "detail": "10240*pi/693"
+  }
+ ],
+ "values": {
+  "l=2 m=l cos: A": "16*pi/35",
+  "l=2 m=l cos: S": "12*pi/35",
+  "l=2 m=l cos: alpha": "-8",
+  "l=2 m=l sin: A": "16*pi/35",
+  "l=2 m=l sin: S": "12*pi/35",
+  "l=2 m=l sin: alpha": "-8",
+  "l=2 m=0: A": "12*pi/35",
+  "l=2 m=0: S": "9*pi/35",
+  "l=2 m=0: alpha": "-8",
+  "l=2 mixed: A": "388*pi/35",
+  "l=2 mixed: S": "291*pi/35",
+  "l=2 mixed: alpha": "-8",
+  "l=3 m=l cos: A": "128*pi/105",
+  "l=3 m=l cos: S": "512*pi/525",
+  "l=3 m=l cos: alpha": "-10",
+  "l=3 m=l sin: A": "128*pi/105",
+  "l=3 m=l sin: S": "512*pi/525",
+  "l=3 m=l sin: alpha": "-10",
+  "l=3 m=0: A": "16*pi/21",
+  "l=3 m=0: S": "64*pi/105",
+  "l=3 m=0: alpha": "-10",
+  "l=3 mixed: A": "4768*pi/105",
+  "l=3 mixed: S": "19072*pi/525",
+  "l=3 mixed: alpha": "-10",
+  "l=4 m=l cos: A": "512*pi/231",
+  "l=4 m=l cos: S": "1280*pi/693",
+  "l=4 m=l cos: alpha": "-12",
+  "l=4 m=l sin: A": "512*pi/231",
+  "l=4 m=l sin: S": "1280*pi/693",
+  "l=4 m=l sin: alpha": "-12",
+  "l=4 m=0: A": "40*pi/33",
+  "l=4 m=0: S": "100*pi/99",
+  "l=4 m=0: alpha": "-12",
+  "l=4 mixed: A": "8944*pi/77",
+  "l=4 mixed: S": "22360*pi/231",
+  "l=4 mixed: alpha": "-12",
+  "l=5 m=l cos: A": "10240*pi/3003",
+  "l=5 m=l cos: S": "20480*pi/7007",
+  "l=5 m=l cos: alpha": "-14",
+  "l=5 m=l sin: A": "10240*pi/3003",
+  "l=5 m=l sin: S": "20480*pi/7007",
+  "l=5 m=l sin: alpha": "-14",
+  "l=5 m=0: A": "240*pi/143",
+  "l=5 m=0: S": "1440*pi/1001",
+  "l=5 m=0: alpha": "-14",
+  "l=5 mixed: A": "710800*pi/3003",
+  "l=5 mixed: S": "1421600*pi/7007",
+  "l=5 mixed: alpha": "-14",
+  "alpha closed form": "-2(l+2), so the coherent vector is v_f with f = -(2/(l+2)) chi(r) r^2 K (wave69 Step 1: B[v_f] = C f / 4)"
+ }
+}

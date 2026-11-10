@@ -1,0 +1,13 @@
+24 TT harmonic data
+PASS wedge (Killing lapse): geometric rate = modular rate on every datum
+PASS ball: geometric rate - modular rate = K on every datum
+PASS general lapse: G - M = 2 sym(K.HessN) - (Lap N) K
+FAIL plant (flow coefficient 2 -> 3) breaks the wedge equality on every datum
+PASS scope family l=2: M = (l+1)K and G = (l+2)K
+PASS scope family l=3: M = (l+1)K and G = (l+2)K
+PASS scope family l=4: M = (l+1)K and G = (l+2)K
+bin: KILLING-OK | failed: ['plant (flow coefficient 2 -> 3) breaks the wedge equality on every datum']
+
+real	0m9.379s
+user	0m9.194s
+sys	0m0.044s

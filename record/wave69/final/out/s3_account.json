@@ -1,0 +1,468 @@
+{
+ "script": "s3_account",
+ "ALL_PASS": true,
+ "n_checks": 72,
+ "n_plants": 18,
+ "checks": [
+  {
+   "label": "l=2 m=l cos: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(12*pi/35, 16*pi/35)"
+  },
+  {
+   "label": "l=2 m=l cos: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(9*pi/35, 12*pi/35)"
+  },
+  {
+   "label": "l=2 m=0: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(291*pi/35, 388*pi/35)"
+  },
+  {
+   "label": "l=2 mixed: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 a=-3/5: W3 T is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 a=-3/5: W3 A = int N T.T = c_l E_2[psi]",
+   "pass": true,
+   "detail": "82256*pi/5775"
+  },
+  {
+   "label": "l=2 a=-3/5: W3 A - c_l E_1 = (c_l/2) int psi^2 > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 a=2: W3 T is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 a=2: W3 A = int N T.T = c_l E_2[psi]",
+   "pass": true,
+   "detail": "355408*pi/1155"
+  },
+  {
+   "label": "l=2 a=2: W3 A - c_l E_1 = (c_l/2) int psi^2 > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(512*pi/525, 128*pi/105)"
+  },
+  {
+   "label": "l=3 m=l cos: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(64*pi/105, 16*pi/21)"
+  },
+  {
+   "label": "l=3 m=0: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(19072*pi/525, 4768*pi/105)"
+  },
+  {
+   "label": "l=3 mixed: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 a=-3/5: W3 T is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 a=-3/5: W3 A = int N T.T = c_l E_2[psi]",
+   "pass": true,
+   "detail": "2212352*pi/170625"
+  },
+  {
+   "label": "l=3 a=-3/5: W3 A - c_l E_1 = (c_l/2) int psi^2 > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 a=2: W3 T is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 a=2: W3 A = int N T.T = c_l E_2[psi]",
+   "pass": true,
+   "detail": "24693472*pi/75075"
+  },
+  {
+   "label": "l=3 a=2: W3 A - c_l E_1 = (c_l/2) int psi^2 > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(1280*pi/693, 512*pi/231)"
+  },
+  {
+   "label": "l=4 m=l cos: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(100*pi/99, 40*pi/33)"
+  },
+  {
+   "label": "l=4 m=0: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: psi harmonic of degree l",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: W0 psi = (l-1) l (l+1)/2 phi",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: W0 oint |K|^2 = (l-1)(2l+1) l (l+1)/2 oint phi^2",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: W1 c_l E_1[psi] = (l+1)/(l+2) A  (transfer formula = direct value)",
+   "pass": true,
+   "detail": "(22360*pi/231, 8944*pi/77)"
+  },
+  {
+   "label": "l=4 mixed: W2 c_l E_2[psi] = A",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: W2 (c_l/2) int psi^2 = A/(l+2) > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 a=-3/5: W3 T is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 a=-3/5: W3 A = int N T.T = c_l E_2[psi]",
+   "pass": true,
+   "detail": "390784*pi/28875"
+  },
+  {
+   "label": "l=4 a=-3/5: W3 A - c_l E_1 = (c_l/2) int psi^2 > 0",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 a=2: W3 T is TT",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 a=2: W3 A = int N T.T = c_l E_2[psi]",
+   "pass": true,
+   "detail": "12023488*pi/31185"
+  },
+  {
+   "label": "l=4 a=2: W3 A - c_l E_1 = (c_l/2) int psi^2 > 0",
+   "pass": true,
+   "detail": null
+  }
+ ],
+ "plants": [
+  {
+   "label": "l=2 m=l cos: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=l cos: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 m=0: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=2 mixed: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=l cos: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 m=0: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=3 mixed: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=l cos: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 m=0: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: P c_{l+1} in place of c_l",
+   "caught": true,
+   "detail": null
+  },
+  {
+   "label": "l=4 mixed: P weight 3/2 on the area side",
+   "caught": true,
+   "detail": null
+  }
+ ],
+ "values": {
+  "l=2 a=-3/5: S/A on this datum": "204/265",
+  "l=2 a=2: S/A on this datum": "2089/2748",
+  "l=3 a=-3/5: S/A on this datum": "1037/1276",
+  "l=3 a=2: S/A on this datum": "4172/5179",
+  "l=4 a=-3/5: S/A on this datum": "538/639",
+  "l=4 a=2: S/A on this datum": "7311/8738"
+ }
+}
