@@ -25,7 +25,7 @@ The entropy is blind to electric–magnetic duality. The area is not. No local L
 
 **What is new and what is not.** The area numbers at l = 2 are already in print: Jacobson, Senovilla and Speranza, [arXiv:1710.07379](https://arxiv.org/abs/1710.07379), eq. (75) at the constant-mean-curvature shape. They also showed the area deficit is not the Bel–Robinson energy for any shape. What we did not find in print is the entropy side, and so the comparison. "Holds on electric data" is true at the stationary surface; for a geodesic ball the electric case fails too, while the magnetic coefficient is the same for every shape.
 
-**Start here:** [`paper/ladder_short.pdf`](paper/ladder_short.pdf) (8 pages, version 2).
+**Start here:** [`paper/ladder_short.pdf`](paper/ladder_short.pdf) (8 pages, version 3).
 
 ## Status
 
@@ -35,7 +35,7 @@ Read this before quoting the result.
 - **Assumed, and stated as assumptions:** the theory is free linearised gravity at order G⁰ on a flat ball in four dimensions; the gravitational term of the first law at this order is the stationary value of Area − 2·Volume; three conditions on what counts as "the algebra of the ball"; Einstein's equations to second order. The full list is in the paper, section 8, and in [`record/wave69/final/THEOREM.md`](record/wave69/final/THEOREM.md), section 2.
 - **Open:** whether the ball algebra of full quantum gravity reduces to the free one as G → 0. Nothing here tests that.
 - **Not peer reviewed.** Every check so far was made inside this programme. No outside referee has read the proofs.
-- **Corrected once already.** Version 1 of the paper was public for about an hour before a blind read came back. It confirmed every formula and found four statements that were wrong or too broad, including that part of the area result is in print. Version 2 fixes them and lists them in its last section. The read is in [`record/wave72/blindread/`](record/wave72/blindread/REPORT.md).
+- **Corrected once already.** Version 1 of the paper was public for about an hour before a blind read came back. It confirmed every formula and found four statements that were wrong or too broad, including that part of the area result is in print. Version 2 fixed them; version 3 only shortens the text. The read is in [`record/wave72/blindread/`](record/wave72/blindread/REPORT.md).
 
 ## Reproduce
 

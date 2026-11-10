@@ -14,17 +14,17 @@
 \title{Entropy cannot tell electric tides from magnetic ones.\\ Area can.\\[4pt]
 \large An exact second-order mismatch for free gravitons in a flat ball}
 \author{Andreas Houg}
-\date{10 November 2026 (version 2, corrected after a blind read; see the last section)}
+\date{10 November 2026 (version 3)}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Take a ball in flat space and put a weak tidal gravitational field through it. Two quantities respond at second order in the field: the relative entropy of the gravitons inside the ball, and the area of the ball's surface. The first law of causal diamonds, carried to second order, would make the two responses equal. We compute both exactly in free linearised gravity. For a uniform tidal field in a ball of radius $R$ the entropy is the Bel--Robinson super-energy of the ball,
+Take a ball in flat space and put a weak tidal gravitational field through it. Two quantities respond at second order in the field: the relative entropy of the gravitons inside the ball, and the area of its surface. The first law of causal diamonds, carried to second order, would make them equal. We compute both exactly in free linearised gravity. On a static electric tidal field of multipole order $l$ they agree. On a stationary magnetic one the entropy is only $(l+1)/(l+2)$ of the area term. For a uniform field in a ball of radius $R$ the entropy is the Bel--Robinson super-energy,
 \[
 S=\frac{\pi R^{6}}{420\,G}\bigl(\cE_{ij}\cE_{ij}+\cB_{ij}\cB_{ij}\bigr),
 \]
-while the area term is $\frac{\pi R^{6}}{420\,G}\,\cE_{ij}\cE_{ij}$ for a purely electric field and $\frac{\pi R^{6}}{420\,G}\cdot\frac43\,\cB_{ij}\cB_{ij}$ for a purely magnetic one. The area numbers are in print (Jacobson, Senovilla and Speranza, 2017); the entropy is new. At multipole order $l$ the two agree on static electric data and differ by the factor $(l+1)/(l+2)$ on stationary magnetic data. The entropy is blind to electric--magnetic duality; the area is not. No local scalar can remove the mismatch, and it vanishes identically when the ball's conformal Killing vector is replaced by a Killing vector. We state the assumptions and what would refute the result.
+while the area term is $\frac{\pi R^{6}}{420\,G}\,\cE_{ij}\cE_{ij}$ for an electric field and $\frac43\cdot\frac{\pi R^{6}}{420\,G}\,\cB_{ij}\cB_{ij}$ for a magnetic one. The area terms are in print (Jacobson, Senovilla and Speranza, 2017); the entropy is new. The entropy is blind to electric--magnetic duality and the area is not. No local scalar removes the mismatch, and it vanishes identically when the ball's conformal Killing vector is replaced by a Killing vector.
 \end{abstract}
 
 \section{The result}
@@ -57,7 +57,14 @@ So at the stationary surface the first law holds on electric data and fails on m
 \]
 \end{result}
 
-\eqref{eq:S} is exact to all orders, because the state is coherent and the theory is free; it has no cross term between the sectors, which would be odd under parity. \eqref{eq:AB} is proved for all $l$. \eqref{eq:AE} is computed exactly for $l=2,\dots,12$ and follows for all $l$ from a closed form given in Section~\ref{sec:area}. When both sectors are present the area side is the sum of \eqref{eq:AE} and \eqref{eq:AB} only if the ball is not pushed along a boost, which for $l=2$ requires $\cE$ and $\cB$ to share principal axes ($\epsilon_{kil}\cE_{ij}\cB_{lj}=0$); we argue this from the symmetry of the zero modes and have not computed the general mixed case. For $l=2$ the fields are uniform, $\int_B\psi^2=\tfrac{8\pi}{105}\cE_{ij}\cE_{ij}$, and the Result becomes the formulas of the abstract; the powers of $R$ follow by dilation.
+How far each line reaches:
+\begin{itemize}
+\item \eqref{eq:S} is exact to all orders, because the state is coherent and the theory is free. It has no cross term between the sectors (it would be odd under parity).
+\item \eqref{eq:AB} is proved for every $l$.
+\item \eqref{eq:AE} is computed exactly for $l\le12$, and for every $l$ given the closed form of Section~\ref{sec:area}.
+\item When both sectors are present, the area side is the sum of \eqref{eq:AE} and \eqref{eq:AB} only if the ball is not pushed along a boost. For $l=2$ that requires $\cE$ and $\cB$ to share principal axes, $\epsilon_{kil}\cE_{ij}\cB_{lj}=0$. This is argued from the symmetry of the zero modes; the general mixed case is not computed.
+\end{itemize}
+For $l=2$ the fields are uniform and $\int_B\psi^2=\tfrac{8\pi}{105}\cE_{ij}\cE_{ij}$, which gives the formulas of the abstract; the powers of $R$ follow by dilation.
 
 \begin{center}
 \begin{tabular}{lccc}
@@ -112,7 +119,7 @@ Here $\Delta^{it}$ is the modular group of the diamond and $P$ cuts a solution d
 \[
 2\sym(x\times\cB)=(l+1)\,\varepsilon K .
 \]
-The flowed solution has electric curvature $2\pi(l+1)\varepsilon K$ in the ball. The cut velocity is the finite-norm element supported in the ball with this interior curvature. Finite norm forces the metric perturbation to be continuous across the sphere, so it vanishes there up to gauge; $x\!\cdot\!K\!\cdot\!x=0$ makes the truncated profile satisfy the constraint across the sphere; and the remaining gauge freedom vanishes on the sphere and does not change the pairing with a transverse $K$. For vacuum data with $\delta p=0$ the electric curvature is the linearised Ricci tensor of $\delta h$, and
+The flowed solution has electric curvature $2\pi(l+1)\varepsilon K$ in the ball. To cut it to the ball we need a metric perturbation with that curvature inside, supported in the ball, and of finite norm. Finite norm means it is continuous across the sphere, so it vanishes there (up to gauge, which does not change the pairing with a transverse $K$). The profile $2NK$ does this: $N$ vanishes on the sphere, and $x\!\cdot\!K\!\cdot\!x=0$ keeps the constraint satisfied across it. Its linearised Ricci tensor, which is its electric curvature, is
 \[
 \operatorname{Ric}\,(2NK)=(l+2)K ,
 \]
@@ -166,18 +173,16 @@ and $S\propto\cE^2+\cB^2$ is not a scalar. Jacobson's proposal for non-conformal
 
 \paragraph{Not an edge-mode ambiguity.} Any algebra one assigns to the ball that (i) is related to the full theory by a fixed quantum channel, (ii) cannot signal to the outside, and (iii) contains the interior curvature observables, has the same relative entropy~\cite{T}. Centres and edge modes of this kind do not move $S$.
 
-\paragraph{What is already in print.} For $l=2$ the area side is known. Eq.~(75) of Jacobson, Senovilla and Speranza~\cite{JSS17} gives the second-order area deficit of a small ball at fixed volume in vacuum, for a one-parameter family of shapes; at the constant-mean-curvature shape it reads $\delta A=-\frac{\pi\ell^6}{105}\bigl(\cE^2+\tfrac43\cB^2\bigr)$ in four dimensions, which is $-4G$ times the area terms above. They also showed that no shape makes the deficit proportional to the Bel--Robinson super-energy $W=\cE^2+\cB^2$. The magnetic coefficient does not depend on the shape; the electric one does, and equals the entropy only at the stationary shape. A geodesic ball of fixed volume, the construction of~\cite{J}, gives $\cE^2/6$ in place of $3\cE^2/4$, and then the electric case fails too. Benedetti and Casini computed the vacuum entanglement entropy of gravitons in a sphere~\cite{BC}. What we did not find in print is the entropy side: the relative entropy of a tidal state, $S=\pi R^6W/420G$, and hence the comparison. These are search results, not a priority claim.
+\paragraph{What is already in print.} For $l=2$ the area side is known. Eq.~(75) of Jacobson, Senovilla and Speranza~\cite{JSS17} gives the second-order area deficit of a small ball at fixed volume in vacuum, for a one-parameter family of shapes. At the constant-mean-curvature shape it reads $\delta A=-\frac{\pi\ell^6}{105}\bigl(\cE^2+\tfrac43\cB^2\bigr)$ in four dimensions, which is $-4G$ times the area terms above. Two things follow from their formula:
+\begin{itemize}
+\item No shape makes the deficit proportional to the Bel--Robinson super-energy $W=\cE^2+\cB^2$.
+\item The magnetic coefficient is the same for every shape. The electric one is not: it equals the entropy only at the stationary shape. For a geodesic ball of fixed volume, the construction of~\cite{J}, it is $\cE^2/6$ in place of $3\cE^2/4$, and the electric case fails too.
+\end{itemize}
+What we did not find in print is the entropy side, $S=\pi R^6W/420G$, and hence the comparison. (Benedetti and Casini~\cite{BC} computed the vacuum entanglement entropy of gravitons in a sphere, a different quantity.) These are search results, not a priority claim.
 
-\section{One picture for both integers}
+\section{Where the extra 1 comes from}
 
-Define, for a function $\psi$ on the ball, $Q_w[\psi]=\tfrac12\int_BN|\nabla\psi|^2+\tfrac w2\int_B\psi^2$. For a harmonic polynomial of degree $l$, $\int_BN|\nabla\psi|^2=l\int_B\psi^2$, so $Q_w=\tfrac{l+w}{2}\int_B\psi^2$. Then
-\[
-8G\,S=c_l\,Q_1[\psi]\ \ \text{(both sectors)},\qquad
-8G\,(\text{area side})=c_l\,Q_1[\psi_\cE]\ \text{ or }\ c_l\,Q_2[\psi_\cB].
-\]
-The entropy weighs the tidal potential with weight 1 in both sectors. The geometry weighs a magnetic potential with weight 2.
-
-\paragraph{Where the extra 1 comes from.} For any lapse function $N$ and any transverse, traceless, harmonic $K$,
+The two integers $l+1$ and $l+2$ are two rates: how fast the modular flow moves the curvature, and how fast the conformal Killing flow moves the metric. For any lapse function $N$ and any transverse, traceless, harmonic $K$,
 \begin{equation}\label{eq:killing}
 \underbrace{\operatorname{Ric}\,(2NK)}_{\text{geometric rate}}-\underbrace{2\sym(\nabla N\times\operatorname{curl}K)}_{\text{modular rate}}
 =2\sym(K\!\cdot\!\nabla\nabla N)-(\nabla^2N)\,K .
@@ -222,9 +227,9 @@ All checks so far are internal to this programme. No outside referee has read th
 \item Is a mismatch of this kind known, in this or another language?
 \end{enumerate}
 
-\section*{Version 2: what the blind read changed}
+\section*{Changes since version 1}
 
-Before circulation the paper was read by a checker who saw only the paper, recomputed its formulas independently and was instructed to break it. Every formula and number agreed. Four statements of version 1 were wrong or too broad and are corrected here: (1) the area formula was stated for mixed electric and magnetic data without the condition that the ball is not pushed along a boost; (2) the $l=1$ control was described as flat space, which the Weyl metric with $U=\varepsilon z$ is not beyond first order; (3) the first law was said to hold for matter, where it holds for conformal matter; (4) reference~\cite{JSS17} was described as a different prescription, when its eq.~(75) contains the $l=2$ area numbers of this paper. The statement that the area side was new at $l=2$ is withdrawn.
+A checker who saw only the paper recomputed its formulas independently, with instructions to break it. Every formula and number agreed. Four statements were wrong or too broad and are corrected: the area formula had been stated for mixed electric and magnetic data without a condition; the $l=1$ control had been called flat space; the first law had been said to hold for matter, not conformal matter; and reference~\cite{JSS17} had been described as a different prescription, when its eq.~(75) contains the $l=2$ area terms. The claim that the area side was new at $l=2$ is withdrawn. Version 3 only shortens the text.
 
 \begin{thebibliography}{99}\small
 \bibitem{JV} T.~Jacobson and M.~Visser, \emph{Gravitational thermodynamics of causal diamonds in (A)dS}, arXiv:1812.01596.

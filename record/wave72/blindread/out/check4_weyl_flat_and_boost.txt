@@ -1,9 +1,0 @@
-(a) Weyl l=1 (U = eps z, k = -eps^2 rho^2/2): Ricci tensor zero: True
-    Kretschmann scalar = 16*epsilon**4*(epsilon**2*rho**2 + 3)*exp(2*epsilon*(epsilon*rho**2 + 2*z))
-    leading order in eps: 48*epsilon**4 + 192*epsilon**5*z + O(epsilon**6)
-    R_{t rho t rho} = -epsilon**2*exp(2*epsilon*z)  ; series: -epsilon**2 - 2*epsilon**3*z + O(epsilon**4)
-(b) super-Poynting vector P_k = eps_kil E_ij B_lj
-    d/dbeta [E^2 - B^2]        = 0  (invariant, as it must be)
-    d/dbeta [E^2 + B^2]        = -8 * (beta.P)
-    d/dbeta [E^2 + (4/3) B^2]  = -28/3 * (beta.P)
-    P = 0 iff [E,B]=0: P components [-B11*E23 - B12*E13 + B13*E12 - 2*B22*E23 + B23*E11 + 2*B23*E22, 2*B11*E13 + B12*E23 - 2*B13*E11 - B13*E22 + B22*E13 - B23*E12, -B11*E12 + B12*E11 - B12*E22 - B13*E23 + B22*E12 + B23*E13]  ; [E,B] entries (01,02,12): -B11*E12 + B12*E11 - B12*E22 - B13*E23 + B22*E12 + B23*E13 -2*B11*E13 - B12*E23 + 2*B13*E11 + B13*E22 - B22*E13 + B23*E12 -B11*E23 - B12*E13 + B13*E12 - 2*B22*E23 + B23*E11 + 2*B23*E22
