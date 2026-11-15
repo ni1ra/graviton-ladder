@@ -1,0 +1,9 @@
+ALL-T  log 05: note on run 2 (log 04)
+
+Run 2: 51 s, exit 1 with exactly one failed line, C2 (odd l_1(1, pi) = 15236 against my pre-fixed [15237, 15238]; see log 03).
+The predictions of log 03 held: F2, F3, F7 pass after the two script fixes; no printed digit of any r moved between run 1 and run 2.
+Added lines E2_C, E2_F, E2_R, MONO pass. Plant caught on the m-line at tau = 0.05 and on the final floor at tau = 0.002; as predicted
+it is NOT caught on the final floor at tau = 0.05 (r = 6.1e-3 to 1.1e-2 against the planted 2.1e-3), because the true ratio is 50 to
+100 times the floor.
+Observation not in any line: r(tau) itself is not monotone in tau (even l=4096: 0.1482 at 1.7771, 0.1247 at pi, 0.1072 at 2pi,
+0.1075 at 20); m(tau) is, and the floor is a bound through m.

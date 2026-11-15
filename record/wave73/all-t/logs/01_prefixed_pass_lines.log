@@ -1,0 +1,28 @@
+ALL-T  log 01: pass lines, fixed before the first run (15 Nov 2026)
+
+Objects. T(tau) = int_0^tau e^{sX0} D e^{-sX0} ds (oriented integral, either sign of tau); r(tau,l) = lam ||beta1hat(tau) e_l||/||e_l||.
+Proved floor to be tested:  c(tau) = c_pi * Phi(min(|tau|, s*)/s*),  Phi(x) = (15x - 10x^3 + 3x^5)/8,
+  i.e. c(tau) = [J0^2 t - J0 J1 t^3/3 + J1^2 t^5/20]/(2 Q16 Den E) at t = min(|tau|, s*), with J0 = J0_lo, J1 = J1_hi.
+Remainder: K (e^x - 1 - x), x = sqrt2 |g||tau|/lam.  l_1(g,tau) = max(16, ceil(2 e^eta K tau^2 |g| / c(tau))),
+  eta = (15 c_pi/(8 s*))/(sqrt2 K)  (about 1.0e-3).
+Grid: tau in {0.05, 0.5, 1.7771, pi, 2pi, 20}, l in {16, 256, 4096}, both parities; even = even-remainder's setup (box bottom -4.8, dy 0.02),
+  odd = odd-remainder's setup (box bottom -3, dy 0.02).
+
+C1  s* < pi; c_even(pi) within 5e-4 relative of 2.110e-3 and c_odd(pi) within 5e-4 of 2.038e-3; K_even <= 1.5715, K_odd <= 1.5716;
+    closed-form c(tau) equals an independent numerical quadrature of the floor integrand to 1e-9 relative at all six tau.
+C2  l_1(1, pi): even in [14714, 14716], odd in [15237, 15238].  l_1(1, 0.5) in [600, 900] both parities; l_1(1, 2pi) in [55000, 65000].
+F1  r(tau,l) >= c(tau) in all 36 cells.                                   (THE floor)
+F2  in all 36 cells: lam m(tau) >= M_lo(tau) (the truncated integral / Q16); r >= m/(2 Den e) (1 - 1e-9);
+    |Im<z,Tz> + m/2| <= 1e-6 m.
+F3  Den_l and ||e_l|| are computed with no reference to tau, and Den_l <= Den_hi, E_lo <= ||e_l|| <= E_hi at each l, both parities.
+F4  3 <= r/c(tau) <= 3000 in all cells.
+F5  at tau = pi the grid reproduces the lanes to 1e-5 relative: even 0.121788, 0.124501, 0.124673; odd 0.297406, 0.304791, 0.305262.
+F6  small-tau power one: 0.095 <= r(0.05)/r(0.5) <= 0.20 at every l, both parities  (c(0.05)/c(0.5) = 0.1054).
+F7  sign symmetry: |r(-tau)/r(tau) - 1| <= 1e-8 at l = 256 for tau = 0.5 and 2pi, both parities; and m(-tau) = -m(tau) to 1e-9.
+R1  l = 4096, g = 1, tau in {0.5, 2pi}, both parities: actual ||beta e - g beta1hat e||/||e|| <= K(e^x - 1 - x), slack between 20 and 1e5.
+R2  same four cases: actual ||beta e||/||e|| >= proved lower bound; at tau = 0.5 the proved bound is >= c(tau)/(2 lam) > 0 (non-vacuous,
+    l_1 < 4096); at tau = 2pi it is negative (vacuous, l_1 > 4096).
+R3  same four cases, box [-3, 40], dy 0.04: ||R_2||_H <= e^x - 1 - x and ||S||_H <= e^x (1 + 1e-12).
+PLANT  c(tau) continued as the constant c_pi below s* (instead of the truncated integral). Expected: caught on the m-line at tau = 0.05
+    (lam m(0.05) < M_lo(s*) at every l, both parities) and on the final floor at the plant-only tau = 0.002 (r(0.002) < c_pi).
+    Expected NOT caught on the final floor at tau = 0.05 (r(0.05) in [2.2e-3, 3e-2]); this is predicted, printed, and not a pass line.

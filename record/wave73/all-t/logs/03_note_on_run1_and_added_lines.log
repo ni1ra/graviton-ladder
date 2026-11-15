@@ -1,0 +1,24 @@
+ALL-T  log 03: note on run 1 (log 02), written after seeing it and before run 2
+
+Run 1: exit 1. C1, F1, F4, F5, F6, R1, R2, R3, PLANT passed. Failed: C2, F2, F3, F7.
+
+F3 (even only), F2, F7: two bugs in MY script, not in the mathematics.
+  (a) Den for the even family: exp(2 pi p) overflowed (the even box reaches p ~ 157) and inf * 0 gave nan; this also made the even
+      chain nan in F2. Fix: evaluate the weight only where z != 0 (z underflows to exactly 0 far below the overflow point).
+  (b) Im<z,Tz> was computed with the true W (the lanes' st["A"], st["B"]) but compared with lam*m. Run 1 itself shows the factor:
+      even l=256, tau=-0.5: Im = +2.339e-5, m = -0.0119993, and lam * Im = 256.4995 * 2.339e-5 = +0.0060 = -m/2. Fix: multiply by lam.
+  Prediction for run 2, fixed now: F2, F3, F7 pass unchanged as lines; r columns do not move in any printed digit.
+
+C2: FAILED AS PRE-FIXED and stays failed. I required l_1(1, pi) odd in [15237, 15238]; the formula gives 15236. Reason: my eta is
+  per parity (odd eta = 9.675e-4, e^eta = 1.000968), slightly below the record's blanket 1.001, so my l_1 is 15235.5 -> 15236, not the
+  record's 15236.03 -> 15237. A wrong prediction of a ceiling, not a violated inequality. The line is not edited.
+
+Lead's update received during run 1 (orientation; whether c(tau) can vanish at isolated tau; scope wording; use even-second's
+enclosures for the even family, odd-sign's own for the odd). Lines ADDED for run 2, written after run 1:
+E2_C   even family with even-second's enclosures (A_inf, A_16, G_hi, Q_16, S', C, s_3, ||u||^2 read from even-second\out\values.json, chain
+       re-derived here in ball arithmetic): my c_pi and K pi^2 agree with that lane's "c" and "C0" to 1e-12 relative; c_pi in
+       [2.1193e-3, 2.1194e-3]; K in [1.5692, 1.5694]; l_1(1, pi) in [14625, 14635]; l_1(1, 0.5) in [600, 900].
+E2_F   with those constants: r >= c(tau), lam m >= M_lo(tau), Den_l <= Den_hi, E_lo <= ||e_l|| <= E_hi, 3 <= r/c <= 3000, all 18 even cells.
+E2_R   with those constants at l = 4096, g = 1: rem <= K(e^x-1-x); actual >= proved low; low >= c/(2 lam) at tau = 0.5; low < 0 at 2pi.
+MONO   no isolated zeros: on the grid lam*m(tau) is strictly increasing along tau = 0.002 < 0.05 < 0.5 < 1.7771 < pi < 2pi < 20 at every l,
+       both parities (m is the integral of a non-negative integrand), and c(tau) is non-decreasing along the same list.
