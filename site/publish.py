@@ -93,7 +93,9 @@ def resolve_ref(ref):
 def export(commit, dest):
     """Unpack the files the site needs from one commit, straight from git's object store."""
     dest.mkdir(parents=True)
-    proc = subprocess.Popen(["git", "archive", "--format=tar", commit, "--", *EXPORT_PATHS],
+    # No line-ending conversion: a Windows autocrlf setting must not change published bytes.
+    proc = subprocess.Popen(["git", "-c", "core.autocrlf=false", "-c", "core.eol=lf",
+                             "archive", "--format=tar", commit, "--", *EXPORT_PATHS],
                             cwd=str(REPO), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     with tarfile.open(fileobj=proc.stdout, mode="r|") as tar:
         try:
