@@ -1,0 +1,28 @@
+ODD-SIGN  pass lines, fixed 2026-11-15 BEFORE the first run of scripts\odd_sign.py
+(hand estimates only; no script of this lane has been run yet)
+
+Family: u(y) = (1-((y-2)/4)^2)^4 on [-2,6], y = rho - ln(2 lam); e_l = (q_l, 0), q_l = exp(-eps h_l^2) h_l^2 u, eps = 1.5, tau = pi.
+D0(q,pi) = (0, -N q)  (g factored out), beta1hat from T = int_0^tau e^{sX0} D0 e^{-sX0} ds, formula (cP, s Qbar) of BETA-DEF.
+Proved floor: c = M_lo / (2 Den_hi E_hi), M_lo = (8/15) J0_lo^2 s*/Q_16,
+  Q_l = <u, (lam N_l)^-1 u> = int e^y (1+e^-y/(2 lam))^2 u^2 dy,
+  Den^2 <= S' A_16, S' = sup p^3 e^{-2 eps p^2} sinh(2 pi p);  E^2 <= C A_16/2, C = sup (p^3 + p^2/pi) e^{-2 eps p^2}.
+Hand estimates: A, G_hi, J0_lo, J1_hi, s* as EVEN-PASSAGE (same h_l, same u): 0.9385, 0.770, 0.3636, 0.2302, 1.777.
+  Q_16 ~ 30 (Gaussian estimate), S' ~ 25.3, C ~ 0.1155, so c ~ 1.8e-3.
+
+C1  c_unif > 0, s* < tau, all certified constants finite.
+C2  1.2e-3 <= c_unif <= 2.6e-3.
+C3  25 <= Q_16 <= 40;  24.5 <= S' <= 26;  0.113 <= C <= 0.118.
+P1  at every l in {16,64,256,1024,4096}: A_inf(1-2e-3) <= A_grid <= A_16(1+2e-3), J0_grid >= J0_lo, J1_grid <= J1_hi.
+P2  at every l and each of 33 s-nodes in [0,tau]: <q_s, lam N q_s> >= max(J0_lo - s^2 J1_hi/2, 0)^2 / Q_16.
+P3  lam m_l >= M_lo at every l.
+P4  Den_l <= Den_hi and ||e_l|| <= E_hi at every l.
+P5  THE DECISIVE LINE: r_l = lam ||beta1hat e_l||/||e_l|| >= c_unif at every l, and r_l >= m_l/(2 Den_l ||e_l||) (1-1e-9).
+P6  |Im<z,Tz> + m_l/2| <= 1e-6 m_l at every l (sign and slot: omega(e,Te) = -m).
+N1  r_4096 / r_16 >= 0.8.
+N2  lam |r_l/r_inf - 1| for l = 64..4096: max/min <= 2 (clean 1/lam approach).
+N3  halving dy changes r by < 1e-3 (l = 1024 and limit); doubling the box changes r_inf by < 1e-6.
+N4  5 <= r_l/c_unif <= 400 at every l.
+PLANT_A  factor lam dropped: planted values fall below c_unif at l = 1024 and 4096 and fail N1.  Must be caught.
+PLANT_B  wrong slot: B-part of T given the even-parity sign (as if D = (W pi, 0)), at l = 64:
+         |Im<z,Tz> + m/2| > 1e-2 m (P6 violated) and r changes by more than 1%.  Must be caught.
+Exit code 0 only if every line holds.
