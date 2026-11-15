@@ -1,0 +1,38 @@
+PASS V1  ||W(r)Om - Om||^2 = 2(1 - exp(-r^2/2)), worst abs err 1.33e-15
+PASS V2  <Om, W(k) Om> = exp(-||k||^2/2), two modes, complex k, worst abs err 1.11e-15
+PASS V3  r -> 2(1 - exp(-r^2/2)) strictly increasing on [0, 6]
+CAUGHT PA  exponent 1/4 at r = 1: mismatch 0.3445
+
+h_min    case                cos(H,H')      ||S||_H  ||S-hat||_K  ||beta||_op  ||beta||_HS     S2 rel
+0.25     a odd generic        0.754940     1.616521     2.053020     0.782966     0.799890    1.5e-15
+0.25     b odd structured     0.754940     1.027269     1.031861     0.031369     0.045227    6.7e-15
+0.25     c even               0.754940     1.027269     1.031861     0.031369     0.045227    6.2e-15
+0.05     a odd generic        0.987789     5.691279    34.205836    17.088301    17.089206    0.0e+00
+0.05     b odd structured     0.987789     1.026584     1.031524     0.031042     0.044969    4.3e-16
+0.05     c even               0.987789     1.026584     1.031524     0.031042     0.044969    0.0e+00
+0.01     a odd generic        0.999507    27.722354   847.427162   423.712991   423.713028    5.4e-16
+0.01     b odd structured     0.999507     1.026556     1.031506     0.031025     0.044950    3.9e-15
+0.01     c even               0.999507     1.026556     1.031506     0.031025     0.044950    3.4e-15
+0.002    a odd generic        0.999980   138.460338 21178.553939 10589.276946 10589.276947    1.7e-16
+0.002    b odd structured     0.999980     1.026555     1.031505     0.031024     0.044949    4.5e-15
+0.002    c even               0.999980     1.026555     1.031505     0.031024     0.044949    4.7e-15
+
+PASS G1  kappa reproduces M and Omega/2, worst rel err 3.45e-15
+PASS G2  dim H' = 12 and H + H' spans K at every h_min
+PASS S1  S-hat symplectic on K, worst rel err 3.68e-12
+PASS S2  ||S-hat|| = ||beta||_op + sqrt(1 + ||beta||_op^2), worst rel err 6.67e-15
+PASS S3  ||S-hat|| <= ||beta||_HS + sqrt(1 + ||beta||_HS^2)
+PASS S4  ||beta e||/||e|| <= ||beta||_op <= ||beta||_HS on 50 random e in H per row
+PASS S5  ||S||_H <= exp(sqrt2 g tau/lambda) = 3.0365 in cases b, c
+PASS S6  (1/2)||beta||_F^2 = BETA-DEF's four terms, worst rel err 4.12e-15
+CAUGHT PB  orthogonal complement used for H': violations 0.311, 0.028, 0.028
+
+T1 L = 1e+05  partial sum 4.265959e-06  lower bound 4.265895e-06  decade increment -
+T1 L = 1e+06  partial sum 9.391609e-06  lower bound 9.391534e-06  decade increment 5.125650e-06
+T1 L = 1e+07  partial sum 1.451728e-05  lower bound 1.451720e-05  decade increment 5.125668e-06
+T1 L = 1e+08  partial sum 1.964295e-05  lower bound 1.964287e-05  decade increment 5.125669e-06
+PASS T1  partial sums above the log lower bound; decade increment -> (c g/2)^2 2 ln 10 = 5.125670e-06
+PASS O1  sup (p coth pi p)^3 p^2 exp(-3p^2) = 0.053090 at p = 0.9021
+O1 derived [N]: ||e_l|| >= 0.09370, ||coth^{3/2} psi_l|| <= 0.25221, factor 1.8459, C0 = 18.218, g/lambda <= 5.593e-05 (before the exp(x) factor), l1_odd ~ 17878 |g|
+
+FAILED LINES: none; plants caught: A True, B True

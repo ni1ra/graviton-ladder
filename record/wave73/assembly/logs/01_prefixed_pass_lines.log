@@ -1,0 +1,37 @@
+ASSEMBLY lane, wave 73. Pass lines fixed 2026-11-15 BEFORE the first run of scripts\assembly_check.py.
+
+Normalisation used: W(k) = exp(i(a(k) + a*(k))), [a(k), a*(k')] = <k, k'>, <.,.> antilinear in the first slot,
+Im<kappa x, kappa y> = Omega(x, y)/2, Re = thermal form M. Then <Omega, W(k) Omega> = exp(-||k||^2/2).
+(Derezinski's phi = (a + a*)/sqrt 2 gives exp(-||k||^2/4); the two differ by k -> sqrt(2) k.)
+
+Model: n = 6 modes, h = diag(h_min, 0.6, 1.0, 1.5, 2.2, 3.0), h_min in {0.25, 0.05, 0.01, 0.002}.
+Coordinates x = (q, pi) in R^12. Gram G = M + (i/2) Omega, kappa = Cholesky factor (no c, s, z used).
+K = C^12 as R^24, J = multiplication by i. H = kappa R^12, H' = {v : Im<v, kappa x> = 0 for all x} (null space).
+S = expm(tau (X0 + g D)) expm(-tau X0), tau = pi, g = 1, lambda = 4. S-hat = S on H, 1 on H'.
+beta = (S-hat + J S-hat J)/2. HS^2 in the complex-basis convention = (1/2) real Frobenius^2.
+Three fixed generators (seeded once, the same matrices for every h_min):
+  (a) odd, generic: D(q,pi) = (0, -N q), N a fixed positive matrix, ||N|| = 1/lambda. No Lemma-A structure.
+  (b) odd, structured: N = h M0 h / lambda, M0 fixed positive, ||M0|| = 1/3 (so N <= h/lambda, ||h^-1 N|| <= 1/lambda).
+  (c) even: D(q,pi) = (W pi, 0), W = M0/lambda fixed (so W <= h^-1/lambda, ||h W|| <= 1/lambda).
+
+PASS LINES
+V1  one mode, truncated Fock (dim 160), r in {0.1, 0.5, 1, 2}: | ||W(r)Om - Om||^2 - 2(1 - exp(-r^2/2)) | <= 1e-9.
+V2  two modes (dim 40x40), three complex k: | <Om, W(k) Om> - exp(-||k||^2/2) | <= 1e-9.
+V3  the function r -> 2(1 - exp(-r^2/2)) is strictly increasing on a grid of [0, 6] (so W(k_n)Om -> Om forces k_n -> 0).
+G1  every h_min: ||kappa x||^2 = M(x, x) and Im<kappa x, kappa y> = Omega(x, y)/2 on 20 random pairs, rel err <= 1e-9.
+G2  every h_min: dim H' = 12 and H + H' spans R^24 (smallest singular value of [H, H'] > 0); print the cosine of the smallest angle.
+S1  every h_min, every case: S-hat preserves Im<.,.> on K, rel err <= 1e-6.
+S2  every h_min, every case: ||S-hat||_op = ||beta||_op + sqrt(1 + ||beta||_op^2), rel err <= 1e-6.   (the quantitative shadow of Route 1)
+S3  every h_min, every case: ||S-hat||_op <= ||beta||_HS + sqrt(1 + ||beta||_HS^2).
+S4  every h_min, every case, 50 random e in H: ||beta e||/||e|| <= ||beta||_op <= ||beta||_HS (beta e computed as (S-hat e + J S-hat J e)/2).
+S5  every h_min, cases (b) and (c): ||S||_H (thermal operator norm) <= exp(sqrt(2) g tau / lambda) = exp(1.1107) = 3.0365.
+S6  every h_min, every case: (1/2)||beta||_F^2 equals BETA-DEF's four terms ||cBc||^2 + ||cAs||^2 + ||sAc||^2 + ||sBs||^2, rel err <= 1e-6.
+NO PASS LINE on whether ||S-hat||_op stays bounded as h_min -> 0: Route 1 does not predict it; it is printed beside ||beta||_HS.
+   Expectation written down in advance, not a pass line: case (a) grows (D is not bounded in the thermal norm uniformly); (b), (c) unknown.
+T1  tower sum, c = 2.110e-3, g = 1, l1 = 14714: P(L) = sum_{l1..L} (2l+1)(c g/2)^2/(l(l+1)) >= (c g/2)^2 [ln((L+1)/l1) + ln((L+2)/(l1+1))] for L = 1e5, 1e6, 1e7, 1e8,
+    and each decade increment equals (c g/2)^2 * 2 ln 10 within 1e-3 relative for the last two decades.
+O1  (numeric, not certified) odd remainder constants: sup_p (p coth(pi p))^3 p^2 exp(-3 p^2) <= 0.14 on a grid of step 1e-5 over [1e-6, 6].
+PLANTS (must be caught)
+PA  vacuum exponent 1/4 in place of 1/2 in V1: mismatch > 1e-3 at r = 1.
+PB  H' replaced by the real-orthogonal complement of H (instead of the symplectic complement): S1 or S2 violated by > 1e-3 in every case at h_min = 0.25.
+Exit code 0 iff all pass lines hold and both plants are caught.

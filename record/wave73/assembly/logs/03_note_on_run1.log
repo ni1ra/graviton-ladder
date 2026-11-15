@@ -1,0 +1,7 @@
+Note on run 1 (written after seeing it; nothing re-run, no pass line changed).
+- All pre-fixed lines passed; plants A and B caught; exit 0.
+- Cases (b) and (c) print identical numbers. Not a bug: (q, pi) -> (-h^-1 pi, h q) preserves X0 and the thermal norm
+  and carries D(q,pi) = (0, -(h M0 h/lambda) q) to (M0 pi/lambda, 0). So the two structured cases are one test, not two.
+- My advance expectation for (a) held (norms grow like h_min^-2). For (b)/(c), which I had marked unknown, ||S-hat||_K stays at 1.0315.
+- O1: my hand estimate of the sup before the run was about 0.13 (I had used p + 1/pi and mis-multiplied); the grid value is 0.0531.
+  The pass line (<= 0.14) holds either way; the derived odd constants printed by the script use 0.0531 and are numeric, not certified.
