@@ -1,0 +1,9 @@
+weight-one covariance a=3/5 R=2 p=1: False (at w=1/3: 69967881/3615683187200)
+weight-one covariance a=3/5 R=2 p=2: False (at w=1/3: 2699973/413220935680)
+weight-one covariance a=3/5 R=2 p=3: True
+weight-one covariance a=7/3 R=1 p=1: False (at w=1/3: -1661103038/159067490595)
+weight-one covariance a=7/3 R=1 p=2: False (at w=1/3: -176523921/53022496865)
+weight-one covariance a=7/3 R=1 p=3: True
+IBP: bracket + int v^2 f v^n (symbolic n, R): 0
+bracket on dA = v^2 (affine rescaling): 0
+RULER-L: int v^2 f (s2^2 - s3^2) - int v^3 (s2-s3)^2: 0
