@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ni1ra.github.io/graviton-ladder/sitemap.xml
