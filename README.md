@@ -69,9 +69,11 @@ Folders: `assembly` (the statement, its chain and its hypothesis list), `referee
 
 ### 4. Numbers
 
-- Odd parity: per-sector constant 7ζ(3)/(16π²) ≈ 0.0533 (`hinge-proof`), reproduced by a lattice run that was meant to be blind and was weakened in one way its report states (`hinge-blind`).
-- Even parity: about 0.0136. A pre-registered lattice measurement was inconclusive under its own gate; a secondary analysis, fixed mid-run after about three quarters of the data, gives 0.01359 with a spread of 0.3% (`even-blind`).
-- The proved lower bounds are far from sharp, and the divergence does not depend on the values of these constants.
+The two constants below measure the same obstruction by a different yardstick than the statement in item 2: they are the per-sector constants of the affinity (fidelity) defect between the two flows' states, lim λ²(1 − A_l), which is what the lattices measured. The proof in item 2 goes through a Hilbert–Schmidt norm and does not use them.
+
+- Odd parity: 7ζ(3)/(16π²) ≈ 0.0533 (`hinge-proof`), reproduced by a lattice run that was meant to be blind and was weakened in one way its report states (`hinge-blind`).
+- Even parity: 49ζ(3)/(16π²) − 3β(4)/π² + G/8 − (ln 2)/4 ≈ 0.0135994 in the large-l limit model, with β(4) the Dirichlet beta value and G Catalan's constant (`even-const`; the reduction to a one-dimensional integral is the lane's own, the integral's closed form was re-checked independently to 20 digits). A pre-registered lattice measurement was inconclusive under its own gate; a secondary analysis, fixed mid-run after about three quarters of the data, gives 0.01359 with a spread of 0.3% (`even-blind`), within 0.1% of the closed form.
+- The proved lower bounds in item 3 are far from sharp, and the divergence does not depend on the values of these constants.
 
 ### 5. Which ruler
 

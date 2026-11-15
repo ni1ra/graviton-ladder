@@ -1,0 +1,37 @@
+EVEN-CONST lane, log 01: pass lines fixed BEFORE the first run of scripts/even_const.py
+Written 2026-11-15, before the script was executed. Hand derivation precedes it; the script checks the hand algebra.
+
+Object: a = lim lambda^2 (1 - A_l) at unit coupling (affinity defect, second order), in the Liouville limit model.
+Formula under test (quadrant p,p' > 0; P = p+p', q = p-p'; mu(p) = (2/pi^2) p sinh(pi p)):
+  a = (1/(2 pi^2)) int int M^2/(sinh(pi p) sinh(pi p')) [ sinh^2(pi P/2)/P^2 + sinh^2(pi q/2)/q^2 ] dp dp'
+  odd : M = pi sqrt(mu mu') I(p,p') / (2 sqrt(p p')),  I = int_0^inf K_ip K_ip' dx = pi^2/(4 cosh(pi P/2) cosh(pi q/2))
+  even: M = pi sqrt(mu mu') Jk(p,p') sqrt(p p') / 2,   Jk = <K_ip, W_inf K_ip'>_{dy dy'}
+        = pi^2 (sech(pi q/2) - sech(pi P/2)) / (8 p p' cosh(pi p/2) cosh(pi p'/2))
+Hand closed forms to be tested: a_odd = 7 zeta(3)/(16 pi^2);
+  a_even = 49 zeta(3)/(16 pi^2) - 3 beta(4)/pi^2 + Catalan/8 - ln(2)/4  (beta = Dirichlet beta), about 0.0135994.
+
+L1  KL normalisation: (a) |int K_ip(x) e^-x dx - pi p/sinh(pi p)| < 1e-12 at p = 0.7, 1.9;
+    (b) |int mu(p) (pi p/sinh pi p)^2 dp - 1/4| < 1e-18 (Plancherel for x e^-x);
+    (c) |int mu(p) F2(p)^2 dp - 3/8| < 1e-18 with F2 = (1+p^2) pi p/(3 sinh pi p) (Plancherel for x^2 e^-x), and F2 matches direct quadrature < 1e-12 at p = 0.7.
+L2  Bessel identity: int_0^inf K_ip K_ip' dx vs closed form, rel err < 1e-12 at (0.5,1.2), (1,1), (0.3,2).
+L3  Framework-assembled density (mu, I, Jk, thermal weights) = reduced form
+    (pi^4/128) r r' T^(2e) [tanh^2 a/(P^2 cosh^2 b) + tanh^2 b/(q^2 cosh^2 a)], rel < 1e-25 at 6 points, odd and even, true and planted mu.
+L4  Sine transform int K_ip(x) sin(kx) dx/x = pi sin(p arsinh k)/(2 p cosh(pi p/2)), rel < 1e-10 at 2 points;
+    theta integral int_0^inf sin(p th) sin(p' th)/cosh th dth = (pi/4)(sech(pi q/2) - sech(pi P/2)), < 1e-15.
+L5  ODD: setting A (mpmath tanh-sinh, a outer, b inner) and setting B (numpy composite Gauss-Legendre, b outer, a inner, analytic 1/a^2 tail)
+    each match 7 zeta(3)/(16 pi^2) with rel err < 1e-10.
+L6  PLANT: mu -> (2/pi^2) p tanh(pi p). Odd value must deviate from 7 zeta(3)/(16 pi^2) by rel > 1e-3 (caught) in setting B.
+L7  EVEN: |A - B| / a < 1e-8; B stable under node refinement (10 -> 16 nodes) to rel < 1e-10.
+L8  EVEN: 2-d values (A and B) vs 1-d reduction (1/64) int tanh^2 x Phi(x)/x^2 dx, rel < 1e-8;
+    1-d reduction vs closed form, |diff| < 1e-40.
+L9  Phi: numerical F1(x) + 2 F2(x) vs Phi(x) = 2 - 4 pi sech x + 8x/(sinh x cosh x) + 8(x cosh x - sinh x)/sinh^3 x, < 1e-20 at x = 0.3, 1, 2.5, 6.
+L10 Elementary integrals, each < 1e-20: int tanh^2/x^2 = 14 zeta(3)/pi^2; int tanh sech^2/x = 7 zeta(3)/pi^2;
+    int (1/(x sinh x) - 1/x^2) = -ln 2; int tanh^2 sech/x^2 = 48 beta(4)/pi^3 - 2 Catalan/pi.
+L11 Kernel cross-check: w(p,p') from a finite-difference solve of -w'' + w = K_ip'(x)/x, w(0)=0 (y grid, Richardson h=0.004/0.002),
+    vs closed form, rel < 1e-4 at (0.5,1.2), (1,1), (0.3,2).
+L12 PSLQ (100 digits, on the 1-d value, max coefficient 10^4):
+    basis B0 = {a, 1, zeta3, zeta5, pi^2, ln2, G, 1/pi^2, zeta3/pi^2, zeta5/pi^2, ln2/pi^2, G/pi^2}: outcome REPORTED (prediction: null).
+    basis B1 = B0 + {beta(4)/pi^2}: must return the relation 16 a = 49 zeta3/pi^2 - 48 beta4/pi^2 + 2 G - 4 ln2 (PASS line).
+I1  Information (not the constant): ||beta_1-hat||_HS^2 at tau = pi. Odd: (1/8) int (1+tanh^2 x) sin^2 x * 2/x^2 dx must equal HINGE's J(0.5)/2 = 0.29166 (|diff| < 1e-5),
+    showing the constant 7 zeta(3)/(16 pi^2) is NOT this norm. Even: (1/16) int (1+tanh^2 x) sin^2 x Phi/x^2 dx, reported.
+I2  Lattice: a_even inside [0.013555, 0.013625] (PASS line); offset from 0.013586 reported.
