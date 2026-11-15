@@ -1,0 +1,15 @@
+B1 D = 4 symbolic p, 21 basis sources: number with M_k not identically zero: {0: 0, 1: 0, 2: 0, 3: 0}
+B2 teeth: sources with M_4 not identically zero: 21 of 21
+B5 PLANT (cross term -1 instead of -2): sources with M_k != 0: {0: 0, 1: 0, 2: 10, 3: 18} -> plant caught: True
+B3 generic direction, 4 random interior p x 21 sources x 4 moments: non-zero count = 0 of 336
+B4 non-conserved source: M_0 = 0, M_1 = 0, M_2 = 50510/27951 + 156622*I/22869, M_3 = 691987/204974 + 10728607*I/838530; M_3/M_2 = 411/220, 3 u_x = 411/220
+B6 D = 6 control: curvature sources with M_k != 0 (of 240): {0: 30, 1: 30, 2: 30, 3: 50}
+B7 D = 5 control: curvature sources with M_k != 0 (of 110): {0: 110, 1: 110, 2: 110, 3: 110}
+  B1               PASS
+  B2               PASS
+  B3               PASS
+  B4               PASS
+  B5_plant_caught  PASS
+  B6               PASS
+  B7               PASS
+SCRIPT B PASS

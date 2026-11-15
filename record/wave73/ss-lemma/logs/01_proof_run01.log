@@ -1,0 +1,8 @@
+A1 epsilon algebra, symbolic k: residual zero = True
+Traceback (most recent call last):
+  File "record\wave73\ss-lemma\scripts\lemma_proof.py", line 66, in <module>
+    generic = frame(ngen, e1, e2)
+  File "record\wave73\ss-lemma\scripts\lemma_proof.py", line 55, in frame
+    assert dot(l, l) == 0 and dot(m, m) == 0 and dot(l, m) == 0 and dot(lp, m) == 0 and dot(l, lp) == -2
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

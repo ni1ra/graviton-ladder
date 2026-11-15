@@ -1,0 +1,36 @@
+SS-LEMMA (Q12) pass lines, fixed 2026-11-16 BEFORE any script was run.
+
+Lemma (as ss-second uses it, D = 4): for a source f (symmetric, divergence-free, smooth, compact support in the open
+diamond) and every generator l = (1, n) of the cone from the tip, with complex null m tangent to the sphere at n,
+  M_k(n) := int_0^1 u^k Psi_0[E f](u l) du = 0  for k = 0, 1, 2, 3,   Psi_0 = R(l, m, l, m).
+(ss-second's M_n = int u^n j_F du, j_F = -2 u Psi_0, n = -1..2, is the same statement with n = k - 1.)
+
+Notation: w = -l.y, mu = m.y, s = -y.y, v = mu l + w m, signature (-+++).
+
+Script A  scripts\lemma_proof.py  (the hand proof's identities, exact symbolic)
+ A1  epsilon-algebra, symbolic k: (k-1)(k-2) f_mm w^(1-k) + 2(k-2) d_eps[f(l_eps,m) w_eps^(1-k)] + d_eps^2[f(l_eps,l_eps) w_eps^(1-k)]
+     at eps = 0 equals k(k-1) w^(-k-1) f(v,v).                          PASS iff residual simplifies to exactly 0.
+ A2  sym-grad(xi2) = v v / w^3 and sym-grad(xi3) = s v v / w^4, all 10 components, symbolic y, at the canonical
+     direction and at one generic rational direction.                   PASS iff all 40 residuals are exactly 0.
+ A3  linearised Riemann of t_k = s^(k-2) w^(-k-1) v v: identically 0 for k = 2 and k = 3; NOT identically 0 for k = 4 (teeth).
+     PASS iff exactly that.
+ A4  D = 5 control (reduction): linearised Riemann of s^(k-5/2) w^(-k-1) v v non-zero at a rational point for k = 2 and k = 3.
+     PASS iff both non-zero.
+ A5  PLANT: xi3 with the coefficient 1/3 replaced by 1/2. PASS iff A2's test reports a non-zero residual (plant caught).
+
+Script B  scripts\lemma_direct.py  (independent route: straight from the definitions, no use of the reduction)
+     h_bd = Phi^{bedf} d_e d_f G(x - p), G = delta(sigma); Psi_0 from Cartesian second derivatives of h; moments by
+     exact u-integration of derivatives of delta along the generator. p SYMBOLIC (4 free symbols), Phi over a basis of all
+     21 bivector pairs, so the family is every curvature component at every interior point; identities in p imply all
+     p-derivatives (every point multipole) and, by superposition, every smooth curvature smearing.
+ B1  D = 4, canonical (l, m): M_0..M_3 identically 0 in p for all 21 basis sources (84 identities).   PASS iff all exactly 0.
+ B2  teeth: M_4 not identically 0 for at least one basis source.                                      PASS iff so.
+ B3  D = 4, generic rational direction, 4 random rational interior p: M_0..M_3 = 0 for all 21.         PASS iff all exactly 0.
+ B4  non-conserved point source h_bd = Phi_bd G (Phi symmetric, generic rational): expected M_0 = M_1 = 0,
+     M_2 != 0, M_3 != 0 and M_3 / M_2 = 3 u_x exactly (the reduction formula's prediction).            PASS iff exactly that.
+ B5  PLANT: cross term of Psi_0 with coefficient -1 instead of -2. PASS iff B1's test FAILS (some M_k != 0, k <= 3).
+ B6  D = 6 control (G = delta'(sigma)): for curvature point sources at 2 rational p, NOT all of M_0..M_3 vanish.
+     PASS iff at least one non-zero.  (Expected from the reduction: M_3 != 0.)
+ B7  D = 5 control (G = (-sigma)_+^(-3/2), finite part): same, NOT all of M_0..M_3 vanish.   PASS iff at least one non-zero.
+
+Expected: every line PASS. Any failed line is reported as failed.

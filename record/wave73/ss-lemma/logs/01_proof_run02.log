@@ -1,0 +1,10 @@
+A1 epsilon algebra, symbolic k: residual zero = True
+A2 canonical: non-zero residual components  xi2: 0/10   xi3: 0/10
+A2 generic  : non-zero residual components  xi2: 0/10   xi3: 0/10
+A5 PLANT (1/3 -> 1/2 in xi3): non-zero residual components = 7  -> plant caught: True
+A3 D = 4, k = 2: non-zero linearised Riemann components = 0 of 21
+A3 D = 4, k = 3: non-zero linearised Riemann components = 0 of 21
+A3 D = 4, k = 4: non-zero linearised Riemann components = 21 of 21
+A4 D = 5 control, k = 2: non-zero components at the rational point = 55 of 55
+A4 D = 5 control, k = 3: non-zero components at the rational point = 55 of 55
+SCRIPT A PASS
