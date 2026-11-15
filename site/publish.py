@@ -66,6 +66,15 @@ class Stop(Exception):
         self.code = code
 
 
+def remove_tree(path):
+    """rmtree that also removes git's read-only pack files on Windows."""
+    def writable_then_retry(func, p, _exc):
+        os.chmod(p, 0o700)
+        func(p)
+    kw = {"onexc": writable_then_retry} if sys.version_info >= (3, 12) else {"onerror": writable_then_retry}
+    shutil.rmtree(path, ignore_errors=False, **kw)
+
+
 def say(msg=""):
     print(msg, flush=True)
 
@@ -441,7 +450,10 @@ def main(argv):
         return e.code
     finally:
         if not keep:
-            shutil.rmtree(work, ignore_errors=True)
+            try:
+                remove_tree(work)
+            except OSError as e:
+                print(f"note: could not remove {work}: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":
