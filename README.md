@@ -63,7 +63,7 @@ Folders: `assembly` (the statement, its chain and its hypothesis list), `referee
   - the change of variables to the hyperbolic frame is an exact identity with coupling 1: `even-dict`;
   - density, domains and boundedness on the one-particle space: `even-density`;
   - a unitary implementer forces the map to be continuous, so Shale's criterion applies with no boundedness input: `assembly`, section C;
-  - the certified constants of the even family, recomputed by a second code that never saw the first one's values: `even-second`.
+  - the certified constants, recomputed for both families by second codes that never saw the first ones' values: `even-second`, `odd-second`.
 - **Standard theorems**, located with their hypotheses in secondary sources (lecture notes and review papers), not in the originals: Shale's criterion (necessity), Connes' cocycle theorem, the bounded perturbation theorem, the modular operator of a second-quantised algebra. Folders: `std-theorems`, `phys-id`.
 - **Identifications that are physics and are not proved here:** what the ball's graviton algebra is; that the vacuum's modular generator on each sector is the form used (the literature has theorems for conformally covariant nets and for free massless fields of arbitrary helicity, none of which names linearised gravity; `phys-id` states the condition under which they apply); that the area-side charge is the physically relevant one.
 
@@ -80,7 +80,6 @@ On the ball's light cone, with the size rule the printed first-law proof uses, t
 ### 6. Open
 
 - The lower bounds bite only for l above about 15,000 times the coupling at t = 1/2. That suffices for the divergence of the tail, and is tested non-vacuously at a single l.
-- The certified constants of the odd family have no second code yet.
 - The standard theorems have not been read in the original papers.
 - The three physics identifications in item 3.
 
