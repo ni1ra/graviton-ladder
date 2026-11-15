@@ -1,0 +1,52 @@
+ODD-DICT log 00: pass lines, fixed 2026-11-16 before any script of this lane was run.
+
+Dictionary under test (odd sector l, psi = psi_B = f(r) Y, psidot = p(r) Y, integrals over the unit ball in units of
+N_Y = oint Y^2; Y = H/r^l with H = Re[(x+iy)^(l-1)] z):
+  r = tanh(rho/2), N = (1-r^2)/2 = 1/(1+cosh rho), dr = N drho, r = N sinh rho, lam^2 = l(l+1)
+  q(rho)  = r f(r)
+  pi(rho) = N r p(r)
+  E_w = (1/2) int_B N (psidot^2 + |grad psi|^2) + (w/2) int_B psi^2 ;  input (not proved here): A_ext = c_l E_2 on odd data.
+Claims:
+  (a1) (1/2) int_B N psidot_i psidot_j / N_Y                              = (1/2) int pi_i pi_j drho
+  (a2) [(1/2) int_B N grad psi_i . grad psi_j + (1/2) int_B psi_i psi_j]/N_Y = (1/2) int (q_i' q_j' + lam^2 q_i q_j/sinh^2 rho) drho
+  (a3) int_B psidot_i psi_j / N_Y                                         = int pi_i q_j drho   (non-symmetric, 25 entries)
+  (b)  Z_ij = (1/2) int_B psi_i psi_j / N_Y                               = (1/2) g int N q_i q_j drho,  g = 1
+  (c)  the Hamiltonian field of E_2 for Omega(a,b) = int (psidot_a psi_b - psidot_b psi_a) is
+       (dpsi, dpsidot) = (N psidot, div(N grad psi) - 2 psi), and in (q, pi) it is (pi, -h^2 q - g N q), g = 1:
+       X_0 + g D_0, D_0(q, pi) = (0, -N q), h^2 = -d^2/drho^2 + lam^2/sinh^2 rho.
+  (d)  odd data (h, K): psi_B = -x.curl K.x depends on K only, psidot_B = x.curl(-(1/2) lap h).x on h only;
+       int_B K_a . h_b = -c_l int_B psi_B[K_a] psidot_B[h_b], c_l = 4 (l-2)!/(l+2)!  (so Omega_grav = +c_l Omega_scalar,
+       roles swapped), and Z = (1/2) c_l int psi_B^2 is a form on K (extrinsic curvature) alone.
+Data: f in { r^(l+2k), k = 0..3 } and r^l (3 - 7s/2 + 5s^2/3 + 2s^3/7 - 11 s^4/13); p in the same four monomials and
+r^l (1 + 2s - 9s^2/5 + s^3/3); s = r^2. l = 2, 3, 4.
+r side: exact rationals, computed twice: (A) genuine 3D Cartesian polynomial integrals over the ball with the harmonic H,
+(B) the radial reduction. rho side: composite Gauss-Legendre, 45 digits working precision, 60 nodes per panel, 21 panels to rho = 112.
+
+MAIN (script odd_dict_check.py), each line at each l = 2, 3, 4
+ L0  exact: 3D Cartesian Grams (A) equal the radial Grams (B) entry by entry, for (a1), (a2), (a3), (b).
+ L1  (a1): max over Gram of |rho - r| / max|r| <= 1e-30.
+ L2  (a2): same line.
+ L3  (a3): same line, all 25 entries.
+ L4  (b):  same line with g = 1.
+ L5  g read back from (b): every entry ratio (rho side)/(r side) within 1e-28 of 1.
+ L6  full 10x10 Gram of E_2 on the data (f_i,0),(0,p_j), cross block included (zero on both sides), same line 1e-30;
+     full 10x10 antisymmetric symplectic Gram, same line.
+ L7  quadrature self-check: all four rho-side Grams with 60 and 80 nodes per panel agree to 1e-32 relative.
+ L8  (c) exact, 3D: Omega(b, X a) = 2 E_2(a, b) (bilinear) for all 100 pairs of the 10 data, X a = (N psidot_a, div(N grad psi_a) - 2 psi_a).
+ L9  (c) exact: div(N grad psi) - 2 psi in Cartesian form equals [ (r^2 N f')'/r^2 - N lam^2 f/r^2 - 2 f ] Y, every f datum.
+ L10 (c) pointwise, rho side by numerical second derivative in rho (mpmath diff) at rho in {0.3,0.7,1.1,1.9,2.7,4.3,6.1,9.0}:
+     q'' - lam^2 q/sinh^2 - N q  =  N r [radial flow of L9]   to 1e-28 relative (to the largest term), every f datum;
+     and g read back = (q'' - lam^2 q/sinh^2 - N r dp)/(N q) within 1e-25 of 1 at every point.
+ L11 (d) exact: S[eta] = g1 (x(x)v + v(x)x) + g2 (grad v + grad v^T), v = x cross grad H, g1 = -D eta/(l+2),
+     g2 = (eta + r^2 D eta/(l+2))/(l-1), is traceless and divergence-free for the three profiles
+     eta in { (1-s)^3, (1-s)^3 s, (1-s)^4 (1+2s) }.
+ L12 (d) exact: psi_B[K = S[eta]] = l(l+1) eta H ;  psidot_B[h = S[eta]] = (1/2) l(l+1) (4 s eta_ss + (4l+6) eta_s) H.
+ L13 (d) exact: int_B K_a . h_b = -c_l int_B psi_B[K_a] psidot_B[h_b] on the full 3x3 matrix, entries non-zero.
+ PLANT P1 (the card's): Z on the rho side with N^2 in place of N. Must break L4 by > 1e-3 relative.
+ PLANT P2: pi = N^2 r p. Must break L1 and L3 by > 1e-3 relative.
+ PLANT P3: q = N r f. Must break L2 and L4 by > 1e-3 relative.
+ PLANT P4: weight 3 in the r-side flow (-3 psi). The g read back in L10 must be off 1 by > 1e-3 (expected 2).
+ PLANT P5: +c_l in L13 (role swap ignored). Must break L13 (non-zero difference).
+
+Expected outcome: every L line passes, g = 1, every plant caught. Any line that fails is reported as failed;
+lines are not edited after the first run.

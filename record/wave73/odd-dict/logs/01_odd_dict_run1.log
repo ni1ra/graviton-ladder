@@ -1,0 +1,62 @@
+ODD-DICT check; mp.dps = 45
+L0  l=2    PASS  3D Cartesian Grams == radial Grams exactly; N_Y/4pi = 1/15; Z[0][0] = 1/14, E1fld[0][0] = 3/14
+L1  l=2    PASS  (a1) momentum rel err 1.37e-46
+L2  l=2    PASS  (a2) field rel err 1.17e-46
+L3  l=2    PASS  (a3) symplectic, 25 entries, rel err 1.76e-46
+L4  l=2    PASS  (b) Z with g = 1 rel err 2.29e-46
+L5  l=2    PASS  g read back from Z: max |ratio - 1| = 1.75e-46
+L6  l=2    PASS  10x10 E_2 Gram rel err 1.86e-46; 10x10 symplectic Gram rel err 1.76e-46
+L7  l=2    PASS  60 vs 80 nodes per panel: 2.73e-46
+L8  l=2    PASS  Omega(b, X a) = 2 E_2(a,b) exactly on all 100 pairs, X = (N psidot, div(N grad psi) - 2 psi)
+L9  l=2    PASS  Cartesian div(N grad psi) - 2 psi == radial formula x Y, every f datum
+L10 l=2    PASS  pointwise flow rel err 3.48e-45; g read back, max |g - 1| = 4.51e-43 over 40 points
+L11 l=2    PASS  S[eta] traceless and divergence-free, three profiles
+L12 l=2    PASS  psi_B[K=S[eta]] = l(l+1) eta H;  psidot_B[h=S[eta]] = (1/2) l(l+1) eta~ H
+L13 l=2    PASS  int_B K_a.h_b = -c_l int_B psi_B[K_a] psidot_B[h_b] on 3x3; ratios found ['-1/6'], c_l = 1/6; entry [0][0] = 512/60775 (units 4pi)
+P1  l=2    CAUGHT  Z with N^2: L4 deviation 0.827
+P2  l=2    CAUGHT  pi = N^2 r p: L1 deviation 0.961, L3 deviation 0.86
+P3  l=2    CAUGHT  q = N r f: L2 deviation 0.912, L4 deviation 0.959
+P4  l=2    CAUGHT  weight 3: g read back = 2.0 (max |g - 1| = 1.0)
+P5  l=2    CAUGHT  +c_l in L13 (role swap ignored)
+   [l=2 done, 4 s]
+L0  l=3    PASS  3D Cartesian Grams == radial Grams exactly; N_Y/4pi = 4/105; Z[0][0] = 1/18, E1fld[0][0] = 2/9
+L1  l=3    PASS  (a1) momentum rel err 1.06e-46
+L2  l=3    PASS  (a2) field rel err 1.41e-46
+L3  l=3    PASS  (a3) symplectic, 25 entries, rel err 1.22e-46
+L4  l=3    PASS  (b) Z with g = 1 rel err 1.75e-46
+L5  l=3    PASS  g read back from Z: max |ratio - 1| = 1.75e-46
+L6  l=3    PASS  10x10 E_2 Gram rel err 1.76e-46; 10x10 symplectic Gram rel err 1.22e-46
+L7  l=3    PASS  60 vs 80 nodes per panel: 2.82e-46
+L8  l=3    PASS  Omega(b, X a) = 2 E_2(a,b) exactly on all 100 pairs, X = (N psidot, div(N grad psi) - 2 psi)
+L9  l=3    PASS  Cartesian div(N grad psi) - 2 psi == radial formula x Y, every f datum
+L10 l=3    PASS  pointwise flow rel err 1.69e-44; g read back, max |g - 1| = 5.51e-43 over 40 points
+L11 l=3    PASS  S[eta] traceless and divergence-free, three profiles
+L12 l=3    PASS  psi_B[K=S[eta]] = l(l+1) eta H;  psidot_B[h=S[eta]] = (1/2) l(l+1) eta~ H
+L13 l=3    PASS  int_B K_a.h_b = -c_l int_B psi_B[K_a] psidot_B[h_b] on 3x3; ratios found ['-1/30'], c_l = 1/30; entry [0][0] = 73728/40415375 (units 4pi)
+P1  l=3    CAUGHT  Z with N^2: L4 deviation 0.859
+P2  l=3    CAUGHT  pi = N^2 r p: L1 deviation 0.97, L3 deviation 0.894
+P3  l=3    CAUGHT  q = N r f: L2 deviation 0.939, L4 deviation 0.972
+P4  l=3    CAUGHT  weight 3: g read back = 2.0 (max |g - 1| = 1.0)
+P5  l=3    CAUGHT  +c_l in L13 (role swap ignored)
+   [l=3 done, 8 s]
+L0  l=4    PASS  3D Cartesian Grams == radial Grams exactly; N_Y/4pi = 8/315; Z[0][0] = 1/22, E1fld[0][0] = 5/22
+L1  l=4    PASS  (a1) momentum rel err 1.52e-46
+L2  l=4    PASS  (a2) field rel err 1.62e-46
+L3  l=4    PASS  (a3) symplectic, 25 entries, rel err 1.52e-46
+L4  l=4    PASS  (b) Z with g = 1 rel err 2.41e-46
+L5  l=4    PASS  g read back from Z: max |ratio - 1| = 1.75e-46
+L6  l=4    PASS  10x10 E_2 Gram rel err 1.39e-46; 10x10 symplectic Gram rel err 1.52e-46
+L7  l=4    PASS  60 vs 80 nodes per panel: 3.03e-46
+L8  l=4    PASS  Omega(b, X a) = 2 E_2(a,b) exactly on all 100 pairs, X = (N psidot, div(N grad psi) - 2 psi)
+L9  l=4    PASS  Cartesian div(N grad psi) - 2 psi == radial formula x Y, every f datum
+L10 l=4    PASS  pointwise flow rel err 2.66e-44; g read back, max |g - 1| = 7.43e-43 over 40 points
+L11 l=4    PASS  S[eta] traceless and divergence-free, three profiles
+L12 l=4    PASS  psi_B[K=S[eta]] = l(l+1) eta H;  psidot_B[h=S[eta]] = (1/2) l(l+1) eta~ H
+L13 l=4    PASS  int_B K_a.h_b = -c_l int_B psi_B[K_a] psidot_B[h_b] on 3x3; ratios found ['-1/90'], c_l = 1/90; entry [0][0] = 16384/27776385 (units 4pi)
+P1  l=4    CAUGHT  Z with N^2: L4 deviation 0.923
+P2  l=4    CAUGHT  pi = N^2 r p: L1 deviation 0.977, L3 deviation 0.922
+P3  l=4    CAUGHT  q = N r f: L2 deviation 0.956, L4 deviation 0.99
+P4  l=4    CAUGHT  weight 3: g read back = 2.0 (max |g - 1| = 1.0)
+P5  l=4    CAUGHT  +c_l in L13 (role swap ignored)
+   [l=4 done, 13 s]
+FAILED LINES: none
