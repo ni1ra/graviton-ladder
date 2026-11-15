@@ -1,0 +1,77 @@
+== Part C: certified enclosures (ball arithmetic, prec 120 bits) ==
+  moment_3                     [0.250000000 +/- 1.98e-10]
+  moment_3_contains_exact      True
+  moment_5                     [0.500000000000000 +/- 1.14e-16]
+  moment_5_contains_exact      True
+  moment_7                     [2.1250000000000000000000 +/- 7.71e-23]
+  moment_7_contains_exact      True
+  I0                           [0.167103468 +/- 5.02e-10]
+  N1sq                         [0.124792968 +/- 2.80e-10]
+  H1sq                         [0.2451608725258528546915 +/- 4.49e-23]
+  Esq                          [0.1116 +/- 7.76e-5]
+  Dsq                          [7576.89088596001221756012013690326 +/- 5.03e-30]
+  w_lo                         [0.0558471383 +/- 7.03e-11]
+  kappa                        [0.0874562074 +/- 6.98e-11]
+  sstar                        [0.799107381 +/- 7.80e-10]
+  m_lo                         [0.029751907 +/- 1.14e-10]
+  m_hi                         [0.196024335 +/- 6.17e-10]
+  ratio_lo                     [0.000512 +/- 6.06e-7]
+  ENCLOSURE  m(pi) in [0.029752, 0.196024]  =>  matrix element mu = -m/2 in [-0.098012, -0.014876]
+  CERTIFIED  ||beta1hat e||/||e||_H >= 5.113948e-04   (squared: 2.615246e-07)
+== Part N: float64 grid ==
+  limit  dy=0.02 top=40 : {"grid_norm_pi0": 0.24999999999999997, "grid_pi0_W_pi0": 0.12500833327777827, "grid_pi0_h2_pi0": 0.499991667138871, "grid_norm_h2pi0": 2.124966677164033, "m": 0.06080046902115117, "Im_z_Tz": -0.03040023451057562, "beta_sq": 0.0015129644753383903, "e_sq": 0.11167864156162645, "R": 0.013547482796909802, "p_min": 0.03914605285019805}
+  limit  dy=0.01 top=40 : {"m": 0.06079756166226914, "Im_z_Tz": -0.0303987808311346, "beta_sq": 0.001512863367189172, "e_sq": 0.11167784047913087, "R": 0.013546674619589185, "p_min": 0.03915093998788385}
+  limit  dy=0.02 top=80 : {"m": 0.060800469021159424, "Im_z_Tz": -0.03040023451057974, "beta_sq": 0.0015129644753401389, "e_sq": 0.11167864156073305, "R": 0.013547482797033834, "p_min": 0.019604053908168}
+  l=   64 (lam W_l, h_l)  : {"m": 0.060244697864582177, "Im_z_Tz": -0.03012234893229112, "beta_sq": 0.001489313746300341, "e_sq": 0.11166768690284581, "R": 0.013337016173676884, "p_min": 0.03914609199075906, "d": 0.015535478168750672, "lam_d": 1.0020082339162644}
+  l=  256 (lam W_l, h_l)  : {"m": 0.06066235448179399, "Im_z_Tz": -0.03033117724089703, "beta_sq": 0.001507029038418245, "e_sq": 0.11167794883034045, "R": 0.013494419034394176, "p_min": 0.0391460553324699, "d": 0.003916872478164746, "lam_d": 1.0046758818401935}
+  l= 1024 (lam W_l, h_l)  : {"m": 0.060765995055595, "Im_z_Tz": -0.030382997527797523, "beta_sq": 0.0015114792409971723, "e_sq": 0.11167859814005134, "R": 0.013534188879248744, "p_min": 0.03914605300626633, "d": 0.0009812832287995343, "lam_d": 1.005324548178026}
+  plant A (e^-y for W)   : {"m": 0.07693092927287153, "Im_z_Tz": -0.03846546463643578, "beta_sq": 0.0020533766055911163, "e_sq": 0.11167864156162645, "R": 0.01838647548786688, "p_min": 0.03914605285019805}
+  plant B (coth dropped) : {"m": 0.06080046902115117, "Im_z_Tz": -0.03040023451057562, "beta_sq": 0.0011904298038747892, "e_sq": 0.0890371047440587, "R": 0.013370041706732661, "p_min": 0.03914605285019805}
+== table ==
+  R_inf = ||beta1hat e||^2/||e||^2 = 0.01354748   m(pi) = 0.06080047   mu = -0.03040023
+  N1 rel. errors {'grid_norm_pi0': np.float64(1.1102230246251565e-16), 'grid_pi0_W_pi0': np.float64(6.666622222617491e-05), 'grid_pi0_h2_pi0': np.float64(1.6665722258002447e-05), 'grid_norm_h2pi0': np.float64(1.5681334572748007e-05)}
+  N5 rel. changes {'dy': 5.96551649285626e-05, 'box': 9.155343150268891e-12}
+  l=   64  R_l=0.01333702  m_l=0.06024470  |R_l/R_inf-1|=1.554e-02  lam*d=1.0020
+  l=  256  R_l=0.01349442  m_l=0.06066235  |R_l/R_inf-1|=3.917e-03  lam*d=1.0047
+  l= 1024  R_l=0.01353419  m_l=0.06076600  |R_l/R_inf-1|=9.813e-04  lam*d=1.0053
+  plants: R_A=0.01838648 (rel 0.357)  R_B=0.01337004 (rel 0.013)
+== pass lines ==
+  C1: PASS
+  C2: PASS
+  C3: PASS
+  N1: PASS
+  N2: PASS
+  N3: PASS
+  N4: PASS
+  N5: PASS
+  N6: PASS
+  N7: FAIL
+SOME LINES FAILED (20 s)
+Traceback (most recent call last):
+  File "record\wave73\even-nonzero\scripts\even_nonzero.py", line 233, in <module>
+    main()
+    ~~~~^^
+  File "record\wave73\even-nonzero\scripts\even_nonzero.py", line 226, in main
+    json.dump({"certified": cert, "limit": base, "limit_fine": fine, "limit_bigbox": big,
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               "finite_l": fin, "plantA": pa, "plantB": pb, "n1": n1, "n5": n5, "n7": n7,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               "lines": lines}, f, indent=1)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Python314\Lib\json\encoder.py", line 442, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Python314\Lib\json\encoder.py", line 411, in _iterencode_dict
+    yield from chunks
+  File "C:\Python314\Lib\json\encoder.py", line 411, in _iterencode_dict
+    yield from chunks
+  File "C:\Python314\Lib\json\encoder.py", line 449, in _iterencode
+    newobj = _default(o)
+  File "C:\Python314\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+when serializing dict item 'N2'
+when serializing dict item 'lines'

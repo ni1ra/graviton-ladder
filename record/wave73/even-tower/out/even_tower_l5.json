@@ -1,0 +1,293 @@
+{
+ "l": 5,
+ "kmax": 3,
+ "checks": {
+  "D0 even basis T[s^k], k=0..KMAX: div = 0, tr = 0, x.T.x = s^k phi": {
+   "pass": true,
+   "info": ""
+  },
+  "D0b T[1] = Hess(phi)/(l(l-1)) (the TT gauge mode)": {
+   "pass": true,
+   "info": ""
+  },
+  "C3 Green identity int N R_lin[q] = -2 dF[q] on random symmetric q": {
+   "pass": true,
+   "info": "1/21"
+  },
+  "H1 A_un unchanged by edge-tangent and interior xi: their rows vanish against all TT data and all gauge data": {
+   "pass": true,
+   "info": ""
+  },
+  "H1b A_un depends on xi only through sigma: gauge-family form = -(l-1)(l+2) sigma_i sigma_j oint Y^2 (rank 1)": {
+   "pass": true,
+   "info": "M(sigma=Y)=-512/99 ; flat-space value -(l-1)(l+2)N_Y=-512/99"
+  },
+  "Q1a(h) stationarity in sigma solvable for every TT datum, rank of the gauge form = 1": {
+   "pass": true,
+   "info": "rank=1"
+  },
+  "D4 psi_E[T[s^k]] = -(1/2) Lap(s^k phi) (companion A8 Lemma 7)": {
+   "pass": true,
+   "info": ""
+  },
+  "Q2a FIELD block: A_ext^h = c_l E_1[psi_E] on the whole Gram (k=0..KMAX), exact": {
+   "pass": true,
+   "info": "max|diff|=0 ; A_ext(T1,T1)=832/24255"
+  },
+  "PL4 weight 2 on the even field block": {
+   "pass": true,
+   "plant": true,
+   "info": "max|diff|=5.447e-02"
+  },
+  "Q2a' gauge mode T[1] has a zero row in A_ext^h": {
+   "pass": true,
+   "info": ""
+  },
+  "H3(h) companion A8 Lemma 8: A_ext^h = A_un^h + oint G_a G_b/((l-1)(l+2)), G = (1/2)(d_r + 2)(x.h.x)": {
+   "pass": true,
+   "info": ""
+  },
+  "C4 companion A8 Cor. 2(ii): unextremised A_un(Hess phi, T[s^k]) = -(l/4)(2k + l + 2) N_Y, non-zero": {
+   "pass": true,
+   "info": "A_un(Hess phi,Hess phi)=-3200/99"
+  },
+  "Q1d(h) non-vacuity: A_un^h differs from A_ext^h on TT data (the extremisation is doing something)": {
+   "pass": true,
+   "info": ""
+  },
+  "PL3 lapse (1 - 1.1 r^2)/2 in A_un: extremised value on T[s] differs from c_l E_1": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "H2(K) pure-gauge K = Hess X0 returns flat-space geometry: A_un = oint|grad_tan tau|^2 - 2 int|grad X0|^2 (all pairs)": {
+   "pass": true,
+   "info": ""
+  },
+  "H3(K) drive: A_un(T_a, Hess X0) = oint kappa_a tau (depends on X0 only through the corner time shift)": {
+   "pass": true,
+   "info": ""
+  },
+  "Q1a(K) stationarity in X0 solvable, gauge form non-degenerate on the polynomial family": {
+   "pass": true,
+   "info": "rank=5 of 5"
+  },
+  "Q1c(K) the stationary point is stationary against directions outside the family (s^(D+1) phi, s^(D+2) phi)": {
+   "pass": true,
+   "info": ""
+  },
+  "H3'(K) stationary X0 is harmonic, X0 = -kappa(1)/(l(l-1)) phi (maximal slice; moved K has zero normal-normal part on the edge)": {
+   "pass": true,
+   "info": ""
+  },
+  "H3''(K) closed form: A_ext^K = int N K_a.K_b - oint kappa_a kappa_b/(l(l-1)) on TT K": {
+   "pass": true,
+   "info": ""
+  },
+  "Q1d(K) non-vacuity: A_un^K differs from A_ext^K": {
+   "pass": true,
+   "info": ""
+  },
+  "D4b G_D: -Lap u = psidot_E and u = 0 on the edge (u = F(s) phi with F(1) = 0)": {
+   "pass": true,
+   "info": ""
+  },
+  "Q2b MOMENTUM block: A_ext^K = c_l[(1/2) int N psidot^2 + (1/2) int psidot G_D psidot] on the whole Gram, exact": {
+   "pass": true,
+   "info": "max|diff|=0 ; A_ext(T1,T1)=256/155925 ; Z_E(T1,T1)=128/1091475"
+  },
+  "Q2b' momentum block is NOT c_l E_w for any w (E_w has no w on this block): A_ext^K - c_l(1/2)int N psidot^2 = Z_E != 0": {
+   "pass": true,
+   "info": "Z_E/S on T[s] = 1/13"
+  },
+  "Q2b'' Z_E positive on the basis diagonal (k >= 1) and zero on the gauge mode": {
+   "pass": true,
+   "info": ""
+  },
+  "PL5a Neumann-type inverse in place of G_D": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "PL5b coefficient 2 on the G_D term": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "Q2d spectrum of A_ext^K against c_l(1/2)int N psidot^2 = {1 + 1/((j+1)(2l+2j+3))}, j=0..KMAX-1 (exact roots); 1 is not a root": {
+   "pass": true,
+   "info": "eigenvalues ['14/13', '31/30', '52/51']"
+  },
+  "Q2e flow of A_ext^K on the curvature: x.Ric_lin[2 N Kt].x = N psidot_E + G_D psidot_E (non-local in psidot_E)": {
+   "pass": true,
+   "info": ""
+  },
+  "Q2e' without the corner shift the same expression is not N psidot_E either (TT representative is not the local one)": {
+   "pass": true,
+   "info": ""
+  },
+  "PL2 (extremisation) bulk slice term -2 int|grad X0|^2 dropped from the stiffness": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "PL1 (extremisation) corner time shift frozen: value changes under the harmonic X0 move, which keeps K TT": {
+   "pass": true,
+   "plant": true,
+   "info": "frozen: 0.85976 -> 14.7947 ; full: 0.385429 -> 0.385429"
+  },
+  "G0 moved data are not TT and the edge and corner really move (sigma != 0, tau != 0)": {
+   "pass": true,
+   "info": "sigma=37/10 Y, tau=-33/4 Y"
+  },
+  "G1 psi_E and psidot_E are unchanged by the even gauge move": {
+   "pass": true,
+   "info": ""
+  },
+  "G1b moved data still satisfy the linearised constraints (R_lin[h] = 0, div K = grad tr K)": {
+   "pass": true,
+   "info": ""
+  },
+  "Q1b(h) A_ext^h(h + 2 sym grad xi) = A_ext^h(h), random xi with a, b of degree 2 (pipeline run on the non-TT datum)": {
+   "pass": true,
+   "info": "2.7025396 = 2.7025396"
+  },
+  "Q1d(h) the unextremised A_un^h moves under the same xi": {
+   "pass": true,
+   "info": "-0.0158442 -> -43.0704"
+  },
+  "Q1b(K) A_ext^K(K + Hess X0) = A_ext^K(K), random X0 = c(s) phi of degree 2": {
+   "pass": true,
+   "info": "0.0039903003 = 0.0039903003"
+  },
+  "Q1d(K) the unextremised A_un^K moves under the same X0": {
+   "pass": true,
+   "info": "0.0132255 -> 239.846"
+  },
+  "Q1c(K) moved datum: stationary against the extra directions, and the stationary slice is maximal (tr K = 0)": {
+   "pass": true,
+   "info": ""
+  },
+  "Q1/Q2 random datum, h and K independent, after the gauge move: A_ext = c_l E_1[psi_E, psidot_E] + (c_l/2)<psidot_E, G_D psidot_E>": {
+   "pass": true,
+   "info": "A_ext/4pi=2.7065299"
+  },
+  "S1 mixed-m datum (two harmonics), closed forms of H3: A_ext = chain form, exact": {
+   "pass": true,
+   "info": "2.8225966"
+  },
+  "C1-0 odd tensors are TT with x.T.x = 0": {
+   "pass": true,
+   "info": ""
+  },
+  "C1a ODD data, degree l and degree l+1 (same polynomial parity as the gauge family): zero drive against every even gauge direction, h and K slots": {
+   "pass": true,
+   "info": ""
+  },
+  "C1b ODD data through the same geometric code: A_ext = A_un = c_l E_2[psi_B] on the Gram, K slot and h slot": {
+   "pass": true,
+   "info": "A(K_l)/4pi=640/3003"
+  },
+  "C1c stationary magnetic datum: A = oint|K|^2/((2l+1)(2l+3)), c_l E_1/A = (l+1)/(l+2)": {
+   "pass": true,
+   "info": ""
+  },
+  "INFO odd momentum spectrum against c_l E_1: 1 + 1/((2j+1)(l+j+1)); with the even one both are 1 + 2/(n(2l+n+1)), n odd / n even": {
+   "pass": true,
+   "info": ""
+  },
+  "C2-0 h = -2 phi delta satisfies the linearised Hamiltonian constraint and is not TT": {
+   "pass": true,
+   "info": ""
+  },
+  "C2 stationary electric datum through the full pipeline: A_ext = 2l(l-1)/((l+2)(2l+3)) N_Y = c_l E_1, psi_E = l(l-1) phi; ratio information/area = 1": {
+   "pass": true,
+   "info": "A_ext/N_Y=40/91 ; unextremised A_un/N_Y=-24/13"
+  },
+  "Q3c-0 E_dot = -sym curl B equals Ric_lin[2K]; B is TT with x.B.x = 0; E is TT": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3c-1 x.dE.x = N psidot_E": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3c-2 -x.(sym curl dB).x = div(N grad psi_E) - 1*psi_E (weight 1: the conformal flow on the curvature)": {
+   "pass": true,
+   "info": ""
+  },
+  "PL6a weight 2 in Q3c-2": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "Q3c-3 dE, dB are transverse and traceless": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3d-1 E = T[q_E] with q_E phi = psi_E: E <-> psi_E algebraic, local both ways": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3d-2 B = odd-type TT tensor with profile eta = F/(l(l+1)), psidot_E = F phi: B <-> psidot_E algebraic, local both ways": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3d-3 psi_E[Lap h] = Lap psi_E[h], psidot_E[Lap K] = Lap psidot_E[K]: the chain field obeys the scalar wave equation": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3-TT Gaussian-profile even tensors are TT on R^3": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3-B0 control: Parseval, position space = momentum space, tensors and scalars": {
+   "pass": true,
+   "info": ""
+  },
+  "Q3a Omega_grav = kappa c_l Omega_chain on R^3 with one constant kappa = +1: int K_a.h_b = c_l int psidot_E,a psi_E,b": {
+   "pass": true,
+   "info": "kappa=['1']"
+  },
+  "Q3b-h vacuum two-point function, h-h block: int (1/2) omega h_a.h_b = c_l int omega psi_E,a psi_E,b, whole Gram": {
+   "pass": true,
+   "info": "512/231 = 512/231"
+  },
+  "Q3b-K vacuum two-point function, K-K block: int 2 K_a.K_b/omega = c_l int psidot_E,a psidot_E,b/omega, whole Gram": {
+   "pass": true,
+   "info": "128/231 = 128/231"
+  },
+  "PL6b transfer (psi/2, 2 psidot): symplectic identity kept, two-point function broken": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "PL6c omega and 1/omega exchanged on the scalar side": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "PL6d c_l scaled by (l+3)/(l+2)": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  }
+ },
+ "fails": [],
+ "plants_missed": [],
+ "seconds": 15.344907999038696,
+ "even_momentum_eigs": [
+  "14/13",
+  "31/30",
+  "52/51"
+ ],
+ "spot": {
+  "A_ext_h": "3705219328/1371013875",
+  "A_ext_K": "75496448/18919991475",
+  "chain": "256037615872/94599957375"
+ },
+ "electric_stationary": {
+  "A_ext_over_NY": "40/91",
+  "A_un_over_NY": "-24/13"
+ }
+}

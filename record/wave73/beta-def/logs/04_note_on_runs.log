@@ -1,0 +1,1 @@
+Run 2 = run 1 after tidying one dead-code line in the L14 block (no numerical change; logs identical). All 14 pre-fixed lines pass.

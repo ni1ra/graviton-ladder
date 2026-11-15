@@ -1,0 +1,27 @@
+L1 literal-formula check, worst rel diff = 1.35e-13
+L6 domination: max(lamW - D) = 0.000e+00 (must be <= 0), min(lamW) = 0.000e+00
+
+f1:  err = ||lam W_l f - W_inf f||_L2(dy)
+    l      err          l*err     lam*err/||F||  ||lam*d-F||/||F||  err_plant(ln lam)  quad rel chg
+   16  1.025681e-02  0.164109  0.97866        0.02376            4.587788e-02      3.4e-16
+   64  2.665187e-03  0.170572  0.99451        0.00623            3.628306e-02      2.4e-15
+  256  6.729441e-04  0.172274  0.99862        0.00158            3.389939e-02      2.9e-15
+ 1024  1.686571e-04  0.172705  0.99965        0.00040            3.330999e-02      6.4e-15
+    slope(256->1024) = -0.9982;  ||F|| = 1.728491e-01;  ||W_inf f|| scale: plant err(1024)/err(1024) = 197.5
+
+f2:  err = ||lam W_l f - W_inf f||_L2(dy)
+    l      err          l*err     lam*err/||F||  ||lam*d-F||/||F||  err_plant(ln lam)  quad rel chg
+   16  8.675612e-04  0.013881  0.96419        0.03932            1.668965e-02      6.2e-16
+   64  2.279326e-04  0.014588  0.99067        0.01024            1.801325e-02      1.3e-15
+  256  5.771815e-05  0.014776  0.99764        0.00259            1.837251e-02      6.8e-15
+ 1024  1.447623e-05  0.014824  0.99941        0.00065            1.846426e-02      2.1e-14
+    slope(256->1024) = -0.9977;  ||F|| = 1.483966e-02;  ||W_inf f|| scale: plant err(1024)/err(1024) = 1275.5
+
+L1: PASS
+L2: PASS
+L3: PASS
+L4: PASS
+L5: PASS
+L6: PASS
+L7_plant_caught: PASS
+ALL LINES HELD

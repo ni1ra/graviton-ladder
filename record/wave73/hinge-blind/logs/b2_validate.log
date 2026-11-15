@@ -1,0 +1,46 @@
+== V1 thermal chain: modular Hamiltonian must be beta*H
+  max|M - beta K| = 2.22e-15   max|N - beta 1| = 7.77e-16
+== V2 two-mode squeezed vacuum, reduced to one mode: eps = 2 log coth r
+  r=0.3 eps=2.466716637664411 exact=2.466716637664410  M=2.466716637664411 N=2.466716637664411
+  r=1.1 eps=0.445039937163110 exact=0.445039937163110  M=0.445039937163110 N=0.445039937163110
+   two squeezed pairs, reduced modes mixed by a point transformation G
+  max|M - exact| = 2.22e-16  max|N - exact| = 2.22e-16
+== V3 one mode, two thermal states of the same oscillator: closed form
+  eps=(0.5,0.9) A_I=0.959874450857454 A_II=0.959874450857454 exact=0.959874450857454
+  eps=(2.0,7.0) A_I=0.939890673135036 A_II=0.939890673135036 exact=0.939890673135036
+== V4 brute-force Fock space, one mode: K = (N p^2 + M x^2)/2, K' = K + c x^2/2
+  M=1.3 N=0.8 c=+1.257  Fock=0.9738722853391  I=0.9738722853391  II=0.9738722853391  |I-Fock|=1.3e-15
+  M=1.3 N=0.8 c=-0.628  Fock=0.9743658678892  I=0.9743658678892  II=0.9743658678892  |I-Fock|=1.4e-15
+  M=3.0 N=2.0 c=+6.283  Fock=0.9461841565004  I=0.9461841565004  II=0.9461841565004  |I-Fock|=2.8e-15
+  M=9.0 N=6.0 c=-6.283  Fock=0.9516737910031  I=0.9516737910031  II=0.9516737910031  |I-Fock|=1.1e-15
+== V5 brute-force Fock space, two coupled modes, diagonal phi^2 perturbation
+  g=+1.00 w=(0.3, 0.3)  Fock=0.979591934116  I=0.979591934116  II=0.979591934116  |I-Fock|=3.3e-16
+  g=-1.00 w=(0.3, 0.15)  Fock=0.954630858986  I=0.954630858986  II=0.954630858986  |I-Fock|=6.7e-16
+  g=+0.25 w=(0.3, 0.3)  Fock=0.997979616518  I=0.997979616518  II=0.997979616518  |I-Fock|=1.1e-15
+== V6 lattice vacuum, n=2 inside N=10 (D2, l=1): exp(-K) must reproduce X_A, P_A in Fock space
+  eps = [12.81729400912276, 3.8467291599337066]
+  max|X_fock - X_A| = 2.00e-15   max|P_fock - P_A| = 3.00e-15
+  g=+1  1-A: Fock=6.363435728325e-03  I=6.363435728323e-03  II=6.363435728323e-03
+  g=-1  1-A: Fock=1.951707423591e-02  I=1.951707423591e-02  II=1.951707423591e-02
+== V7 ball lattice: g=0 gives A=1; williamson(M,N) returns the entanglement spectrum; formula I = formula II
+  n=12 l=2 prec=1600  log10 min(nu^2-1/4)=-43.8  log10 max rel|eps_W - eps|=-480.1  log10|1-A(g=0)|=-479.4
+     g=+1  1-A(I)=[0.003957498033101424856107557 +/- 2.02e-28]  log10 rel|I-II|=-437.7  (log10 rel radius of det in II: -433.4)
+     g=-1  1-A(I)=[0.008090298678975814168247956 +/- 3.34e-28]  log10 rel|I-II|=-436.6  (log10 rel radius of det in II: -433.3)
+  n=16 l=4 prec=2400  log10 min(nu^2-1/4)=-70.8  log10 max rel|eps_W - eps|=-720.8  log10|1-A(g=0)|=-720.1
+     g=+1  1-A(I)=[0.001579356397749928242161879 +/- 1.07e-29]  log10 rel|I-II|=-649.9  (log10 rel radius of det in II: -647.0)
+     g=-1  1-A(I)=[0.002398158505210249282837172 +/- 2.60e-28]  log10 rel|I-II|=-649.7  (log10 rel radius of det in II: -646.9)
+  n=24 l=8 prec=4000  log10 min(nu^2-1/4)=-130.4  log10 max rel|eps_W - eps|=-1202.3  log10|1-A(g=0)|=-1201.9
+     g=+1  1-A(I)=[0.0005242038336740503802997467 +/- 1.35e-29]  log10 rel|I-II|=-1071.4  (log10 rel radius of det in II: -1067.6)
+     g=-1  1-A(I)=[0.0006579574375083461291478156 +/- 1.59e-29]  log10 rel|I-II|=-1071.2  (log10 rel radius of det in II: -1067.6)
+== V8 Srednicki large-l entropy: S ~ xi (1 - log xi), xi = n(n+1)(2n+1)^2 / (64 l^2 (l+1)^2)
+  n=6 l=150  S=3.509223e-06  xi(1-log xi)=3.533959e-06  ratio=0.99300
+  n=6 l=300  S=2.595000e-07  xi(1-log xi)=2.599631e-07  ratio=0.99822
+  n=10 l=400  S=5.389105e-07  xi(1-log xi)=5.403148e-07  ratio=0.99740
+== V9 information: row sums of the pi-pi kernel N against the continuum 2 pi (1-r^2)/(2a)
+  j= 4 r=0.123  rowsum N=102.8148  diag N=106.9051  2pi(1-r^2)/(2a)=100.5551
+  j= 8 r=0.246  rowsum N=96.6051  diag N=101.4831  2pi(1-r^2)/(2a)=95.9152
+  j=16 r=0.492  rowsum N=77.3342  diag N=80.3479  2pi(1-r^2)/(2a)=77.3557
+  j=24 r=0.738  rowsum N=46.3970  diag N=47.0972  2pi(1-r^2)/(2a)=46.4231
+  j=28 r=0.862  rowsum N=26.3042  diag N=26.4275  2pi(1-r^2)/(2a)=26.3169
+  j=31 r=0.954  rowsum N=9.2033  diag N=9.2074  2pi(1-r^2)/(2a)=9.2073
+  j=32 r=0.985  rowsum N=3.1161  diag N=3.1164  2pi(1-r^2)/(2a)=3.1174

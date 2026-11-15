@@ -1,0 +1,31 @@
+EVEN-NONZERO: pass lines, fixed before the first run of scripts\even_nonzero.py
+Written 2026-11-15, before any number from the script was seen.
+
+Setting (limit model): h^2 = -d^2/dy^2 + e^(-2y) on L^2(R,dy), x = e^(-y); W = W_inf, kernel sinh(x_<)e^(-x_>).
+pi0(y) = x e^(-x)  (W pi0 = pi0/2 exactly; Kontorovich-Lebedev density of pi0: 2 p^3/sinh(pi p) dp).
+phi(p) = exp(-p^2/4);  pi1 = phi(h) pi0;  e = (q, pi) = (0, pi1) in H;  t = 0.5, tau = 2 pi t = pi.
+z = i pi1 / sqrt(2h) (complex coordinate of e), c^2 = 1/(1-e^(-2 pi h)), s^2 = c^2 - 1.
+T = B_1(tau) = int_0^tau e^(sX0) D e^(-sX0) ds,  D(q,pi) = (W pi, 0);  Tz = Az + B zbar.
+beta1hat e = ( c [B c^2 zbar - A s^2 z],  s conj[A c^2 z - B s^2 zbar] )   (antilinear part of T (+) 0 on H + H').
+m(tau) = int_0^tau < cos(sh) pi1, W cos(sh) pi1 > ds.
+Matrix element: mu = Re< eta, beta1hat e >_K with eta = (iz/c, conj(iz)/s);  claim mu = -m(tau)/2.
+R = ||beta1hat e||^2 / ||e||_H^2.
+
+Certified part (python-flint ball arithmetic; every truncation bounded by hand in the script):
+ C1  The enclosures of 2*int p^3/sinh, 2*int p^5/sinh, 2*int p^7/sinh contain 1/4, 1/2, 17/8
+     (the x-space values of ||pi0||^2, <pi0,h^2 pi0>, ||h^2 pi0||^2).
+ C2  Certified lower bound m_lo for m(pi) is > 0 (as a ball: lower endpoint > 0). Upper bound m_hi = pi*||pi1||^2/2.
+ C3  Certified lower bound for ||beta1hat e||/||e||_H, namely (m_lo/2)/(Den*E), is > 0.
+
+Plain numerics (float64, finite differences on a common y-grid, [N]):
+ N1  Grid values of ||pi0||^2, <pi0,W pi0>, <pi0,h^2 pi0>, ||h^2 pi0||^2 within 1e-3 relative of 1/4, 1/8, 1/2, 17/8.
+ N2  Numerical m(pi) (Gauss-Legendre in s) lies inside the certified enclosure [m_lo, m_hi].
+ N3  | Im<z,Tz> + m/2 | <= 1e-6 * m   (the A, B formulas agree with the time integral).
+ N4  R_inf > 0 and R_inf >= (certified lower bound of C3)^2.
+ N5  R_inf changes by less than 1% when dy 0.02 -> 0.01, and by less than 1% when the box top goes 40 -> 80.
+ N6  Finite l with lam*W_l (exact kernel) and h_l: d_l = |R_l/R_inf - 1| on the same grid satisfies
+     d_1024 < d_256 < d_64 and d_1024 < 1%.
+ N7  Planted error A (odd local operator: multiplication by e^(-y) in place of W_inf): |R_plantA/R_inf - 1| > 20%.
+     Planted error B (coth dropped: c^2 -> 1, s^2 -> 0, coth -> 1): |R_plantB/R_inf - 1| > 20%.
+
+Any line that fails is reported as failed, not re-worded.

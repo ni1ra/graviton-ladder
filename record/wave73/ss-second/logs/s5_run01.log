@@ -1,0 +1,5 @@
+D=4 cfg A: cL-ab = 0 | Maxwell kernel*sigma^p = 0 (hand formula 0) | graviton kernel*sigma^p = 0
+D=5 cfg A: cL-ab = 0 | Maxwell kernel*sigma^p = 0 (hand formula 0) | graviton kernel*sigma^p = 0
+D=5 cfg B: cL-ab = -4/5 | Maxwell kernel*sigma^p = 50/7 (hand formula 50/7) | graviton kernel*sigma^p = 12500/49
+D=6 cfg A: cL-ab = 0 | Maxwell kernel*sigma^p = 0 (hand formula 0) | graviton kernel*sigma^p = 0
+D=6 cfg B: cL-ab = -4/5 | Maxwell kernel*sigma^p = 400/21 (hand formula 400/21) | graviton kernel*sigma^p = 160000/147

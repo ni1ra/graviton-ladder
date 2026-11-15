@@ -1,0 +1,5 @@
+plan odd: 3 jobs, 3 workers, pid 17820
+18:47:45 n=24 N=96 l=8 odd prec=1280 D=130 margin=255 t=0s  q2_odd_mid:0.04207448996 odd_mid+1:0.03774267602 odd_mid-1:0.04737293550 
+18:47:45 n=32 N=128 l=4 odd prec=1344 D=140 margin=264 t=1s  q2_odd_mid:0.03982565603 odd_mid+1:0.03288138233 odd_mid-1:0.04981740508 
+18:47:49 n=48 N=192 l=16 odd prec=1984 D=313 margin=284 t=5s  q2_odd_mid:0.04527370475 odd_mid+1:0.04273092500 odd_mid-1:0.04810110416 
+plan odd done

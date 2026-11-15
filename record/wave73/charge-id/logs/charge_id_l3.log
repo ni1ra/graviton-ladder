@@ -1,0 +1,37 @@
+PASS D0 TT of basis tensor k=0
+PASS D0 TT of basis tensor k=1
+PASS D0 TT of basis tensor k=2
+PASS D0 TT of basis tensor k=3
+l=3 c_l=1/30 basis 8 built, t=0.0s
+PASS D1 Green identity int N R_lin[q] = -2 dF[q] on random q  2/35
+PASS T3 Omega_B(a, delta^w b) symmetric on TT data (delta^w Hamiltonian on the ball)
+canonical and scalar Grams done, t=0.1s
+geometric Gram done, t=0.6s
+PASS T1a A_can == c_l E_2 on all Gram entries (h-h, K-K, h-K)  max|diff|=0
+PASS T1b A_geo == c_l E_2 on all Gram entries  max|diff|=0
+PASS T1c Lemma-3 closed form (4) == A_can  max|diff|=0
+PASS T1d no h-K cross term in A_can
+PASS C1 stationary control: A = oint|K|^2/((2l+1)(2l+3)) = c_l E_2, c_l E_1/A = (l+1)/(l+2)  A/4pi=32/105, E1/E2=4/5
+PASS PL1 plant caught: lapse (1 - 11/10 r^2)/2 in delta^w  max|diff|=3.068e+00
+PASS PL2 plant caught: weight 1 instead of 2  max|diff|=6.095e-02
+PASS PL3 plant caught: c_l -> 4(l-1)!/(l+2)!  max|diff|=2.583e+00
+PASS PL3b plant caught (added post-run): c_l -> c_l (l+3)/(l+2)  max|diff|=5.166e-01
+PASS PL4 plant caught: pure Lie derivative (no +2tH) differs from c_l E_2  max|diff|=1.891e+00
+PASS PL4b pure-Lie charge = A + (1/2) int_B |h|^2 exactly
+PASS T2a transferred flow: psi[delta K] = N psi_dot, identically
+PASS T2b transferred flow: psi_dot[delta h] = div(N grad psi) - 2 psi, identically
+PASS T2c plant caught: weight 1 in the flow identity fails
+PASS T2d delta^w a satisfies the linearised constraints (div dK = 0, tr dK = 0, R_lin[dh] = 0)
+PASS S1 random mixed-harmonic datum: A_can = A_geo = c_l E_2 exactly  A/4pi=67.1224
+PASS S2 float quadrature of A_can and c_l E_2 agree with exact value (rel <= 1e-9)  rel=1.66e-14
+PASS G0 gauge-moved h is not TT (test is not vacuous)
+PASS G1 psi_dot invariant under odd gauge h -> h + 2 sym grad(a(r) v)
+PASS G2 A_geo invariant under random odd gauge move  0.439101
+INFO G3 closed form (4) applied off TT gauge: TT value 0.439101, moved value 32.6469, MOVES (formula is TT-only)
+PASS G4 Regge-Wheeler representative is g_RW(r) P (no K_l, h_AB = 0)
+PASS G5 A_geo in Regge-Wheeler gauge = A_geo in TT gauge  1.25454
+PASS G6 psi_dot in Regge-Wheeler gauge = TT gauge
+PASS T5 (post-hoc) psi[Lap K] = Lap psi[K] and psi_dot[Lap h] = Lap psi_dot[h]: psi obeys the scalar wave equation
+PASS T4a Gaussian-profile tensors are TT on R^3
+PASS T4b Omega_grav = kappa c_l Omega_scalar on R^3 with one constant kappa  kappa values: ['1']
+DONE l=3: 32/32 pass, fails=[], t=3.4s

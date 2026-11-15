@@ -1,0 +1,3 @@
+pids started by this lane (parents; workers are their children): mid/ctrl/prec/out chain python parents incl. 26660/37908 (prec); bigA 23240/28120; later stages logged in their own first log line
+B192 pool parent 39092 (chain); B160 early pool parent 20952; q2only-224 first attempt pool 40312 stopped via TaskStop at 19:31 for memory (free RAM fell to 0.3 GB), no rows written, log 17
+q2only-224 second attempt = log 18 (task bcq1nb3d9); q2only-256 first attempt (log 22, task bvplwcfff) stopped via TaskStop at 20:36 for memory, no rows written; B176 pool = log 12

@@ -1,0 +1,6 @@
+('th', 'th') R_{uAuB}(frame) - [-(1/2)u^-2 d_u(u^2 d_u shat)] = 0
+('th', 'ph') R_{uAuB}(frame) - [-(1/2)u^-2 d_u(u^2 d_u shat)] = 0
+('ph', 'ph') R_{uAuB}(frame) - [-(1/2)u^-2 d_u(u^2 d_u shat)] = 0
+D=4 identity  -(1/2)u^-2 d_u(u^2 d_u(S/u)) = -S''/(2u): True
+D=6 form of Psi in terms of S: -Derivative(S(u), (u, 2))/(2*u**2) + Derivative(S(u), u)/u**3 - S(u)/u**4
+C4 PASS

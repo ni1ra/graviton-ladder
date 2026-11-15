@@ -1,0 +1,53 @@
+PASS   J0a basis tensors are TT (div = 0, tr = 0, x.T.x = 0)
+l=2 c_l=1/6 basis 6, t=0.0s
+PASS   J1a K-K block: P1 (pure Lie) = P1w (rescaled) = P2 = P3 = P4 = int_B N K.K
+PASS   J1b K-K block = c_l E_2 (psi part), exactly
+PASS   J1c K-K block - c_l E_1 (psi part) = (1/2) c_l int psi psi, non-zero (weight 1 excluded in every prescription)  | [0][0] = 4/35
+PASS   J1d no h-K cross block in P1, P1w; both flows Hamiltonian on the ball (Omega(a, delta b) symmetric)
+PASS   J2a h-h block on TT: P1w = P4 = c_l (1/2) int N psi_dot psi_dot
+PASS   J2b h-h block on TT: P1 - P4 = (1/2) int h.h  | lambda set ['1/2']
+PASS   J2c h-h block on TT: P3 - P4 = 1 * int h.h  | lambda set ['1']
+PASS   J2d h-h block on TT: P2 = P3 + 2 delta^2 Area[h], and delta^2 Area is not a multiple of int h.h  | P2 lambda set has 6 values
+CAUGHT PL4 plant caught: claim 'P1 (literal 3.28) = P4 (fixed volume) on TT' is false
+PASS   J3a representatives: TT' is TT and differs from TT; RW = alpha(r) P; psi_dot identical on all three
+TABLE  TT  P1=68.0743  P1w=23.9994  P2=-332.295  P3=112.149  P4=23.9994  int|h|^2=88.1498  d2Area=-222.222  d2Vol=-22.0375
+TABLE  TT' P1=52.2076  P1w=23.9994  P2=-248.295  P3=80.4159  P4=23.9994  int|h|^2=56.4165  d2Area=-164.356  d2Vol=-14.1041
+TABLE  RW  P1=140.836  P1w=23.9994  P2=257.673  P3=257.673  P4=23.9994  int|h|^2=233.674  d2Area=0  d2Vol=-58.4185
+INFO   c_l E_2 (h part) of the datum: 154436/6435 = 23.9994
+PASS   J3b P4 (fixed volume) is the same on TT, TT', RW and equals c_l E_2
+CAUGHT J3c P1 is gauge dependent (values differ between TT, TT', RW)  | 68.0743, 52.2076, 140.836
+CAUGHT J3c P2 is gauge dependent (values differ between TT, TT', RW)  | -332.295, -248.295, 257.673
+CAUGHT J3c P3 is gauge dependent (values differ between TT, TT', RW)  | 112.149, 80.4159, 257.673
+INFO   P1w (canonical with +2tH) on TT, TT', RW: 23.9994, 23.9994, 23.9994  (invariant)
+PASS   J4a Section 3.3 first-order conditions hold identically on odd data: delta Vol[h] = delta Area[h] = 0
+PASS   J4b Section 3.3 extremality: cross term between h and a normal displacement f vanishes (4 choices of f, 3 gauges)
+CAUGHT J4c power control: the same cross term is non-zero for an even perturbation phi*delta with f = phi  | 4/15
+INFO   P(mu) - c_l E_2 on TT: mu=0: 88.1498, mu=1: 0  (linear in mu, slope 4 d2Vol = -88.1498)
+INFO   P(mu) - c_l E_2 on TT': mu=0: 56.4165, mu=1: 0  (linear in mu, slope 4 d2Vol = -56.4165)
+INFO   P(mu) - c_l E_2 on RW: mu=0: 233.674, mu=1: 0  (linear in mu, slope 4 d2Vol = -233.674)
+PASS   J4d the region-fixing freedom mu acts on the h-h block only; no mu gives c_l E_1 (K-K block is mu-independent, J1c)
+PASS   J5a P5 (Lie derivative of the Weyl tensor): x.dB.x = N psi_dot, identically
+PASS   J5b P5: x.curl(dE).x = div(N grad psi) - 1*psi, identically (weight 1, the vacuum modular flow)
+PASS   J5c flow induced by (3.28) on E: Ric_lin[2NK] = dE_P5 + K, identically (and delta h is the same with or without +2tH)
+PASS   J5d B half with the rescaling term: - sym curl(delta^w K) = dB_P5, identically
+PASS   J5e B half of literal (3.28) on TT: - sym curl(delta_pure K) = dB_P5 + sym curl h, identically
+CAUGHT PL2 plant caught: coefficient 1 instead of 2 on x cross B in P5 breaks the weight-1 identity
+PASS   J5f generator of P5 in (psi, psi_dot): c_l E_1 on all Gram entries; and P1w = P4 = c_l E_2 on all Gram entries
+PASS   C1a Killing control (boost, lapse x_1): flow of (3.28) on (E, B) = Lie derivative of the Weyl tensor, identically
+CAUGHT PL1 plant caught: lapse x_1 + r^2/10 (not Killing) breaks the control identity
+PASS   J0b conventions: R^lin_0i0j[H] = Ric_lin[h] and (1/2) eps_ikl R^lin_kl0j[H] = - sym curl K at t = 0
+PASS   J6a O(s kappa) Riemann of the dragged metric: R_0i0j = dE_P5 and (1/2) eps R_kl0j = dB_P5 at t = 0 (datum non-trivial)
+PASS   J6b control: the dragged metric is Ricci flat at O(s kappa), all 16 components at t = 0
+PASS   J6c covariance: (Lie_zeta R^lin[H]) has the same E and B components as P5
+CAUGHT PL3 plant caught: without the bilinear (Lie_zeta eta, H) term the E component is not dE_P5  | difference equals +K exactly: False
+4d block t=0.0s
+PASS   J7a Gaussian-profile tensors are TT on R^3 (degrees l and l+1)
+PASS   J7b two-sided, zeta used on all of R^3: (1/2) Omega(a, delta^w a) = c_l E_2 over R^3 on all Gram entries; flow Hamiltonian
+PASS   J7c two-sided literal (3.28): pure-Lie charge - c_l E_2 = (1/2) int_R3 h.h on TT
+FAIL   J7d two-sided stress-tensor integral: -int_R3 N R^(2)[h] - c_l (1/2) int N psi_dot^2 = 1 * int_R3 h.h on TT  | lambda set ['-551/688', '-3/16', '41/112']
+PASS   J7e two-sided K-K block: int_R3 N K.K = c_l E_2 (psi part) != c_l E_1 (psi part)
+PASS   J7f gauge-moved Gaussian h is not TT but has the same psi_dot
+CAUGHT C2 contrast: for zeta the stress-tensor integral -int N R^(2)[h] over R^3 CHANGES under the gauge move  | 0.773438 -> 1.03646
+FAIL   C1b Killing control on R^3 (boost): canonical charge of (3.28) = stress-tensor integral on all Gram entries, non-zero, Hamiltonian  | max entry 19.0078
+FAIL   C1c Killing control: the stress-tensor integral is invariant under the same gauge move, and non-zero  | 22.3125
+DONE l=2: 39/42 as expected (9 plants/contrasts), fails=['J7d two-sided stress-tensor integral: -int_R3 N R^(2)[h] - c_l (1/2) int N psi_dot^2 = 1 * int_R3 h.h on TT', 'C1b Killing control on R^3 (boost): canonical charge of (3.28) = stress-tensor integral on all Gram entries, non-zero, Hamiltonian', 'C1c Killing control: the stress-tensor integral is invariant under the same gauge move, and non-zero'], t=2.2s

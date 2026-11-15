@@ -1,0 +1,75 @@
+== (ii) g -> 0 (ghost): 1-A and Q = l(l+1)(1-A)/g^2 against Q2
+  n=24 l=2 Q2=0.00585244200237
+     |g|=1     1-A(+)=0.0008600992 1-A(-)=0.0011246684  Q(+)=0.00516059549 Q(-)=0.00674801066 mean/Q2-1=0.0174 odd part/Q2=0.136
+     |g|=1/4   1-A(+)=5.8993330293 1-A(-)=6.3063110986  Q(+)=0.00566335971 Q(-)=0.00605405865 mean/Q2-1=0.00107 odd part/Q2=0.0334
+     |g|=1/16  1-A(+)=3.7786739854 1-A(-)=3.8422027335  Q(+)=0.00580404324 Q(-)=0.0059016234 mean/Q2-1=6.69e-5 odd part/Q2=0.00834
+  n=24 l=8 Q2=0.0123820306097
+     |g|=1     1-A(+)=0.0001637133 1-A(-)=0.0001810687  Q(+)=0.0117873609 Q(-)=0.0130369487 mean/Q2-1=0.00243 odd part/Q2=0.0505
+     |g|=1/4   1-A(+)=1.0614631326 1-A(-)=1.0885210896  Q(+)=0.0122280553 Q(-)=0.012539763 mean/Q2-1=0.000152 odd part/Q2=0.0126
+     |g|=1/16  1-A(+)=6.6966091112 1-A(-)=6.7388813401  Q(+)=0.0123431899 Q(-)=0.0124211061 mean/Q2-1=9.48e-6 odd part/Q2=0.00315
+  n=48 l=2 Q2=0.00551112856185
+     |g|=1     1-A(+)=0.0008099053 1-A(-)=0.0010591842  Q(+)=0.00485943228 Q(-)=0.00635510556 mean/Q2-1=0.0174 odd part/Q2=0.136
+     |g|=1/4   1-A(+)=5.5551932052 1-A(-)=5.9386489465  Q(+)=0.00533298548 Q(-)=0.00570110299 mean/Q2-1=0.00107 odd part/Q2=0.0334
+     |g|=1/16  1-A(+)=3.5582863414 1-A(-)=3.6181432595  Q(+)=0.00546552782 Q(-)=0.00555746805 mean/Q2-1=6.7e-5 odd part/Q2=0.00834
+  n=48 l=8 Q2=0.0105710544567
+     |g|=1     1-A(+)=0.0001403295 1-A(-)=0.0001539325  Q(+)=0.0101037309 Q(-)=0.0110831444 mean/Q2-1=0.00212 odd part/Q2=0.0463
+     |g|=1/4   1-A(+)=9.0714148839 1-A(-)=9.2835338635  Q(+)=0.0104502699 Q(-)=0.010694631 mean/Q2-1=0.000132 odd part/Q2=0.0116
+     |g|=1/16  1-A(+)=5.7186417105 1-A(-)=5.7517811373  Q(+)=0.0105406004 Q(-)=0.010601683 mean/Q2-1=8.25e-6 odd part/Q2=0.00289
+  n=96 l=2 Q2=0.00538704407586
+     |g|=1     1-A(+)=0.0007911560 1-A(-)=0.0010360764  Q(+)=0.00474693639 Q(-)=0.00621645844 mean/Q2-1=0.0176 odd part/Q2=0.136
+     |g|=1/4   1-A(+)=5.4292020667 1-A(-)=5.8059402153  Q(+)=0.00521203398 Q(-)=0.00557370261 mean/Q2-1=0.00108 odd part/Q2=0.0336
+     |g|=1/16  1-A(+)=3.4780228213 1-A(-)=3.5368310036  Q(+)=0.00534224305 Q(-)=0.00543257242 mean/Q2-1=6.75e-5 odd part/Q2=0.00838
+  n=96 l=8 Q2=0.00977371891531
+     |g|=1     1-A(+)=0.0001298227 1-A(-)=0.0001422350  Q(+)=0.00934723643 Q(-)=0.0102409269 mean/Q2-1=0.00208 odd part/Q2=0.0457
+     |g|=1/4   1-A(+)=8.3884554672 1-A(-)=8.5820114616  Q(+)=0.0096635007 Q(-)=0.0098864772 mean/Q2-1=0.00013 odd part/Q2=0.0114
+     |g|=1/16  1-A(+)=5.2875052607 1-A(-)=5.3177446115  Q(+)=0.0097459297 Q(-)=0.00980166687 mean/Q2-1=8.12e-6 odd part/Q2=0.00285
+  n=96 l=32 Q2=0.014917169674
+     |g|=1     1-A(+)=1.3941925078 1-A(-)=1.4315173334  Q(+)=0.0147226729 Q(-)=0.015116823 mean/Q2-1=0.000173 odd part/Q2=0.0132
+     |g|=1/4   1-A(+)=8.7997574393 1-A(-)=8.8580678317  Q(+)=0.0148680702 Q(-)=0.0149665914 mean/Q2-1=1.08e-5 odd part/Q2=0.0033
+     |g|=1/16  1-A(+)=5.5134590717 1-A(-)=5.5225699763  Q(+)=0.0149048647 Q(-)=0.0149294948 mean/Q2-1=6.75e-7 odd part/Q2=0.000826
+
+== boundary conventions at finite n, exact g=+1 / g=-1 and Q2 (continuum comparison is in eanalyze step 1)
+  n=24 l=2  ghost 0.005160595/0.006748011  trunc 0.008231917/0.01158141  site 0.003437807/0.004352633   Q2 ghost 0.00585244 trunc 0.00964500 site 0.00384290
+  n=24 l=8  ghost 0.01178736/0.01303695  trunc 0.02219427/0.0259933  site 0.005330767/0.005707062   Q2 ghost 0.01238203 trunc 0.02395694 site 0.00551237
+  n=48 l=2  ghost 0.004859432/0.006355106  trunc 0.006475662/0.008739237  site 0.003893079/0.005008617   Q2 ghost 0.00551112 trunc 0.00744808 site 0.00438336
+  n=48 l=8  ghost 0.01010373/0.01108314  trunc 0.01680455/0.01907017  site 0.006341052/0.006848425   Q2 ghost 0.01057105 trunc 0.01787025 site 0.00658483
+  n=96 l=2  ghost 0.004746936/0.006216458  trunc 0.005550107/0.007360698  site 0.004217448/0.005476371   Q2 ghost 0.00538704 trunc 0.00633386 site 0.00476836
+  n=96 l=8  ghost 0.009347236/0.01024093  trunc 0.01298701/0.01445263  site 0.007219462/0.007848103   Q2 ghost 0.00977371 trunc 0.01368198 site 0.00752058
+  n=96 l=32  ghost 0.01472267/0.01511682  trunc 0.02650064/0.02760853  site 0.007593105/0.007735117   Q2 ghost 0.01491716 trunc 0.02704393 site 0.00766341
+
+== (iii) local momentum contrast Z = (g/2) Int N pi^2, N=(1-r^2)/2: 1-A (not multiplied by l(l+1))
+  n= 24 l= 2  (1-A)/g^2: g=+1 0.2990764  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 0.5793616  g=-1/4 0.9454643   second-order coeff 0.7394208   -lnA(g=1) 0.3553564
+  n= 24 l= 8  (1-A)/g^2: g=+1 0.3378703  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 0.7111214  g=-1/4 1.346942   second-order coeff 0.9558067   -lnA(g=1) 0.4122938
+  n= 24 l=32  (1-A)/g^2: g=+1 0.4923811  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 1.454219  g=-1/4 -   second-order coeff 2.622106   -lnA(g=1) 0.6780244
+  n= 48 l= 2  (1-A)/g^2: g=+1 0.4991092  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 1.101115  g=-1/4 1.763755   second-order coeff 1.424673   -lnA(g=1) 0.6913671
+  n= 48 l= 8  (1-A)/g^2: g=+1 0.53025  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 1.241667  g=-1/4 2.171305   second-order coeff 1.66089   -lnA(g=1) 0.7555546
+  n= 48 l=32  (1-A)/g^2: g=+1 0.651493  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 2.035938  g=-1/4 -   second-order coeff 3.518891   -lnA(g=1) 1.054097
+  n= 96 l= 2  (1-A)/g^2: g=+1 0.743092  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 2.08507  g=-1/4 3.256671   second-order coeff 2.784114   -lnA(g=1) 1.359037
+  n= 96 l= 8  (1-A)/g^2: g=+1 0.7610599  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 2.230572  g=-1/4 3.648788   second-order coeff 3.043088   -lnA(g=1) 1.431543
+  n= 96 l=32  (1-A)/g^2: g=+1 0.8277162  g=-1 ERR:cholesky: not positive definite at row 0  g=+1/4 3.029268  g=-1/4 -   second-order coeff 5.047112   -lnA(g=1) 1.758612
+
+== (v) planted errors: ratio to the correct (ghost) value, Q2 and exact g=+1
+  n=24 l=2  neumann: Q2 ratio 54.966, g=+1 ratio 27.064 | nocent: Q2 ratio 4.1159, g=+1 ratio 3.5515 | ghost_x2: Q2 ratio (4 by construction), g=+1 ratio 3.5732
+  n=24 l=8  neumann: Q2 ratio 15.024, g=+1 ratio 12.436 | nocent: Q2 ratio 21.684, g=+1 ratio 17.511 | ghost_x2: Q2 ratio (4 by construction), g=+1 ratio 3.8159
+  n=48 l=2  neumann: Q2 ratio 87.839, g=+1 ratio 38.283 | nocent: Q2 ratio 4.2773, g=+1 ratio 3.6873 | ghost_x2: Q2 ratio (4 by construction), g=+1 ratio 3.5733
+  n=48 l=8  neumann: Q2 ratio 30.423, g=+1 ratio 23.675 | nocent: Q2 ratio 24.272, g=+1 ratio 19.553 | ghost_x2: Q2 ratio (4 by construction), g=+1 ratio 3.8304
+  n=96 l=2  neumann: Q2 ratio 127.44, g=+1 ratio 49.491 | nocent: Q2 ratio 4.3441, g=+1 ratio 3.7448 | ghost_x2: Q2 ratio (4 by construction), g=+1 ratio 3.5712
+  n=96 l=8  neumann: Q2 ratio 51.96, g=+1 ratio 38.143 | nocent: Q2 ratio 25.936, g=+1 ratio 20.882 | ghost_x2: Q2 ratio (4 by construction), g=+1 ratio 3.8327
+  n=96 l=32  neumann: Q2 ratio 14.546, g=+1 ratio 13.734 | nocent: Q2 ratio 250.48, g=+1 ratio 195.22 | ghost_x2: Q2 ratio (4 by construction), g=+1 ratio 3.9485
+
+== (iv) outside size: Q(N) - Q(4n), ghost
+  n=24 l=2  Q2(4n)=0.0058524420  N=2n: dQ2 -0.000176 d(g=+1) -0.00015 | N=8n: dQ2 5.32e-6 d(g=+1) 4.75e-6
+  n=24 l=4  Q2(4n)=0.0087123394  N=2n: dQ2 -4.88e-5 d(g=+1) -4.61e-5 | N=8n: dQ2 7.5e-7 d(g=+1) 7.4e-7
+  n=24 l=8  Q2(4n)=0.0123820306  N=2n: dQ2 -1.23e-5 d(g=+1) -1.22e-5 | N=8n: dQ2 1.08e-7 d(g=+1) 1.08e-7
+  n=48 l=2  Q2(4n)=0.0055111285  N=2n: dQ2 -0.000172 d(g=+1) -0.000147 | N=8n: dQ2 5.12e-6 d(g=+1) 4.57e-6
+  n=48 l=4  Q2(4n)=0.0078955194  N=2n: dQ2 -4.75e-5 d(g=+1) -4.49e-5 | N=8n: dQ2 7.64e-7 d(g=+1) 7.55e-7
+  n=48 l=8  Q2(4n)=0.0105710544  N=2n: dQ2 -1.25e-5 d(g=+1) -1.24e-5 | N=8n: dQ2 2.2e-7 d(g=+1) 2.2e-7
+  n=96 l=2  Q2(4n)=0.0053870440  N=2n: dQ2 -0.000172 d(g=+1) -0.000146 | N=8n: dQ2 5.02e-6 d(g=+1) 4.49e-6
+  n=96 l=4  Q2(4n)=0.0075780185  N=2n: dQ2 -4.71e-5 d(g=+1) -4.44e-5 | N=8n: dQ2 7.44e-7 d(g=+1) 7.35e-7
+  n=96 l=8  Q2(4n)=0.0097737189  N=2n: dQ2 -1.21e-5 d(g=+1) -1.21e-5 | N=8n: dQ2 2.36e-7 d(g=+1) 2.36e-7
+  n=96 l=32  Q2(4n)=0.0149171696  N=2n: dQ2 -2.13e-6 d(g=+1) -2.13e-6 | N=8n: dQ2 1.38e-8 d(g=+1) 1.38e-8
+
+== precision reruns at 1.4x bits: differences to the default-precision row
+  n=24 l=8 prec 1280 -> 1792  dQ2=0.0 d(g=+1)=0.0 d(g=-1)=0.0 (30 digits stored)
+  n=48 l=16 prec 1984 -> 2752  dQ2=0.0 d(g=+1)=0.0 d(g=-1)=0.0 (30 digits stored)
+  n=96 l=32 prec 3456 -> 4800  dQ2=0.0 d(g=+1)=0.0 d(g=-1)=0.0 (30 digits stored)

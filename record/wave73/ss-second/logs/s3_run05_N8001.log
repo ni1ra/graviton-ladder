@@ -1,0 +1,80 @@
+record\wave73\ss-second\scripts\s3_limit.py:40: RuntimeWarning: overflow encountered in power
+  acc += (-1)**n*wb**(-n)/(n + 5)
+record\wave73\ss-second\scripts\s3_limit.py:40: RuntimeWarning: invalid value encountered in power
+  acc += (-1)**n*wb**(-n)/(n + 5)
+N = 8001  h = 0.000125
+
+== pointwise: J_eps / [48/(u12 - i eps/2)^4] ==
+ (u1,u2)=(0.50,0.50): 0.99787+0.00000i 0.99947+0.00000i 0.99987+0.00000i 0.99997+0.00000i 1.00000+0.00000i 1.00000+0.00000i
+ (u1,u2)=(0.50,0.52): 0.99795+0.00204i 0.99949+0.00102i 0.99987+0.00051i 0.99997+0.00026i 1.00000+0.00005i 1.00000+0.00001i
+ (u1,u2)=(0.30,0.70): 0.99462+0.05030i 0.99864+0.02533i 0.99966+0.01269i 0.99991+0.00635i 1.00000+0.00127i 1.00000+0.00013i
+ (u1,u2)=(0.05,0.06): 0.84616+0.06230i 0.95579+0.04028i 0.98850+0.02166i 0.99709+0.01104i 0.99988+0.00222i 1.00000+0.00022i
+ (u1,u2)=(0.90,0.20): 0.98546-0.10139i 0.99627-0.05155i 0.99906-0.02589i 0.99976-0.01296i 0.99999-0.00259i 1.00000-0.00026i
+
+== P2 graviton D=4: smeared <j jbar> vs 48 G/(u12-i0)^4 ==
+ K1,K1            target(eps=0) = +3.16361057e+03-3.537e-15i  (Fourier tail 2e-14)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  3.25e-02  1.92e-02  1.05e-02  5.49e-03
+    err_0    :  3.61e-01  2.12e-01  1.17e-01  6.13e-02    err_R = 6.02e-03
+     ok
+ K1,K2            target(eps=0) = -4.82841374e+02+1.486e+03i  (Fourier tail 6e-15)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  4.07e-02  2.21e-02  1.15e-02  5.86e-03
+    err_0    :  1.52e-01  7.79e-02  3.94e-02  1.98e-02    err_R = 3.75e-04
+     ok
+ K3,K3 (tip u^2)  target(eps=0) = +8.41356861e+01+9.061e-17i  (Fourier tail 1e-09)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :       nan  6.81e-03  3.62e-03  1.87e-03
+    err_0    :       nan  1.84e-01  9.93e-02  5.18e-02    err_R = 4.24e-03
+     NOT ok
+ K3,K1            target(eps=0) = -2.22544456e+01-1.591e+02i  (Fourier tail 5e-12)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  3.12e-02  1.66e-02  8.52e-03  4.32e-03
+    err_0    :  1.62e-01  8.30e-02  4.20e-02  2.11e-02    err_R = 5.80e-04
+     ok
+
+== C2 Maxwell D=4: smeared <dA_m dA_mbar> vs -(1/4pi)/(u12-i0)^2 ==
+ F1,F1            target(eps=0) = +3.31218055e-01+1.386e-18i  (Fourier tail 5e-22)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  5.42e-02  2.97e-02  1.56e-02  7.97e-03
+    err_0    :  1.72e-01  9.16e-02  4.73e-02  2.41e-02    err_R = 8.00e-04
+     ok
+ F1,F2            target(eps=0) = +3.04500503e-01+3.339e-01i  (Fourier tail 5e-21)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  3.92e-02  2.10e-02  1.09e-02  5.53e-03
+    err_0    :  1.43e-01  7.45e-02  3.80e-02  1.92e-02    err_R = 3.94e-04
+     ok
+
+== C1 scalar D=4: smeared <dPhi dPhi> vs -(1/4pi)/(u12-i0)^2 ==
+ F1,F1            target(eps=0) = +3.31218055e-01+1.386e-18i  (Fourier tail 5e-22)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  3.57e-05  3.57e-05  3.57e-05  3.57e-05
+    err_0    :  1.18e-01  6.20e-02  3.18e-02  1.61e-02    err_R = 3.80e-04
+     ok
+ F1,F2            target(eps=0) = +3.04500503e-01+3.339e-01i  (Fourier tail 5e-21)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  3.83e-05  3.83e-05  3.83e-05  3.83e-05
+    err_0    :  1.07e-01  5.54e-02  2.81e-02  1.42e-02    err_R = 2.49e-04
+     ok
+
+== C1 scalar D=6: smeared <dPhi dPhi> vs -(1/4pi)/(u12-i0)^2 ==
+ F1,F1            target(eps=0) = +3.31218055e-01+1.386e-18i  (Fourier tail 5e-22)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  5.42e-02  2.97e-02  1.56e-02  7.97e-03
+    err_0    :  1.72e-01  9.16e-02  4.73e-02  2.41e-02    err_R = 8.00e-04
+     ok
+ F1,F2            target(eps=0) = +3.04500503e-01+3.339e-01i  (Fourier tail 5e-21)
+    eps      :   0.04000   0.02000   0.01000   0.00500
+    err_reg  :  3.92e-02  2.10e-02  1.09e-02  5.53e-03
+    err_0    :  1.43e-01  7.45e-02  3.80e-02  1.92e-02    err_R = 3.94e-04
+     ok
+
+== C3(a) plant: graviton normalisation 16 pi G ==
+ rel.err = 0.503  -> plant caught: True
+
+== sign of (B.26): int int F F/(u12 - i eps)^2 for real F ==
+ eps = 0.02 : -3.670538+7.3e-18i   (Fourier: -3.670390)
+ eps = 0.01 : -3.904335-1.2e-16i   (Fourier: -3.904187)
+ => printed sign (+1/(32 pi^2 G)) gives omega(gamma[f]^2) < 0; the state is (B.26) with a minus sign.
+
+S3 FAIL

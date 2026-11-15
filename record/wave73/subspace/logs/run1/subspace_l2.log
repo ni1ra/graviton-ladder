@@ -1,0 +1,29 @@
+l=2 c_l=1/6 KMAX=3
+PASS A1 psi[build_T(s^k)] = l(l+1) s^k phi exactly, build_T is TT (K <-> psi local both ways)
+CAUGHT PA1 inverse with (l+1) in place of (l+2) is not TT
+PASS A2 TT odd tensors a(s)K_l + b(s)P with deg <= 3 form a space of dimension exactly 4 = span build_T(s^0..s^3)  unknowns=8 rank=4 nullity=4
+PASS A3 psi_dot[alpha(r) P] = kappa_l alpha phi with one constant (Regge-Wheeler h <-> psi_dot algebraic)  proportional=True kappa_k=['-12', '-12', '-12', '-12']
+PASS A4a int_B K_a.h_b = -c_l int_B psi_a psidot_b, data vanishing to 2nd order at the boundary, h TT
+PASS A4b the same with h in Regge-Wheeler gauge
+INFO A4 boundary-touching data (eta = s^a): Omega_B/(c_l Omega_s,B) in (TT gauge, RW gauge): [('rhs=0', 'rhs=0'), ('-2', '1'), ('-1', '1'), ('rhs=0', 'rhs=0'), ('-20/7', '1'), ('-13/9', '1'), ('rhs=0', 'rhs=0'), ('-26/7', '1'), ('-17/9', '1')]
+PASS C1a dE/dt = -sym curl B equals Ric_lin[2K] on TT data
+PASS C1a' psi, psi_dot here equal charge-id's psi_of_K, psidot_of_h
+PASS C1b x.dB.x = N psi_dot
+PASS C1c x.(sym curl dE).x = div(N grad psi) - 1*psi  (weight 1)
+CAUGHT PC1 weight 2 in C1c
+PASS C1d dE, dB are transverse and traceless
+PASS B-TT Gaussian-profile tensors are TT on R^3
+PASS B0 control: Parseval, position space = momentum space, all tensors and scalars
+PASS B1a control: Omega_grav = kappa c_l Omega_s with kappa = 1 (charge-id T4)  kappa=['1']
+PASS B1b control: int K_a.K_b = c_l (1/2) int grad psi_a.grad psi_b (Paper A Prop. 1)
+PASS B2a K-K block: int 2 K_a.K_b/omega = c_l int omega psi_a psi_b, whole Gram  GK[0][0]=24/5 c_l*SK[0][0]=24/5
+PASS B2b h-h block: int (1/2) omega h_a.h_b = c_l int psidot_a psidot_b/omega, whole Gram  Gh[0][0]=48/5 c_l*Sh[0][0]=48/5
+CAUGHT PB1 c_l scaled by (l+3)/(l+2)
+CAUGHT PB2 symplectic but not vacuum-preserving map (h,K)->(2h,K/2): Omega identity still holds, B2 fails
+CAUGHT PB3 omega^{+1} and omega^{-1} exchanged on the scalar side
+PASS C3-ctl1 control: time translation (Pi, Lap Phi) is skew for mu_s
+PASS C3-ctl2 control: dilation (x.grad Phi + Phi, x.grad Pi + 2 Pi) is skew for mu_s
+PASS C3-ctl3 control: delta_w is skew for Omega_s at w = 1 and w = 2 (both flows are symplectic)
+PASS C3 delta_1 = (N Pi, div(N grad Phi) - Phi) is skew for mu_s: the weight-1 flow preserves the vacuum
+CAUGHT PC3 weight 2 is not skew for mu_s (the area-side flow does not preserve the vacuum two-point function)  skew_2[0][0]=-2/15
+DONE l=2: 26/26 lines as expected, fails=[], plants missed=[], t=1.8s

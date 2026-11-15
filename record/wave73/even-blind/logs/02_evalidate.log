@@ -1,0 +1,15 @@
+== E1 Fock space, two modes, momentum-block perturbation N' = N + 2 pi g a G
+  g=+1.00 Fock=0.985565699416 I=0.985565699416 II=0.985565699416 |I-Fock|=3.3e-16
+  g=-1.00 Fock=0.927893369800 I=0.927893369801 II=0.927893369801 |I-Fock|=1.7e-13
+  g=+0.25 Fock=0.998639202066 I=0.998639202066 II=0.998639202066 |I-Fock|=4.4e-16
+== E2 second-order formula, momentum perturbation, against exact affinity at small g
+  g=1/1000 (1-A)/g^2=2.574813369110e-02  q2=2.576656862293e-02  rel diff=-7.2e-04
+  g=-1/1000 (1-A)/g^2=2.578502625470e-02  q2=2.576656862293e-02  rel diff=7.2e-04
+  g=1/100000 (1-A)/g^2=2.576638416132e-02  q2=2.576656862293e-02  rel diff=-7.2e-06
+== E3 lattice G against the continuum Green function, G_c = (r<^(l+1) r>^(-l) - (r r')^(l+1))/(2l+1)
+  n=16 l=2  max rel |a K_B^-1 - G_c|: ghost 1.12e-02  trunc 1.04e-01  site 1.12e-02
+  n=16 l=8  max rel |a K_B^-1 - G_c|: ghost 1.16e-01  trunc 1.16e-01  site 1.16e-01
+  n=64 l=2  max rel |a K_B^-1 - G_c|: ghost 7.13e-04  trunc 1.73e-01  site 7.13e-04
+  n=64 l=8  max rel |a K_B^-1 - G_c|: ghost 8.64e-03  trunc 1.25e-01  site 8.64e-03
+== E4 odd second order: second_order_mat(A^T W A) against hb.second_order
+  log10 rel diff = -inf

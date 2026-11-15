@@ -1,0 +1,67 @@
+[
+ [
+  "T0 R_{rArB} = -(1/2) r d_r^2(s_AB/r) in Gaussian null gauge (theta-theta, theta-phi, phi-phi)",
+  "PASS",
+  "residuals 0, 0, 0"
+ ],
+ [
+  "P0 plant: R_{rArB} = -(1/2) d_r^2 s_AB (no background terms)",
+  "CAUGHT",
+  "residual (r*Derivative(a(w, r, theta, phi), r) - a(w, r, theta, phi))/r**2"
+ ],
+ [
+  "T5a C_AB trace-free on the cone for all 15 solutions",
+  "PASS",
+  "exact"
+ ],
+ [
+  "T5b div div Q = a u (x.E.x), one constant, degrees 2..6, three polarisations, three points",
+  "PASS",
+  "a = -2, max relative spread 0"
+ ],
+ [
+  "T5c curl div Q = b u (x.B.x), one constant, same set",
+  "PASS",
+  "b = 2, max relative spread 0"
+ ],
+ [
+  "P5 plant: S in place of Q (drop the integral term)",
+  "CAUGHT",
+  "max relative spread 0.333"
+ ],
+ [
+  "T6 half-line ultralocal form: W(F_a, F_b) = W(Q_a, Q_b), complex, n = 2..5 (16 entries, exact)",
+  "PASS",
+  "all equal"
+ ],
+ [
+  "P2 plant: coefficient 1 in place of 2 in the transform",
+  "CAUGHT",
+  "differs"
+ ],
+ [
+  "T6b int_0^inf F du = 0 for every F = T^-1 Q (the constraint that singles out curvature observables)",
+  "PASS",
+  "exact"
+ ],
+ [
+  "T7a vacuum flow on S = u(1-u) S' + 2 int_0^u S  (all monomials u^n)",
+  "PASS",
+  "residual 0"
+ ],
+ [
+  "T7b on Psi0 the vacuum flow is local: delta Psi0 = N Psi0' + (3 - 5u) Psi0",
+  "PASS",
+  "residual 0"
+ ],
+ [
+  "P7 plant: the literal weight-0 flow on S is the same local flow on Psi0",
+  "CAUGHT",
+  "residual n*u**(n - 2)  (= -S'/u, a non-local functional of Psi0)"
+ ],
+ [
+  "T7c literal flow moves the constraint: int N F' du = 2 int u F du (by parts), not 0",
+  "PASS",
+  "by hand: int_0^1 u(1-u) F' du = -int (1-2u) F du = 2 int u F du when int F du = 0"
+ ]
+]

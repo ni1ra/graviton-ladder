@@ -1,0 +1,405 @@
+lattices nmax=all relcut=0.01 weighted=True q2only-rows=True
+
+Step 1, series q2:   l   continuum    bracket   rel     largest-n value  lattices
+     2  0.00532500  3.5e-07  6.6e-05  0.00534487  [80, 96, 112, 128, 144, 160, 176, 192]
+     3  0.00654801  6.7e-07  1.0e-04  0.00658397  [80, 96, 112, 128, 144, 160, 176, 192]
+     4  0.00741014  1.1e-06  1.5e-04  0.00746539  [80, 96, 112, 128, 144, 160, 176, 192]
+     5  0.00805708  1.6e-06  1.9e-04  0.00813443  [80, 96, 112, 128, 144, 160, 176, 192]
+     6  0.00856382  2.1e-06  2.5e-04  0.00866579  [80, 96, 112, 128, 144, 160, 176, 192]
+     8  0.00931263  2.8e-06  3.0e-04  0.00943612  [96, 112, 128, 144, 160, 176, 192, 224]
+    10  0.00984425  5.2e-06  5.3e-04  0.01006566  [80, 96, 112, 128, 144, 160, 176, 192]
+    12  0.01024447  5.7e-06  5.5e-04  0.01047384  [96, 112, 128, 144, 160, 176, 192, 224]
+    16  0.01081179  9.4e-06  8.7e-04  0.01116627  [96, 112, 128, 144, 160, 176, 192, 224]
+    20  0.01119856  1.4e-05  1.2e-03  0.01169339  [96, 112, 128, 144, 160, 176, 192, 224]
+    24  0.01148138  1.9e-05  1.7e-03  0.01212894  [96, 112, 128, 144, 160, 176, 192, 224]
+    32  0.01187078  3.2e-05  2.7e-03  0.01285245  [96, 112, 128, 144, 160, 176, 192, 224]
+    40  0.01212861  6.0e-05  5.0e-03  0.01378932  [80, 96, 112, 128, 144, 160, 176, 192]
+    48  0.01229922  8.7e-05  7.0e-03  0.01442963  [96, 112, 128, 144, 160, 176, 192]
+
+Step 1, series q2_trunc:   l   continuum    bracket   rel     largest-n value  lattices
+     2  0.00532493  1.6e-06  3.1e-04  0.00580205  [80, 96, 112, 128, 144, 160, 176, 192]
+     3  0.00654786  3.1e-06  4.8e-04  0.00728260  [80, 96, 112, 128, 144, 160, 176, 192]
+     4  0.00740990  5.0e-06  6.7e-04  0.00840938  [80, 96, 112, 128, 144, 160, 176, 192]
+     5  0.00805672  7.2e-06  9.0e-04  0.00932645  [80, 96, 112, 128, 144, 160, 176, 192]
+     6  0.00856332  9.8e-06  1.1e-03  0.01010754  [80, 96, 112, 128, 144, 160, 176, 192]
+     8  0.00931197  1.3e-05  1.4e-03  0.01109227  [96, 112, 128, 144, 160, 176, 192, 224]
+    10  0.00984296  2.3e-05  2.4e-03  0.01251086  [80, 96, 112, 128, 144, 160, 176, 192]
+    12  0.01024304  2.6e-05  2.5e-03  0.01299067  [96, 112, 128, 144, 160, 176, 192, 224]
+    16  0.01080931  4.2e-05  3.9e-03  0.01453369  [96, 112, 128, 144, 160, 176, 192, 224]
+    20  0.01119470  6.3e-05  5.6e-03  0.01589127  [96, 112, 128, 144, 160, 176, 192, 224]
+    24  0.01147579  8.6e-05  7.5e-03  0.01713088  [96, 112, 128, 144, 160, 176, 192, 224]
+    32  0.01186055  1.4e-04  1.2e-02  0.01936849  [96, 112, 128, 144, 160, 176, 192, 224]  EXCLUDED
+    40  0.01210805  2.6e-04  2.2e-02  0.02270966  [80, 96, 112, 128, 144, 160, 176, 192]  EXCLUDED
+    48  0.01232749  4.9e-04  4.0e-02  0.02463343  [96, 112, 128, 144, 160, 176, 192]  EXCLUDED
+
+Step 1, series q2_site:   l   continuum    bracket   rel     largest-n value  lattices
+     2  0.00532492  1.6e-06  3.0e-04  0.00501319  [80, 96, 112, 128, 144, 160, 176, 192]
+     3  0.00654785  3.0e-06  4.7e-04  0.00608978  [80, 96, 112, 128, 144, 160, 176, 192]
+     4  0.00740988  4.8e-06  6.5e-04  0.00681312  [80, 96, 112, 128, 144, 160, 176, 192]
+     5  0.00805670  7.0e-06  8.6e-04  0.00732818  [80, 96, 112, 128, 144, 160, 176, 192]
+     6  0.00856328  9.4e-06  1.1e-03  0.00770927  [80, 96, 112, 128, 144, 160, 176, 192]
+     8  0.00931191  1.2e-05  1.3e-03  0.00834585  [96, 112, 128, 144, 160, 176, 192, 224]
+    10  0.00984281  2.2e-05  2.2e-03  0.00853874  [80, 96, 112, 128, 144, 160, 176, 192]
+    12  0.01024287  2.4e-05  2.3e-03  0.00889898  [96, 112, 128, 144, 160, 176, 192, 224]
+    16  0.01080894  3.8e-05  3.5e-03  0.00913426  [96, 112, 128, 144, 160, 176, 192, 224]
+    20  0.01119404  5.5e-05  4.9e-03  0.00922539  [96, 112, 128, 144, 160, 176, 192, 224]
+    24  0.01147477  7.4e-05  6.4e-03  0.00924199  [96, 112, 128, 144, 160, 176, 192, 224]
+    32  0.01185852  1.2e-04  9.8e-03  0.00916827  [96, 112, 128, 144, 160, 176, 192, 224]
+    40  0.01210194  2.0e-04  1.6e-02  0.00876154  [80, 96, 112, 128, 144, 160, 176, 192]  EXCLUDED
+    48  0.01223816  2.7e-04  2.2e-02  0.00859687  [96, 112, 128, 144, 160, 176, 192]  EXCLUDED
+
+Step 1, series p1:   l   continuum    bracket   rel     largest-n value  lattices
+     2  0.00468936  3.4e-07  7.3e-05  0.00470801  [80, 96, 112, 128, 144, 160, 176, 192]
+     3  0.00593692  6.6e-07  1.1e-04  0.00597106  [80, 96, 112, 128, 144, 160, 176, 192]
+     4  0.00684368  1.1e-06  1.6e-04  0.00689653  [80, 96, 112, 128, 144, 160, 176, 192]
+     5  0.00753621  1.5e-06  2.1e-04  0.00761058  [80, 96, 112, 128, 144, 160, 176, 192]
+     6  0.00808462  2.1e-06  2.6e-04  0.00818306  [80, 96, 112, 128, 144, 160, 176, 192]
+     8  0.00890261  3.5e-06  3.9e-04  0.00905585  [80, 96, 112, 128, 144, 160, 176, 192]
+    10  0.00948753  5.1e-06  5.4e-04  0.00970330  [80, 96, 112, 128, 144, 160, 176, 192]
+    12  0.00992924  7.1e-06  7.1e-04  0.01021418  [80, 96, 112, 128, 144, 160, 176, 192]
+    16  0.01055661  1.2e-05  1.1e-03  0.01099653  [80, 96, 112, 128, 144, 160, 176, 192]
+    20  0.01098440  1.7e-05  1.6e-03  0.01159737  [80, 96, 112, 128, 144, 160, 176, 192]
+    24  0.01129692  2.4e-05  2.1e-03  0.01209727  [80, 96, 112, 128, 144, 160, 176, 192]
+    32  0.01172642  4.0e-05  3.4e-03  0.01293341  [80, 96, 112, 128, 144, 160, 176, 192]
+    40  0.01201026  6.0e-05  5.0e-03  0.01365286  [80, 96, 112, 128, 144, 160, 176, 192]
+    48  0.01219899  8.6e-05  7.1e-03  0.01430844  [96, 112, 128, 144, 160, 176, 192]
+
+Step 1, series m1:   l   continuum    bracket   rel     largest-n value  lattices
+     2  0.00614891  3.6e-07  5.8e-05  0.00617027  [80, 96, 112, 128, 144, 160, 176, 192]
+     3  0.00729388  6.8e-07  9.3e-05  0.00733198  [80, 96, 112, 128, 144, 160, 176, 192]
+     4  0.00807594  1.1e-06  1.4e-04  0.00813393  [80, 96, 112, 128, 144, 160, 176, 192]
+     5  0.00865371  1.6e-06  1.8e-04  0.00873438  [80, 96, 112, 128, 144, 160, 176, 192]
+     6  0.00910251  2.2e-06  2.4e-04  0.00920835  [80, 96, 112, 128, 144, 160, 176, 192]
+     8  0.00976191  3.5e-06  3.6e-04  0.00992471  [80, 96, 112, 128, 144, 160, 176, 192]
+    10  0.01022885  5.2e-06  5.1e-04  0.01045625  [80, 96, 112, 128, 144, 160, 176, 192]
+    12  0.01058028  7.2e-06  6.8e-04  0.01087884  [80, 96, 112, 128, 144, 160, 176, 192]
+    16  0.01107946  1.2e-05  1.1e-03  0.01153682  [80, 96, 112, 128, 144, 160, 176, 192]
+    20  0.01142094  1.8e-05  1.5e-03  0.01205498  [80, 96, 112, 128, 144, 160, 176, 192]
+    24  0.01167154  2.4e-05  2.1e-03  0.01249640  [80, 96, 112, 128, 144, 160, 176, 192]
+    32  0.01201822  4.1e-05  3.4e-03  0.01325612  [80, 96, 112, 128, 144, 160, 176, 192]
+    40  0.01224939  6.1e-05  5.0e-03  0.01392859  [80, 96, 112, 128, 144, 160, 176, 192]
+    48  0.01240119  8.7e-05  7.0e-03  0.01455292  [96, 112, 128, 144, 160, 176, 192]
+
+Step 1, series mean:   l   continuum    bracket   rel     largest-n value  lattices
+     2  0.00541913  3.5e-07  6.5e-05  0.00543914  [80, 96, 112, 128, 144, 160, 176, 192]
+     3  0.00661540  6.7e-07  1.0e-04  0.00665152  [80, 96, 112, 128, 144, 160, 176, 192]
+     4  0.00745981  1.1e-06  1.4e-04  0.00751523  [80, 96, 112, 128, 144, 160, 176, 192]
+     5  0.00809496  1.6e-06  1.9e-04  0.00817248  [80, 96, 112, 128, 144, 160, 176, 192]
+     6  0.00859357  2.1e-06  2.5e-04  0.00869571  [80, 96, 112, 128, 144, 160, 176, 192]
+     8  0.00933226  3.5e-06  3.8e-04  0.00949028  [80, 96, 112, 128, 144, 160, 176, 192]
+    10  0.00985819  5.2e-06  5.3e-04  0.01007977  [80, 96, 112, 128, 144, 160, 176, 192]
+    12  0.01025476  7.1e-06  6.9e-04  0.01054651  [80, 96, 112, 128, 144, 160, 176, 192]
+    16  0.01081804  1.2e-05  1.1e-03  0.01126667  [80, 96, 112, 128, 144, 160, 176, 192]
+    20  0.01120267  1.8e-05  1.6e-03  0.01182617  [80, 96, 112, 128, 144, 160, 176, 192]
+    24  0.01148423  2.4e-05  2.1e-03  0.01229683  [80, 96, 112, 128, 144, 160, 176, 192]
+    32  0.01187232  4.0e-05  3.4e-03  0.01309477  [80, 96, 112, 128, 144, 160, 176, 192]
+    40  0.01212982  6.0e-05  5.0e-03  0.01379072  [80, 96, 112, 128, 144, 160, 176, 192]
+    48  0.01230009  8.7e-05  7.0e-03  0.01443068  [96, 112, 128, 144, 160, 176, 192]
+
+Step 1, series p1L:   l   continuum    bracket   rel     largest-n value  lattices
+     2  0.00312624  2.3e-07  7.3e-05  0.00313867  [80, 96, 112, 128, 144, 160, 176, 192]
+     3  0.00445269  4.9e-07  1.1e-04  0.00447829  [80, 96, 112, 128, 144, 160, 176, 192]
+     4  0.00547495  8.5e-07  1.6e-04  0.00551722  [80, 96, 112, 128, 144, 160, 176, 192]
+     5  0.00628017  1.3e-06  2.1e-04  0.00634215  [80, 96, 112, 128, 144, 160, 176, 192]
+     6  0.00692968  1.8e-06  2.6e-04  0.00701405  [80, 96, 112, 128, 144, 160, 176, 192]
+     8  0.00791343  3.1e-06  3.9e-04  0.00804965  [80, 96, 112, 128, 144, 160, 176, 192]
+    10  0.00862503  4.7e-06  5.4e-04  0.00882118  [80, 96, 112, 128, 144, 160, 176, 192]
+    12  0.00916545  6.5e-06  7.1e-04  0.00942847  [80, 96, 112, 128, 144, 160, 176, 192]
+    16  0.00993563  1.1e-05  1.1e-03  0.01034967  [80, 96, 112, 128, 144, 160, 176, 192]
+    20  0.01046133  1.7e-05  1.6e-03  0.01104511  [80, 96, 112, 128, 144, 160, 176, 192]
+    24  0.01084505  2.3e-05  2.1e-03  0.01161338  [80, 96, 112, 128, 144, 160, 176, 192]
+    32  0.01137107  3.9e-05  3.4e-03  0.01254149  [80, 96, 112, 128, 144, 160, 176, 192]
+    40  0.01171733  5.9e-05  5.0e-03  0.01331986  [80, 96, 112, 128, 144, 160, 176, 192]
+    48  0.01195003  8.5e-05  7.1e-03  0.01401643  [96, 112, 128, 144, 160, 176, 192]
+
+Convention check (Q2 continuum): l  ghost  trunc-ghost  site-ghost  (brackets ghost/trunc/site)
+     2  0.00532500  -7.2e-08  -7.5e-08  (3.5e-07 / 1.6e-06 / 1.6e-06)
+     3  0.00654801  -1.4e-07  -1.5e-07  (6.7e-07 / 3.1e-06 / 3.0e-06)
+     4  0.00741014  -2.4e-07  -2.5e-07  (1.1e-06 / 5.0e-06 / 4.8e-06)
+     5  0.00805708  -3.6e-07  -3.8e-07  (1.6e-06 / 7.2e-06 / 7.0e-06)
+     6  0.00856382  -5.0e-07  -5.4e-07  (2.1e-06 / 9.8e-06 / 9.4e-06)
+     8  0.00931263  -6.6e-07  -7.2e-07  (2.8e-06 / 1.3e-05 / 1.2e-05)
+    10  0.00984425  -1.3e-06  -1.4e-06  (5.2e-06 / 2.3e-05 / 2.2e-05)
+    12  0.01024447  -1.4e-06  -1.6e-06  (5.7e-06 / 2.6e-05 / 2.4e-05)
+    16  0.01081179  -2.5e-06  -2.9e-06  (9.4e-06 / 4.2e-05 / 3.8e-05)
+    20  0.01119856  -3.9e-06  -4.5e-06  (1.4e-05 / 6.3e-05 / 5.5e-05)
+    24  0.01148138  -5.6e-06  -6.6e-06  (1.9e-05 / 8.6e-05 / 7.4e-05)
+    32  0.01187078  -1.0e-05  -1.2e-05  (3.2e-05 / 1.4e-04 / 1.2e-04)
+    40  0.01212861  -2.1e-05  -2.7e-05  (6.0e-05 / 2.6e-04 / 2.0e-04)
+    48  0.01229922  +2.8e-05  -6.1e-05  (8.7e-05 / 4.9e-04 / 2.7e-04)
+
+Doubling differences (q2 continuum): l  D_l = Q_2l - Q_l  ratio D_2l/D_l
+     2  0.002085  0.912
+     4  0.001902  0.788
+     8  0.001499  0.706
+    16  0.001059  
+     3  0.002016  0.834
+     6  0.001681  0.736
+    12  0.001237  0.661
+    24  0.000818  
+     5  0.001787  0.758
+    10  0.001354  0.687
+    20  0.000930  
+
+Step 2 out-of-sample, series q2, usable l = [2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48]
+  split S1 train [3, 4, 5, 6, 8, 10, 12] test [16, 20, 24, 32, 40, 48]
+    C1   const fail  max miss/bracket    82.28  max rel miss 1.3e-01  lead par +0.010984  misses/bracket: 82.3 69.9 58.8 42.4 25.3 18.9
+    C2   const fail  max miss/bracket    17.81  max rel miss 4.9e-02  lead par +0.012273  misses/bracket: 17.1 17.8 16.9 13.9 9.0 7.0
+    C3   const fail  max miss/bracket     5.96  max rel miss 2.2e-02  lead par +0.012761  misses/bracket: 4.2 5.5 6.0 5.7 4.0 3.1
+    CL1  const fail  max miss/bracket     4.05  max rel miss 1.1e-02  lead par +0.013269  misses/bracket: 3.8 4.0 3.9 3.2 2.1 1.5
+    CL2  const PASS  max miss/bracket     0.26  max rel miss 8.4e-04  lead par +0.013552  misses/bracket: 0.2 0.2 0.3 0.2 0.2 0.0
+    CL3  const PASS  max miss/bracket     0.15  max rel miss 1.1e-03  lead par +0.013585  misses/bracket: 0.0 0.0 0.0 0.0 0.0 0.2
+    ZP   grow  fail  max miss/bracket   149.67  max rel miss 5.2e-01  lead par +0.395000  misses/bracket: 147.2 149.7 143.9 126.3 87.1 73.7
+    ZP2  grow  fail  max miss/bracket    21.54  max rel miss 9.7e-02  lead par +0.153000  misses/bracket: 16.2 20.1 21.5 21.2 15.5 13.8
+    ZL1  zero  fail  max miss/bracket   478.56  max rel miss 7.3e-01  lead par -0.043451  misses/bracket: 478.6 398.4 330.8 234.9 138.8 103.8
+    ZL2  zero  fail  max miss/bracket   191.97  max rel miss 5.3e-01  lead par -0.261440  misses/bracket: 187.7 192.0 180.2 147.6 94.8 74.8
+    ZL3  zero  fail  max miss/bracket    99.35  max rel miss 3.8e-01  lead par -0.571713  misses/bracket: 71.9 93.0 99.4 94.1 65.6 54.6
+    ZG   zero  fail  max miss/bracket   361.17  max rel miss 5.1e-01  lead par +0.031035  misses/bracket: 361.2 291.7 237.8 165.3 96.7 71.8
+    GL   grow  fail  max miss/bracket    19.74  max rel miss 8.5e-02  lead par +0.005700  misses/bracket: 15.4 18.7 19.7 19.1 13.8 12.1
+    spread of all forms' predictions / bracket per test l: 625.7 548.1 474.7 361.3 225.9 177.5
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 CL1|CL2 CL2|CL3 ZP2|GL
+  split S2 train [3, 4, 5, 6, 8, 10, 12, 16, 20] test [24, 32, 40, 48]
+    C1   const fail  max miss/bracket    56.34  max rel miss 1.3e-01  lead par +0.011041  misses/bracket: 56.3 40.9 24.5 18.3
+    C2   const fail  max miss/bracket    14.15  max rel miss 4.4e-02  lead par +0.012352  misses/bracket: 14.2 12.1 8.0 6.2
+    C3   const fail  max miss/bracket     4.13  max rel miss 1.7e-02  lead par +0.012848  misses/bracket: 3.9 4.1 3.0 2.4
+    CL1  const fail  max miss/bracket     3.04  max rel miss 8.8e-03  lead par +0.013302  misses/bracket: 3.0 2.7 1.8 1.3
+    CL2  const PASS  max miss/bracket     0.15  max rel miss 5.3e-04  lead par +0.013561  misses/bracket: 0.1 0.1 0.1 0.1
+    CL3  const PASS  max miss/bracket     0.16  max rel miss 1.2e-03  lead par +0.013588  misses/bracket: 0.0 0.0 0.0 0.2
+    ZP   grow  fail  max miss/bracket   122.00  max rel miss 4.6e-01  lead par +0.378000  misses/bracket: 122.0 109.4 76.1 64.9
+    ZP2  grow  fail  max miss/bracket    16.14  max rel miss 7.8e-02  lead par +0.142000  misses/bracket: 15.2 16.1 12.2 11.1
+    ZL1  zero  fail  max miss/bracket   327.29  max rel miss 7.3e-01  lead par -0.044628  misses/bracket: 327.3 233.1 138.0 103.3
+    ZL2  zero  fail  max miss/bracket   165.64  max rel miss 5.1e-01  lead par -0.280978  misses/bracket: 165.6 139.3 90.6 72.1
+    ZL3  zero  fail  max miss/bracket    78.70  max rel miss 3.4e-01  lead par -0.653164  misses/bracket: 75.5 78.7 57.3 48.9
+    ZG   zero  fail  max miss/bracket   234.18  max rel miss 5.0e-01  lead par +0.031412  misses/bracket: 234.2 163.2 95.6 71.1
+    GL   grow  fail  max miss/bracket    14.89  max rel miss 7.0e-02  lead par +0.006035  misses/bracket: 14.3 14.9 11.1 10.0
+    spread of all forms' predictions / bracket per test l: 449.3 342.5 214.1 168.1
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 C3|CL2 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S3 train [4, 5, 6, 8, 10, 12, 16] test [20, 24, 32, 40, 48]
+    C1   const fail  max miss/bracket    43.38  max rel miss 9.6e-02  lead par +0.011497  misses/bracket: 43.4 38.4 29.3 18.0 13.7
+    C2   const fail  max miss/bracket     9.55  max rel miss 3.3e-02  lead par +0.012535  misses/bracket: 9.1 9.5 8.7 5.9 4.7
+    C3   const fail  max miss/bracket     3.00  max rel miss 1.3e-02  lead par +0.012940  misses/bracket: 2.0 2.6 3.0 2.3 1.9
+    CL1  const PASS  max miss/bracket     1.81  max rel miss 5.7e-03  lead par +0.013376  misses/bracket: 1.7 1.8 1.7 1.2 0.8
+    CL2  const PASS  max miss/bracket     0.11  max rel miss 7.8e-04  lead par +0.013570  misses/bracket: 0.1 0.1 0.1 0.1 0.1
+    CL3  const PASS  max miss/bracket     0.17  max rel miss 1.2e-03  lead par +0.013590  misses/bracket: 0.0 0.0 0.0 0.0 0.2
+    ZP   grow  fail  max miss/bracket    83.40  max rel miss 3.3e-01  lead par +0.331000  misses/bracket: 81.8 83.4 77.7 55.1 47.5
+    ZP2  grow  fail  max miss/bracket    11.91  max rel miss 6.0e-02  lead par +0.125000  misses/bracket: 8.9 10.8 11.9 9.2 8.5
+    ZL1  zero  fail  max miss/bracket   311.89  max rel miss 6.6e-01  lead par -0.074297  misses/bracket: 311.9 271.5 203.2 123.6 94.1
+    ZL2  zero  fail  max miss/bracket   128.61  max rel miss 4.5e-01  lead par -0.371297  misses/bracket: 124.7 128.6 116.0 78.3 63.8
+    ZL3  zero  fail  max miss/bracket    64.10  max rel miss 3.0e-01  lead par -0.804924  misses/bracket: 44.0 56.8 64.1 48.6 42.6
+    ZG   zero  fail  max miss/bracket   197.29  max rel miss 4.0e-01  lead par +0.039932  misses/bracket: 197.3 168.8 124.0 74.8 56.7
+    GL   grow  fail  max miss/bracket    11.21  max rel miss 5.6e-02  lead par +0.006653  misses/bracket: 8.6 10.3 11.2 8.6 7.9
+    spread of all forms' predictions / bracket per test l: 393.7 354.9 280.9 178.7 141.7
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+
+Step 2 out-of-sample, series p1, usable l = [2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48]
+  split S1 train [3, 4, 5, 6, 8, 10, 12] test [16, 20, 24, 32, 40, 48]
+    C1   const fail  max miss/bracket    80.54  max rel miss 1.6e-01  lead par +0.010607  misses/bracket: 80.5 67.6 56.5 40.3 30.1 22.4
+    C2   const fail  max miss/bracket    16.52  max rel miss 5.6e-02  lead par +0.012158  misses/bracket: 16.2 16.5 15.5 12.6 10.2 7.9
+    C3   const fail  max miss/bracket     5.24  max rel miss 2.4e-02  lead par +0.012723  misses/bracket: 3.8 4.9 5.2 4.9 4.3 3.4
+    CL1  const fail  max miss/bracket     3.20  max rel miss 9.7e-03  lead par +0.013334  misses/bracket: 3.1 3.2 3.0 2.4 1.9 1.4
+    CL2  const PASS  max miss/bracket     0.30  max rel miss 2.1e-03  lead par +0.013636  misses/bracket: 0.1 0.1 0.2 0.2 0.2 0.3
+    CL3  const PASS  max miss/bracket     0.25  max rel miss 1.8e-03  lead par +0.013623  misses/bracket: 0.0 0.1 0.1 0.1 0.1 0.2
+    ZP   grow  fail  max miss/bracket   145.82  max rel miss 6.5e-01  lead par +0.460000  misses/bracket: 143.4 145.8 140.5 124.0 107.9 91.5
+    ZP2  grow  fail  max miss/bracket    22.44  max rel miss 1.3e-01  lead par +0.183000  misses/bracket: 17.2 21.1 22.4 22.0 20.1 17.7
+    ZL1  zero  fail  max miss/bracket   395.27  max rel miss 7.4e-01  lead par -0.041952  misses/bracket: 395.3 326.8 270.2 190.8 141.2 105.2
+    ZL2  zero  fail  max miss/bracket   158.34  max rel miss 5.4e-01  lead par -0.258069  misses/bracket: 156.7 158.3 147.6 120.0 96.5 75.8
+    ZL3  zero  fail  max miss/bracket    81.48  max rel miss 3.9e-01  lead par -0.566056  misses/bracket: 60.3 76.8 81.5 76.6 66.8 55.4
+    ZG   zero  fail  max miss/bracket   307.11  max rel miss 5.3e-01  lead par +0.029295  misses/bracket: 307.1 246.7 200.3 138.5 101.4 75.0
+    GL   grow  fail  max miss/bracket    19.78  max rel miss 1.1e-01  lead par +0.004449  misses/bracket: 15.7 18.8 19.8 19.0 17.1 14.9
+    spread of all forms' predictions / bracket per test l: 538.7 472.6 410.7 314.7 249.1 196.7
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S2 train [3, 4, 5, 6, 8, 10, 12, 16, 20] test [24, 32, 40, 48]
+    C1   const fail  max miss/bracket    54.76  max rel miss 1.5e-01  lead par +0.010656  misses/bracket: 54.8 39.3 29.3 21.8
+    C2   const fail  max miss/bracket    13.36  max rel miss 5.0e-02  lead par +0.012236  misses/bracket: 13.4 11.2 9.2 7.1
+    C3   const fail  max miss/bracket     3.72  max rel miss 1.9e-02  lead par +0.012807  misses/bracket: 3.6 3.7 3.4 2.7
+    CL1  const fail  max miss/bracket     2.42  max rel miss 8.2e-03  lead par +0.013362  misses/bracket: 2.4 2.0 1.6 1.1
+    CL2  const PASS  max miss/bracket     0.27  max rel miss 1.9e-03  lead par +0.013631  misses/bracket: 0.1 0.1 0.1 0.3
+    CL3  const PASS  max miss/bracket     0.22  max rel miss 1.5e-03  lead par +0.013615  misses/bracket: 0.0 0.0 0.1 0.2
+    ZP   grow  fail  max miss/bracket   120.36  max rel miss 5.7e-01  lead par +0.441000  misses/bracket: 120.4 108.1 94.9 80.9
+    ZP2  grow  fail  max miss/bracket    17.01  max rel miss 1.0e-01  lead par +0.170000  misses/bracket: 16.3 17.0 16.1 14.4
+    ZL1  zero  fail  max miss/bracket   268.21  max rel miss 7.4e-01  lead par -0.042772  misses/bracket: 268.2 189.7 140.6 104.8
+    ZL2  zero  fail  max miss/bracket   137.87  max rel miss 5.2e-01  lead par -0.274266  misses/bracket: 137.9 114.4 93.0 73.5
+    ZL3  zero  fail  max miss/bracket    65.66  max rel miss 3.6e-01  lead par -0.636469  misses/bracket: 64.4 65.7 59.4 50.3
+    ZG   zero  fail  max miss/bracket   198.25  max rel miss 5.3e-01  lead par +0.029565  misses/bracket: 198.2 137.3 100.7 74.5
+    GL   grow  fail  max miss/bracket    15.28  max rel miss 8.9e-02  lead par +0.004807  misses/bracket: 15.0 15.3 14.2 12.6
+    spread of all forms' predictions / bracket per test l: 388.6 297.8 235.5 185.7
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S3 train [4, 5, 6, 8, 10, 12, 16] test [20, 24, 32, 40, 48]
+    C1   const fail  max miss/bracket    42.32  max rel miss 1.1e-01  lead par +0.011213  misses/bracket: 42.3 37.0 27.9 21.4 16.2
+    C2   const fail  max miss/bracket     8.78  max rel miss 3.7e-02  lead par +0.012455  misses/bracket: 8.5 8.8 7.9 6.7 5.3
+    C3   const fail  max miss/bracket     2.61  max rel miss 1.4e-02  lead par +0.012916  misses/bracket: 1.8 2.3 2.6 2.5 2.0
+    CL1  const PASS  max miss/bracket     1.28  max rel miss 4.8e-03  lead par +0.013443  misses/bracket: 1.2 1.3 1.1 1.0 0.6
+    CL2  const PASS  max miss/bracket     0.26  max rel miss 1.8e-03  lead par +0.013627  misses/bracket: 0.1 0.1 0.1 0.1 0.3
+    CL3  const PASS  max miss/bracket     0.20  max rel miss 1.5e-03  lead par +0.013611  misses/bracket: 0.0 0.0 0.0 0.0 0.2
+    ZP   grow  fail  max miss/bracket    80.52  max rel miss 4.1e-01  lead par +0.384000  misses/bracket: 79.0 80.5 75.2 67.2 58.0
+    ZP2  grow  fail  max miss/bracket    12.37  max rel miss 7.7e-02  lead par +0.148000  misses/bracket: 9.5 11.3 12.4 12.0 10.9
+    ZL1  zero  fail  max miss/bracket   259.15  max rel miss 6.8e-01  lead par -0.071495  misses/bracket: 259.1 223.9 166.0 126.3 95.7
+    ZL2  zero  fail  max miss/bracket   106.13  max rel miss 4.6e-01  lead par -0.365572  misses/bracket: 103.9 106.1 94.8 80.0 64.8
+    ZL3  zero  fail  max miss/bracket    52.99  max rel miss 3.1e-01  lead par -0.792579  misses/bracket: 38.0 47.9 53.0 50.1 43.6
+    ZG   zero  fail  max miss/bracket   170.53  max rel miss 4.2e-01  lead par +0.038157  misses/bracket: 170.5 144.8 105.3 79.4 59.8
+    GL   grow  fail  max miss/bracket    11.46  max rel miss 7.0e-02  lead par +0.005558  misses/bracket: 9.1 10.7 11.5 10.9 9.9
+    spread of all forms' predictions / bracket per test l: 338.1 304.4 241.2 193.6 153.7
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+
+Step 2 out-of-sample, series mean, usable l = [2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48]
+  split S1 train [3, 4, 5, 6, 8, 10, 12] test [16, 20, 24, 32, 40, 48]
+    C1   const fail  max miss/bracket    69.17  max rel miss 1.4e-01  lead par +0.010920  misses/bracket: 69.2 58.4 48.9 35.1 26.2 19.6
+    C2   const fail  max miss/bracket    14.92  max rel miss 5.1e-02  lead par +0.012244  misses/bracket: 14.5 14.9 14.0 11.5 9.3 7.2
+    C3   const fail  max miss/bracket     4.97  max rel miss 2.3e-02  lead par +0.012747  misses/bracket: 3.6 4.7 5.0 4.7 4.1 3.3
+    CL1  const fail  max miss/bracket     3.58  max rel miss 1.2e-02  lead par +0.013250  misses/bracket: 3.4 3.6 3.4 2.8 2.3 1.7
+    CL2  const PASS  max miss/bracket     0.18  max rel miss 7.3e-04  lead par +0.013561  misses/bracket: 0.1 0.2 0.2 0.2 0.1 0.0
+    CL3  const PASS  max miss/bracket     0.17  max rel miss 1.2e-03  lead par +0.013592  misses/bracket: 0.0 0.0 0.0 0.0 0.0 0.2
+    ZP   grow  fail  max miss/bracket   121.89  max rel miss 5.2e-01  lead par +0.392000  misses/bracket: 121.2 121.9 116.5 101.5 87.5 73.9
+    ZP2  grow  fail  max miss/bracket    17.99  max rel miss 1.0e-01  lead par +0.156000  misses/bracket: 13.9 16.9 18.0 17.6 16.1 14.2
+    ZL1  zero  fail  max miss/bracket   390.75  max rel miss 7.4e-01  lead par -0.041545  misses/bracket: 390.7 323.5 267.7 189.2 140.0 104.5
+    ZL2  zero  fail  max miss/bracket   156.91  max rel miss 5.3e-01  lead par -0.256447  misses/bracket: 155.0 156.9 146.5 119.2 95.8 75.5
+    ZL3  zero  fail  max miss/bracket    81.01  max rel miss 3.9e-01  lead par -0.562692  misses/bracket: 59.8 76.3 81.0 76.2 66.4 55.2
+    ZG   zero  fail  max miss/bracket   295.97  max rel miss 5.1e-01  lead par +0.030506  misses/bracket: 296.0 238.0 193.5 133.9 98.1 72.8
+    GL   grow  fail  max miss/bracket    16.00  max rel miss 8.6e-02  lead par +0.005650  misses/bracket: 12.6 15.2 16.0 15.4 13.9 12.2
+    spread of all forms' predictions / bracket per test l: 512.0 445.4 384.2 290.7 227.5 178.4
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S2 train [3, 4, 5, 6, 8, 10, 12, 16, 20] test [24, 32, 40, 48]
+    C1   const fail  max miss/bracket    47.40  max rel miss 1.3e-01  lead par +0.010963  misses/bracket: 47.4 34.1 25.6 19.1
+    C2   const fail  max miss/bracket    12.12  max rel miss 4.6e-02  lead par +0.012315  misses/bracket: 12.1 10.2 8.4 6.5
+    C3   const fail  max miss/bracket     3.54  max rel miss 1.8e-02  lead par +0.012827  misses/bracket: 3.4 3.5 3.2 2.6
+    CL1  const fail  max miss/bracket     2.76  max rel miss 9.9e-03  lead par +0.013281  misses/bracket: 2.8 2.4 2.0 1.4
+    CL2  const PASS  max miss/bracket     0.10  max rel miss 5.9e-04  lead par +0.013568  misses/bracket: 0.1 0.1 0.1 0.1
+    CL3  const PASS  max miss/bracket     0.17  max rel miss 1.2e-03  lead par +0.013592  misses/bracket: 0.0 0.0 0.0 0.2
+    ZP   grow  fail  max miss/bracket   101.95  max rel miss 4.7e-01  lead par +0.378000  misses/bracket: 101.9 90.3 78.4 66.5
+    ZP2  grow  fail  max miss/bracket    13.50  max rel miss 8.1e-02  lead par +0.145000  misses/bracket: 12.9 13.5 12.8 11.5
+    ZL1  zero  fail  max miss/bracket   265.75  max rel miss 7.3e-01  lead par -0.042372  misses/bracket: 265.8 188.2 139.4 104.2
+    ZL2  zero  fail  max miss/bracket   136.70  max rel miss 5.1e-01  lead par -0.272700  misses/bracket: 136.7 113.6 92.2 73.2
+    ZL3  zero  fail  max miss/bracket    65.27  max rel miss 3.5e-01  lead par -0.633338  misses/bracket: 64.0 65.3 59.1 50.1
+    ZG   zero  fail  max miss/bracket   191.44  max rel miss 5.1e-01  lead par +0.030771  misses/bracket: 191.4 132.8 97.3 72.2
+    GL   grow  fail  max miss/bracket    12.42  max rel miss 7.3e-02  lead par +0.005941  misses/bracket: 12.1 12.4 11.6 10.4
+    spread of all forms' predictions / bracket per test l: 367.7 278.4 217.8 170.7
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S3 train [4, 5, 6, 8, 10, 12, 16] test [20, 24, 32, 40, 48]
+    C1   const fail  max miss/bracket    36.84  max rel miss 1.0e-01  lead par +0.011437  misses/bracket: 36.8 32.4 24.5 18.8 14.3
+    C2   const fail  max miss/bracket     8.07  max rel miss 3.4e-02  lead par +0.012510  misses/bracket: 7.8 8.1 7.3 6.2 4.9
+    C3   const fail  max miss/bracket     2.51  max rel miss 1.4e-02  lead par +0.012929  misses/bracket: 1.8 2.2 2.5 2.4 1.9
+    CL1  const PASS  max miss/bracket     1.61  max rel miss 6.3e-03  lead par +0.013364  misses/bracket: 1.5 1.6 1.5 1.3 0.9
+    CL2  const PASS  max miss/bracket     0.12  max rel miss 8.7e-04  lead par +0.013577  misses/bracket: 0.0 0.0 0.0 0.0 0.1
+    CL3  const PASS  max miss/bracket     0.17  max rel miss 1.2e-03  lead par +0.013593  misses/bracket: 0.0 0.0 0.0 0.0 0.2
+    ZP   grow  fail  max miss/bracket    67.64  max rel miss 3.4e-01  lead par +0.329000  misses/bracket: 66.9 67.6 62.5 55.4 47.7
+    ZP2  grow  fail  max miss/bracket     9.99  max rel miss 6.3e-02  lead par +0.128000  misses/bracket: 7.6 9.1 10.0 9.7 8.9
+    ZL1  zero  fail  max miss/bracket   256.57  max rel miss 6.7e-01  lead par -0.070935  misses/bracket: 256.6 221.9 164.7 125.3 95.2
+    ZL2  zero  fail  max miss/bracket   105.36  max rel miss 4.5e-01  lead par -0.363392  misses/bracket: 103.0 105.4 94.2 79.5 64.5
+    ZL3  zero  fail  max miss/bracket    52.71  max rel miss 3.1e-01  lead par -0.788985  misses/bracket: 37.7 47.6 52.7 49.8 43.4
+    ZG   zero  fail  max miss/bracket   164.23  max rel miss 4.1e-01  lead par +0.039133  misses/bracket: 164.2 139.6 101.8 76.8 58.0
+    GL   grow  fail  max miss/bracket     9.39  max rel miss 5.8e-02  lead par +0.006544  misses/bracket: 7.4 8.7 9.4 9.0 8.2
+    spread of all forms' predictions / bracket per test l: 323.4 289.5 227.2 180.7 142.9
+    pairs NOT separated (<= 4 brackets everywhere): C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+
+Step 2 out-of-sample, series q2_site, usable l = [2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32]
+  split S1 train [3, 4, 5, 6, 8, 10, 12] test [16, 20, 24, 32]
+    C1   const fail  max miss/bracket    19.83  max rel miss 1.1e-01  lead par +0.011002  misses/bracket: 19.8 17.4 15.1 11.5
+    C2   const fail  max miss/bracket     4.39  max rel miss 3.7e-02  lead par +0.012277  misses/bracket: 4.1 4.4 4.3 3.7
+    C3   const PASS  max miss/bracket     1.49  max rel miss 1.5e-02  lead par +0.012759  misses/bracket: 1.0 1.4 1.5 1.5
+    CL1  const PASS  max miss/bracket     0.96  max rel miss 7.9e-03  lead par +0.013268  misses/bracket: 0.9 1.0 0.9 0.8
+    CL2  const PASS  max miss/bracket     0.03  max rel miss 1.4e-04  lead par +0.013545  misses/bracket: 0.0 0.0 0.0 0.0
+    CL3  const PASS  max miss/bracket     0.05  max rel miss 4.7e-04  lead par +0.013568  misses/bracket: 0.0 0.0 0.0 0.0
+    ZP   grow  fail  max miss/bracket    37.29  max rel miss 3.4e-01  lead par +0.393000  misses/bracket: 35.4 37.3 37.0 34.5
+    ZP2  grow  fail  max miss/bracket     5.96  max rel miss 5.9e-02  lead par +0.153000  misses/bracket: 4.0 5.2 5.7 6.0
+    ZL1  zero  fail  max miss/bracket   116.68  max rel miss 6.4e-01  lead par -0.044046  misses/bracket: 116.7 100.3 85.8 64.6
+    ZL2  zero  fail  max miss/bracket    48.09  max rel miss 4.0e-01  lead par -0.263526  misses/bracket: 45.4 48.1 46.6 40.5
+    ZL3  zero  fail  max miss/bracket    25.83  max rel miss 2.5e-01  lead par -0.573986  misses/bracket: 17.4 23.3 25.7 25.8
+    ZG   zero  fail  max miss/bracket    87.85  max rel miss 4.5e-01  lead par +0.031232  misses/bracket: 87.8 73.2 61.5 45.3
+    GL   grow  fail  max miss/bracket     5.30  max rel miss 5.2e-02  lead par +0.005724  misses/bracket: 3.7 4.7 5.1 5.3
+    spread of all forms' predictions / bracket per test l: 152.1 137.6 122.8 99.1
+    pairs NOT separated (<= 4 brackets everywhere): C2|C3 C2|CL1 C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S2 train [3, 4, 5, 6, 8, 10, 12, 16, 20] test [24, 32]
+    C1   const fail  max miss/bracket    14.33  max rel miss 1.1e-01  lead par +0.011067  misses/bracket: 14.3 11.0
+    C2   const fail  max miss/bracket     3.51  max rel miss 3.1e-02  lead par +0.012363  misses/bracket: 3.5 3.2
+    C3   const PASS  max miss/bracket     1.04  max rel miss 1.0e-02  lead par +0.012849  misses/bracket: 0.9 1.0
+    CL1  const PASS  max miss/bracket     0.71  max rel miss 6.2e-03  lead par +0.013302  misses/bracket: 0.7 0.6
+    CL2  const PASS  max miss/bracket     0.02  max rel miss 2.0e-04  lead par +0.013550  misses/bracket: 0.0 0.0
+    CL3  const PASS  max miss/bracket     0.04  max rel miss 4.0e-04  lead par +0.013564  misses/bracket: 0.0 0.0
+    ZP   grow  fail  max miss/bracket    30.35  max rel miss 2.9e-01  lead par +0.373000  misses/bracket: 30.4 29.1
+    ZP2  grow  fail  max miss/bracket     4.32  max rel miss 4.3e-02  lead par +0.140000  misses/bracket: 3.8 4.3
+    ZL1  zero  fail  max miss/bracket    84.73  max rel miss 6.3e-01  lead par -0.045454  misses/bracket: 84.7 64.0
+    ZL2  zero  fail  max miss/bracket    42.32  max rel miss 3.7e-01  lead par -0.285516  misses/bracket: 42.3 37.9
+    ZL3  zero  fail  max miss/bracket    21.25  max rel miss 2.1e-01  lead par -0.661927  misses/bracket: 19.0 21.2
+    ZG   zero  fail  max miss/bracket    60.39  max rel miss 4.4e-01  lead par +0.031681  misses/bracket: 60.4 44.6
+    GL   grow  fail  max miss/bracket     4.04  max rel miss 4.0e-02  lead par +0.006088  misses/bracket: 3.6 4.0
+    spread of all forms' predictions / bracket per test l: 115.1 93.1
+    pairs NOT separated (<= 4 brackets everywhere): C2|C3 C2|CL1 C2|CL2 C2|CL3 C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S3 train [4, 5, 6, 8, 10, 12, 16] test [20, 24, 32]
+    C1   const fail  max miss/bracket    10.70  max rel miss 7.7e-02  lead par +0.011513  misses/bracket: 10.7 9.8 7.9
+    C2   const fail  max miss/bracket     2.39  max rel miss 2.3e-02  lead par +0.012538  misses/bracket: 2.2 2.4 2.3
+    C3   const PASS  max miss/bracket     0.75  max rel miss 7.4e-03  lead par +0.012936  misses/bracket: 0.5 0.6 0.8
+    CL1  const PASS  max miss/bracket     0.41  max rel miss 3.7e-03  lead par +0.013372  misses/bracket: 0.4 0.4 0.4
+    CL2  const PASS  max miss/bracket     0.03  max rel miss 3.3e-04  lead par +0.013557  misses/bracket: 0.0 0.0 0.0
+    CL3  const PASS  max miss/bracket     0.05  max rel miss 4.9e-04  lead par +0.013570  misses/bracket: 0.0 0.0 0.1
+    ZP   grow  fail  max miss/bracket    21.08  max rel miss 2.1e-01  lead par +0.328000  misses/bracket: 19.9 21.1 20.9
+    ZP2  grow  fail  max miss/bracket     3.29  max rel miss 3.2e-02  lead par +0.124000  misses/bracket: 2.2 2.8 3.3
+    ZL1  zero  fail  max miss/bracket    78.14  max rel miss 5.5e-01  lead par -0.075418  misses/bracket: 78.1 70.2 55.7
+    ZL2  zero  fail  max miss/bracket    33.03  max rel miss 3.1e-01  lead par -0.374800  misses/bracket: 30.9 33.0 31.7
+    ZL3  zero  fail  max miss/bracket    17.47  max rel miss 1.7e-01  lead par -0.809805  misses/bracket: 10.8 14.5 17.5
+    ZG   zero  fail  max miss/bracket    49.19  max rel miss 3.3e-01  lead par +0.040199  misses/bracket: 49.2 43.4 33.8
+    GL   grow  fail  max miss/bracket     3.11  max rel miss 3.1e-02  lead par +0.006689  misses/bracket: 2.1 2.7 3.1
+    spread of all forms' predictions / bracket per test l: 98.1 91.3 76.7
+    pairs NOT separated (<= 4 brackets everywhere): C2|C3 C2|CL1 C2|CL2 C2|CL3 C3|CL1 C3|CL2 C3|CL3 C3|GL CL1|CL2 CL1|CL3 CL1|ZP2 CL1|GL CL2|CL3 CL2|ZP2 CL2|GL CL3|ZP2 CL3|GL ZP2|GL
+
+Step 2 out-of-sample, series q2_trunc, usable l = [2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24]
+  split S1 train [3, 4, 5, 6, 8, 10, 12] test [16, 20, 24]
+    C1   const fail  max miss/bracket    18.15  max rel miss 9.8e-02  lead par +0.010989  misses/bracket: 18.1 15.5 13.1
+    C2   const fail  max miss/bracket     3.92  max rel miss 2.8e-02  lead par +0.012272  misses/bracket: 3.8 3.9 3.7
+    C3   const PASS  max miss/bracket     1.30  max rel miss 9.7e-03  lead par +0.012758  misses/bracket: 0.9 1.2 1.3
+    CL1  const PASS  max miss/bracket     0.87  max rel miss 6.2e-03  lead par +0.013266  misses/bracket: 0.8 0.9 0.8
+    CL2  const PASS  max miss/bracket     0.03  max rel miss 1.9e-04  lead par +0.013546  misses/bracket: 0.0 0.0 0.0
+    CL3  const PASS  max miss/bracket     0.01  max rel miss 1.0e-04  lead par +0.013570  misses/bracket: 0.0 0.0 0.0
+    ZP   grow  fail  max miss/bracket    33.18  max rel miss 2.4e-01  lead par +0.394000  misses/bracket: 32.4 33.2 32.1
+    ZP2  grow  fail  max miss/bracket     4.89  max rel miss 3.7e-02  lead par +0.153000  misses/bracket: 3.6 4.5 4.9
+    ZL1  zero  fail  max miss/bracket   106.03  max rel miss 5.6e-01  lead par -0.043644  misses/bracket: 106.0 88.8 74.1
+    ZL2  zero  fail  max miss/bracket    42.71  max rel miss 3.0e-01  lead par -0.262047  misses/bracket: 41.5 42.7 40.3
+    ZL3  zero  fail  max miss/bracket    22.22  max rel miss 1.7e-01  lead par -0.572263  misses/bracket: 15.9 20.7 22.2
+    ZG   zero  fail  max miss/bracket    79.95  max rel miss 4.0e-01  lead par +0.031099  misses/bracket: 80.0 64.9 53.2
+    GL   grow  fail  max miss/bracket     4.45  max rel miss 3.3e-02  lead par +0.005711  misses/bracket: 3.4 4.2 4.4
+    spread of all forms' predictions / bracket per test l: 138.4 122.0 106.2
+    pairs NOT separated (<= 4 brackets everywhere): C2|C3 C2|CL1 C2|CL2 C2|CL3 C3|CL1 C3|CL2 C3|CL3 CL1|CL2 CL1|CL3 CL2|CL3 ZP2|GL
+  split S2 train [3, 4, 5, 6, 8, 10, 12, 16, 20] test [24]  NOT EVALUABLE (<2 test points)
+  split S3 train [4, 5, 6, 8, 10, 12, 16] test [20, 24]
+    C1   const fail  max miss/bracket     9.59  max rel miss 6.4e-02  lead par +0.011500  misses/bracket: 9.6 8.5
+    C2   const fail  max miss/bracket     2.09  max rel miss 1.6e-02  lead par +0.012533  misses/bracket: 2.0 2.1
+    C3   const PASS  max miss/bracket     0.56  max rel miss 4.2e-03  lead par +0.012934  misses/bracket: 0.4 0.6
+    CL1  const PASS  max miss/bracket     0.37  max rel miss 2.8e-03  lead par +0.013371  misses/bracket: 0.4 0.4
+    CL2  const PASS  max miss/bracket     0.00  max rel miss 2.9e-05  lead par +0.013559  misses/bracket: 0.0 0.0
+    CL3  const PASS  max miss/bracket     0.02  max rel miss 1.2e-04  lead par +0.013573  misses/bracket: 0.0 0.0
+    ZP   grow  fail  max miss/bracket    18.56  max rel miss 1.4e-01  lead par +0.330000  misses/bracket: 18.1 18.6
+    ZP2  grow  fail  max miss/bracket     2.46  max rel miss 1.8e-02  lead par +0.125000  misses/bracket: 2.0 2.5
+    ZL1  zero  fail  max miss/bracket    69.42  max rel miss 4.6e-01  lead par -0.074609  misses/bracket: 69.4 60.7
+    ZL2  zero  fail  max miss/bracket    28.72  max rel miss 2.2e-01  lead par -0.372131  misses/bracket: 27.7 28.7
+    ZL3  zero  fail  max miss/bracket    12.67  max rel miss 9.5e-02  lead par -0.805797  misses/bracket: 9.7 12.7
+    ZG   zero  fail  max miss/bracket    43.85  max rel miss 2.8e-01  lead par +0.040005  misses/bracket: 43.8 37.7
+    GL   grow  fail  max miss/bracket     2.32  max rel miss 1.7e-02  lead par +0.006668  misses/bracket: 1.9 2.3
+    spread of all forms' predictions / bracket per test l: 87.5 79.3
+    pairs NOT separated (<= 4 brackets everywhere): C2|C3 C2|CL1 C2|CL2 C2|CL3 C3|CL1 C3|CL2 C3|CL3 C3|ZP2 C3|GL CL1|CL2 CL1|CL3 CL1|ZP2 CL1|GL CL2|CL3 CL2|ZP2 CL2|GL CL3|ZP2 CL3|GL ZP2|GL
+
+GATES (deciding series q2)
+  pass S1 and S2: const ['CL2', 'CL3'] | zero [] | grow []
+  (S3 passes on q2: ['CL1', 'CL2', 'CL3'])
+  LIMIT from passing constant forms (gate c): 18 fits, median 0.013580 range [0.013555, 0.013625] half-range/median 0.3%
+      series q2   median 0.013576 range [0.013555, 0.013584]
+      series p1   median 0.013600 range [0.013559, 0.013625]
+      series mean median 0.013579 range [0.013555, 0.013586]
+      form CL2  median 0.013579 range [0.013565, 0.013625] (9)
+      form CL3  median 0.013581 range [0.013555, 0.013603] (9)
+  for reference, every constant-family form, all windows (spread, not gate):
+  all constant forms: 54 fits, median 0.013247 range [0.010676, 0.013625] half-range/median 11.1%
+      series q2   median 0.013256 range [0.011062, 0.013584]
+      series p1   median 0.013284 range [0.010676, 0.013625]
+      series mean median 0.013247 range [0.010980, 0.013586]
+      form C1   median 0.011493 range [0.010676, 0.012109] (9)
+      form C2   median 0.012597 range [0.012278, 0.012915] (9)
+      form C3   median 0.013031 range [0.012865, 0.013196] (9)
+      form CL1  median 0.013407 range [0.013299, 0.013547] (9)
+      form CL2  median 0.013579 range [0.013565, 0.013625] (9)
+      form CL3  median 0.013581 range [0.013555, 0.013603] (9)
+  fitted log coefficients b (CL forms, q2, window l>=3):
+      CL1  params +0.013319 -0.009172 -0.011593
+      CL2  params +0.013565 -0.003458 -0.014774 -0.009076
+      CL3  params +0.013584 -0.002349 -0.015223 -0.012110 +0.003094
+      ZP   params +0.366000 +0.004203
+      ZP2  params +0.134000 +0.007962 -0.008503
+      GL   params +0.006277 +0.001779 -0.006862

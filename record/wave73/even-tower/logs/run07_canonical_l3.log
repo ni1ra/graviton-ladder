@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "record\wave73\even-tower\scripts\even_canonical.py", line 15, in <module>
+    exec(compile(src.split("# ================================================================== data")[0], "even_tower_head", "exec"), ns)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "even_tower_head", line 12, in <module>
+NameError: name '__file__' is not defined. Did you mean: '__name__'?

@@ -1,0 +1,27 @@
+tee: ../logs/01_even_lemma_a.log: No such file or directory
+PASS  V1 triangular generalised problem, diagonal (k+1)(2l+2k+3), exact, l=2..6, k=0..5  0 mismatches
+PASS  V2 W in rho variables has eigenvalues 1/((j+1)(2l+2j+3)), l=2,3, j=0,1,2 (mpmath)  worst rel err 4.34e-30
+PASS  V3 grid W top eigenvalues = 1/mu_j, l=2  [0.14285866 0.05555737 0.03030496] vs [0.14285714 0.05555556 0.03030303]
+PASS  V4 kernel = N^1/2 (h^2+1/4)^-1 N^1/2, l=2  rel op-norm diff 2.77e-05
+PASS  V3 grid W top eigenvalues = 1/mu_j, l=3  [0.11111239 0.0454562  0.02564285] vs [0.11111111 0.04545455 0.02564103]
+PASS  V4 kernel = N^1/2 (h^2+1/4)^-1 N^1/2, l=3  rel op-norm diff 3.65e-05
+PLANT CAUGHT  P2 Neumann kernel misses 1/(2l+3) at l=2  top eigenvalue * 7 = 86.2514
+
+  l      lam  |D_E|(40,0.04)  |D_E|(40,0.02)  |D_E|(60,0.02)  |D_E|(40,0.01)   sqrt2/lam     ratio  lam|hW|  lam|D_E|
+  2     2.449    1.652013e-01    1.651550e-01    1.651550e-01    1.651434e-01   5.7735e-01  0.2860   0.4176   0.4045   (23s)
+  3     3.464    1.377422e-01    1.376916e-01    1.376916e-01    1.376790e-01   4.0825e-01  0.3372   0.4909   0.4769   (23s)
+  4     4.472    1.184526e-01    1.183999e-01    1.183999e-01    1.183868e-01   3.1623e-01  0.3744   0.5438   0.5294   (23s)
+  8     8.485    7.680113e-02    7.674638e-02    7.674638e-02    7.673273e-02   1.6667e-01  0.4604   0.6653   0.6511   (23s)
+ 16    16.492    4.582623e-02    4.577342e-02    4.577342e-02    4.576029e-02   8.5749e-02  0.5337   0.7674   0.7547   (23s)
+ 32    32.496    2.573122e-02    2.568303e-02    2.568303e-02    2.567113e-02   4.3519e-02  0.5899   0.8447   0.8342   (24s)
+ 64    64.498    1.386730e-02    1.382454e-02    1.382454e-02    1.381420e-02   2.1926e-02  0.6300   0.8991   0.8910   (23s)
+128   128.499    9.996563e-03    7.243783e-03    7.243783e-03    7.234992e-03   1.1006e-02  0.6574   0.9356   0.9297   (22s)
+PASS  C1 ||D_E||_H <= sqrt(2)/lam, all l, all grids  max ratio 0.9083
+FAIL  C2 lam ||h W|| <= 1, all l, all grids  max 1.2845
+FAIL  C3 slope of log||D_E|| against log lam, l = 16..128, in [-1.08, -0.92]  slope -0.8990
+PASS  C4 finest two grids agree to 1%  worst rel diff 1.21e-03
+PLANT CAUGHT  P1 wrong power: bound sqrt(2)/lam^2 is violated  violated at l = [3, 4, 8, 16, 32, 64, 128]
+
+SOME LINE FAILED
+
+[exited with code 1]

@@ -1,0 +1,64 @@
+{
+ "checks": [
+  {
+   "name": "S1 control g = 0: log A = 0",
+   "pass": true,
+   "info": "7.50e-11"
+  },
+  {
+   "name": "S2 control (known answer): odd tower potential at l = 16 reproduces HINGE-E's stored odd-control number within 2 %",
+   "pass": true,
+   "info": "1.691930e-04 vs 1.691930e-04; l^2(1-A)=0.04331"
+  },
+  {
+   "name": "S3 even tower: 1 - A_l at g = 1 within 2 % of HINGE-E's stored values, l = 16..128",
+   "pass": true,
+   "info": ""
+  },
+  {
+   "name": "S4 l^2 (1 - A_l) increasing over l = 16..128 and inside [0.6, 1.05] a_E: sum (2l+1)(1 - A_l) diverges logarithmically",
+   "pass": true,
+   "info": "[0.010187, 0.011523, 0.012387, 0.012916]"
+  }
+ ],
+ "rows": [
+  {
+   "l": 16,
+   "1-A_g=+1": 3.883105685299537e-05,
+   "1-A_g=-1": 4.075351299788651e-05,
+   "hinge_e_g=+1": 3.883112375865396e-05,
+   "l2_mean": 0.01018682494091288,
+   "l2_mean_over_aE": 0.749063990750878
+  },
+  {
+   "l": 32,
+   "1-A_g=+1": 1.1114374582151554e-05,
+   "1-A_g=-1": 1.1390685513012497e-05,
+   "hinge_e_g=+1": 1.1114408479992362e-05,
+   "l2_mean": 0.011522590768723993,
+   "l2_mean_over_aE": 0.8472863600850445
+  },
+  {
+   "l": 64,
+   "1-A_g=+1": 3.0055717013894596e-06,
+   "1-A_g=-1": 3.0427903857663824e-06,
+   "hinge_e_g=+1": 3.0057957952366197e-06,
+   "l2_mean": 0.012387045554495164,
+   "l2_mean_over_aE": 0.9108519907314293
+  },
+  {
+   "l": 128,
+   "1-A_g=+1": 7.859368092044748e-07,
+   "1-A_g=-1": 7.907571273237851e-07,
+   "hinge_e_g=+1": 7.858355747077562e-07,
+   "l2_mean": 0.012916276728039505,
+   "l2_mean_over_aE": 0.9497677487997493
+  }
+ ],
+ "odd_control_l16": 0.00016919295310284673,
+ "plant_W_to_N": {
+  "value": 0.25458500913752685,
+  "caught": true
+ },
+ "seconds": 28.580595016479492
+}

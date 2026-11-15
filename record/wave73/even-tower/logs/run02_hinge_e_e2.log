@@ -1,0 +1,104 @@
+ok   K1 Bessel sine transform (4 points) | worst rel err 1.05e-24
+ok   K2 int cos(cs)/(1+s^2) = (pi/2) e^-c, hence the Dirichlet half-line kernel sinh(x_<) e^(-x_>) | 0.780034371135874
+ok   K3 theta integral and the assembled closed form w = v tanh tanh/(pp') (3 points) | worst rel err 2.74e-26
+ok   K4 brute-force w(p,p') from Bessel modes and the kernel = closed form (3 points, grid accuracy 1e-3) | worst rel err 1.14e-05
+caught neumann: half-line Neumann kernel cosh(x_<) e^(-x_>) | 0.180991 vs 0.235870
+ok   K5 int int w^2 = pi^2/24 (Coulomb spectrum 1/(2n)) | 0.411233516 vs 0.411233517
+record\wave73\hinge-e\scripts\e2_kernel.py:121: IntegrationWarning: The maximum number of subdivisions (400) has been achieved.
+  If increasing the limit yields no improvement it is advised to analyze 
+  the integrand in order to determine the difficulties.  If the position of a 
+  local difficulty can be determined (singularity, discontinuity) one will 
+  probably gain from splitting up the interval and calling the integrator 
+  on the subranges.  Perhaps a special-purpose integrator should be used.
+  return 2*quad(lambda q: f(P, q), 0, P, points=brk or None, epsabs=1e-13, epsrel=1e-11, limit=400)[0]
+caught noT: tanh factors dropped in K5 | 1.233701
+ok   K6 a_E: 1-d reduction = (49 zeta(3) - 48 beta(4))/(16 pi^2) + Catalan/8 - log(2)/4 | 0.0135994054803337911 vs 0.0135994054803337911
+caught beta96: 48 -> 96 in the closed form of a_E | 
+ok   K6 elementary integrals: tanh^2 sech/x^2 = 48 beta(4)/pi^3 - 2G/pi; tanh^2/x^2 = 14 zeta(3)/pi^2; tanh sech^2/x = 7 zeta(3)/pi^2; 1/(x sinh x) - 1/x^2 = -log 2 | 6.29e-27
+ok   K6 inner integrals: F1 + F2 = Phi and -G1 + G2 = Psi (the Gudermannian and log cosh terms cancel) | 1.23e-30
+ok   K6 a_E: 2-d quadrature = closed form | 0.0135994055 vs 0.0135994055
+ok   K6 control: the same routine with T = 1 returns HINGE's a1 | 0.0532847999 vs 0.0532847999
+ok   K7 X: 1-d reduction = (12 beta(4) - 7 zeta(3))/(8 pi^2) - Catalan/16, and 2-d quadrature agrees | -0.0135159005318777 vs -0.0135159005318777; 2-d -0.0135159005
+ok   K7 the form a1 g_f^2 + 2 X g_f g_m + a_E g_m^2 is positive definite; X < 0 | det 0.00054196203, X/a_E = -0.99385966
+ok   K8 J_E(t) >= pi min(Phi) |t| / 8 > 0 at t = 0.25 ... 8 | {'0.25': '0.123592421455', '0.5': '0.114742992515', '1.0': '0.133293316952', '2.0': '0.173294225447', '4.0': '0.252069963718', '8.0': '0.409614634302'}
+ok   K8 Phi > 0 on the grid 0..20 (step 0.005), Phi(0) = 38/3 - 4 pi, Phi(20) -> 2 | Phi(0) = 0.10029605, min Phi = 0.068837457 at x = 0.763702, Phi(20) = 1.999999948
+ok   K8 PREREG claim 'Phi is increasing' is FALSE (recorded miss; the bound uses min Phi instead of Phi(0)) | min Phi/Phi(0) = 0.686343
+ok   K8 J_E(0.5): 2-d quadrature = 1-d reduction (to the oscillating truncated tail) | 0.114743 vs 0.114742992515
+ok   K9 fidelity constant: control f1 = Catalan/(8 pi); 1/2 <= f_E/a_E <= 1 | f_E = 0.00727024418604, f_E/a_E = 0.53460015
+ok   K10 control: the lapse routine with T = 1 returns HINGE's cross coefficient (2/3) a1 | 0.666666667
+ok   K10 lapse tuning, even tower: a_E + 2cY + (8/15) a1 c^2 is positive for every c (min > 0) | Y = -0.00674596, min 0.011998 = 0.8822 a_E at c = 0.2374
+ok   K10 lapse tuning, both towers with one c: minimum > 0 | min 0.052314 = 0.7822 of the c = 0 value, at c = -0.5063
+e2: 20/20 checks pass, 3/3 plants caught
+{
+ "w_bruteforce_vs_closed": [
+  [
+   0.5,
+   1.2,
+   0.23587164523546972,
+   0.23586976200749646
+  ],
+  [
+   1.0,
+   1.0,
+   0.419020448697487,
+   0.41901629755689945
+  ],
+  [
+   0.3,
+   2.0,
+   0.03581759599662573,
+   0.03581718671961123
+  ]
+ ],
+ "mode_norm_sanity": 0.9897126855412924,
+ "HS_w": 0.4112335156068081,
+ "beta4": "0.98894455174110533611",
+ "a1": "0.053284799852188223865",
+ "aE_closed": "0.013599405480333791098",
+ "aE_1d": "0.013599405480333791099",
+ "X_closed": "-0.013515900531877723428",
+ "X_1d": "-0.013515900531877723426",
+ "aE_over_a1": "0.255221104669",
+ "eta_even": "0.0271988109606676",
+ "eta_odd": "0.106569599704376",
+ "eta_total": "0.133768410665044",
+ "aE_2d": 0.013599405480337647,
+ "a1_2d": 0.05328479985219208,
+ "X_2d": -0.013515900531881578,
+ "Phi(0)": "0.100296052307494",
+ "Phi_min": "0.0688374574097748",
+ "Phi_argmin": "0.7637016027",
+ "J_E(t)": {
+  "0.25": "0.123592421455",
+  "0.5": "0.114742992515",
+  "1.0": "0.133293316952",
+  "2.0": "0.173294225447",
+  "4.0": "0.252069963718",
+  "8.0": "0.409614634302"
+ },
+ "J_odd(t)": {
+  "0.25": "0.334049020356",
+  "0.5": "0.583322431008",
+  "1.0": "0.996970088314",
+  "2.0": "1.7839303793",
+  "4.0": "3.35473185297",
+  "8.0": "6.49632450659"
+ },
+ "prereg_claim_Phi_increasing": false,
+ "J_E(0.5)_2d": 0.11474349606268687,
+ "fE": "0.00727024418604025",
+ "f1": "0.0364451130038523",
+ "fE_over_aE": "0.5346001483",
+ "eta_F_even": "0.0145404883721",
+ "eta_F_total": "0.0874307143798",
+ "lapse_control_over_a1": 0.6666666666666666,
+ "Y_2d": -0.006745958549061725,
+ "even_tower_best_c": 0.23737862044294225,
+ "even_tower_min": 0.011998059146392246,
+ "even_min_over_aE": 0.8822487985774625,
+ "both_towers_best_c": -0.5063106897785289,
+ "both_towers_min": 0.05231398041346663,
+ "both_min_over_c0": 0.7821574638344293,
+ "odd_tower_best_c": -1.25,
+ "odd_tower_min": 0.008880799975364704
+}

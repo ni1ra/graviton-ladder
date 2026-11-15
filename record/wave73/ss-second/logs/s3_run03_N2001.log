@@ -1,0 +1,4 @@
+  File "record\wave73\ss-second\scripts\s3_limit.py", line 117
+    print('
+          ^
+SyntaxError: unterminated string literal (detected at line 117)

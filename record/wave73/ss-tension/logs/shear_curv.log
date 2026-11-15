@@ -1,0 +1,17 @@
+[PASS] T0 R_{rArB} = -(1/2) r d_r^2(s_AB/r) in Gaussian null gauge (theta-theta, theta-phi, phi-phi): residuals 0, 0, 0
+[CAUGHT] P0 plant: R_{rArB} = -(1/2) d_r^2 s_AB (no background terms): residual (r*Derivative(a(w, r, theta, phi), r) - a(w, r, theta, phi))/r**2
+    div div Q / (u x.E.x) = -2, curl div Q / (u x.B.x) = 2
+[PASS] T5a C_AB trace-free on the cone for all 15 solutions: exact
+[PASS] T5b div div Q = a u (x.E.x), one constant, degrees 2..6, three polarisations, three points: a = -2, max relative spread 0
+[PASS] T5c curl div Q = b u (x.B.x), one constant, same set: b = 2, max relative spread 0
+[CAUGHT] P5 plant: S in place of Q (drop the integral term): max relative spread 0.333
+    sample (n1,n2)=(2,3): form on Q = 2 - 3*I*pi/8, on F = 2 - 3*I*pi/8, planted = 1 - I*pi/4
+[PASS] T6 half-line ultralocal form: W(F_a, F_b) = W(Q_a, Q_b), complex, n = 2..5 (16 entries, exact): all equal
+[CAUGHT] P2 plant: coefficient 1 in place of 2 in the transform: differs
+[PASS] T6b int_0^inf F du = 0 for every F = T^-1 Q (the constraint that singles out curvature observables): exact
+[PASS] T7a vacuum flow on S = u(1-u) S' + 2 int_0^u S  (all monomials u^n): residual 0
+[PASS] T7b on Psi0 the vacuum flow is local: delta Psi0 = N Psi0' + (3 - 5u) Psi0: residual 0
+[CAUGHT] P7 plant: the literal weight-0 flow on S is the same local flow on Psi0: residual n*u**(n - 2)  (= -S'/u, a non-local functional of Psi0)
+[PASS] T7c literal flow moves the constraint: int N F' du = 2 int u F du (by parts), not 0: by hand: int_0^1 u(1-u) F' du = -int (1-2u) F du = 2 int u F du when int F du = 0
+
+13 lines, 0 unexpected, 17.9 s

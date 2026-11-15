@@ -1,0 +1,230 @@
+{
+ "l": 4,
+ "kmax": 3,
+ "checks": {
+  "D0 TT of basis tensor k=0": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=1": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=2": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=3": {
+   "pass": true,
+   "info": ""
+  },
+  "D1 Green identity int N R_lin[q] = -2 dF[q] on random q": {
+   "pass": true,
+   "info": "32/1155"
+  },
+  "T3 Omega_B(a, delta^w b) symmetric on TT data (delta^w Hamiltonian on the ball)": {
+   "pass": true,
+   "info": ""
+  },
+  "T1a A_can == c_l E_2 on all Gram entries (h-h, K-K, h-K)": {
+   "pass": true,
+   "info": "max|diff|=0"
+  },
+  "T1b A_geo == c_l E_2 on all Gram entries": {
+   "pass": true,
+   "info": "max|diff|=0"
+  },
+  "T1c Lemma-3 closed form (4) == A_can": {
+   "pass": true,
+   "info": "max|diff|=0"
+  },
+  "T1d no h-K cross term in A_can": {
+   "pass": true,
+   "info": ""
+  },
+  "C1 stationary control: A = oint|K|^2/((2l+1)(2l+3)) = c_l E_2, c_l E_1/A = (l+1)/(l+2)": {
+   "pass": true,
+   "info": "A/4pi=512/2079, E1/E2=5/6"
+  },
+  "PL1 plant caught: lapse (1 - 11/10 r^2)/2 in delta^w": {
+   "pass": true,
+   "info": "max|diff|=3.338e+00"
+  },
+  "PL2 plant caught: weight 1 instead of 2": {
+   "pass": true,
+   "info": "max|diff|=4.105e-02"
+  },
+  "PL3 plant caught: c_l -> 4(l-1)!/(l+2)!": {
+   "pass": true,
+   "info": "max|diff|=4.583e+00"
+  },
+  "PL3b plant caught (added post-run): c_l -> c_l (l+3)/(l+2)": {
+   "pass": true,
+   "info": "max|diff|=3.819e-01"
+  },
+  "PL4 plant caught: pure Lie derivative (no +2tH) differs from c_l E_2": {
+   "pass": true,
+   "info": "max|diff|=1.741e+00"
+  },
+  "PL4b pure-Lie charge = A + (1/2) int_B |h|^2 exactly": {
+   "pass": true,
+   "info": ""
+  },
+  "T2a transferred flow: psi[delta K] = N psi_dot, identically": {
+   "pass": true,
+   "info": ""
+  },
+  "T2b transferred flow: psi_dot[delta h] = div(N grad psi) - 2 psi, identically": {
+   "pass": true,
+   "info": ""
+  },
+  "T2c plant caught: weight 1 in the flow identity fails": {
+   "pass": true,
+   "info": ""
+  },
+  "T2d delta^w a satisfies the linearised constraints (div dK = 0, tr dK = 0, R_lin[dh] = 0)": {
+   "pass": true,
+   "info": ""
+  },
+  "S1 random mixed-harmonic datum: A_can = A_geo = c_l E_2 exactly": {
+   "pass": true,
+   "info": "A/4pi=73.8376"
+  },
+  "S2 float quadrature of A_can and c_l E_2 agree with exact value (rel <= 1e-9)": {
+   "pass": true,
+   "info": "rel=1.37e-14"
+  },
+  "G0 gauge-moved h is not TT (test is not vacuous)": {
+   "pass": true,
+   "info": ""
+  },
+  "G1 psi_dot invariant under odd gauge h -> h + 2 sym grad(a(r) v)": {
+   "pass": true,
+   "info": ""
+  },
+  "G2 A_geo invariant under random odd gauge move": {
+   "pass": true,
+   "info": "20.1559"
+  },
+  "G4 Regge-Wheeler representative is g_RW(r) P (no K_l, h_AB = 0)": {
+   "pass": true,
+   "info": ""
+  },
+  "G5 A_geo in Regge-Wheeler gauge = A_geo in TT gauge": {
+   "pass": true,
+   "info": "25.8539"
+  },
+  "G6 psi_dot in Regge-Wheeler gauge = TT gauge": {
+   "pass": true,
+   "info": ""
+  },
+  "T5 (post-hoc) psi[Lap K] = Lap psi[K] and psi_dot[Lap h] = Lap psi_dot[h]: psi obeys the scalar wave equation": {
+   "pass": true,
+   "info": ""
+  },
+  "T4a Gaussian-profile tensors are TT on R^3": {
+   "pass": true,
+   "info": ""
+  },
+  "T4b Omega_grav = kappa c_l Omega_scalar on R^3 with one constant kappa": {
+   "pass": true,
+   "info": "kappa values: ['1']"
+  }
+ },
+ "gram_can_4pi": [
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "2816/7371",
+   "5632/8505",
+   "2816/3213",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "5632/8505",
+   "173056/144585",
+   "33280/20349",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "2816/3213",
+   "33280/20349",
+   "6400/2793",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "512/2079",
+   "512/2457",
+   "512/2835",
+   "512/3213"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "512/2457",
+   "20992/110565",
+   "3584/20655",
+   "512/3213"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "512/2835",
+   "3584/20655",
+   "30208/183141",
+   "11776/75411"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "512/3213",
+   "512/3213",
+   "11776/75411",
+   "512/3381"
+  ]
+ ],
+ "spot": {
+  "A_can": "32062418004732065696/434229007915828125",
+  "A_geo": "32062418004732065696/434229007915828125",
+  "cE2": "32062418004732065696/434229007915828125"
+ },
+ "G3_closed_form_moves": {
+  "TT": "98798272/4901715",
+  "moved": "-83606680384/83329155"
+ },
+ "kappa": [
+  "1"
+ ],
+ "fails": [],
+ "seconds": 7.379375457763672
+}

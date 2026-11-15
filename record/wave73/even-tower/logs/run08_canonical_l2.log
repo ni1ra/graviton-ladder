@@ -1,0 +1,10 @@
+PASS K1a Omega_B(a, delta^w b) symmetric on even TT data
+PASS K1b (1/2) Omega_B(a, delta^w b) = closed form (4) on the even Gram, h-h, K-K, h-K  A_can(T1 as K)=86/405  A_can(T1 as h)=-1/5
+PASS K1c delta^w H keeps H_00 = 0 and the data stay constraint solutions
+PASS K2a K slot: A_can = int N K.K, so A_can - A_ext^K = + oint kappa kappa/(l(l-1)) (A_ext^K closed form, run01 H3'')  diff on T1 = 2/15
+PASS K2b h slot: A_can - A_ext^h = -(1/4) oint (nu.h.nu)^2 - oint G^2/((l-1)(l+2))  diff on T1 = -2/3
+PASS K3 A_can is NOT invariant under the residual TT gauge mode T[1]: its row is non-zero in both slots (A_ext's is zero)  h slot row ['-1/3', '-7/15', '-3/5'] ; K slot row ['2/15', '2/15', '2/15']
+INFO K4 momentum datum T[s^1]: psi_E[delta^w h] - N psidot_E is NON-ZERO; minus G_D psidot_E it is non-zero: profile ['1']
+INFO K4 field datum T[s^1]: psidot_E[delta^w K] = div(N grad psi_E) - w psi_E holds for w in [1]
+INFO K4 momentum datum T[s^2]: psi_E[delta^w h] - N psidot_E is NON-ZERO; minus G_D psidot_E it is non-zero: profile ['1']
+INFO K4 field datum T[s^2]: psidot_E[delta^w K] = div(N grad psi_E) - w psi_E holds for w in [1]

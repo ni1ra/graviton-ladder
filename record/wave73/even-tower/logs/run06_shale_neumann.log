@@ -1,0 +1,10 @@
+PASS S1 control g = 0: log A = 0  7.50e-11
+PASS S2 control (known answer): odd tower potential at l = 16 reproduces HINGE-E's stored odd-control number within 2 %  1.691930e-04 vs 1.691930e-04; l^2(1-A)=0.04331
+l=  16  1-A(g=1)=3.883106e-05 (HINGE-E 3.883112e-05, ratio 1.0000)  1-A(g=-1)=4.075351e-05  l^2 mean=0.010187 = 0.7491 a_E  t=11s
+l=  32  1-A(g=1)=1.111437e-05 (HINGE-E 1.111441e-05, ratio 1.0000)  1-A(g=-1)=1.139069e-05  l^2 mean=0.011523 = 0.8473 a_E  t=16s
+l=  64  1-A(g=1)=3.005572e-06 (HINGE-E 3.005796e-06, ratio 0.9999)  1-A(g=-1)=3.042790e-06  l^2 mean=0.012387 = 0.9109 a_E  t=22s
+l= 128  1-A(g=1)=7.859368e-07 (HINGE-E 7.858356e-07, ratio 1.0001)  1-A(g=-1)=7.907571e-07  l^2 mean=0.012916 = 0.9498 a_E  t=26s
+PASS S3 even tower: 1 - A_l at g = 1 within 2 % of HINGE-E's stored values, l = 16..128  
+PASS S4 l^2 (1 - A_l) increasing over l = 16..128 and inside [0.6, 1.05] a_E: sum (2l+1)(1 - A_l) diverges logarithmically  [0.010187, 0.011523, 0.012387, 0.012916]
+CAUGHT plant W -> N in the kinetic slot: 2.545850e-01 vs 3.883112e-05
+DONE 4/4 checks, t=29s

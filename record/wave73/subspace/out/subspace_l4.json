@@ -1,0 +1,181 @@
+{
+ "l": 4,
+ "kmax": 3,
+ "checks": {
+  "A1 psi[build_T(s^k)] = l(l+1) s^k phi exactly, build_T is TT (K <-> psi local both ways)": {
+   "pass": true,
+   "info": ""
+  },
+  "PA1 inverse with (l+1) in place of (l+2) is not TT": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "A2 TT odd tensors a(s)K_l + b(s)P with deg <= 3 form a space of dimension exactly 4 = span build_T(s^0..s^3)": {
+   "pass": true,
+   "info": "unknowns=8 rank=4 nullity=4"
+  },
+  "A3 psi_dot[alpha(r) P] = kappa_l alpha phi with one constant (Regge-Wheeler h <-> psi_dot algebraic)": {
+   "pass": true,
+   "info": "proportional=True kappa_k=['-180', '-180', '-180', '-180']"
+  },
+  "A4a int_B K_a.h_b = -c_l int_B psi_a psidot_b, data vanishing to 2nd order at the boundary, h TT": {
+   "pass": true,
+   "info": ""
+  },
+  "A4b the same with h in Regge-Wheeler gauge": {
+   "pass": true,
+   "info": ""
+  },
+  "A5 (post hoc) sphere by sphere: <K_a . alpha_b P>_S = -c_l <psi_a psidot_b>_S as polynomials in r (RW gauge)": {
+   "pass": true,
+   "info": ""
+  },
+  "C1a dE/dt = -sym curl B equals Ric_lin[2K] on TT data": {
+   "pass": true,
+   "info": ""
+  },
+  "C1a' psi, psi_dot here equal charge-id's psi_of_K, psidot_of_h": {
+   "pass": true,
+   "info": ""
+  },
+  "C1b x.dB.x = N psi_dot": {
+   "pass": true,
+   "info": ""
+  },
+  "C1c x.(sym curl dE).x = div(N grad psi) - 1*psi  (weight 1)": {
+   "pass": true,
+   "info": ""
+  },
+  "PC1 weight 2 in C1c": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "C1d dE, dB are transverse and traceless": {
+   "pass": true,
+   "info": ""
+  },
+  "B-TT Gaussian-profile tensors are TT on R^3": {
+   "pass": true,
+   "info": ""
+  },
+  "B0 control: Parseval, position space = momentum space, all tensors and scalars": {
+   "pass": true,
+   "info": ""
+  },
+  "B1a control: Omega_grav = kappa c_l Omega_s with kappa = 1 (charge-id T4)": {
+   "pass": true,
+   "info": "kappa=['1']"
+  },
+  "B1b control: int K_a.K_b = c_l (1/2) int grad psi_a.grad psi_b (Paper A Prop. 1)": {
+   "pass": true,
+   "info": ""
+  },
+  "B2a K-K block: int 2 K_a.K_b/omega = c_l int omega psi_a psi_b, whole Gram": {
+   "pass": true,
+   "info": "GK[0][0]=2560/189 c_l*SK[0][0]=2560/189"
+  },
+  "B2b h-h block: int (1/2) omega h_a.h_b = c_l int psidot_a psidot_b/omega, whole Gram": {
+   "pass": true,
+   "info": "Gh[0][0]=2560/63 c_l*Sh[0][0]=2560/63"
+  },
+  "PB1 c_l scaled by (l+3)/(l+2)": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "PB2 symplectic but not vacuum-preserving map (h,K)->(2h,K/2): Omega identity still holds, B2 fails": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "PB3 omega^{+1} and omega^{-1} exchanged on the scalar side": {
+   "pass": true,
+   "plant": true,
+   "info": ""
+  },
+  "C3-ctl1 control: time translation (Pi, Lap Phi) is skew for mu_s": {
+   "pass": true,
+   "info": ""
+  },
+  "C3-ctl2 control: dilation (x.grad Phi + Phi, x.grad Pi + 2 Pi) is skew for mu_s": {
+   "pass": true,
+   "info": ""
+  },
+  "C3-ctl3 control: delta_w is skew for Omega_s at w = 1 and w = 2 (both flows are symplectic)": {
+   "pass": true,
+   "info": ""
+  },
+  "C3 delta_1 = (N Pi, div(N grad Phi) - Phi) is skew for mu_s: the weight-1 flow preserves the vacuum": {
+   "pass": true,
+   "info": ""
+  },
+  "PC3 weight 2 is not skew for mu_s (the area-side flow does not preserve the vacuum two-point function)": {
+   "pass": true,
+   "plant": true,
+   "info": "skew_2[0][0]=-32/105"
+  }
+ },
+ "kappa_RW": [
+  "-180",
+  "-180",
+  "-180",
+  "-180"
+ ],
+ "A4_info_boundary_touching_ratio_TT_and_RW": [
+  [
+   "rhs=0",
+   "rhs=0"
+  ],
+  [
+   "-3",
+   "1"
+  ],
+  [
+   "-3/2",
+   "1"
+  ],
+  [
+   "rhs=0",
+   "rhs=0"
+  ],
+  [
+   "-41/11",
+   "1"
+  ],
+  [
+   "-49/26",
+   "1"
+  ],
+  [
+   "rhs=0",
+   "rhs=0"
+  ],
+  [
+   "-49/11",
+   "1"
+  ],
+  [
+   "-59/26",
+   "1"
+  ]
+ ],
+ "B2_ratios_diag": {
+  "KK": [
+   "1/90",
+   "1/90",
+   "1/90",
+   "1/90"
+  ],
+  "hh": [
+   "1/90",
+   "1/90",
+   "1/90",
+   "1/90"
+  ]
+ },
+ "fails": [],
+ "plants_missed": [],
+ "seconds": 4.8890135288238525
+}

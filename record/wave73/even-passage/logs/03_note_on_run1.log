@@ -1,0 +1,6 @@
+EVEN-PASSAGE  log 03  note on run 1 (logs/02), written after the run. No re-run, no threshold changed.
+C2 FAILED as pre-fixed: c_unif = 2.110230e-03, window was [2.2e-3, 2.7e-3].
+Cause: scan_constants.py used the true sup of p coth(pi p) exp(-2 eps p^2) for C; even_passage.py certifies the
+majorant (p + 1/pi) exp(-2 eps p^2) instead (C = 0.47369), which costs 18%; l0 = 16 costs a further 2.5%.
+The bound is still valid and positive; my prediction of its size was wrong.
+All other lines held on the first run; plants A and B both caught.

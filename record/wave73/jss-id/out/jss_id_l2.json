@@ -1,0 +1,273 @@
+{
+ "l": 2,
+ "kmax": 3,
+ "checks": {
+  "J0a basis tensors are TT (div = 0, tr = 0, x.T.x = 0)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J0c own second-order scalar curvature = polyalg.rscal_2 on polynomial data (TT and non-TT)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J1a K-K block: P1 (pure Lie) = P1w (rescaled) = P2 = P3 = P4 = int_B N K.K": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J1b K-K block = c_l E_2 (psi part), exactly": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J1c K-K block - c_l E_1 (psi part) = (1/2) c_l int psi psi, non-zero (weight 1 excluded in every prescription)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": "[0][0] = 4/35"
+  },
+  "J1d no h-K cross block in P1, P1w; both flows Hamiltonian on the ball (Omega(a, delta b) symmetric)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J2a h-h block on TT: P1w = P4 = c_l (1/2) int N psi_dot psi_dot": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J2b h-h block on TT: P1 - P4 = (1/2) int h.h": {
+   "ok": true,
+   "kind": "PASS",
+   "info": "lambda set ['1/2']"
+  },
+  "J2c h-h block on TT: P3 - P4 = 1 * int h.h": {
+   "ok": true,
+   "kind": "PASS",
+   "info": "lambda set ['1']"
+  },
+  "J2d h-h block on TT: P2 = P3 + 2 delta^2 Area[h], and delta^2 Area is not a multiple of int h.h": {
+   "ok": true,
+   "kind": "PASS",
+   "info": "P2 lambda set has 10 values"
+  },
+  "PL4 plant caught: claim 'P1 (literal 3.28) = P4 (fixed volume) on TT' is false": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": ""
+  },
+  "J3a representatives: TT' is TT and differs from TT; RW = alpha(r) P; psi_dot identical on all three": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J3b P4 (fixed volume) is the same on TT, TT', RW and equals c_l E_2": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J3c P1 is gauge dependent (values differ between TT, TT', RW)": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": "166.523, 143.19, 506.966"
+  },
+  "J3c P2 is gauge dependent (values differ between TT, TT', RW)": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": "-877.104, -733.371, 941.558"
+  },
+  "J3c P3 is gauge dependent (values differ between TT, TT', RW)": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": "260.674, 214.007, 941.558"
+  },
+  "J4a Section 3.3 first-order conditions hold identically on odd data: delta Vol[h] = delta Area[h] = 0": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J4b Section 3.3 extremality: cross term between h and a normal displacement f vanishes (4 choices of f, 3 gauges)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J4c power control: the same cross term is non-zero for an even perturbation phi*delta with f = phi": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": "4/15"
+  },
+  "J4d the region-fixing freedom mu acts on the h-h block only; no mu gives c_l E_1 (K-K block is mu-independent, J1c)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J5a P5 (Lie derivative of the Weyl tensor): x.dB.x = N psi_dot, identically": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J5b P5: x.curl(dE).x = div(N grad psi) - 1*psi, identically (weight 1, the vacuum modular flow)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J5c flow induced by (3.28) on E: Ric_lin[2NK] = dE_P5 + K, identically (and delta h is the same with or without +2tH)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J5d B half with the rescaling term: - sym curl(delta^w K) = dB_P5, identically": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J5e B half of literal (3.28) on TT: - sym curl(delta_pure K) = dB_P5 + sym curl h, identically": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "PL2 plant caught: coefficient 1 instead of 2 on x cross B in P5 breaks the weight-1 identity": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": ""
+  },
+  "J5f generator of P5 in (psi, psi_dot): c_l E_1 on all Gram entries; and P1w = P4 = c_l E_2 on all Gram entries": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "C1a Killing control (boost, lapse x_1): flow of (3.28) on (E, B) = Lie derivative of the Weyl tensor, identically": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "PL1 plant caught: lapse x_1 + r^2/10 (not Killing) breaks the control identity": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": ""
+  },
+  "J0b conventions: R^lin_0i0j[H] = Ric_lin[h] and (1/2) eps_ikl R^lin_kl0j[H] = - sym curl K at t = 0": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J6a O(s kappa) Riemann of the dragged metric: R_0i0j = dE_P5 and (1/2) eps R_kl0j = dB_P5 at t = 0 (datum non-trivial)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J6b control: the dragged metric is Ricci flat at O(s kappa), all 16 components at t = 0": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J6c covariance: (Lie_zeta R^lin[H]) has the same E and B components as P5": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "PL3 plant caught: without the bilinear (Lie_zeta eta, H) term the E component is not dE_P5": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": "(4d component of a field that is not a solution; the Cauchy-data statement is J5c)"
+  },
+  "J7a Gaussian-profile tensors are TT on R^3 (degrees l and l+1)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J7b two-sided, zeta used on all of R^3: (1/2) Omega(a, delta^w a) = c_l E_2 over R^3 on all Gram entries; flow Hamiltonian": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J7c two-sided literal (3.28): pure-Lie charge - c_l E_2 = (1/2) int_R3 h.h on TT": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J7d two-sided stress-tensor integral: -int_R3 N R^(2)[h] - c_l (1/2) int N psi_dot^2 = 1 * int_R3 h.h on TT": {
+   "ok": true,
+   "kind": "PASS",
+   "info": "lambda set ['1']"
+  },
+  "J7e two-sided K-K block: int_R3 N K.K = c_l E_2 (psi part) != c_l E_1 (psi part)": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "J7f gauge-moved Gaussian h is not TT but has the same psi_dot": {
+   "ok": true,
+   "kind": "PASS",
+   "info": ""
+  },
+  "C2 contrast: for zeta the stress-tensor integral -int N R^(2)[h] over R^3 CHANGES under the gauge move": {
+   "ok": true,
+   "kind": "CAUGHT",
+   "info": "4.10156 -> 59.3724"
+  },
+  "C1b Killing control on R^3 (boost): canonical charge of (3.28) = stress-tensor integral on all Gram entries, non-zero, Hamiltonian": {
+   "ok": true,
+   "kind": "PASS",
+   "info": "max entry 9.07031"
+  },
+  "C1c Killing control: the stress-tensor integral is invariant under the same gauge move, and non-zero": {
+   "ok": true,
+   "kind": "PASS",
+   "info": "11.8125"
+  }
+ },
+ "info": {
+  "c_l E_2 (h part) of the datum": "3045092/42075 = 72.373",
+  "P1w (canonical with +2tH) on TT, TT', RW": "72.373, 72.373, 72.373  (invariant)",
+  "P(mu) - c_l E_2 on TT": "mu=0: 188.301, mu=1: 0  (linear in mu, slope 4 d2Vol = -188.301)",
+  "P(mu) - c_l E_2 on TT'": "mu=0: 141.634, mu=1: 0  (linear in mu, slope 4 d2Vol = -141.634)",
+  "P(mu) - c_l E_2 on RW": "mu=0: 869.185, mu=1: 0  (linear in mu, slope 4 d2Vol = -869.185)"
+ },
+ "gauge_table": {
+  "TT": {
+   "P1": "91084066/546975",
+   "P1w": "3045092/42075",
+   "P2": "-479754064/546975",
+   "P3": "47527312/182325",
+   "P4": "3045092/42075",
+   "int|h|^2": "20599148/109395",
+   "d2Area": "-5120/9",
+   "d2Vol": "-5149787/109395"
+  },
+  "TT'": {
+   "P1": "78321316/546975",
+   "P1w": "3045092/42075",
+   "P2": "-401135524/546975",
+   "P3": "39018812/182325",
+   "P4": "3045092/42075",
+   "int|h|^2": "15494048/109395",
+   "d2Area": "-21316/45",
+   "d2Vol": "-3873512/109395"
+  },
+  "RW": {
+   "P1": "1812402/3575",
+   "P1w": "3045092/42075",
+   "P2": "515008816/546975",
+   "P3": "515008816/546975",
+   "P4": "3045092/42075",
+   "int|h|^2": "95084524/109395",
+   "d2Area": "0",
+   "d2Vol": "-23771131/109395"
+  }
+ },
+ "run4d": {
+  "conv": true,
+  "E_nl": true,
+  "B_nl": true,
+  "ricci": true,
+  "E_lie": true,
+  "B_lie": true,
+  "plant_differs": true,
+  "plant_diff_is_K_plus": false,
+  "nontrivial": true
+ },
+ "fails": [],
+ "seconds": 5.201463937759399
+}

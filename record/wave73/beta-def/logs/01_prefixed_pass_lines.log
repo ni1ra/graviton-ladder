@@ -1,0 +1,23 @@
+BETA-DEF  01  pass lines fixed BEFORE the first run (2026-11-15)
+Script: scripts\beta_def.py   n = 6, h = diag(0.25,0.45,0.7,0.95,1.25,1.6), tau = pi, seed 73, float64.
+"def" side = abstract one-particle structure: K = C^{2n} with Gram G = M + (i/2)Omega (M = thermal covariance,
+no c, s, z used), H = real vectors, H' = null space (SVD) of k -> Im<k,.>_G, S^ = S (+) 1 on H (+) H',
+beta_def = (S^ + J S^ J)/2.  "formula" side = L (+) Lbar model, k(z) = (c z, s zbar).
+S_g = exp(tau(X0 + g D)) exp(-tau X0), D = Omega*Sym random, T = int_0^tau e^{sX0} D e^{-sX0} ds.
+
+ L1  G positive definite; dim H' = 2n; smallest singular value of [H | H'] basis > 1e-6; S_g symplectic to 1e-9.
+ L2  Kc^dagger Kc = G to 1e-10 relative (so (c z, s zbar) IS the one-particle structure, U = Kc unitary).
+ L3  H' transported by U equals {(s w, c wbar)}: residual <= 1e-9.
+ L4  EXACT formula: || U beta_def U^-1 - beta_formula[S_g - 1] ||_F / ||beta_formula||_F <= 1e-7 for g = 1e-1, 1e-2, 1e-3.
+ L5  HS^2 from def = four-term sum of hs_beta (u1_uniformity.py) to 1e-7 relative, same g.
+ L6  beta_1-hat by definition (antilinear part of T (+) 0) = EVEN-NONZERO vector form (cP, s Qbar) on 5 random z: rel <= 1e-8.
+ L7  first order: r(g) = ||beta_def(S_g) - g beta1_def||_F / (g ||beta1_def||_F); r(g)/g constant:
+     r(1e-1)/r(1e-2), r(1e-2)/r(1e-3), r(1e-3)/r(1e-4) each in [8, 12].
+ L8  same scaling for EVEN-NONZERO's form on one vector e: ||beta_def(S_g) kappa(e) - g (cP, sQbar)|| / g, decade ratios in [8, 12].
+ L9  step 1: P + Q = T z to 1e-12 rel; ||beta1_def e|| >= ||(2 sinh 2 pi h)^(-1/2) T z|| (5 random z).
+ L10 step 6: Re<eta, beta1_def e> = Im<z, T z> to 1e-9 rel (5 random z), eta = (i z/c, conj(i z)/s).
+ L11 HINGE-PROOF line 63: i*kappa(k(psi)) has H-part k(i coth psi) and H'-part k'(-i csch psi): rel <= 1e-9.
+ L12 PLANT A (c and s swapped in the formula): mismatch in L6 metric >= 1e-2  (must be CAUGHT).
+ L13 PLANT B (Q instead of Qbar in second slot): mismatch >= 1e-2 (must be CAUGHT).
+ L14 PLANT C (extension S (+) S' with S' = conj-copy of S instead of S (+) 1): HS^2 differs from L5 value by >= 1% (shows extension matters).
+ INFO (no pass line): HS norm of antilinear part of exp(tau X0) (+) 1 (no cocycle factor) at g = 0.

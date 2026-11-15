@@ -1,0 +1,13 @@
+(a) TT residual of the parametrisation: 0 ; eta_tilde - [eta'' + (2l+n-1)eta'/r]: 0 ; c_B oint|Psi|^2/N_v - 4/((l-1)(l+n-1)): 0
+(b) Euler-Lagrange of D (symbolic l, n): 0 ; D - dPhi/dr: 0 ; Phi(1): H0**2/2 ; Phi(0) exponent 2l+n-4 (> 0 for l >= 2, n >= 3)
+    plant dP.dP + 1: Euler-Lagrange = r**(2*l + n - 4)*(2*l*r**2*Derivative(eta(r), r) - 2*l*Derivative(eta(r), r) + n*r**2*Derivative(eta(r), r) - n*Derivative(eta(r), r) + r**3*Derivative(eta(r), (r, 2)) - r**2*Derivative(eta(r), r) - r*Derivative(eta(r), (r, 2)) + 3*Derivative(eta(r), r))/(4*(l + n - 1)**2) (caught)
+(c) n=3 l=2: Cartesian angular expansion of oint|grad T|^2 = formula: True
+(c) n=3 l=3: Cartesian angular expansion of oint|grad T|^2 = formula: True
+(c) n=3 l=4: Cartesian angular expansion of oint|grad T|^2 = formula: True
+(c) n=4 l=2: Cartesian angular expansion of oint|grad T|^2 = formula: True
+(c) n=4 l=3: Cartesian angular expansion of oint|grad T|^2 = formula: True
+(c) n=5 l=2: Cartesian angular expansion of oint|grad T|^2 = formula: True
+(c) n=5 l=3: Cartesian angular expansion of oint|grad T|^2 = formula: True
+(d) d=5 l=2: A_hh = c_B/2 int N Rdot^2 on a T_1 + b T_2 (Cartesian): True; A_hh = 2*pi**2*(486*a**2 + 1260*a*b + 875*b**2)/11907
+(d) d=6 l=2: A_hh = c_B/2 int N Rdot^2 on a T_1 + b T_2 (Cartesian): True; A_hh = pi**2*(43875*a**2 + 118800*a*b + 85184*b**2)/625625
+ALL OK [25 s]

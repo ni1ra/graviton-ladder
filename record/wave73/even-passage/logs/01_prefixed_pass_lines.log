@@ -1,0 +1,42 @@
+EVEN-PASSAGE  log 01  pass lines fixed BEFORE the first run of scripts/even_passage.py
+2026-11-15
+
+What was run before this log: scripts/scan_constants.py only (two versions; the second overwrote the first).
+It evaluates the closed-form side of the bound in the limit model (1-D integrals of the profile u) to pick
+(k, b, y0, eps). It builds no operator h_l, no W_l and no beta1hat. First version (comparison a ~ f, eps small)
+gave a useless constant ~7e-23 and was dropped; second version (Jensen + variational bound) gave c ~ 2.64e-3
+at k=4, b=4, y0=2, eps=1.5 (limit-model constants A=0.9385, G=0.7668, Q=16.647, s*=1.785).
+
+FAMILY (fixed now)
+  u(y) = (1 - ((y-2)/4)^2)^4 on -2 <= y <= 6, else 0;  y = rho - ln(2 lam), lam = sqrt(l(l+1)), l >= 16.
+  e_l = (q, pi) = (0, a_l),  a_l = exp(-eps h_l^2) h_l^2 u,  eps = 1.5,  tau = pi (t = 0.5).
+  Quantity: r_l = lam ||beta1hat^(l) e_l|| / ||e_l||_{H_l}, beta1hat^(l) built with W_l (not lam W_l).
+
+BOUND TO BE TESTED (all l >= l0 = 16), constants by ball arithmetic:
+  A_l = ||h_l u||^2, G_l = ||h_l^2 u||, Q_l = <u, W_l^-1 u>/lam,
+  J0_lo = A_inf exp(-eps G_hi^2/A_inf), J1_hi = min(G_hi^2, A_16/(e eps)), s* = sqrt(2 J0_lo/J1_hi),
+  M_lo = (8/15) J0_lo^2 s*/Q_16, Den_hi = sqrt(S' A_16), E_hi = sqrt(C A_16/2),
+  S' = sup p exp(-2 eps p^2) sinh(2 pi p), C = sup (p + 1/pi) exp(-2 eps p^2),
+  c_unif = M_lo/(2 Den_hi E_hi).
+
+PASS LINES
+ C1  all certified balls finite; s* < tau; c_unif > 0.
+ C2  2.2e-3 <= c_unif <= 2.7e-3 (the float scan gave 2.64e-3 at l = inf; l0 = 16 should cost < 15%).
+ Grid lines, each at l = 16, 64, 256, 1024, 4096 (float64, dy = 0.02, even-nonzero's discretisation):
+ P1  A_grid in [A_inf (1 - 2e-3), A_16 (1 + 2e-3)];  J0_grid >= J0_lo;  J1_grid <= J1_hi.
+ P2  at 33 equispaced s in [0, tau]:  lam <a_s, W_l a_s> >= max(J0_lo - s^2 J1_hi/2, 0)^2 / Q_16.
+ P3  lam m_l(tau) >= M_lo.
+ P4  Den_l <= Den_hi and ||e_l|| <= E_hi.
+ P5  r_l >= c_unif (the statement), and r_l >= lam m_l/(2 Den_l ||e_l||) (1 - 1e-9) (grid-level chain).
+ P6  |Im<z, T z> + m/2| <= 1e-6 m.
+ N1  no decay: r_4096 / r_16 >= 0.8.
+ N2  1/lam approach: d_l = lam |r_l/r_inf - 1| for l = 64, 256, 1024, 4096 all within a factor 1.5 of each other.
+ N3  grid stability at l = 1024 and in the limit model: dy 0.02 -> 0.01 moves r by < 1e-3 relative;
+     top wall 40 -> 80 (limit model) moves r by < 1e-6 relative.
+ N4  order of magnitude I expect: 5 <= r_l / c_unif <= 400 at every l (bound is loose, not vacuous).
+ PLANT A (factor lam dropped, i.e. the claim "liminf ||beta1hat e_l||/||e_l|| > 0"): must FAIL P5's first
+     half at l = 1024 and 4096, and must FAIL N1. If it passes either, the check is too weak.
+ PLANT B (lapse weight dropped in Q: Q_planted = A_16 instead of Q_16, i.e. W^-1 confused with h^2):
+     the planted M_lo must be violated (P3 fails) at every l. This one is a prediction, not a certainty:
+     I expect lam m_l ~ 0.05-0.15 and planted M_lo ~ 0.13.
+Exit code 0 only if every line holds and both plants are caught.

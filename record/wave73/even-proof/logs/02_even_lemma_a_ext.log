@@ -1,0 +1,15 @@
+   l       lam   |D_E|(H=.02)   |D_E|(H=.01)  lam|D_E|  lam|hW|  sqrt(lam)|D_E|  local slope
+   16    16.492   4.575606e-02   4.575595e-02    0.7546   0.7674      0.1858          nan   (15s)
+   32    32.496   2.566723e-02   2.566719e-02    0.8341   0.8446      0.1463      -0.8524   (17s)
+   64    64.498   1.381080e-02   1.381079e-02    0.8908   0.8989      0.1109      -0.9041   (15s)
+  128   128.499   7.232131e-03   7.232127e-03    0.9293   0.9353      0.0820      -0.9385   (16s)
+  256   256.500   3.722272e-03   3.722271e-03    0.9548   0.9590      0.0596      -0.9609   (16s)
+  512   512.500   1.895096e-03   1.895096e-03    0.9712   0.9742      0.0429      -0.9753   (18s)
+ 1024  1024.500   9.583071e-04   9.583070e-04    0.9818   0.9838      0.0307      -0.9844   (18s)
+PASS  E1 lam||D_E|| increasing and < sqrt(2); lam||hW|| increasing and < 1  lam||D_E||: 0.7546 .. 0.9818; lam||hW||: 0.7674 .. 0.9838
+PASS  E2 local slopes monotone towards -1, last in [-1.00, -0.95]  slopes -0.8524, -0.9041, -0.9385, -0.9609, -0.9753, -0.9844
+PASS  E3 grids agree to 1%  worst rel diff 2.29e-06
+PASS  E4 exact kernel against resolvent form, l = 16..128, H = 0.01, within 0.5%  worst rel diff 3.96e-04
+PLANT CAUGHT  P3 exponent 1/2 rejected: sqrt(lam)||D_E|| falls > 30% from l=64 to 1024  0.1109 -> 0.0307
+
+ALL LINES HELD

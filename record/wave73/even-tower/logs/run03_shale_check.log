@@ -1,0 +1,3 @@
+PASS S1 control g = 0: log A = 0  -2.73e-11
+FAIL S2 control (known answer): odd tower potential at l = 16 reproduces HINGE-E's stored odd-control number within 2 %  1.535009e-04 vs 1.691930e-04; l^2(1-A)=0.03930
+S2 failed: routine wrong, nothing claimed

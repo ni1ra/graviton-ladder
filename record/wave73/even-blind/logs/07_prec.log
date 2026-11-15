@@ -1,0 +1,5 @@
+plan prec: 3 jobs, 3 workers, pid 37908
+18:58:39 n=24 N=96 l=8 prec prec=1792 D=130 margin=409 t=0s  q2_ghost:0.01238203060 ghost+1:0.01178736090 ghost-1:0.01303694872 
+18:58:48 n=48 N=192 l=16 prec prec=2752 D=313 margin=515 t=9s  q2_ghost:0.01386626313 ghost+1:0.01351332342 ghost-1:0.01423765448 
+19:01:10 n=96 N=384 l=32 prec prec=4800 D=737 margin=708 t=152s  q2_ghost:0.01491716967 ghost+1:0.01472267288 ghost-1:0.01511682304 
+plan prec done

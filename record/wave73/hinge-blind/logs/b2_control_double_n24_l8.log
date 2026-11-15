@@ -1,0 +1,11 @@
+n=24 l=8 N=96  reference (arb, 1280 bits):  Q(+1)=0.0377426760  Q(-1)=0.0473729355  eps_max=300.3
+  arb, eps capped at   16:  Q(+1)=0.0426142854 (+1.29e-01 rel)  Q(-1)=0.0524106428 (+1.06e-01 rel)   modes capped: 21 of 24
+  arb, eps capped at   32:  Q(+1)=0.0384814967 (+1.96e-02 rel)  Q(-1)=0.0481219829 (+1.58e-02 rel)   modes capped: 19 of 24
+  arb, eps capped at   64:  Q(+1)=0.0378173406 (+1.98e-03 rel)  Q(-1)=0.0474479911 (+1.58e-03 rel)   modes capped: 14 of 24
+  arb, eps capped at  128:  Q(+1)=0.0377456098 (+7.77e-05 rel)  Q(-1)=0.0473758748 (+6.20e-05 rel)   modes capped: 7 of 24
+  arb, eps capped at  256:  Q(+1)=0.0377426844 (+2.21e-07 rel)  Q(-1)=0.0473729438 (+1.76e-07 rel)   modes capped: 1 of 24
+  arb, eps capped at  512:  Q(+1)=0.0377426760 (+0.00e+00 rel)  Q(-1)=0.0473729355 (+0.00e+00 rel)   modes capped: 0 of 24
+  float64 naive: 10 of 24 modes have nu^2 - 1/4 <= 0: modular Hamiltonian undefined, no number
+  float64 clip=1e-14 (10 modes had nu^2-1/4<=0):  Q(+1)=0.0384655791 (+1.92e-02 rel)  Q(-1)=0.0481057462 (+1.55e-02 rel)
+  float64 clip=1e-12 (10 modes had nu^2-1/4<=0):  Q(+1)=0.0388703251 (+2.99e-02 rel)  Q(-1)=0.0485195723 (+2.42e-02 rel)
+  float64 clip=1e-10 (10 modes had nu^2-1/4<=0):  Q(+1)=0.0396155280 (+4.96e-02 rel)  Q(-1)=0.0492858068 (+4.04e-02 rel)

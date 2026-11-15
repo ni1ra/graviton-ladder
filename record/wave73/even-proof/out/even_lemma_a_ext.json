@@ -1,0 +1,87 @@
+{
+ "rows": [
+  {
+   "l": 16,
+   "lam": 16.492422502470642,
+   "normD_coarse": 0.0457560560744839,
+   "normD": 0.04575595113497421,
+   "norm_hW": 0.04652766702012409,
+   "local_slope": NaN
+  },
+  {
+   "l": 32,
+   "lam": 32.49615361854384,
+   "normD_coarse": 0.025667226449175403,
+   "normD": 0.025667190623763998,
+   "norm_hW": 0.025989898758430916,
+   "local_slope": -0.8523896670949591
+  },
+  {
+   "l": 64,
+   "lam": 64.4980619863884,
+   "normD_coarse": 0.013810803999548125,
+   "normD": 0.01381079260572906,
+   "norm_hW": 0.013936400014977519,
+   "local_slope": -0.9040861160128351
+  },
+  {
+   "l": 128,
+   "lam": 128.49902723367208,
+   "normD_coarse": 0.007232130520861741,
+   "normD": 0.007232127057043278,
+   "norm_hW": 0.007278577215840116,
+   "local_slope": -0.9385320750567507
+  },
+  {
+   "l": 256,
+   "lam": 256.4995126701024,
+   "normD_coarse": 0.003722271999713486,
+   "normD": 0.0037222709726211244,
+   "norm_hW": 0.00373883904981924,
+   "local_slope": -0.9609288408040484
+  },
+  {
+   "l": 512,
+   "lam": 512.4997560975029,
+   "normD_coarse": 0.0018950964998606914,
+   "normD": 0.0018950961985236376,
+   "norm_hW": 0.0019008564339996975,
+   "local_slope": -0.9752820437994596
+  },
+  {
+   "l": 1024,
+   "lam": 1024.4998779892558,
+   "normD_coarse": 0.0009583071246460016,
+   "normD": 0.0009583070363491164,
+   "norm_hW": 0.0009602731722495683,
+   "local_slope": -0.9844036572862018
+  }
+ ],
+ "checks": [
+  {
+   "name": "E1 lam||D_E|| increasing and < sqrt(2); lam||hW|| increasing and < 1",
+   "ok": true,
+   "detail": "lam||D_E||: 0.7546 .. 0.9818; lam||hW||: 0.7674 .. 0.9838"
+  },
+  {
+   "name": "E2 local slopes monotone towards -1, last in [-1.00, -0.95]",
+   "ok": true,
+   "detail": "slopes -0.8524, -0.9041, -0.9385, -0.9609, -0.9753, -0.9844"
+  },
+  {
+   "name": "E3 grids agree to 1%",
+   "ok": true,
+   "detail": "worst rel diff 2.29e-06"
+  },
+  {
+   "name": "E4 exact kernel against resolvent form, l = 16..128, H = 0.01, within 0.5%",
+   "ok": true,
+   "detail": "worst rel diff 3.96e-04"
+  },
+  {
+   "name": "P3 exponent 1/2 rejected: sqrt(lam)||D_E|| falls > 30% from l=64 to 1024",
+   "ok": true,
+   "detail": "0.1109 -> 0.0307"
+  }
+ ]
+}

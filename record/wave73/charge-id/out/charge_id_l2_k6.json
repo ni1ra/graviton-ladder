@@ -1,0 +1,383 @@
+{
+ "l": 2,
+ "kmax": 6,
+ "checks": {
+  "D0 TT of basis tensor k=0": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=1": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=2": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=3": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=4": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=5": {
+   "pass": true,
+   "info": ""
+  },
+  "D0 TT of basis tensor k=6": {
+   "pass": true,
+   "info": ""
+  },
+  "D1 Green identity int N R_lin[q] = -2 dF[q] on random q": {
+   "pass": true,
+   "info": "9/70"
+  },
+  "T3 Omega_B(a, delta^w b) symmetric on TT data (delta^w Hamiltonian on the ball)": {
+   "pass": true,
+   "info": ""
+  },
+  "T1a A_can == c_l E_2 on all Gram entries (h-h, K-K, h-K)": {
+   "pass": true,
+   "info": "max|diff|=0"
+  },
+  "T1b A_geo == c_l E_2 on all Gram entries": {
+   "pass": true,
+   "info": "max|diff|=0"
+  },
+  "T1c Lemma-3 closed form (4) == A_can": {
+   "pass": true,
+   "info": "max|diff|=0"
+  },
+  "T1d no h-K cross term in A_can": {
+   "pass": true,
+   "info": ""
+  },
+  "C1 stationary control: A = oint|K|^2/((2l+1)(2l+3)) = c_l E_2, c_l E_1/A = (l+1)/(l+2)": {
+   "pass": true,
+   "info": "A/4pi=16/35, E1/E2=3/4"
+  },
+  "C2 record value E_1/E_2 = 204/265 on momentum profile 1 - 3r^2/5, l=2": {
+   "pass": true,
+   "info": "got 204/265"
+  },
+  "PL1 plant caught: lapse (1 - 11/10 r^2)/2 in delta^w": {
+   "pass": true,
+   "info": "max|diff|=1.604e+01"
+  },
+  "PL2 plant caught: weight 1 instead of 2": {
+   "pass": true,
+   "info": "max|diff|=1.143e-01"
+  },
+  "PL3b plant caught (added post-run): c_l -> c_l (l+3)/(l+2)": {
+   "pass": true,
+   "info": "max|diff|=2.657e+00"
+  },
+  "PL4 plant caught: pure Lie derivative (no +2tH) differs from c_l E_2": {
+   "pass": true,
+   "info": "max|diff|=3.586e+00"
+  },
+  "PL4b pure-Lie charge = A + (1/2) int_B |h|^2 exactly": {
+   "pass": true,
+   "info": ""
+  },
+  "T2a transferred flow: psi[delta K] = N psi_dot, identically": {
+   "pass": true,
+   "info": ""
+  },
+  "T2b transferred flow: psi_dot[delta h] = div(N grad psi) - 2 psi, identically": {
+   "pass": true,
+   "info": ""
+  },
+  "T2c plant caught: weight 1 in the flow identity fails": {
+   "pass": true,
+   "info": ""
+  },
+  "T2d delta^w a satisfies the linearised constraints (div dK = 0, tr dK = 0, R_lin[dh] = 0)": {
+   "pass": true,
+   "info": ""
+  },
+  "S1 random mixed-harmonic datum: A_can = A_geo = c_l E_2 exactly": {
+   "pass": true,
+   "info": "A/4pi=241.57"
+  },
+  "S2 float quadrature of A_can and c_l E_2 agree with exact value (rel <= 1e-9)": {
+   "pass": true,
+   "info": "rel=4.34e-15"
+  },
+  "G0 gauge-moved h is not TT (test is not vacuous)": {
+   "pass": true,
+   "info": ""
+  },
+  "G1 psi_dot invariant under odd gauge h -> h + 2 sym grad(a(r) v)": {
+   "pass": true,
+   "info": ""
+  },
+  "G2 A_geo invariant under random odd gauge move": {
+   "pass": true,
+   "info": "936.835"
+  },
+  "G4 Regge-Wheeler representative is g_RW(r) P (no K_l, h_AB = 0)": {
+   "pass": true,
+   "info": ""
+  },
+  "G5 A_geo in Regge-Wheeler gauge = A_geo in TT gauge": {
+   "pass": true,
+   "info": "465.352"
+  },
+  "G6 psi_dot in Regge-Wheeler gauge = TT gauge": {
+   "pass": true,
+   "info": ""
+  },
+  "T4a Gaussian-profile tensors are TT on R^3": {
+   "pass": true,
+   "info": ""
+  },
+  "T4b Omega_grav = kappa c_l Omega_scalar on R^3 with one constant kappa": {
+   "pass": true,
+   "info": "kappa values: ['1']"
+  }
+ },
+ "gram_can_4pi": [
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "28/45",
+   "56/55",
+   "84/65",
+   "112/75",
+   "28/17",
+   "168/95",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "56/55",
+   "1296/715",
+   "792/325",
+   "1248/425",
+   "1080/323",
+   "2448/665",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "84/65",
+   "792/325",
+   "1452/425",
+   "6864/1615",
+   "660/133",
+   "4488/805",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "112/75",
+   "1248/425",
+   "6864/1615",
+   "10816/1995",
+   "1040/161",
+   "21216/2875",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "28/17",
+   "1080/323",
+   "660/133",
+   "1040/161",
+   "180/23",
+   "136/15",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "168/95",
+   "2448/665",
+   "4488/805",
+   "21216/2875",
+   "136/15",
+   "4624/435",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "16/35",
+   "16/45",
+   "16/55",
+   "16/65",
+   "16/75",
+   "16/85",
+   "16/95"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "16/45",
+   "32/99",
+   "16/55",
+   "256/975",
+   "304/1275",
+   "352/1615",
+   "80/399"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "16/55",
+   "16/55",
+   "272/975",
+   "112/425",
+   "80/323",
+   "464/1995",
+   "176/805"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "16/65",
+   "256/975",
+   "112/425",
+   "416/1615",
+   "496/1995",
+   "192/805",
+   "656/2875"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "16/75",
+   "304/1275",
+   "80/323",
+   "496/1995",
+   "592/2415",
+   "688/2875",
+   "784/3375"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "16/85",
+   "352/1615",
+   "464/1995",
+   "192/805",
+   "688/2875",
+   "32/135",
+   "304/1305"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "16/95",
+   "80/399",
+   "176/805",
+   "656/2875",
+   "784/3375",
+   "304/1305",
+   "208/899"
+  ]
+ ],
+ "PL3_vacuous_at_l2": true,
+ "spot": {
+  "A_can": "354285581006787008/1466598584075625",
+  "A_geo": "354285581006787008/1466598584075625",
+  "cE2": "354285581006787008/1466598584075625"
+ },
+ "G3_closed_form_moves": {
+  "TT": "4456643093456/4757127375",
+  "moved": "96726490463536/242613496125"
+ },
+ "kappa": [
+  "1"
+ ],
+ "fails": [],
+ "seconds": 31.038755178451538
+}

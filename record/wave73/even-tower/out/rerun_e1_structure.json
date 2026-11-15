@@ -1,0 +1,127 @@
+{
+ "checks": [
+  {
+   "name": "T1 (M0 + 1/4) kills sinh^((n-1)/2) N^((n-2)/2) u_harmonic, n = 3,4,5,6,8, l = 2,3,7, both solutions",
+   "pass": true,
+   "info": "8.33e-39"
+  },
+  {
+   "name": "T1 weight exponent 1/2 and spectral shift 1/4 in every dimension",
+   "pass": true,
+   "info": "exponent 1/2, shift 1/4"
+  },
+  {
+   "name": "T2 N G_D N = N^(1/2) (M0 + 1/4)^-1 N^(1/2) pointwise (n = 3, l = 2,3,6)",
+   "pass": true,
+   "info": "5.31e-40; Wronskian error 3.31e-39"
+  },
+  {
+   "name": "T3 spec(W, sector l) = 1/((j+1)(2l+2j+3)), j = 0..4, symbolic in l (D-DEP's eigenvalues minus one)",
+   "pass": true,
+   "info": "j=0: 1/mu = 2*l + 3; j=1: 1/mu = 2*(2*l + 5); j=2: 1/mu = 3*(2*l + 7); j=3: 1/mu = 4*(2*l + 9); j=4: 1/mu = 5*(2*l + 11)"
+  },
+  {
+   "name": "T3 l = 2, j = 0,1,2: 1/7, 1/18, 1/33 (D-DEP: 8/7, 19/18, 34/33)",
+   "pass": true,
+   "info": ""
+  },
+  {
+   "name": "T4 discretised W: four largest eigenvalues equal 1/((j+1)(2l+2j+3)) at l = 2, 8, 64 (grid error < 0.2 %)",
+   "pass": true,
+   "info": "worst rel err 3.60e-04"
+  },
+  {
+   "name": "T5 sqrt(x) I_1/2(x_<) K_1/2(x_>) sqrt(x') = sinh(x_<) exp(-x_>)",
+   "pass": true,
+   "info": "4.93e-32"
+  },
+  {
+   "name": "T5 Wronskian in y of (K_1/2, I_1/2)(e^-y) is -1 (unit-normalised Green function)",
+   "pass": true,
+   "info": "-1.0"
+  },
+  {
+   "name": "T5 Coulomb limit: lambda * mu_j -> 1/(2(j+1)) (l = 512, within 1 %)",
+   "pass": true,
+   "info": "[0.49903, 0.24904, 0.16572, 0.12406]"
+  },
+  {
+   "name": "T5 lambda^2 |W|_HS^2 -> pi^2/24 = 0.41123 (W is Hilbert-Schmidt per sector, norm ~ 1/l; the potential N of the odd tower is not)",
+   "pass": true,
+   "info": "{8: 0.27487578097692145, 64: 0.37865029021024066, 512: 0.40570926842382543}"
+  }
+ ],
+ "plants": [
+  {
+   "name": "shift1: resolvent shift 1 in place of 1/4",
+   "caught": true,
+   "info": "top eigenvalue 0.08334 vs 1/7 = 0.14286"
+  },
+  {
+   "name": "fullN: N in place of N^(1/2)",
+   "caught": true,
+   "info": "top eigenvalue 0.03011 vs 1/7 = 0.14286"
+  }
+ ],
+ "numbers": {
+  "W_eigenvalues": {
+   "2": {
+    "grid": [
+     0.1428605914109379,
+     0.055560337634158664,
+     0.03030902266111033,
+     0.019237691668308465
+    ],
+    "exact": [
+     0.14285714285714285,
+     0.05555555555555555,
+     0.030303030303030304,
+     0.019230769230769232
+    ]
+   },
+   "8": {
+    "grid": [
+     0.05263254098117749,
+     0.02381106854949252,
+     0.014494942449159958,
+     0.010002792208905275
+    ],
+    "exact": [
+     0.05263157894736842,
+     0.023809523809523808,
+     0.014492753623188406,
+     0.01
+    ]
+   },
+   "64": {
+    "grid": [
+     0.007633713974852248,
+     0.0037596065887457878,
+     0.002469440995760724,
+     0.0018252217744692
+    ],
+    "exact": [
+     0.007633587786259542,
+     0.0037593984962406013,
+     0.0024691358024691358,
+     0.0018248175182481751
+    ]
+   }
+  },
+  "lambda_mu_l512": [
+   0.49903419108821484,
+   0.24904149356553834,
+   0.16571637249962462,
+   0.124058040607698
+  ],
+  "lambda2_HS2": {
+   "8": 0.27487578097692145,
+   "64": 0.37865029021024066,
+   "512": 0.40570926842382543
+  }
+ },
+ "n_checks": 10,
+ "n_pass": 10,
+ "n_plants": 2,
+ "n_caught": 2
+}

@@ -1,0 +1,2 @@
+Run 1 (02): numbers complete, N7 FAILED (plant B moved R by 1.3%, line asked >20%); crashed only when writing JSON (numpy bool).
+Run 2 (03): same script with the JSON cast fixed, no numerical change; exits 1 because N7 still fails as pre-fixed.

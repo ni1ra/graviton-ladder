@@ -1,0 +1,10 @@
+PASS gamma(lambda = 0) = 1
+PASS d gamma / d lambda at 0 = -3 x0  -3*z1/2 - 3*z2/2
+PASS generator of v_lambda = -zeta on the x0-x3 plane  (z1**2/4 + z2**2/4 - 1/2, z1**2/4 - z2**2/4)
+PASS v_lambda is a one-parameter group
+PASS gamma = (conformal factor of v_{-lambda})^{4 - Delta} with Delta = 1 (test function of a dimension-1 field)  [0.e-125]
+CAUGHT plant: Delta = 2 does not reproduce gamma  [-0.0541581469110539]
+PASS induced field generator = zeta.d phi + (1/4)(d.zeta) phi (dimension 1), up to the sign of lambda  (d.zeta) - dgamma = -z1/2 - z2/2, (d.zeta)/4 = -z1/2 - z2/2
+CAUGHT plant: dimension 2 generator
+CAUGHT plant: dimension 3 generator
+DONE hl_gamma: fails = []

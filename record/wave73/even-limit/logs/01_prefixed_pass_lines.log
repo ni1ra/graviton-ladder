@@ -1,0 +1,14 @@
+EVEN-LIMIT pass lines, fixed BEFORE the first run of scripts\even_limit.py (2026-11-15)
+
+Setting: lam = sqrt(l(l+1)), y = rho - ln(2 lam), x = e^-y, L^2(R, dy), W_l extended by zero below y = -ln(2 lam).
+Claimed limit kernel (w.r.t. dy dy'): W_inf(y,y') = sinh(x_<) e^(-x_>).
+Test functions: f1 = exp(-1/(1-y^2)) on |y|<1; f2 = exp(-1/(1-s^2)) cos(3y), s=(y-1)/1.5, on (-0.5, 2.5).
+err(l) = || lam W_l f - W_inf f ||_{L^2(dy)}.
+
+L1  kernel code vs literal formula t_<^(l+1)(t_>^-l - t_>^(l+1))/(2l+1) in mpmath (60 digits), 20 random points per l: rel. diff < 1e-10.
+L2  err(l) strictly decreasing over l = 16, 64, 256, 1024, both f.
+L3  rate 1/l: log-slope of err between l = 256 and 1024 lies in [-1.05, -0.95], both f.
+L4  leading term: with F = -(1/2)(X W_inf + W_inf X) f, X = mult. by e^-y:  | lam*err / ||F|| - 1 | < 3% at l = 1024, and || lam (lam W_l f - W_inf f) - F || / ||F|| < 3% at l = 1024, both f.
+L5  quadrature: refining (8 panels x 40 nodes -> 12 x 48 inner; outer step 0.25 x 40 -> 0.125 x 48) changes err by < 1e-8 relative, every l, both f.
+L6  domination used in the proof: 0 <= lam W_l(y,y') <= min(2 x_<, (1/2) e^-|x-x'|) at 20000 random points per l (x, x' in (0, 2 lam)).
+L7  PLANT (wrong shift y = rho - ln(lam)): must be CAUGHT, i.e. err_plant(1024) > 0.5 * err_plant(16) and err_plant(1024) > 100 * err(1024), both f.

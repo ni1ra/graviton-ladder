@@ -37,6 +37,19 @@ Read this before quoting the result.
 - **Not peer reviewed.** Every check so far was made inside this programme. No outside referee has read the proofs.
 - **Corrected once already.** Version 1 of the paper was public for about an hour before a blind read came back. It confirmed every formula and found four statements that were wrong or too broad, including that part of the area result is in print. Version 2 fixed them; version 3 only shortens the text. The read is in [`record/wave72/blindread/`](record/wave72/blindread/REPORT.md).
 
+## Since version 3: newer work, not yet in the paper
+
+The folders under [`record/wave73/`](record/wave73/) hold work done after version 3. A version 4 of the paper is in preparation. Until it is here, the paper and the summary above do not reflect this work; where they differ, the newer record is the more careful statement. None of it is run by `./run_all.sh` yet, and each report lists what its lead did and did not re-check.
+
+What the newer record supports, with its stated gaps:
+
+- **The contrast is metric data against extrinsic-curvature data, not electric against magnetic.** On every graviton sector of the flat ball, of either parity, the gauge-invariant fixed-volume area-side charge equals the vacuum's modular generator on metric data and exceeds it on extrinsic-curvature data by a positive form (local for odd parity, non-local for even). The ladder above is that statement restricted to stationary magnetic data. Exact checks are at l = 2 to 6. See `even-tower`, `charge-id`, `subspace`, `jss-id`.
+- **Odd parity.** Granting the reduction of the odd sectors to scalar sectors, the flow of that charge is not the modular flow of any normal state or weight in the vacuum sector: the Shale sum over sectors diverges logarithmically, with per-sector constant 7ζ(3)/(16π²) ≈ 0.0533. See `hinge-proof`. The constant was reproduced by a lattice run that was meant to be blind and was weakened in one way its report states (`hinge-blind`).
+- **Even parity.** The per-sector constant is about 0.0136. A pre-registered lattice measurement was inconclusive under its own gate; a secondary analysis, fixed mid-run after about three quarters of the data, gives 0.01359 with a spread of 0.3% (`even-blind`). The even divergence is **not proved**. Established so far: the operator bound, the large-l limit of the operator, a non-zero first-order term, a lower bound on it uniform in l, and a first-principles definition of the antilinear part (`even-proof`, `even-limit`, `even-nonzero`, `even-passage`, `beta-def`). The second-order remainder is still open.
+- **Not claimed.** That an assumption of Jensen, Sorce and Speranza fails for gravitons, or that no equilibrium state exists for a ball. That the charge here is the one they define: `jss-id` examines the relation and leaves a gap. That any theorem of Satishchandran and Sorce is wrong: `ss-second` checks one statement of their graviton appendix in D = 4, 5 and 6 and withdraws two side statements made in `ss-tension`.
+
+These reports cite sibling folders of the working record that are not published here (`hinge`, `hinge-e`, `gen-law` and some earlier waves). The scripts were run on Windows with Python 3.14; a few need `python-flint` in addition to `requirements.txt`, and say so in their report.
+
 ## Reproduce
 
 ```bash
@@ -61,6 +74,7 @@ All scripts use exact rational arithmetic (sympy) except four numerical checks a
 | [`record/wave71/blindfinal/`](record/wave71/blindfinal/) | An adversarial read of the proofs by a checker instructed to break them: its brief and its verdict ("no step is broken", nine text fixes, and remarks the authors had missed). |
 | [`record/wave72/decider/`](record/wave72/decider/) | The electric sector from the exact Weyl solution and the Killing-limit test, each with its pre-registration and a report that lists what went wrong as well as what passed. |
 | [`record/wave72/blindread/`](record/wave72/blindread/) | A blind read of the short paper by a checker that saw only the paper: its findings, the scripts it wrote from the paper's text (`work/`), and how each finding was handled. |
+| [`record/wave73/`](record/wave73/) | Work since version 3, one folder per question, each with a report that opens with the lead's check and grade: the area-side charge on every sector (`even-tower`, `charge-id`, `subspace`, `jss-id`), the odd-parity divergence and its lattice reproduction (`hinge-proof`, `hinge-blind`), the even-parity measurement and proof steps (`even-blind`, `even-proof`, `even-limit`, `even-nonzero`, `even-passage`, `beta-def`), and a check against a published null-cone construction (`ss-tension`, `ss-second`). Not yet wired into `run_all.sh`. |
 | [`record/wave55/gravlattice2/`](record/wave55/gravlattice2/) | A three-dimensional lattice computation of the graviton entropy with no multipole reduction. Stored outputs only: a rerun needs hours and several GB of memory. Its own verdict was INCONCLUSIVE for the question it was registered to answer; the paper quotes its rows for a different comparison and says so. |
 | [`docs/MANIFESTO.md`](docs/MANIFESTO.md) | The standing rules of this repository. |
 
