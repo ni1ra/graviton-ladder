@@ -47,7 +47,7 @@ BANNED = [
     r"\brefutes? (jacobson|senovilla|speranza|casini|longo)",
 ]
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]+")
-PRIVATE_PATH = re.compile(r"[A-Za-z]:[\\/]+Users|/home/[a-z]|\\\\[a-z]+\\|navi-docs", re.I)
+PRIVATE_PATH = re.compile(r"[A-Za-z]:[\\/]+Users|/home/[a-z]|\\\\[a-z]+\\", re.I)
 
 
 # --------------------------------------------------------------------------

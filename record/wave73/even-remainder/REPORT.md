@@ -93,7 +93,7 @@ Run 2, 82 s. Columns 3 to 7 are on the fine grid (dy = 0.02); λ²‖R₂‖_H i
 
 ## 4. Re-run
 
-From `C:\Users\nira\work\navi-docs\lain\unified\wave73\even-remainder\scripts`:
+From `record\wave73\even-remainder\scripts`:
 
 `..\..\even-nonzero\venv\Scripts\python.exe -B even_remainder.py ..\out\even_remainder.json` (82 s, exits 1 because of P5)
 
