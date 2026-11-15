@@ -1,0 +1,27 @@
+MODGEN pass lines, fixed 2026-11-15 before the first run of scripts\modgen_check.py
+Setting: sector l in {2,3}, lambda^2 = l(l+1), r = tanh(rho/2), N = (1-r^2)/2, q = r f, pi = N r p, integrals in units of N_Y.
+Data (regularity stated): field data f_i = r^(l+2i) (1-r^2)^2, i = 0,1,2 (zero extension is C^1, so in H^2(R^3), inside H^(1/2); needed so that
+<f, omega f> = <f, omega^-1 (-Laplacian f)> with no surface term); momentum data p_j = r^(l+2j), j = 0,1,2 (cut off at the edge; in H^(-1/2)).
+Flat side: <a, omega^-1 b> = int int a b r r' Q_l(chi)/pi dr dr' (kernel 1/(2 pi^2 |x-y|^2) reduced to the sector), exact rational combination of the
+one-dimensional integrals M(n) = int_0^1 t^n Q_l((1+t^2)/(2t)) dt. Thermal side: spectral representation of h by u_k = A_l...A_1 sin(k rho)/prod sqrt(k^2+j^2),
+A_j = -d/drho + j coth(rho).
+All "rel err" are max entrywise deviation over the 3x3 Gram divided by the largest entry of the flat Gram.
+
+L0  generator identity (exact, sympy, generic f): N r [div(N grad f) - f]_sector = q_rhorho - lambda^2 q / sinh^2 rho. PASS iff difference simplifies to 0.
+L1  spectral guard: Parseval int ghat_a ghat_b dk = int g_a g_b drho, and int k^2 qhat_a qhat_b dk = int (q_a' q_b' + lambda^2 q_a q_b/sinh^2) drho,
+    all 6 data, both l. PASS iff rel err <= 1e-12.
+L2  flat guard: (a) Heine form of Q_l equals the logarithmic closed form at 3 points, <= 1e-20; (b) M(n) by quadrature equals its 3F2(1) or series form at
+    one n per l, <= 1e-10; (c) Bessel-transform (momentum space) values (2/pi) int k^3 ftilde^2 dk and (2/pi) int k ftilde^2 dk for f = r^l (1-r^2)^2 at
+    l = 2 equal the position-space values, <= 1e-4 (k cut at 80, tail not added).
+L3  momentum slot l=2: <p_i, omega^-1 p_j>_flat = <pi_i, h^-1 coth(pi h) pi_j>. PASS iff rel err <= 1e-10.
+L4  momentum slot l=3: same, <= 1e-10.
+L5  field slot l=2: <f_i, omega f_j>_flat = <q_i, h coth(pi h) q_j>. PASS iff rel err <= 1e-10.
+L6  field slot l=3: same, <= 1e-10.
+L7  cross/flow test l=2 (the only way a q-pi term can enter: d/ds of the covariance along X_0): three numbers per (i,j) must agree,
+    C1 = <N p_j, omega f_i>_flat, C2 = <L f_i, omega^-1 p_j>_flat with L f = -div(N grad f) + f, C3 = <pi_j, h coth(pi h) q_i>. PASS iff both rel errs <= 1e-10.
+L8  cross/flow test l=3: same, <= 1e-10.
+L9  convergence: thermal Grams at the coarse grid (20 nodes per panel, both variables) agree with the fine grid (30 nodes) to <= 1e-12 (rel).
+P1  plant, wrong temperature coth(pi h/2): must give rel err > 1e-3 in BOTH slots at BOTH l. CAUGHT iff all four exceed 1e-3.
+P2  plant, weight-1 term dropped (L f = -div(N grad f)): C2 must differ from C1 by rel > 1e-3 at both l.
+Exit code 1 if any line fails or a plant is missed. Failed lines are reported, not repaired silently.
+The plain cross term (q,0)-(0,pi) is zero identically on both sides (omega and h are real operators); no number is attached to it; L7, L8 test its flow derivative.
