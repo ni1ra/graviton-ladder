@@ -1,0 +1,19 @@
+
+==================== l = 6 ====================
+   l=6 even metric data built at 55 s
+   l=6 even extrinsic data built at 114 s
+PASS l=6 even: each TT tensor with x.T.x = s^k phi is unique (8 data)
+PASS l=6 even: all 8 data transverse and traceless
+PASS l=6 even: all 8 data solve the linearised vacuum equations exactly
+PASS l=6 even: the other parity's chain field vanishes on all 8 data
+PASS l=6 even: the cone Weyl component starts at v^(l-2) or higher on all 8 data | lowest powers [4, 4, 4, 4, 4, 4, 4, 4]
+PASS l=6 even: the eight data span the chain basis (psi, psi_dot; j = 0..3)
+   l=6 even Gram matrices at 444 s
+FAIL l=6 even: Q_3 Gram equals c_l E_1 on the chain basis (block diagonal)
+PASS l=6 even: Q_3 of the first datum equals nc.entropy_slice
+FAIL l=6 even: identity Delta = 2 oint int v^3 |sigma_2 - sigma_3|^2 holds on the whole 8x8 Gram
+PASS l=6 even: Delta on psi block (metric) is positive definite by exact leading minors | positive definite
+      minor signs ['+', '+', '+', '+']; eigenvalues ['2.60619e-10', '7.83894e-08', '1.26077e-05', '0.000707535']
+      Delta diag ['1/5880', '313/1799280', '10099/55301400', '1684649/8702694000']; row 0 ['1/5880', '1/5880', '1/5880', '1/5880']
+      spectrum of Q_2 relative to S on this block: ['1.02812', '1.07143', '1.19405', '1.88543']
+PASS l=6 even: Delta on psi_dot block (extrinsic) is positive definite by exact leading minors | positive definite

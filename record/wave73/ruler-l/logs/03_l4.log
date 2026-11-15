@@ -1,0 +1,58 @@
+
+==================== l = 4 ====================
+   l=4 even metric data built at 29 s
+   l=4 even extrinsic data built at 57 s
+PASS l=4 even: each TT tensor with x.T.x = s^k phi is unique (8 data)
+PASS l=4 even: all 8 data transverse and traceless
+PASS l=4 even: all 8 data solve the linearised vacuum equations exactly
+PASS l=4 even: the other parity's chain field vanishes on all 8 data
+PASS l=4 even: the cone Weyl component starts at v^(l-2) or higher on all 8 data | lowest powers [2, 2, 2, 2, 2, 2, 2, 2]
+PASS l=4 even: the eight data span the chain basis (psi, psi_dot; j = 0..3)
+   l=4 even Gram matrices at 174 s
+FAIL l=4 even: Q_3 Gram equals c_l E_1 on the chain basis (block diagonal)
+PASS l=4 even: Q_3 of the first datum equals nc.entropy_slice
+FAIL l=4 even: identity Delta = 2 oint int v^3 |sigma_2 - sigma_3|^2 holds on the whole 8x8 Gram
+PASS l=4 even: Delta on psi block (metric) is positive definite by exact leading minors | positive definite
+      minor signs ['+', '+', '+', '+']; eigenvalues ['5.19395e-09', '1.08459e-06', '0.000116814', '0.00471231']
+      Delta diag ['1/900', '283/245700', '10711/8675100', '-1289945088*2**(27/55)*3**(1/55)*5**(3/5)*7**(49/55)/16955576821225 + 760511/257414850']; row 0 ['1/900', '1/900', '1/900', '1/900']
+      spectrum of Q_2 relative to S on this block: ['1.036', '1.09447', '1.26687', '2.25669']
+PASS l=4 even: Delta on psi_dot block (extrinsic) is positive definite by exact leading minors | positive definite
+      minor signs ['+', '+', '+', '+']; eigenvalues ['1.1573e-11', '3.16759e-09', '4.62154e-07', '4.55794e-05']
+      Delta diag ['1/59400', '1/81900', '77657/8241345000', '35107/4633467300']; row 0 ['1/59400', '1/70200', '1/81000', '1/91800']
+      spectrum of Q_2 relative to S on this block: ['1.02819', '1.06643', '1.19214', '2.33103']
+PASS l=4 even: Delta on full block (8x8) is positive definite by exact leading minors | positive definite
+      minor signs ['+', '+', '+', '+', '+', '+', '+', '+']; eigenvalues ['6.74721e-12', '6.86275e-10', '6.10839e-09', '8.80363e-08', '1.17339e-06', '6.97579e-06', '0.000123058', '0.00474496']
+PASS l=4 even: cross block of Delta is non-zero | row 0 ['-1/9900', '-1/11700', '-1/13500', '-1/15300']
+   [l=4 even] Q_2/S on psi = phi (metric): 36/25; on psi_dot = phi (extrinsic): 43/30
+   l=4 odd metric data built at 276 s
+   l=4 odd extrinsic data built at 286 s
+PASS l=4 odd: all 8 data transverse and traceless
+PASS l=4 odd: all 8 data solve the linearised vacuum equations exactly
+PASS l=4 odd: the other parity's chain field vanishes on all 8 data
+PASS l=4 odd: the cone Weyl component starts at v^(l-2) or higher on all 8 data | lowest powers [2, 2, 2, 2, 2, 2, 2, 2]
+PASS l=4 odd: the eight data span the chain basis (psi, psi_dot; j = 0..3)
+   l=4 odd Gram matrices at 371 s
+FAIL l=4 odd: Q_3 Gram equals c_l E_1 on the chain basis (block diagonal)
+PASS l=4 odd: Q_3 of the first datum equals nc.entropy_slice
+FAIL l=4 odd: identity Delta = 2 oint int v^3 |sigma_2 - sigma_3|^2 holds on the whole 8x8 Gram
+PASS l=4 odd: Delta on psi block (extrinsic) is positive definite by exact leading minors | positive definite
+      minor signs ['+', '+', '+', '+']; eigenvalues ['5.19395e-09', '1.08459e-06', '0.000116814', '0.00471231']
+      Delta diag ['1/900', '283/245700', '10711/8675100', '-1289945088*2**(27/55)*3**(1/55)*5**(3/5)*7**(49/55)/16955576821225 + 760511/257414850']; row 0 ['1/900', '1/900', '1/900', '1/900']
+      spectrum of Q_2 relative to S on this block: ['1.036', '1.09447', '1.26687', '2.25669']
+PASS l=4 odd: Delta on psi_dot block (metric) is positive definite by exact leading minors | positive definite
+      minor signs ['+', '+', '+', '+']; eigenvalues ['1.1573e-11', '3.16759e-09', '4.62154e-07', '4.55794e-05']
+      Delta diag ['1/59400', '1/81900', '77657/8241345000', '35107/4633467300']; row 0 ['1/59400', '1/70200', '1/81000', '1/91800']
+      spectrum of Q_2 relative to S on this block: ['1.02819', '1.06643', '1.19214', '2.33103']
+PASS l=4 odd: Delta on full block (8x8) is positive definite by exact leading minors | positive definite
+      minor signs ['+', '+', '+', '+', '+', '+', '+', '+']; eigenvalues ['6.74721e-12', '6.86275e-10', '6.10839e-09', '8.80363e-08', '1.17339e-06', '6.97579e-06', '0.000123058', '0.00474496']
+PASS l=4 odd: cross block of Delta is non-zero | row 0 ['-1/9900', '-1/11700', '-1/13500', '-1/15300']
+   [l=4 odd] Q_2/S on psi = phi (extrinsic): 36/25; on psi_dot = phi (metric): 43/30
+PASS l=4: B of h = 2tK_0 is a constant multiple of Hess phi | 5/2
+PASS l=4: static electric tide gives Q_2/S = ((l+2)/(l+1))^2 = 36/25 | 36/25
+PASS l=4: stationary magnetic tide h = 2tK gives Q_2/S = ((l+2)/(l+1))^2 = 36/25 | 36/25
+PASS l=4: even Gram [psi0, psi0] reproduces the static electric tide (pure metric datum)
+PASS l=4: odd Gram [psi0, psi0] reproduces the stationary magnetic tide (pure extrinsic-curvature datum)
+PASS l=4: duality, even and odd chain-basis Gram matrices identical (Q_2 and Q_3)
+   l=4 done in 442 s
+
+plant=None l=[4] checks=31 fail=4 time=442 s

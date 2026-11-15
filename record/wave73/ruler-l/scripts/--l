@@ -1,0 +1,135 @@
+{
+ "all_pass": true,
+ "checks": [
+  {
+   "detail": "0",
+   "name": "part 2: Q_2 - Q_3 = int h^2/v on all pairs of monomials (symbolic exponents)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "part 2: the same identity, exact rationals, exponents 0..40",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "part 2: monomials m = 0..8 give ((m+4)/(m+3))^2 > 1 exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "part 2: degree <= 8, Q_2 - Q_3 positive definite (exact minors), so every ratio exceeds 1",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "part 2: degree <= 8, exact bracket of the largest ratio: 2862321/500000 < max < 5724643/1000000",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "part 2: degree <= 8, exact bracket of the smallest ratio: 505990433/500000000 < min < 1011980867/1000000000",
+   "pass": true
+  },
+  {
+   "detail": "search range [1.056142, 3.216708]",
+   "name": "part 2: every random ratio lies strictly above 1 and inside the exact degree-8 range",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "part 2: the family respects the proved lower bound 1 + ln(N)/270 and grows with N",
+   "pass": true
+  }
+ ],
+ "part2": {
+  "family": {
+   "1": 2.2708333333333335,
+   "2": 2.646333333333333,
+   "4": 3.215880574452003,
+   "8": 4.001477600171005,
+   "16": 4.992145010278713,
+   "32": 6.150708792438711,
+   "64": 7.43087806557,
+   "128": 8.791431681043345
+  },
+  "monomials": {
+   "0": "16/9",
+   "1": "25/16",
+   "2": "36/25",
+   "3": "49/36",
+   "4": "64/49",
+   "5": "81/64",
+   "6": "100/81",
+   "7": "121/100",
+   "8": "144/121"
+  },
+  "pencil": {
+   "0": [
+    1.7777777777777777,
+    1.7777777777777777
+   ],
+   "1": [
+    1.1863715864918947,
+    2.3414061912858832
+   ],
+   "10": [
+    1.00821344228998,
+    6.542188982553892
+   ],
+   "11": [
+    1.0069632731248794,
+    6.931220631046326
+   ],
+   "12": [
+    1.0059775787634688,
+    7.308242936111929
+   ],
+   "2": [
+    1.0886275420361033,
+    2.8824926394051604
+   ],
+   "3": [
+    1.0527946520812368,
+    3.402949723133835
+   ],
+   "4": [
+    1.035295154511061,
+    3.9034004389835704
+   ],
+   "5": [
+    1.0253376161701244,
+    4.38471057416936
+   ],
+   "6": [
+    1.019099063681164,
+    4.847937907843126
+   ],
+   "7": [
+    1.0149207274204648,
+    5.294209282055747
+   ],
+   "8": [
+    1.0119808666651526,
+    5.724642127514946
+   ],
+   "9": [
+    1.009832202669944,
+    6.140303066440035
+   ]
+  },
+  "random": {
+   "Bernstein basis": [
+    1.0561419357049662,
+    3.2167078339195
+   ],
+   "monomial basis": [
+    1.085115698591005,
+    2.704039584545036
+   ]
+  }
+ },
+ "per_l": {},
+ "plant": null,
+ "script": "ruler_l.py"
+}

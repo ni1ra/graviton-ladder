@@ -1,0 +1,102 @@
+
+==================== l = 2 ====================
+   l=2 even metric data built at 15 s
+   l=2 even extrinsic data built at 29 s
+PASS l=2 even: each TT tensor with x.T.x = s^k phi is unique (8 data)
+PASS l=2 even: all 8 data transverse and traceless
+PASS l=2 even: all 8 data solve the linearised vacuum equations exactly
+PASS l=2 even: the other parity's chain field vanishes on all 8 data
+PASS l=2 even: the cone Weyl component starts at v^(l-2) or higher on all 8 data | lowest powers [0, 0, 0, 0, 0, 0, 0, 0]
+PASS l=2 even: the eight data span the chain basis (psi, psi_dot; j = 0..3)
+   l=2 even Gram matrices at 66 s
+FAIL l=2 even: Q_3 Gram equals c_l E_1 on the chain basis (block diagonal)
+FAIL l=2 even: Q_3 of the first datum equals nc.entropy_slice
+FAIL l=2 even: identity Delta = 2 oint int v^3 |sigma_2 - sigma_3|^2 holds on the whole 8x8 Gram
+PASS l=2 even: Delta on psi block (metric) is negative definite by exact leading minors | negative definite
+      minor signs ['-', '+', '-', '+']; eigenvalues ['-0.122023', '-0.0042949', '-6.66742e-05', '-4.90255e-07']
+      Delta diag ['-1/36', '-4/135', '-657/20020', '-7552/208845']; row 0 ['-1/36', '-1/36', '-1/36', '-1/36']
+      spectrum of Q_2 relative to S on this block: ['0.318935', '0.700281', '0.877696', '0.952407']
+PASS l=2 even: Delta on psi_dot block (extrinsic) is negative definite by exact leading minors | negative definite
+      minor signs ['-', '+', '-', '+']; eigenvalues ['-0.00231577', '-3.22865e-05', '-3.20575e-07', '-1.63742e-09']
+      Delta diag ['-1/1008', '-131/213840', '-307/720720', '-504337/1587222000']; row 0 ['-1/1008', '-1/1296', '-1/1584', '-1/1872']
+      spectrum of Q_2 relative to S on this block: ['0.310818', '0.775189', '0.913238', '0.963163']
+PASS l=2 even: Delta on full block (8x8) is negative definite by exact leading minors | negative definite
+      minor signs ['-', '+', '-', '+', '-', '+', '-', '+']; eigenvalues ['-0.123831', '-0.00451249', '-0.000312647', '-7.15446e-05', '-5.82534e-06', '-5.81244e-07', '-6.84852e-08', '-9.6425e-10']
+PASS l=2 even: cross block of Delta is non-zero | row 0 ['1/252', '1/324', '1/396', '1/468']
+   [l=2 even] Q_2/S on psi = phi (metric): 9/16; on psi_dot = phi (extrinsic): 4/7
+   l=2 odd metric data built at 75 s
+   l=2 odd extrinsic data built at 80 s
+PASS l=2 odd: all 8 data transverse and traceless
+PASS l=2 odd: all 8 data solve the linearised vacuum equations exactly
+PASS l=2 odd: the other parity's chain field vanishes on all 8 data
+PASS l=2 odd: the cone Weyl component starts at v^(l-2) or higher on all 8 data | lowest powers [0, 0, 0, 0, 0, 0, 0, 0]
+PASS l=2 odd: the eight data span the chain basis (psi, psi_dot; j = 0..3)
+   l=2 odd Gram matrices at 102 s
+FAIL l=2 odd: Q_3 Gram equals c_l E_1 on the chain basis (block diagonal)
+FAIL l=2 odd: Q_3 of the first datum equals nc.entropy_slice
+FAIL l=2 odd: identity Delta = 2 oint int v^3 |sigma_2 - sigma_3|^2 holds on the whole 8x8 Gram
+PASS l=2 odd: Delta on psi block (extrinsic) is negative definite by exact leading minors | negative definite
+      minor signs ['-', '+', '-', '+']; eigenvalues ['-0.122023', '-0.0042949', '-6.66742e-05', '-4.90255e-07']
+      Delta diag ['-1/36', '-4/135', '-657/20020', '-7552/208845']; row 0 ['-1/36', '-1/36', '-1/36', '-1/36']
+      spectrum of Q_2 relative to S on this block: ['0.318935', '0.700281', '0.877696', '0.952407']
+PASS l=2 odd: Delta on psi_dot block (metric) is negative definite by exact leading minors | negative definite
+      minor signs ['-', '+', '-', '+']; eigenvalues ['-0.00231577', '-3.22865e-05', '-3.20575e-07', '-1.63742e-09']
+      Delta diag ['-1/1008', '-131/213840', '-307/720720', '-504337/1587222000']; row 0 ['-1/1008', '-1/1296', '-1/1584', '-1/1872']
+      spectrum of Q_2 relative to S on this block: ['0.310818', '0.775189', '0.913238', '0.963163']
+PASS l=2 odd: Delta on full block (8x8) is negative definite by exact leading minors | negative definite
+      minor signs ['-', '+', '-', '+', '-', '+', '-', '+']; eigenvalues ['-0.123831', '-0.00451249', '-0.000312647', '-7.15446e-05', '-5.82534e-06', '-5.81244e-07', '-6.84852e-08', '-9.6425e-10']
+PASS l=2 odd: cross block of Delta is non-zero | row 0 ['1/252', '1/324', '1/396', '1/468']
+   [l=2 odd] Q_2/S on psi = phi (extrinsic): 9/16; on psi_dot = phi (metric): 4/7
+PASS l=2: B of h = 2tK_0 is a constant multiple of Hess phi | 3/2
+PASS l=2: PLANT swap caught, static electric tide no longer gives 16/9 | 9/16
+PASS l=2: PLANT swap caught, stationary magnetic tide h = 2tK no longer gives 16/9 | 9/16
+PASS l=2: even Gram [psi0, psi0] reproduces the static electric tide (pure metric datum)
+PASS l=2: odd Gram [psi0, psi0] reproduces the stationary magnetic tide (pure extrinsic-curvature datum)
+PASS l=2: duality, even and odd chain-basis Gram matrices identical (Q_2 and Q_3)
+   l=2 done in 102 s
+
+==================== part 2: one generator ====================
+FAIL part 2: Q_2 - Q_3 = int h^2/v on all pairs of monomials (symbolic exponents) | (-m - n + (m + 3)*(n + 3) - (m + 4)*(n + 4) - 7)/((m + 3)*(m + 4)*(n + 3)*(n + 4)*(m + n + 6)*(m + n + 7))
+FAIL part 2: the same identity, exact rationals, exponents 0..40
+   monomials C = v^m: exact Q_2/Q_3 beside the profile law ((m+4)/(m+3))^2 and the bounds 1 < ratio < infinity
+      m=0: 9/16 = 0.562500
+      m=1: 16/25 = 0.640000
+      m=2: 25/36 = 0.694444
+      m=3: 36/49 = 0.734694
+      m=4: 49/64 = 0.765625
+      m=5: 64/81 = 0.790123
+      m=6: 81/100 = 0.810000
+      m=7: 100/121 = 0.826446
+      m=8: 121/144 = 0.840278
+FAIL part 2: monomials m = 0..8 give ((m+4)/(m+3))^2 > 1 exactly
+   polynomial C of degree <= d: exact pencil extremes of Q_2/Q_3 (floats from exact matrices, 60 digits)
+      d= 0: min 0.562500000   max 0.562500
+      d= 1: min 0.427093771   max 0.842906
+      d= 2: min 0.346921961   max 0.918588
+      d= 3: min 0.293862702   max 0.949853
+      d= 4: min 0.256186885   max 0.965908
+      d= 5: min 0.228065224   max 0.975289
+      d= 6: min 0.206273269   max 0.981259
+      d= 7: min 0.188885619   max 0.985299
+      d= 8: min 0.174683409   max 0.988161
+      d= 9: min 0.162858411   max 0.990264
+      d=10: min 0.152854037   max 0.991853
+      d=11: min 0.144274732   max 0.993085
+      d=12: min 0.136831795   max 0.994058
+FAIL part 2: PLANT swap: degree <= 8, Q_2 - Q_3 positive definite
+   random search, 20000 polynomials, monomial basis: smallest 0.369817, largest 0.921561
+   random search, 20000 polynomials, Bernstein basis: smallest 0.310877, largest 0.946842
+   beside: proved infimum 1 (not attained), proved supremum +infinity; degree <= 8 exact range (0.174683409, 0.988161)
+FAIL part 2: every random ratio lies strictly above 1 and inside the exact degree-8 range | search range [0.310877, 0.946842]
+   family C_N = 4(1-v)^N - N v (1-v)^(N-1): exact Q_2/Q_3 from the definitions, beside the proved bound 1 + ln(N)/270
+      N=   1: ratio 0.440367   bound 1.000000   (ratio - 1)/ln N = nan
+      N=   2: ratio 0.377881   bound 1.002567   (ratio - 1)/ln N = -0.8975
+      N=   4: ratio 0.310957   bound 1.005134   (ratio - 1)/ln N = -0.4970
+      N=   8: ratio 0.249908   bound 1.007702   (ratio - 1)/ln N = -0.3607
+      N=  16: ratio 0.200315   bound 1.010269   (ratio - 1)/ln N = -0.2884
+      N=  32: ratio 0.162583   bound 1.012836   (ratio - 1)/ln N = -0.2416
+      N=  64: ratio 0.134574   bound 1.015403   (ratio - 1)/ln N = -0.2081
+      N= 128: ratio 0.113747   bound 1.017970   (ratio - 1)/ln N = -0.1827
+FAIL part 2: the family respects the proved lower bound 1 + ln(N)/270 and grows with N
+
+plant=swap l=[2] checks=37 fail=12 time=152 s
