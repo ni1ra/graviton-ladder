@@ -1,0 +1,291 @@
+{
+  "_comment": "Every claim on the page lives in this file. Edit here, then run: python site/build.py. Inline markup in strings: *emphasis*, **strong**, `code`, [text](url). Link shortcuts: blob:path and tree:path point into the repository's main branch, arxiv:ID points at arxiv.org/abs/ID. Math is MathML; {{name}} expands a macro from the macros object.",
+
+  "site": {
+    "name": "The graviton ladder",
+    "url": "https://ni1ra.github.io/graviton-ladder/",
+    "repo": "https://github.com/ni1ra/graviton-ladder",
+    "branch": "main",
+    "pdf": "ladder_short.pdf",
+    "pdf_source": "paper/ladder_short.pdf",
+    "language": "en",
+    "updated": "2026-11-15"
+  },
+
+  "paper": {
+    "version_label": "Version 3, 10 November 2026",
+    "version_number": "3",
+    "status_label": "Not peer reviewed. Version 4 in preparation.",
+    "abstract": "Take a ball in flat space and put a weak tidal gravitational field through it. Two quantities respond at second order in the field: the relative entropy of the gravitons inside the ball, and the area of its surface. The first law of causal diamonds, carried to second order, would make them equal. We compute both exactly in free linearised gravity. On a static electric tidal field of multipole order l they agree. On a stationary magnetic one the entropy is only (l+1)/(l+2) of the area term. For a uniform field in a ball of radius R the entropy is the Bel-Robinson super-energy. The entropy is blind to electric-magnetic duality and the area is not."
+  },
+
+  "head": {
+    "keywords_extra": ["graviton relative entropy", "entanglement entropy of gravitons", "first law of causal diamonds", "Bel-Robinson super-energy", "modular Hamiltonian of a ball", "area deficit at fixed volume"],
+    "title": "The graviton ladder: graviton relative entropy vs area deficit",
+    "description": "Exact computation: graviton relative entropy and the second-order area term of a flat ball agree on electric tides, differ on magnetic ones. Not peer reviewed.",
+    "social_title": "Entropy cannot tell electric tides from magnetic ones. Area can.",
+    "social_description": "An exact second-order mismatch for free gravitons in a flat ball. Rerunnable checks, published failures, not peer reviewed.",
+    "og_alt": "Title card: The graviton ladder. Entropy cannot tell electric tides from magnetic ones. Area can. A ladder of three rungs shows the entropy to area ratios 3/4, 4/5 and 5/6 for magnetic multipoles l = 2, 3 and 4."
+  },
+
+  "nav": [
+    {"id": "computed", "label": "What was computed"},
+    {"id": "formula", "label": "The formula"},
+    {"id": "newer", "label": "Newer work"},
+    {"id": "novelty", "label": "New or in print"},
+    {"id": "status", "label": "Status"},
+    {"id": "reproduce", "label": "Reproduce"},
+    {"id": "break", "label": "Break it"},
+    {"id": "made", "label": "How it was made"},
+    {"id": "cite", "label": "Cite"},
+    {"id": "licence", "label": "Licence"}
+  ],
+
+  "hero": {
+    "kicker": "Free linearised gravity. Exact computation. Rerunnable.",
+    "title": "Entropy cannot tell electric tides from magnetic ones. Area can.",
+    "subtitle": "An exact second-order mismatch for free gravitons in a flat ball",
+    "lead": "Put a weak tidal gravitational field through a ball in flat space. Two quantities respond at second order in the field: the relative entropy of the gravitons inside the ball, and the *area side*, the drop in the stationary value of Area − 2·Volume divided by 4G (an area deficit at fixed volume). The first law of causal diamonds, carried to second order, would make them equal. We computed both exactly in free linearised gravity. For static electric tides they agree. For stationary magnetic tides the entropy is only (*l*+1)/(*l*+2) of the area side, where *l* is the multipole order of the tide.",
+    "notice_title": "Read this first",
+    "notice": "This work is **not peer reviewed**. The derivations, computations and checks were carried out by AI agents under the direction of the author, and every checker belongs to one family of models. The repository publishes its failures as well as its passes, and one correction has already been made. See the [status](#status) and [how it was made](#made).",
+    "buttons": [
+      {"label": "Read the paper (PDF)", "href": "ladder_short.pdf", "primary": true},
+      {"label": "Repository on GitHub", "href": "https://github.com/ni1ra/graviton-ladder"},
+      {"label": "Rerun the checks", "href": "#reproduce"},
+      {"label": "Report a problem", "href": "https://github.com/ni1ra/graviton-ladder/issues"}
+    ]
+  },
+
+  "macros": {
+    "Eij": "<msub><mi>ℰ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>",
+    "Bij": "<msub><mi>ℬ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>",
+    "EE": "<msub><mi>ℰ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>ℰ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>",
+    "BB": "<msub><mi>ℬ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>ℬ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>",
+    "pref": "<mfrac><mrow><mi>π</mi><msup><mi>R</mi><mn>6</mn></msup></mrow><mrow><mn>420</mn><mi>G</mi></mrow></mfrac>",
+    "cl": "<msub><mi>c</mi><mi>l</mi></msub>",
+    "intB": "<msub><mo>∫</mo><mi>B</mi></msub>",
+    "psiE2": "<msubsup><mi>ψ</mi><mi>ℰ</mi><mn>2</mn></msubsup>",
+    "psiB2": "<msubsup><mi>ψ</mi><mi>ℬ</mi><mn>2</mn></msubsup>",
+    "lp1": "<mrow><mi>l</mi><mo>+</mo><mn>1</mn></mrow>",
+    "lp2": "<mrow><mi>l</mi><mo>+</mo><mn>2</mn></mrow>"
+  },
+
+  "sections": [
+    {
+      "id": "computed",
+      "heading": "What was computed: graviton relative entropy against the area side",
+      "blocks": [
+        {"type": "p", "text": "Take a ball in flat space and its causal diamond, the piece of spacetime that an observer confined to the ball can influence and observe. Put a weak vacuum tidal field of amplitude ε through it. Two numbers, both of order ε², are compared."},
+        {"type": "ul", "items": [
+          "**The entropy side.** Quantise linearised gravity. A tidal field is a coherent state of gravitons. Its relative entropy to the vacuum, both restricted to the observables in the diamond, measures how well an observer confined to the diamond can tell the tidal field from empty space. For a coherent state the von Neumann entropy of the ball does not change, so this relative entropy is the change in the expectation of the modular Hamiltonian of the ball. It is not the entanglement entropy of gravitons in the vacuum, which is a different quantity (see Benedetti and Casini, [arXiv:1908.01800](arxiv:1908.01800)).",
+          "**The area side.** For a closed surface near the unit sphere and a slice it bounds, take F = Area − 2·Volume; the 2 is the mean curvature of the unit sphere. The unit ball makes F stationary in flat space under all variations of the surface and the slice. The area side is the drop of the stationary value of F in the perturbed spacetime, divided by 4G: an area deficit at fixed volume."
+        ]},
+        {"type": "p", "text": "For conformal matter the two are equal at first order. This is the first law of causal diamonds (Jacobson and Visser, [arXiv:1812.01596](arxiv:1812.01596)), and it is the content of Jacobson's derivation of the Einstein equation from entanglement equilibrium ([arXiv:1505.04753](arxiv:1505.04753)). Gravitons first appear at second order in the metric perturbation, so for them the comparison is a second-order one: the first law of causal diamonds at second order."},
+        {"type": "table",
+         "caption": "Entropy side and area side for a tidal multipole of order *l*, in units of (c_l/16G)∫ψ². Here ψ is the tidal potential, a harmonic polynomial of degree *l*, and c_l = 4(*l*−2)!/(*l*+2)!.",
+         "columns": ["Tidal field of multipole order *l*", "Entropy", "Area side", "First law at second order"],
+         "rows": [
+           ["static electric", "*l* + 1", "*l* + 1", "holds"],
+           ["stationary magnetic", "*l* + 1", "*l* + 2", "misses by one part in *l* + 2"],
+           ["Rindler wedge, any data", "equal rates", "equal rates", "no miss"]
+         ]},
+        {"type": "p", "text": "On magnetic data the ratio of entropy to area side is (*l*+1)/(*l*+2) = 3/4, 4/5, 5/6, … for *l* = 2, 3, 4, …. That sequence is the ladder of the title. These statements are made at the stationary surface, in free linearised gravity at order G⁰ on a flat ball in four dimensions, under the assumptions listed in the [status](#status) section."},
+        {"type": "h3", "text": "How far each statement reaches"},
+        {"type": "ul", "items": [
+          "The entropy formula is exact to all orders, because the state is coherent and the theory is free. It has no cross term between the electric and magnetic sectors, since that would be odd under parity.",
+          "The area side on magnetic data is proved for every *l*.",
+          "The area side on electric data is computed exactly for *l* ≤ 12, and for every *l* given a closed form stated in the paper.",
+          "When both sectors are present, the area side is the sum of the two only if the ball is not pushed along a boost. For *l* = 2 that requires the electric and magnetic parts to share principal axes. This is argued from the symmetry of the zero modes; the general mixed case is not computed."
+        ]}
+      ]
+    },
+    {
+      "id": "formula",
+      "heading": "The formula for a uniform tidal field: Bel–Robinson super-energy",
+      "blocks": [
+        {"type": "p", "text": "For *l* = 2 the tidal field is uniform. Take a ball of radius *R* with ħ = c = 1, and let ℰ and ℬ be the electric and magnetic parts of the curvature of the tidal field:"},
+        {"type": "math", "items": [
+          {"label": "Electric part",
+           "alt": "E sub i j equals the Riemann tensor component R sub 0 i 0 j",
+           "mathml": "<mrow>{{Eij}}<mo>=</mo><msub><mi>R</mi><mrow><mn>0</mn><mi>i</mi><mn>0</mn><mi>j</mi></mrow></msub></mrow>"},
+          {"label": "Magnetic part",
+           "alt": "B sub i j equals one half epsilon sub i k l times R with lower indices 0 j and upper indices k l",
+           "mathml": "<mrow>{{Bij}}<mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>ε</mi><mrow><mi>i</mi><mi>k</mi><mi>l</mi></mrow></msub><msubsup><mi>R</mi><mrow><mn>0</mn><mi>j</mi></mrow><mrow><mi>k</mi><mi>l</mi></mrow></msubsup></mrow>"}
+        ]},
+        {"type": "p", "text": "The entropy is then the Bel–Robinson super-energy of the ball:"},
+        {"type": "math", "items": [
+          {"label": "Entropy, for any static electric plus stationary magnetic data",
+           "alt": "S equals pi R to the sixth over 420 G, times the sum of E sub i j E sub i j and B sub i j B sub i j",
+           "mathml": "<mrow><mi>S</mi><mo>=</mo>{{pref}}<mo>(</mo>{{EE}}<mo>+</mo>{{BB}}<mo>)</mo></mrow>"}
+        ]},
+        {"type": "p", "text": "The area side is different. For a purely electric field it equals the electric half of that expression. For a purely magnetic field it is four thirds of the magnetic half:"},
+        {"type": "math", "items": [
+          {"label": "Area side, purely electric field",
+           "alt": "Area side equals pi R to the sixth over 420 G, times E sub i j E sub i j",
+           "mathml": "<mrow><msub><mi>A</mi><mtext>area</mtext></msub><mo>=</mo>{{pref}}{{EE}}</mrow>"},
+          {"label": "Area side, purely magnetic field",
+           "alt": "Area side equals four thirds times pi R to the sixth over 420 G, times B sub i j B sub i j",
+           "mathml": "<mrow><msub><mi>A</mi><mtext>area</mtext></msub><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mspace width='0.3em'></mspace>{{pref}}{{BB}}</mrow>"}
+        ]},
+        {"type": "p", "text": "The entropy is blind to electric–magnetic duality. The area is not. No local Lorentz scalar can remove the mismatch: a scalar can move it between the two sectors, never cancel it. It is exactly the failure of the ball's conformal Killing vector to be a Killing vector. On the Rindler wedge, where the vector is Killing, the same computation gives no mismatch. The reason the entropy can be computed at all is that the modular group of the ball, the flow generated by its modular Hamiltonian, acts on the curvature as the conformal flow. The proof and its checks are in the [record](tree:record/wave70/modflow)."},
+        {"type": "h3", "text": "The same statement for a multipole of any order l ≥ 2"},
+        {"type": "math", "items": [
+          {"label": "Entropy, static electric plus stationary magnetic data",
+           "alt": "8 G S equals c sub l times l plus 1 over 2, times the integral over the ball of psi electric squared plus psi magnetic squared",
+           "mathml": "<mrow><mn>8</mn><mi>G</mi><mi>S</mi><mo>=</mo>{{cl}}<mfrac>{{lp1}}<mn>2</mn></mfrac>{{intB}}<mo>(</mo>{{psiE2}}<mo>+</mo>{{psiB2}}<mo>)</mo></mrow>"},
+          {"label": "Area side, static electric data",
+           "alt": "8 G times area side equals c sub l times l plus 1 over 2, times the integral over the ball of psi electric squared",
+           "mathml": "<mrow><mn>8</mn><mi>G</mi><msub><mi>A</mi><mtext>area</mtext></msub><mo>=</mo>{{cl}}<mfrac>{{lp1}}<mn>2</mn></mfrac>{{intB}}{{psiE2}}</mrow>"},
+          {"label": "Area side, stationary magnetic data",
+           "alt": "8 G times area side equals c sub l times l plus 2 over 2, times the integral over the ball of psi magnetic squared",
+           "mathml": "<mrow><mn>8</mn><mi>G</mi><msub><mi>A</mi><mtext>area</mtext></msub><mo>=</mo>{{cl}}<mfrac>{{lp2}}<mn>2</mn></mfrac>{{intB}}{{psiB2}}</mrow>"}
+        ]},
+        {"type": "p", "text": "Here ψ is the tidal potential of the multipole, a harmonic polynomial of degree *l* (for *l* = 2 it is x_i x_j ℰ_ij or x_i x_j ℬ_ij, summed over i and j), and the constant is:"},
+        {"type": "math", "items": [
+          {"label": "The constant c_l",
+           "alt": "c sub l equals 4 times l minus 2 factorial over l plus 2 factorial",
+           "mathml": "<mrow>{{cl}}<mo>=</mo><mn>4</mn><mfrac><mrow><mo>(</mo><mi>l</mi><mo>−</mo><mn>2</mn><mo>)</mo><mo>!</mo></mrow><mrow><mo>(</mo><mi>l</mi><mo>+</mo><mn>2</mn><mo>)</mo><mo>!</mo></mrow></mfrac></mrow>"},
+          {"label": "For l = 2, over the unit ball (the magnetic case is the same with ℬ in place of ℰ)",
+           "alt": "the integral over the ball of psi electric squared equals 8 pi over 105 times E sub i j E sub i j",
+           "mathml": "<mrow>{{intB}}{{psiE2}}<mo>=</mo><mfrac><mrow><mn>8</mn><mi>π</mi></mrow><mn>105</mn></mfrac>{{EE}}</mrow>"}
+        ]},
+        {"type": "p", "text": "The l = 2 line, with the powers of *R* restored by dilation, gives the formulas for the uniform field above."}
+      ]
+    },
+    {
+      "id": "newer",
+      "heading": "Newer work: every graviton sector of the ball, both parities",
+      "blocks": [
+        {"type": "callout", "kind": "newer", "title": "Newer work in the record, version 4 of the paper in preparation",
+         "blocks": [
+           {"type": "p", "text": "The two statements below are **not in version 3** of the paper. They come from later work in the repository's working record and will be in version 4 of the paper, which is in preparation. Treat them as unreviewed: they carry every caveat listed in the [status](#status) section."},
+           {"type": "ol", "items": [
+             "In every graviton sector of the flat ball, of either parity, the gauge-invariant fixed-volume area-side charge equals the vacuum's modular generator on metric data and exceeds it on extrinsic-curvature data by a positive term. The ladder (*l*+2)/(*l*+1) is one symptom of this, on stationary magnetic data.",
+             "The extra term summed over sectors diverges logarithmically. The per-sector constant is 7ζ(3)/(16π²), about 0.0533, for odd parity (reproduced by a blind lattice run) and about 0.0136 for even parity (measured; the even divergence is computed, not yet proved)."
+           ]},
+           {"type": "math", "items": [
+             {"label": "Per-sector constant of the logarithmic divergence, odd parity",
+              "alt": "7 zeta of 3 over 16 pi squared, approximately 0.0533",
+              "mathml": "<mrow><mfrac><mrow><mn>7</mn><mi>ζ</mi><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mn>16</mn><msup><mi>π</mi><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mn>0.0533</mn></mrow>"}
+           ]},
+           {"type": "p", "text": "In plain terms: metric data describe the shape of space on a slice, and extrinsic-curvature data describe how that shape is changing. The area-side charge and the vacuum modular generator agree on the first kind of data and differ on the second, always by a positive amount. The ladder ratio is what that difference looks like on stationary magnetic tides."}
+         ]}
+      ]
+    },
+    {
+      "id": "novelty",
+      "heading": "What is new and what was already in print",
+      "blocks": [
+        {"type": "p", "text": "The area numbers at *l* = 2 are already in print: Jacobson, Senovilla and Speranza, *Area deficits and the Bel–Robinson tensor*, [arXiv:1710.07379](arxiv:1710.07379), eq. (75), at the constant-mean-curvature shape. They also showed that the area deficit is not the Bel–Robinson energy for any shape."},
+        {"type": "p", "text": "What we did not find in print is the entropy side, and so the comparison between the two. “Holds on electric data” is true at the stationary surface; for a geodesic ball the electric case fails too, while the magnetic coefficient is the same for every shape."},
+        {"type": "h3", "text": "Work this builds on"},
+        {"type": "ul", "items": [
+          "T. Jacobson, *Entanglement equilibrium and the Einstein equation*, [arXiv:1505.04753](arxiv:1505.04753).",
+          "T. Jacobson and M. Visser, *Gravitational thermodynamics of causal diamonds in (A)dS*, [arXiv:1812.01596](arxiv:1812.01596).",
+          "H. Casini, D. A. Galante and R. C. Myers, *Comments on Jacobson's “Entanglement equilibrium and the Einstein equation”*, [arXiv:1601.00528](arxiv:1601.00528).",
+          "T. Jacobson, J. M. M. Senovilla and A. J. Speranza, *Area deficits and the Bel–Robinson tensor*, [arXiv:1710.07379](arxiv:1710.07379).",
+          "V. Benedetti and H. Casini, *Entanglement entropy of linearized gravitons in a sphere*, [arXiv:1908.01800](arxiv:1908.01800).",
+          "R. Longo and G. Morsella, *The massless modular Hamiltonian*, [arXiv:2012.00565](arxiv:2012.00565).",
+          "F. Ciolli, R. Longo and G. Ruzzi, *The information in a wave*, [arXiv:1906.01707](arxiv:1906.01707).",
+          "K. Jensen, J. Sorce and A. J. Speranza, *Generalized entropy for general subregions in quantum gravity*, [arXiv:2306.01837](arxiv:2306.01837)."
+        ]}
+      ]
+    },
+    {
+      "id": "status",
+      "heading": "Status: read this before quoting the result",
+      "blocks": [
+        {"type": "status", "items": [
+          {"kind": "proved", "label": "Proved here, with scripts",
+           "text": "the entropy formula (two routes), the area side on magnetic data, the area side on electric data from the exact Weyl solution, the wedge identity."},
+          {"kind": "assumed", "label": "Assumed, and stated as assumptions",
+           "text": "the theory is free linearised gravity at order G⁰ on a flat ball in four dimensions; the gravitational term of the first law at this order is the stationary value of Area − 2·Volume; three conditions on what counts as “the algebra of the ball”; Einstein's equations to second order. The full list is in the paper, section 8, and in [`THEOREM.md`](blob:record/wave69/final/THEOREM.md), section 2."},
+          {"kind": "open", "label": "Open",
+           "text": "whether the ball algebra of full quantum gravity reduces to the free one as G → 0. Nothing here tests that."},
+          {"kind": "unreviewed", "label": "Not peer reviewed",
+           "text": "every check so far was made inside this programme. No outside referee has read the proofs."},
+          {"kind": "corrected", "label": "Corrected once already",
+           "text": "version 1 of the paper was public for about an hour before a blind read came back. It confirmed every formula and found four statements that were wrong or too broad, including that part of the area result is in print. Version 2 fixed them; version 3 only shortens the text. The read is in [`record/wave72/blindread/`](blob:record/wave72/blindread/REPORT.md)."},
+          {"kind": "newer", "label": "Not in version 3",
+           "text": "the sector-by-sector statements in the [newer work](#newer) section are from the working record and are not in the published paper. The even-parity divergence is computed, not yet proved."}
+        ]},
+        {"type": "h3", "text": "Not in the repository yet"},
+        {"type": "ul", "items": [
+          "The second proof of the entropy formula (a unitary transfer of each multipole sector onto scalar partial waves), cited in the paper as a draft.",
+          "The earlier lattice code that the three-dimensional lattice computation builds on.",
+          "Results in other dimensions and for other spins."
+        ]},
+        {"type": "p", "text": "The lattice computation in [`record/wave55/gravlattice2/`](tree:record/wave55/gravlattice2) is stored as outputs only: a rerun needs hours and several GB of memory. Its own verdict was INCONCLUSIVE for the question it was registered to answer; the paper quotes its rows for a different comparison and says so."}
+      ]
+    },
+    {
+      "id": "reproduce",
+      "heading": "Reproduce it in one command",
+      "blocks": [
+        {"type": "code", "lang": "bash", "text": "git clone https://github.com/ni1ra/graviton-ladder.git\ncd graviton-ladder\npip install -r requirements.txt\n./run_all.sh"},
+        {"type": "p", "text": "This takes about three minutes on a laptop. Exit code 0 means every check passed and every planted error was caught: 461 checks and 109 planted errors behind the theorem, the electric-sector and Killing-limit scripts, and the blind reader's own scripts. `FULL=1 ./run_all.sh` also reruns the slow numerical search for the extremal surface, which takes about 30 minutes. The same command runs on every push; see the [Actions tab](https://github.com/ni1ra/graviton-ladder/actions)."},
+        {"type": "p", "text": "All scripts use exact rational arithmetic (sympy) except four numerical checks and the lattice. The full statement and proof are in [`THEOREM.md`](blob:record/wave69/final/THEOREM.md), with a ledger of every premise next to it."}
+      ]
+    },
+    {
+      "id": "break",
+      "heading": "How to break it",
+      "blocks": [
+        {"type": "p", "text": "The result would be refuted by any of these, and we would like to hear about it:"},
+        {"type": "ol", "items": [
+          "An error in the proof that the modular flow of the helicity-2 field on a ball is the conformal flow ([`REPORT.md`](blob:record/wave70/modflow/REPORT.md)), or in Haag duality for the ball ([`REPORT.md`](blob:record/wave69/duality/REPORT.md)).",
+          "A second-order first law in print that balances on magnetic data with the same area prescription.",
+          "A demonstration that the stationary surface for magnetic data is not the one used.",
+          "A script here that passes when it should fail. Each one contains planted errors it must catch; if you find a wrong variant it does not catch, that is a finding."
+        ]},
+        {"type": "p", "text": "[Open an issue](https://github.com/ni1ra/graviton-ladder/issues/new) with three headings: **Why** (what you think is wrong), **What** (the step, equation or script), **Where** (file and line). Corrections are recorded, not erased: see [`REPORT.md`](blob:record/wave72/decider/REPORT.md) for examples in our own work."}
+      ]
+    },
+    {
+      "id": "made",
+      "heading": "How this was made",
+      "blocks": [
+        {"type": "p", "text": "The derivations, computations and checks were carried out by AI agents (Anthropic's Claude models) under the direction of the author, who set the questions, the scope and the rules. The record says which agent did what. The working rules were: outcome bins registered before each run; every script must catch a planted error; a result is credited only through content that was read and rerun; blind checkers are told to break the result; a second method counts for more than a second reader."},
+        {"type": "p", "text": "This is not a substitute for peer review, and one limit should be stated plainly: **all checkers belong to one family of models and can share blind spots.** That is why the scripts, the hypotheses and the failure conditions are published together."}
+      ]
+    },
+    {
+      "id": "cite",
+      "heading": "Cite",
+      "blocks": [
+        {"type": "p", "text": "The entry below is generated from [`CITATION.cff`](blob:CITATION.cff) when this page is built. GitHub also offers it under “Cite this repository”. The paper is a preprint hosted in the repository, not a journal article."},
+        {"type": "bibtex", "key": "houg2026ladder", "note": "Paper version {version}. Preprint, not peer reviewed. Hosted at the repository."}
+      ]
+    },
+    {
+      "id": "licence",
+      "heading": "Licence",
+      "blocks": [
+        {"type": "p", "text": "Code (everything under `record/**/scripts/` and `run_all.sh`) is under the [MIT licence](blob:LICENSE). Text, papers and figures are under [CC BY 4.0](blob:LICENSE-docs.md). Reuse is free under those terms."}
+      ]
+    }
+  ],
+
+  "footer": {
+    "text": "This page sets no cookies, runs no analytics and loads nothing from other sites. Every claim on it is generated from `site/content.json` in the [repository](https://github.com/ni1ra/graviton-ladder).",
+    "links": [
+      {"label": "Paper (PDF)", "href": "ladder_short.pdf"},
+      {"label": "Repository", "href": "https://github.com/ni1ra/graviton-ladder"},
+      {"label": "Actions", "href": "https://github.com/ni1ra/graviton-ladder/actions"},
+      {"label": "Issues", "href": "https://github.com/ni1ra/graviton-ladder/issues"}
+    ]
+  },
+
+  "not_found": {
+    "title": "Page not found",
+    "text": "There is no page at this address. The graviton ladder has one page, and the paper is a PDF next to it."
+  },
+
+  "jsonld": {
+    "article_license": "https://creativecommons.org/licenses/by/4.0/",
+    "code_license": "https://opensource.org/license/mit",
+    "work_status": "Preprint, not peer reviewed",
+    "code_name": "graviton-ladder",
+    "code_description": "Scripts, proofs, pre-registrations and one-command checks for the exact comparison of graviton relative entropy with the second-order area term of a flat ball."
+  }
+}
