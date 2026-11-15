@@ -1,0 +1,36 @@
+CHAIN-ALL-L pass lines, fixed 2026-11-15 before the first run of scripts\chain_all_l.py
+All arithmetic exact (rationals). l = 2..8, harmonic phi = Re[(x+iy)^(l-1)] z (m = l-1), three profiles 1, s, s^2 (s = r^2).
+Conventions: n = 3; D q := q'/r; c_l = 4 (l-2)!/(l+2)!; curl(T)_ij = eps_ikl d_k T_lj;
+  E[h] = -(1/2) Lap h, B[K] = -curl K, Edot = -Lap K = -curl B, Bdot = curl E (record's sign of B).
+  even T[q] = f1 Hess phi + f2 P_phi + f3 phi delta + f4 phi xx with
+     beta = -Dq/(l+1), alpha = (q + s Dq/(l+1))/l, f2 = (beta - 2 D alpha)/(l+2), f3 = -D alpha - (l+1) f2,
+     f4 = -(2 l f2 + 3 f3)/s, f1 = (alpha - s f2)/(l-1)                      (companion A8 Lemma 7 at n = 3)
+  odd  S[eta] = g1 (x v + v x) + g2 (grad v + grad v^T), v = x cross grad phi,
+     g1 = -D eta/(l+2), g2 = (eta + s D eta/(l+2))/(l-1)                     (derived in this lane)
+  Gaussian mode: every profile carries exp(-r^2/2); momentum integrals with common constants dropped.
+
+Per l (each line must print PASS; a plant must print CAUGHT):
+ L01 W0   (once, symbolic, generic symmetric M): Lap(x.M.x) = x.Lap M.x + 4 x.div M + 2 tr M
+ L02 E-TT   T[q_k] symmetric, traceless, divergence-free, k = 0,1,2, polynomial mode and Gaussian mode; f4 division by s exact
+ L03 E-q    x.T[q].x = q phi
+ L04 E-dim  polynomial ansatz (f1 deg<=2, f2,f3 deg<=1, f4 deg 0 in s; 8 unknowns): TT solutions have dimension exactly 3;
+            adding x.T.x = 0 leaves dimension 0   (injectivity and range of T -> x.T.x)
+ L05 O-TT   S[eta_k] symmetric, traceless, divergence-free, both modes
+ L06 O-eta  x.S.x = 0 and x.curl S.x = -l(l+1) eta phi
+ L07 O-dim  polynomial ansatz (g1 deg<=1, g2 deg<=2; 5 unknowns): TT solutions have dimension exactly 3; adding x.curl S.x = 0 leaves 0
+ L08 X-curl curl S[eta] = T[-l(l+1) eta];  curl T[q] = S[qt/(l(l+1))], qt = s D^2 q + (2l+3) D q;  Lap T[q] = T[qt]; Lap S[eta] = S[eta~]
+ L09 W-ev   even datum (h, K) = (T0+T1, T1+T2), Gaussian: E_n, B_n (n = 0,1) are TT and x.Lap M.x = Lap(x.M.x) for M = E_0, E_1, B_0...
+            i.e. the Taylor coefficients of psi_E(t) obey psi_(n+2) = Lap psi_n, n = 0,1 (Box psi_E = 0 through t^3); also x.B_n.x = 0
+ L10 W-od   same for an odd datum (S0+S1, S1+S2) and psi_B = x.B.x (Box psi_B = 0 through t^3); also x.E_n.x = 0
+ L11 FT     control: FT(Lap psi) = -k^2 FT(psi) on one chain field
+ L12 G-Eh   (1/2) int omega h_a.h_b = c_l int omega psi_a psi_b,  psi = x.E[h].x, whole 3x3 Gram, entries nonzero
+ L13 G-EK   2 int K_a.K_b/omega = c_l int psidot_a psidot_b/omega, psidot = x.(-Lap K).x, whole Gram
+ L14 G-Es   int K_a.h_b = + c_l int psidot[K_a] psi[h_b], whole 3x3 (symplectic form, kappa = +1)
+ L15 G-OK   2 int K_a.K_b/omega = c_l int omega psiB_a psiB_b, psiB = x.(-curl K).x, whole Gram
+ L16 G-Oh   (1/2) int omega h_a.h_b = c_l int psiBdot_a psiBdot_b/omega, psiBdot = x.curl(E[h]).x, whole Gram
+ L17 G-Os   int K_a.h_b = - c_l int psiB[K_a] psiBdot[h_b], whole 3x3 (same symplectic form: Omega(u_a,u_b) with psi and psidot slots exchanged)
+ P1 plant   c_l with (l-1)! in place of (l-2)!: L12 and L15 must both FAIL to hold -> CAUGHT
+ P2 plant   omega and 1/omega exchanged on the scalar side: L12 and L15 must FAIL to hold -> CAUGHT
+ P3 plant   g1 = -D eta/(l+1) in the odd build: divergence nonzero -> CAUGHT
+Overall: every L line PASS at every l = 2..8 and every plant CAUGHT. l = 7, 8 are beyond the record.
+If l = 8 exceeds about 10 minutes, stop at 7 and say so.

@@ -1,0 +1,6 @@
+Addendum, 2026-11-15, written after run 01 (l = 2..4) and before run 03 (l = 2..8).
+Run 01: every L line PASS at l = 2, 3, 4. P1 MISSED at l = 2, CAUGHT at l = 3, 4.
+Diagnosis: the planted constant 4 (l-1)!/(l+2)! equals the true c_l at l = 2 because 1! = 0!. The plant as registered is vacuous at l = 2;
+this is a defect of the plant, not of the check. P1 stays in the script unchanged and will again print MISSED at l = 2.
+Post hoc addition (not pre-registered): P1b, c_l scaled by (l+3)/(l+2), must be CAUGHT at every l.
+No other change to the script.

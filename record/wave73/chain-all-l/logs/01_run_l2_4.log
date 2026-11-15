@@ -1,0 +1,62 @@
+PASS l=0 L01 W0 generic identity Lap(x.M.x) = x.LapM.x + 4 x.divM + 2 trM
+CAUGHT l=2 P3 odd build with g1 = -D eta/(l+1): divergence nonzero
+PASS l=2 L02 E-TT
+PASS l=2 L03 E-q
+PASS l=2 L05 O-TT
+PASS l=2 L06 O-eta
+PASS l=2 L08 X-curl
+PASS l=2 L04 E-dim  TT dim 3, with x.T.x=0: 0
+PASS l=2 L07 O-dim  TT dim 3, with x.curlS.x=0: 0
+PASS l=2 L09 W-ev
+PASS l=2 L10 W-od
+PASS l=2 L11 FT
+PASS l=2 L12 G-Eh  [0][0]: 1/3 = 1/3
+PASS l=2 L13 G-EK  [0][0]: 4/15 = 4/15
+PASS l=2 L14 G-Es
+PASS l=2 L15 G-OK  [0][0]: 12/5 = 12/5
+PASS l=2 L16 G-Oh  [0][0]: 12/5 = 12/5
+PASS l=2 L17 G-Os
+MISSED l=2 P1 c_l with (l-1)! in place of (l-2)!  ratio seen/planted = 1
+CAUGHT l=2 P2 omega and 1/omega exchanged on the scalar side
+-- l=2 done in 0.2 s, c_l = 1/6
+CAUGHT l=3 P3 odd build with g1 = -D eta/(l+1): divergence nonzero
+PASS l=3 L02 E-TT
+PASS l=3 L03 E-q
+PASS l=3 L05 O-TT
+PASS l=3 L06 O-eta
+PASS l=3 L08 X-curl
+PASS l=3 L04 E-dim  TT dim 3, with x.T.x=0: 0
+PASS l=3 L07 O-dim  TT dim 3, with x.curlS.x=0: 0
+PASS l=3 L09 W-ev
+PASS l=3 L10 W-od
+PASS l=3 L11 FT
+PASS l=3 L12 G-Eh  [0][0]: 8/35 = 8/35
+PASS l=3 L13 G-EK  [0][0]: 16/105 = 16/105
+PASS l=3 L14 G-Es
+PASS l=3 L15 G-OK  [0][0]: 768/175 = 768/175
+PASS l=3 L16 G-Oh  [0][0]: 192/35 = 192/35
+PASS l=3 L17 G-Os
+CAUGHT l=3 P1 c_l with (l-1)! in place of (l-2)!  ratio seen/planted = 1/2
+CAUGHT l=3 P2 omega and 1/omega exchanged on the scalar side
+-- l=3 done in 0.2 s, c_l = 1/30
+CAUGHT l=4 P3 odd build with g1 = -D eta/(l+1): divergence nonzero
+PASS l=4 L02 E-TT
+PASS l=4 L03 E-q
+PASS l=4 L05 O-TT
+PASS l=4 L06 O-eta
+PASS l=4 L08 X-curl
+PASS l=4 L04 E-dim  TT dim 3, with x.T.x=0: 0
+PASS l=4 L07 O-dim  TT dim 3, with x.curlS.x=0: 0
+PASS l=4 L09 W-ev
+PASS l=4 L10 W-od
+PASS l=4 L11 FT
+PASS l=4 L12 G-Eh  [0][0]: 16/45 = 16/45
+PASS l=4 L13 G-EK  [0][0]: 64/315 = 64/315
+PASS l=4 L14 G-Es
+PASS l=4 L15 G-OK  [0][0]: 2560/189 = 2560/189
+PASS l=4 L16 G-Oh  [0][0]: 1280/63 = 1280/63
+PASS l=4 L17 G-Os
+CAUGHT l=4 P1 c_l with (l-1)! in place of (l-2)!  ratio seen/planted = 1/3
+CAUGHT l=4 P2 omega and 1/omega exchanged on the scalar side
+-- l=4 done in 0.3 s, c_l = 1/90
+DONE l=2..4: fails=[] plants_missed=[(2, 'P1 c_l with (l-1)! in place of (l-2)!')] total 0.7 s

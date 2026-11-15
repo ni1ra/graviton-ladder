@@ -1,0 +1,86 @@
+PASS l=0 L01 W0 generic identity Lap(x.M.x) = x.LapM.x + 4 x.divM + 2 trM
+CAUGHT l=9 P3 odd build with g1 = -D eta/(l+1): divergence nonzero
+PASS l=9 L02 E-TT
+PASS l=9 L03 E-q
+PASS l=9 L05 O-TT
+PASS l=9 L06 O-eta
+PASS l=9 L08 X-curl
+PASS l=9 L04 E-dim  TT dim 3, with x.T.x=0: 0
+PASS l=9 L07 O-dim  TT dim 3, with x.curlS.x=0: 0
+PASS l=9 L09 W-ev
+PASS l=9 L10 W-od
+PASS l=9 L11 FT
+PASS l=9 L12 G-Eh  [0][0]: 22020096/46189 = 22020096/46189
+PASS l=9 L13 G-EK  [0][0]: 7340032/46189 = 7340032/46189
+PASS l=9 L14 G-Es
+PASS l=9 L15 G-OK  [0][0]: 59454259200/508079 = 59454259200/508079
+PASS l=9 L16 G-Oh  [0][0]: 14863564800/46189 = 14863564800/46189
+PASS l=9 L17 G-Os
+CAUGHT l=9 P1 c_l with (l-1)! in place of (l-2)!  ratio seen/planted = 1/8
+CAUGHT l=9 P1b c_l scaled by (l+3)/(l+2)
+CAUGHT l=9 P2 omega and 1/omega exchanged on the scalar side
+-- l=9 done in 0.9 s, c_l = 1/1980
+CAUGHT l=10 P3 odd build with g1 = -D eta/(l+1): divergence nonzero
+PASS l=10 L02 E-TT
+PASS l=10 L03 E-q
+PASS l=10 L05 O-TT
+PASS l=10 L06 O-eta
+PASS l=10 L08 X-curl
+PASS l=10 L04 E-dim  TT dim 3, with x.T.x=0: 0
+PASS l=10 L07 O-dim  TT dim 3, with x.curlS.x=0: 0
+PASS l=10 L09 W-ev
+PASS l=10 L10 W-od
+PASS l=10 L11 FT
+PASS l=10 L12 G-Eh  [0][0]: 12582912/3553 = 12582912/3553
+PASS l=10 L13 G-EK  [0][0]: 50331648/46189 = 50331648/46189
+PASS l=10 L14 G-Es
+PASS l=10 L15 G-OK  [0][0]: 4613734400/4199 = 4613734400/4199
+PASS l=10 L16 G-Oh  [0][0]: 13841203200/4199 = 13841203200/4199
+PASS l=10 L17 G-Os
+CAUGHT l=10 P1 c_l with (l-1)! in place of (l-2)!  ratio seen/planted = 1/9
+CAUGHT l=10 P1b c_l scaled by (l+3)/(l+2)
+CAUGHT l=10 P2 omega and 1/omega exchanged on the scalar side
+-- l=10 done in 1.1 s, c_l = 1/2970
+CAUGHT l=11 P3 odd build with g1 = -D eta/(l+1): divergence nonzero
+PASS l=11 L02 E-TT
+PASS l=11 L03 E-q
+PASS l=11 L05 O-TT
+PASS l=11 L06 O-eta
+PASS l=11 L08 X-curl
+PASS l=11 L04 E-dim  TT dim 3, with x.T.x=0: 0
+PASS l=11 L07 O-dim  TT dim 3, with x.curlS.x=0: 0
+PASS l=11 L09 W-ev
+PASS l=11 L10 W-od
+PASS l=11 L11 FT
+PASS l=11 L12 G-Eh  [0][0]: 31708938240/1062347 = 31708938240/1062347
+PASS l=11 L13 G-EK  [0][0]: 9059696640/1062347 = 9059696640/1062347
+PASS l=11 L14 G-Es
+PASS l=11 L15 G-OK  [0][0]: 14350559477760/1255501 = 14350559477760/1255501
+PASS l=11 L16 G-Oh  [0][0]: 3587639869440/96577 = 3587639869440/96577
+PASS l=11 L17 G-Os
+CAUGHT l=11 P1 c_l with (l-1)! in place of (l-2)!  ratio seen/planted = 1/10
+CAUGHT l=11 P1b c_l scaled by (l+3)/(l+2)
+CAUGHT l=11 P2 omega and 1/omega exchanged on the scalar side
+-- l=11 done in 1.2 s, c_l = 1/4290
+CAUGHT l=12 P3 odd build with g1 = -D eta/(l+1): divergence nonzero
+PASS l=12 L02 E-TT
+PASS l=12 L03 E-q
+PASS l=12 L05 O-TT
+PASS l=12 L06 O-eta
+PASS l=12 L08 X-curl
+PASS l=12 L04 E-dim  TT dim 3, with x.T.x=0: 0
+PASS l=12 L07 O-dim  TT dim 3, with x.curlS.x=0: 0
+PASS l=12 L09 W-ev
+PASS l=12 L10 W-od
+PASS l=12 L11 FT
+PASS l=12 L12 G-Eh  [0][0]: 27179089920/96577 = 27179089920/96577
+PASS l=12 L13 G-EK  [0][0]: 7247757312/96577 = 7247757312/96577
+PASS l=12 L14 G-Es
+PASS l=12 L15 G-OK  [0][0]: 6783900844032/52003 = 6783900844032/52003
+PASS l=12 L16 G-Oh  [0][0]: 3391950422016/7429 = 3391950422016/7429
+PASS l=12 L17 G-Os
+CAUGHT l=12 P1 c_l with (l-1)! in place of (l-2)!  ratio seen/planted = 1/11
+CAUGHT l=12 P1b c_l scaled by (l+3)/(l+2)
+CAUGHT l=12 P2 omega and 1/omega exchanged on the scalar side
+-- l=12 done in 1.4 s, c_l = 1/6006
+DONE l=9..12: fails=[] plants_missed=[] total 4.8 s
