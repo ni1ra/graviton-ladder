@@ -1,0 +1,8 @@
+  D1: ybot=-4.8 dy=0.04 n=1120  lam*||D_1||_H = 2.19027   x_bot*dy/2 = 2.430
+  D2: ybot=-4.8 dy=0.02 n=2240  lam*||D_1||_H = 1.25740   x_bot*dy/2 = 1.215
+  D3: ybot=-3.0 dy=0.04 n=1075  lam*||D_1||_H = 1.00272   x_bot*dy/2 = 0.402
+  D4: ybot=-3.0 dy=0.02 n=2150  lam*||D_1||_H = 0.99340   x_bot*dy/2 = 0.201
+  D1: PASS
+  D2: PASS
+  D3: PASS
+  D4: PASS

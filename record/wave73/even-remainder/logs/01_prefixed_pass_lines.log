@@ -1,0 +1,39 @@
+EVEN-REMAINDER: pass lines fixed before the first run of scripts\even_remainder.py (2026-11-15).
+No quantity below has been computed yet; thresholds are predictions from hand arithmetic.
+
+Notation. tau = pi, eps = 1.5, d = sqrt(2)|g|/lam, x = tau*d.
+  psi_l = z_l = i h^(-1/2) a_l / sqrt(2) = i h^(3/2) exp(-eps h^2) u / sqrt(2),  e_l = k(psi_l), ||e_l|| = ||coth^(1/2) psi_l||.
+  N3_hi  = sqrt( (1/2) sup_p[(p coth(pi p))^3 exp(-2 eps p^2)] ||u||^2 )           (certified upper bound for ||coth^(3/2) psi_l||)
+  E_lo   = sqrt( A_inf exp(-2 eps G_hi^2/A_inf) / (2 pi) )                          (certified lower bound for ||e_l||, l >= 16)
+  Rb     = N3_hi/E_lo,  C0 = (1/2)(1+Rb) pi^2
+  proved remainder bound   rem_hi(l,g) = (1/2)(1+Rb)(e^x - 1 - x)   <= C0 e^x g^2/lam^2
+  proved lower bound       low(l,g)    = c g/lam - rem_hi(l,g),  c = 2.110e-3 (EVEN-PASSAGE, recomputed here by its certified())
+Fine grid: even-passage's discretisation, dy = 0.02, ytop = 40.  Coarse grid for operator norms: dy = 0.04.
+l in {16, 64, 256, 1024} (required) plus 16384 (where the proved bound is predicted to be positive); g in {1, 8}.
+
+Certified constants
+  C1  all finite; 0.145 <= E_lo <= 0.155; 0.30 <= N3_hi <= 0.34; 14 <= C0 <= 17.   (hand estimate: 0.1497, 0.319, 15.45)
+  C2  c recomputed equals 2.110e-3 to 4 digits.
+
+Proved inequalities, tested on the grid (each must hold at every l, and for both g where g enters)
+  P1  E_lo <= ||e_l||_grid <= 0.47154
+  P2  ||coth^(3/2) psi_l||_grid <= N3_hi
+  P3  actual remainder ||beta e - g beta1hat e||/||e||  <=  rem_hi(l,g)
+  P4  actual ||beta e||/||e||  >=  low(l,g)      (vacuous where low < 0; the script prints which)
+  P5  coarse grid operator norms on H:  ||D_1|| <= sqrt(2)/lam;  ||S|| <= e^x;  ||R_2|| <= e^x - 1 - x
+  P6  coarse grid: ||beta e - g beta1hat e|| <= (1/2)||R_2||_H,actual (||e|| + ||coth^(3/2) psi||)    (BETA-DEF sec. 6 with the measured norm)
+
+Numerical sanity
+  N1  remainder scales as g^2: rem(g=8)/rem(g=1) in [40, 90] at every l; lam^2*rem(g=1) at l=1024 within 15% of its value at l=256.
+  N2  g=1 first-order ratio lam||beta1hat e||/||e|| reproduces EVEN-PASSAGE's table (0.121788, 0.123952, 0.124501, 0.124639) to 1e-5 relative.
+  N3  functional-calculus exp(tau(X0+gD)) equals a Taylor scaling-and-squaring matrix exponential of the 2n x 2n generator
+      (dy = 0.2, l = 16 and 64, g = 1 and 8) to 1e-8 relative Frobenius.
+  N4  slack: rem_hi/actual remainder in [3, 300] at every l for g = 1.
+  N5  l = 16384, g = 1: low > c/(2 lam) and actual >= low.  At l <= 1024, g = 1: low < 0 (bound vacuous there; predicted, since l_1(1) ~ 14,650).
+  N6  g = 8: low < 0 at every table l (bound not useful), yet actual ||beta e||/||e|| >= c g/(2 lam) at every l (prediction about the true quantity).
+  N7  grid stability: at l = 1024, g = 1, halving dy changes lam^2*rem by less than 2% and the full ratio by less than 1e-3 relative.
+
+Planted errors (each must be CAUGHT = the planted bound is violated by the measured value somewhere)
+  PLANT_A  remainder bound with the wrong power: C0 e^x g^2/lam^3.  Expected: violated at l = 1024 and l = 16384 (g = 1).
+  PLANT_B  2 pi dropped (tau = t = 0.5 in place of tau = pi) in the operator bound: ||R_2|| <= e^(x') - 1 - x', x' = 0.5 d.
+           Expected: violated by the coarse-grid ||R_2||_H at at least one l (I expect lam^2 ||R_2|| around 0.3 to 1, against a planted 0.25).

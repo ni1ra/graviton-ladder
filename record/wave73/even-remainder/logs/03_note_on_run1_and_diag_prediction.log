@@ -1,0 +1,28 @@
+EVEN-REMAINDER: note on run 1 (02_even_remainder_run1.log), written before any further run.
+
+Run 1: exit 1. One pre-fixed line FAILED: P5. All others passed.
+  P5 failed on its first clause only: coarse-grid lam*||D_1||_H = 1.620, 2.190, 2.429 at l = 256, 1024, 16384, above the
+  lead-checked bound sqrt(2) = 1.414 (EVEN-PROOF). The ||S|| and ||R_2|| clauses held at every l and g.
+
+Hypothesis (to be tested, not assumed): sampling artefact of the exact kernel at the bottom of the y-box, the same one
+EVEN-PROOF reported for its line C2. In x = e^(-y) the kernel lam*W ~ (1/2) e^(-|x-x'|) has width 1 in x, i.e. 1/x in y.
+At the box bottom y = -4.8, x = 121.5, so the width in y is 0.008 < dy. The quadrature diagonal is (1/2) dy, against the true
+row integral 1/x, and D ~ h W picks up h ~ x there. Predicted artefact size: lam*||D_1|| ~ x_bot*dy/2.
+For l = 16, 64 the box bottom is rho -> 0, where the kernel is suppressed by t^(2l+1), so no artefact (observed 0.756, 0.894;
+EVEN-PROOF's own fine-grid values are 0.7546, 0.8908).
+
+Diagnostic (scripts\diag_opnorm.py), predictions fixed here before running it, l = 1024, lam*||D_1||_H:
+  D1  ybot = -4.8, dy = 0.04:  2.43 +- 0.3   (artefact, x_bot*dy/2 = 2.43)       [run 1 gave 2.190]
+  D2  ybot = -4.8, dy = 0.02:  1.21 +- 0.25  (artefact halves with dy)
+  D3  ybot = -3.0, dy = 0.04:  in [0.90, 1.05]  (x_bot*dy/2 = 0.40, below the true value; EVEN-PROOF's value is 0.9818)
+  D4  ybot = -3.0, dy = 0.02:  within 3% of D3
+If D1-D4 hold, the artefact reading stands, and the operator-norm lines are re-run on the box [-3, 40] (dy = 0.04), which still
+contains supp u = [-2, 6]. If D3 exceeds sqrt(2), the failure is real and is reported as a contradiction with EVEN-PROOF.
+
+Consequence for the vector-level table of run 1: none expected. The family lives on y >= -2 (x*dy <= 0.15 at dy = 0.02), and
+N7 (halving dy) moved lam^2*rem by 6e-5 and the ratio by 2e-5.
+New lines for run 2 (written AFTER seeing run 1, so they are not pre-registered in the strict sense):
+  P5   kept as pre-fixed; stays FAILED.
+  P5b  same three clauses as P5 on the box ybot = -3.0, dy = 0.04, at every l and both g.
+  P6   evaluated on the same box as P5b.
+  N8   vector-level remainder on the box [-3, 40], dy = 0.04, agrees with the fine-grid value to 5% at every l (g = 1).
