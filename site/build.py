@@ -6,20 +6,36 @@ Pure standard library. Reads:
   CITATION.cff       author, dates, title, abstract, keywords, BibTeX
   site/style.css     inlined into the pages
   site/assets/       favicon.svg and og.png, copied as they are
+  site/content.nightly.json  optional; merged over content.json for the nightly variant only
+  site/nightly.css   styles of the nightly banner; never part of the default page
 
 Usage:
   python site/build.py          build into site/dist/
   python site/build.py --pdf    also copy paper/ladder_short.pdf into site/dist/
                                 (the Pages workflow does this copy itself)
+  python site/build.py --variant nightly
+                                build the work-in-progress preview into site/dist-nightly/.
+                                It is served from the /nightly/ folder of the Pages site,
+                                is noindex, has no citation tags and no JSON-LD, and
+                                carries a banner with the git commit and the UTC build time.
+  --out DIR                     write somewhere other than the default folder
+  --commit HASH, --built-at ISO banner values of the nightly variant (default: this
+                                checkout's HEAD and the current time; publish.py passes
+                                them because it builds from an export that has no .git)
 
 The build stops with a non-zero exit code if a sanity check fails: broken
 JSON-LD, malformed XML or HTML, a dead internal link, a banned phrase, an
-e-mail address, a private path, or a page heavier than the size budget.
+e-mail address, a private path, or a page heavier than the size budget. The
+public page must carry the citation tags and no noindex; the nightly page the
+reverse.
 """
+import argparse
+import datetime
 import html
 import json
 import re
 import shutil
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -29,6 +45,8 @@ from urllib.parse import urlparse
 SITE = Path(__file__).resolve().parent
 REPO = SITE.parent
 DIST = SITE / "dist"
+DIST_NIGHTLY = SITE / "dist-nightly"
+NIGHTLY_PATH = "nightly/"  # where the preview lives, below the public page's address
 BUDGET_BYTES = 150 * 1024  # page weight without the PDF and og.png
 
 # Phrases the page must never carry. Checked case-insensitively against every
@@ -93,6 +111,41 @@ def parse_cff(text):
 
 def fail(msg):
     raise SystemExit(f"build failed: {msg}")
+
+
+def deep_merge(base, over, path="", added=None):
+    """Overlay rule: objects merge key by key, arrays and scalars replace.
+
+    Keys starting with "_" in the overlay are comments and are dropped. A key the
+    overlay introduces that content.json lacks is recorded in `added`, because a
+    typo would otherwise change nothing, silently.
+    """
+    out = dict(base)
+    for k, v in over.items():
+        if k.startswith("_"):
+            continue
+        here = f"{path}{k}"
+        if k not in base:
+            if added is not None:
+                added.append(here)
+            out[k] = v
+        elif isinstance(base[k], dict) and isinstance(v, dict):
+            out[k] = deep_merge(base[k], v, here + ".", added)
+        else:
+            out[k] = v
+    return out
+
+
+def checkout_commit():
+    """Short hash of this checkout's HEAD, with -dirty when tracked files differ."""
+    try:
+        h = subprocess.run(["git", "-C", str(REPO), "rev-parse", "--short=7", "HEAD"],
+                           capture_output=True, text=True, check=True).stdout.strip()
+        dirty = subprocess.run(["git", "-C", str(REPO), "status", "--porcelain", "--untracked-files=no"],
+                               capture_output=True, text=True, check=True).stdout.strip()
+        return h + ("-dirty" if dirty else "")
+    except (OSError, subprocess.CalledProcessError):
+        return "unknown"
 
 
 # --------------------------------------------------------------------------
@@ -242,7 +295,8 @@ def json_for_script(obj):
     return s.replace("</", "<\\/").replace("<!--", "<\\!--")
 
 
-def build_index(c, cff, css, r):
+def build_index(c, cff, css, r, nightly=None):
+    """`nightly` is None for the public page, else {"public_url", "commit", "built"}."""
     s, p, h, hero = c["site"], c["paper"], c["head"], c["hero"]
     url = s["url"]
     author = f"{cff['authors'][0]['given-names']} {cff['authors'][0]['family-names']}"
@@ -328,7 +382,21 @@ def build_index(c, cff, css, r):
         ("name", "twitter:image", og_url),
         ("name", "twitter:image:alt", h["og_alt"]),
     ]
+    if nightly:
+        # The preview must never compete with the public page: no indexing, no Scholar tags.
+        metas = [(k, n, "noindex, nofollow" if n == "robots" else v)
+                 for k, n, v in metas if not n.startswith("citation_")]
     meta_html = "\n".join(f'<meta {k}="{attr(n)}" content="{attr(v)}">' for k, n, v in metas)
+    ld_html = "" if nightly else f'<script type="application/ld+json">\n{json_for_script(jsonld)}\n</script>\n'
+    banner = ""
+    if nightly:
+        css = css + "\n" + (SITE / "nightly.css").read_text(encoding="utf-8").strip()
+        banner = (
+            '<div class="nightly" role="note" aria-label="Nightly preview"><p class="wrap">'
+            '<strong>Nightly preview:</strong> work in progress, may be wrong. '
+            f'<a href="{attr(nightly["public_url"])}">The public page is here.</a> '
+            f'<span class="build">Build <code>{html.escape(nightly["commit"])}</code>, '
+            f'{html.escape(nightly["built"])}.</span></p></div>\n')
 
     nav = "".join(f'<li><a href="#{n["id"]}">{html.escape(n["label"])}</a></li>' for n in c["nav"])
     buttons = "".join(
@@ -352,16 +420,13 @@ def build_index(c, cff, css, r):
 <meta name="theme-color" content="#fbfaf6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131417" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">
-{json_for_script(jsonld)}
-</script>
-<style>
+{ld_html}<style>
 {css}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>
-<header class="top">
+{banner}<header class="top">
 <div class="wrap">
 <p class="kicker">{r.inline(hero['kicker'])}</p>
 <h1>{r.inline(hero['title'])}</h1>
@@ -471,14 +536,39 @@ class Balance(HTMLParser):
             self.stack.pop()
 
 
-def check(c, dist):
+def check(c, dist, nightly=False):
     problems = []
     base = urlparse(c["site"]["url"]).path or "/"
 
-    # JSON-LD parses and has the fields search engines need.
     idx = (dist / "index.html").read_text(encoding="utf-8")
     m = re.search(r'<script type="application/ld\+json">\n(.*?)\n</script>', idx, re.S)
-    if not m:
+    has_noindex = re.search(r'<meta name="robots" content="[^"]*noindex', idx) is not None
+    has_citation = "citation_" in idx
+    canonical = re.search(r'<link rel="canonical" href="([^"]*)"', idx)
+    if nightly:
+        # The preview must stay out of search engines and Google Scholar.
+        if not has_noindex:
+            problems.append("nightly index.html lacks the noindex robots meta")
+        if has_citation:
+            problems.append("nightly index.html carries citation_ tags")
+        if m or "application/ld+json" in idx:
+            problems.append("nightly index.html carries JSON-LD")
+        if 'class="nightly"' not in idx:
+            problems.append("nightly index.html has no banner")
+        if not canonical or canonical.group(1) != c["site"]["url"]:
+            problems.append(f"nightly canonical is not {c['site']['url']}")
+    else:
+        if "noindex" in idx:
+            problems.append("public index.html carries noindex")
+        if not has_citation:
+            problems.append("public index.html lacks the citation_ tags")
+        if 'class="nightly"' in idx:
+            problems.append("public index.html carries the nightly banner")
+
+    # JSON-LD parses and has the fields search engines need (the preview has none).
+    if nightly:
+        pass
+    elif not m:
         problems.append("no JSON-LD block")
     else:
         try:
@@ -494,11 +584,12 @@ def check(c, dist):
             problems.append(f"JSON-LD does not parse: {e}")
 
     # Well-formedness.
-    try:
-        ET.parse(dist / "sitemap.xml")
-    except ET.ParseError as e:
-        problems.append(f"sitemap.xml: {e}")
-    for name in ("index.html", "404.html"):
+    if (dist / "sitemap.xml").exists():
+        try:
+            ET.parse(dist / "sitemap.xml")
+        except ET.ParseError as e:
+            problems.append(f"sitemap.xml: {e}")
+    for name in [n for n in ("index.html", "404.html") if (dist / n).exists()]:
         bal = Balance()
         bal.feed((dist / name).read_text(encoding="utf-8"))
         problems += [f"{name}: {e}" for e in bal.errors]
@@ -540,30 +631,82 @@ def check(c, dist):
 
 # --------------------------------------------------------------------------
 
-def main(argv):
-    with_pdf = "--pdf" in argv
+def load_content(nightly):
+    """content.json, with content.nightly.json merged over it for the nightly variant."""
     content = json.loads((SITE / "content.json").read_text(encoding="utf-8"))
+    if not nightly:
+        return content
+    public_url = content["site"]["url"]
+    overlay_file = SITE / "content.nightly.json"
+    if overlay_file.exists():
+        try:
+            overlay = json.loads(overlay_file.read_text(encoding="utf-8"))
+        except ValueError as e:
+            fail(f"content.nightly.json does not parse: {e}")
+        added = []
+        content = deep_merge(content, overlay, added=added)
+        print(f"overlay: merged {overlay_file.name} over content.json")
+        for key in added:
+            print(f"overlay: warning, '{key}' is not in content.json (a typo, or a deliberate addition?)")
+    # The preview's address is not up to the overlay: every absolute URL points at /nightly/.
+    content["site"]["url"] = public_url + NIGHTLY_PATH
+    return content, public_url
+
+
+def main(argv):
+    ap = argparse.ArgumentParser(description="Build the landing page (see the module docstring).")
+    ap.add_argument("--pdf", action="store_true", help="copy the paper's PDF next to the page")
+    ap.add_argument("--variant", choices=("default", "nightly"), default="default")
+    ap.add_argument("--out", type=Path, help="output folder (default: site/dist, or site/dist-nightly)")
+    ap.add_argument("--commit", help="commit shown in the nightly banner (default: this checkout's HEAD)")
+    ap.add_argument("--built-at", help="UTC build time for the banner, ISO 8601 such as 2026-11-15T03:00:00Z")
+    args = ap.parse_args(argv)
+    nightly = args.variant == "nightly"
+
+    if nightly:
+        content, public_url = load_content(True)
+        commit = args.commit or checkout_commit()
+        if not re.fullmatch(r"[0-9a-f]{7,40}(-dirty)?|unknown", commit):
+            fail(f"--commit is not a git hash: {commit}")
+        if args.built_at:
+            try:
+                when = datetime.datetime.fromisoformat(args.built_at.replace("Z", "+00:00")).astimezone(datetime.timezone.utc)
+            except ValueError:
+                fail(f"--built-at is not an ISO 8601 time: {args.built_at}")
+        else:
+            when = datetime.datetime.now(datetime.timezone.utc)
+        banner = {"public_url": public_url, "commit": commit, "built": when.strftime("%Y-%m-%d %H:%M UTC")}
+    else:
+        content, banner = load_content(False), None
+    out = (args.out or (DIST_NIGHTLY if nightly else DIST)).resolve()
+
     cff = parse_cff((REPO / "CITATION.cff").read_text(encoding="utf-8"))
     css = (SITE / "style.css").read_text(encoding="utf-8").strip()
     r = Renderer(content, cff)
 
-    DIST.mkdir(exist_ok=True)
-    for old in DIST.iterdir():  # empty it, but keep the folder itself (a server may be using it)
+    out.mkdir(parents=True, exist_ok=True)
+    for old in out.iterdir():  # empty it, but keep the folder itself (a server may be using it)
         shutil.rmtree(old) if old.is_dir() else old.unlink()
 
-    (DIST / "index.html").write_text(build_index(content, cff, css, r), encoding="utf-8", newline="\n")
-    (DIST / "404.html").write_text(build_404(content, css, r), encoding="utf-8", newline="\n")
-    (DIST / "sitemap.xml").write_text(build_sitemap(content), encoding="utf-8", newline="\n")
-    (DIST / "robots.txt").write_text(build_robots(content), encoding="utf-8", newline="\n")
-    (DIST / ".nojekyll").write_text("", encoding="utf-8")
-    shutil.copyfile(SITE / "assets" / "favicon.svg", DIST / "favicon.svg")
-    shutil.copyfile(SITE / "assets" / "og.png", DIST / "og.png")
-    if with_pdf:
-        shutil.copyfile(REPO / content["site"]["pdf_source"], DIST / content["site"]["pdf"])
+    (out / "index.html").write_text(build_index(content, cff, css, r, banner), encoding="utf-8", newline="\n")
+    if not nightly:
+        # Only the public page has these; the preview must not advertise itself.
+        (out / "404.html").write_text(build_404(content, css, r), encoding="utf-8", newline="\n")
+        (out / "sitemap.xml").write_text(build_sitemap(content), encoding="utf-8", newline="\n")
+        (out / "robots.txt").write_text(build_robots(content), encoding="utf-8", newline="\n")
+        (out / ".nojekyll").write_text("", encoding="utf-8")
+    shutil.copyfile(SITE / "assets" / "favicon.svg", out / "favicon.svg")
+    shutil.copyfile(SITE / "assets" / "og.png", out / "og.png")
+    if args.pdf:
+        shutil.copyfile(REPO / content["site"]["pdf_source"], out / content["site"]["pdf"])
 
-    problems, weight = check(content, DIST)
-    for f in sorted(DIST.iterdir()):
-        print(f"{f.stat().st_size:>8}  {f.relative_to(SITE)}")
+    problems, weight = check(content, out, nightly)
+    for f in sorted(out.iterdir()):
+        try:
+            shown = f.relative_to(SITE)
+        except ValueError:
+            shown = f
+        print(f"{f.stat().st_size:>8}  {shown}")
     print(f"page weight without PDF and og.png: {weight} bytes (budget {BUDGET_BYTES})")
     if problems:
         print("\nchecks failed:")

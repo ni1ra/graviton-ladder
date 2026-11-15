@@ -1,0 +1,7 @@
+{
+  "_comment": "Merged over content.json for the nightly preview only (objects merge key by key; arrays and scalars replace). Keys starting with an underscore are dropped. This example changes just the version label so the mechanism is exercised; put work in progress here before it moves to content.json.",
+
+  "paper": {
+    "version_label": "Nightly preview after version 3, 10 November 2026"
+  }
+}

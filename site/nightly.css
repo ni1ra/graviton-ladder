@@ -1,0 +1,12 @@
+/* Banner of the nightly preview. Only the nightly build inlines this file. */
+.nightly {
+  background: var(--text); color: var(--bg);
+  font: 0.875rem/1.45 var(--sans);
+  padding: 0.5rem 0;
+}
+.nightly p { margin: 0; }
+.nightly a { color: inherit; font-weight: 700; }
+.nightly a:focus-visible { outline-color: var(--bg); }
+.nightly code { font-size: 0.95em; }
+.nightly .build { white-space: nowrap; opacity: 0.85; }
+@media print { .nightly { display: none; } }
