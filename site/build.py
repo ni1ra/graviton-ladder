@@ -12,7 +12,7 @@ Pure standard library. Reads:
 Usage:
   python site/build.py          build into site/dist/
   python site/build.py --pdf    also copy paper/ladder_short.pdf into site/dist/
-                                (the Pages workflow does this copy itself)
+                                (publish.py does this copy itself)
   python site/build.py --variant nightly
                                 build the work-in-progress preview into site/dist-nightly/.
                                 It is served from the /nightly/ folder of the Pages site,
