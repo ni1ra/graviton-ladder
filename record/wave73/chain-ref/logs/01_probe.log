@@ -1,0 +1,26 @@
+PASS l=3 m=0  phi=z(5z^2-3r^2) seeds give nonzero TT tensors
+PASS l=3 m=0  phi=z(5z^2-3r^2) chain fields nonzero
+PASS l=3 m=0  phi=z(5z^2-3r^2) psi_B of even data = 0 and psi_E of odd data = 0
+   l=3 m=0  phi=z(5z^2-3r^2): total degrees of psi_E polynomials: [5, 11, 9] (phi has degree 3)
+   l=3 m=0  phi=z(5z^2-3r^2): [0][2] ratios even(h,K,symp) odd(K,h) = [1/30, 1/30, 1/30, 1/30, 1/30]; odd bilinear K.h / psi_B psidot_B = -1/30
+PASS l=3 m=0  phi=z(5z^2-3r^2) l=3: all six ratios on the full 3x3 Gram = c_l = 1/30 (odd bilinear = -c_l)  distinct values seen: ['1/30']
+PASS l=3 m=3  phi=Re(x+iy)^3 seeds give nonzero TT tensors
+PASS l=3 m=3  phi=Re(x+iy)^3 chain fields nonzero
+PASS l=3 m=3  phi=Re(x+iy)^3 psi_B of even data = 0 and psi_E of odd data = 0
+   l=3 m=3  phi=Re(x+iy)^3: total degrees of psi_E polynomials: [5, 11, 9] (phi has degree 3)
+   l=3 m=3  phi=Re(x+iy)^3: [0][2] ratios even(h,K,symp) odd(K,h) = [1/30, 1/30, 1/30, 1/30, 1/30]; odd bilinear K.h / psi_B psidot_B = -1/30
+PASS l=3 m=3  phi=Re(x+iy)^3 l=3: all six ratios on the full 3x3 Gram = c_l = 1/30 (odd bilinear = -c_l)  distinct values seen: ['1/30']
+PASS l=2 m=2  phi=x^2-y^2 seeds give nonzero TT tensors
+PASS l=2 m=2  phi=x^2-y^2 chain fields nonzero
+PASS l=2 m=2  phi=x^2-y^2 psi_B of even data = 0 and psi_E of odd data = 0
+   l=2 m=2  phi=x^2-y^2: total degrees of psi_E polynomials: [4, 10] (phi has degree 2)
+   l=2 m=2  phi=x^2-y^2: [0][1] ratios even(h,K,symp) odd(K,h) = [1/6, 1/6, 1/6, 1/6, 1/6]; odd bilinear K.h / psi_B psidot_B = -1/6
+PASS l=2 m=2  phi=x^2-y^2 l=2: all six ratios on the full 2x2 Gram = c_l = 1/6 (odd bilinear = -c_l)  distinct values seen: ['1/6']
+PASS l=4 m=0  phi=35z^4-30z^2r^2+3r^4 seeds give nonzero TT tensors
+PASS l=4 m=0  phi=35z^4-30z^2r^2+3r^4 chain fields nonzero
+PASS l=4 m=0  phi=35z^4-30z^2r^2+3r^4 psi_B of even data = 0 and psi_E of odd data = 0
+   l=4 m=0  phi=35z^4-30z^2r^2+3r^4: total degrees of psi_E polynomials: [6, 12] (phi has degree 4)
+   l=4 m=0  phi=35z^4-30z^2r^2+3r^4: [0][1] ratios even(h,K,symp) odd(K,h) = [1/90, 1/90, 1/90, 1/90, 1/90]; odd bilinear K.h / psi_B psidot_B = -1/90
+PASS l=4 m=0  phi=35z^4-30z^2r^2+3r^4 l=4: all six ratios on the full 2x2 Gram = c_l = 1/90 (odd bilinear = -c_l)  distinct values seen: ['1/90']
+PASS l=3: graviton forms vanish between m=0 and m=3 (even and odd)
+DONE fails = 0
