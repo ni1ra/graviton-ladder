@@ -1,3 +1,8 @@
+# Crawlers read only the robots.txt at the HOST root (https://ni1ra.github.io/robots.txt).
+# A file inside a project site like this one is ignored, so it cannot protect anything.
+# The preview in /nightly/ is kept out of search results by its noindex meta tag. It is
+# deliberately not disallowed here either: a crawler that may not fetch a page never
+# sees the noindex on it.
 User-agent: *
 Allow: /
 
