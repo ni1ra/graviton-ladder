@@ -1,0 +1,1160 @@
+{
+ "all_pass": true,
+ "checks": [
+  {
+   "detail": "0",
+   "name": "even metric T_1: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_1: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_1: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_1: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "even metric T_2: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_2: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_2: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_2: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "even metric T_3: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_3: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_3: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_3: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "even metric T_4: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_4: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_4: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even metric T_4: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "even extrinsic T_1: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_1: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_1: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_1: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "even extrinsic T_2: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_2: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_2: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_2: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "even extrinsic T_3: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_3: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_3: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_3: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "even extrinsic T_4: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_4: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_4: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even extrinsic T_4: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "747989738496",
+   "name": "even: the eight data span the chain basis (psi, psi_dot; j = 0..3)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even: Q_3 Gram equals c_l E_1 on the chain basis (slice entropy, block diagonal)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even: Q_3 of the first datum equals nc.entropy_slice",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_1: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_1: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_1: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_2: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_2: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_2: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_3: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_3: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_3: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_4: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_4: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd metric O_4: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_0: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_0: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_0: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_1: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_1: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_1: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_2: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_2: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_2: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_3: transverse and traceless",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_3: linearised vacuum equations hold exactly",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd extrinsic O_3: the other parity's chain field vanishes identically",
+   "pass": true
+  },
+  {
+   "detail": "-161404379136",
+   "name": "odd: the eight data span the chain basis (psi, psi_dot; j = 0..3)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd: Q_3 Gram equals c_l E_1 on the chain basis (slice entropy, block diagonal)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd: Q_3 of the first datum equals nc.entropy_slice",
+   "pass": true
+  },
+  {
+   "detail": "16/9",
+   "name": "static electric tide (Newtonian gauge, K = 0): Q_2/S = 16/9",
+   "pass": true
+  },
+  {
+   "detail": "16/9",
+   "name": "stationary magnetic tide h = 2tK: Q_2/S = 16/9",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "even Gram [psi0, psi0] reproduces the static electric tide (gauge invariance; pure metric datum)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "odd Gram [psi0, psi0] reproduces the stationary magnetic tide (pure extrinsic-curvature datum)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "duality: even and odd chain-basis Gram matrices of Q_2 are identical",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "profile law: for C ~ v^(n-2), Q_2/Q_3 = ((n+2)/(n+1))^2 (symbolic n)",
+   "pass": true
+  }
+ ],
+ "l": 2,
+ "plant": null,
+ "results": {
+  "even": {
+   "Delta": {
+    "cross": {
+     "is_zero": false,
+     "matrix": [
+      [
+       "-1/252",
+       "-1/324",
+       "-1/396",
+       "-1/468"
+      ],
+      [
+       "-1/216",
+       "-131/35640",
+       "-157/51480",
+       "-61/23400"
+      ],
+      [
+       "-1/198",
+       "-157/38610",
+       "-307/90090",
+       "-227/77350"
+      ],
+      [
+       "-5/936",
+       "-61/14040",
+       "-227/61880",
+       "-504337/158722200"
+      ]
+     ]
+    },
+    "full": {
+     "eigenvalues_float": [
+      9.642499760207149e-10,
+      6.848522088067136e-08,
+      5.812443812308264e-07,
+      5.8253439322541375e-06,
+      7.154460716352209e-05,
+      0.0003126468855174195,
+      0.004512493180421663,
+      0.12383060083264412
+     ],
+     "is_zero": false,
+     "leading_minors": [
+      "1/36",
+      "1/19440",
+      "1/240810570",
+      "4/233498959068375",
+      "1/308919122847460125",
+      "1/118080936598090310719875",
+      "16/27707960406872652065875556465625",
+      "512/183200888406666097139003822720576330859375"
+     ],
+     "matrix": [
+      [
+       "1/36",
+       "1/36",
+       "1/36",
+       "1/36",
+       "-1/252",
+       "-1/324",
+       "-1/396",
+       "-1/468"
+      ],
+      [
+       "1/36",
+       "4/135",
+       "61/1980",
+       "37/1170",
+       "-1/216",
+       "-131/35640",
+       "-157/51480",
+       "-61/23400"
+      ],
+      [
+       "1/36",
+       "61/1980",
+       "657/20020",
+       "187/5460",
+       "-1/198",
+       "-157/38610",
+       "-307/90090",
+       "-227/77350"
+      ],
+      [
+       "1/36",
+       "37/1170",
+       "187/5460",
+       "7552/208845",
+       "-5/936",
+       "-61/14040",
+       "-227/61880",
+       "-504337/158722200"
+      ],
+      [
+       "-1/252",
+       "-1/216",
+       "-1/198",
+       "-5/936",
+       "1/1008",
+       "1/1296",
+       "1/1584",
+       "1/1872"
+      ],
+      [
+       "-1/324",
+       "-131/35640",
+       "-157/38610",
+       "-61/14040",
+       "1/1296",
+       "131/213840",
+       "157/308880",
+       "61/140400"
+      ],
+      [
+       "-1/396",
+       "-157/51480",
+       "-307/90090",
+       "-227/61880",
+       "1/1584",
+       "157/308880",
+       "307/720720",
+       "227/618800"
+      ],
+      [
+       "-1/468",
+       "-61/23400",
+       "-227/77350",
+       "-504337/158722200",
+       "1/1872",
+       "61/140400",
+       "227/618800",
+       "504337/1587222000"
+      ]
+     ],
+     "verdict": "positive definite"
+    },
+    "psi": {
+     "Q2_over_S_spectrum_float": [
+      1.0499716376888633,
+      1.1393460083773688,
+      1.4279979394276925,
+      3.1354319579679046
+     ],
+     "eigenvalues_float": [
+      4.902548583914117e-07,
+      6.667418008624669e-05,
+      0.004294895666908696,
+      0.12202331922470246
+     ],
+     "is_zero": false,
+     "leading_minors": [
+      "1/36",
+      "1/19440",
+      "1/240810570",
+      "4/233498959068375"
+     ],
+     "matrix": [
+      [
+       "1/36",
+       "1/36",
+       "1/36",
+       "1/36"
+      ],
+      [
+       "1/36",
+       "4/135",
+       "61/1980",
+       "37/1170"
+      ],
+      [
+       "1/36",
+       "61/1980",
+       "657/20020",
+       "187/5460"
+      ],
+      [
+       "1/36",
+       "37/1170",
+       "187/5460",
+       "7552/208845"
+      ]
+     ],
+     "verdict": "positive definite"
+    },
+    "psi_dot": {
+     "Q2_over_S_spectrum_float": [
+      1.0382461373460001,
+      1.0950045313586356,
+      1.290007374007057,
+      3.217317354113704
+     ],
+     "eigenvalues_float": [
+      1.637415303861164e-09,
+      3.20574666916103e-07,
+      3.228646836744623e-05,
+      0.002315773536525602
+     ],
+     "is_zero": false,
+     "leading_minors": [
+      "1/1008",
+      "1/80831520",
+      "1/260335491015600",
+      "2/50959519161433341834375"
+     ],
+     "matrix": [
+      [
+       "1/1008",
+       "1/1296",
+       "1/1584",
+       "1/1872"
+      ],
+      [
+       "1/1296",
+       "131/213840",
+       "157/308880",
+       "61/140400"
+      ],
+      [
+       "1/1584",
+       "157/308880",
+       "307/720720",
+       "227/618800"
+      ],
+      [
+       "1/1872",
+       "61/140400",
+       "227/618800",
+       "504337/1587222000"
+      ]
+     ],
+     "verdict": "positive definite"
+    }
+   },
+   "Q2": [
+    [
+     "4/63",
+     "1/18",
+     "5/99",
+     "11/234",
+     "-1/252",
+     "-1/324",
+     "-1/396",
+     "-1/468"
+    ],
+    [
+     "1/18",
+     "331/5940",
+     "32/585",
+     "25/468",
+     "-1/216",
+     "-131/35640",
+     "-157/51480",
+     "-61/23400"
+    ],
+    [
+     "5/99",
+     "32/585",
+     "2537/45045",
+     "1318/23205",
+     "-1/198",
+     "-157/38610",
+     "-307/90090",
+     "-227/77350"
+    ],
+    [
+     "11/234",
+     "25/468",
+     "1318/23205",
+     "930217/15872220",
+     "-5/936",
+     "-61/14040",
+     "-227/61880",
+     "-504337/158722200"
+    ],
+    [
+     "-1/252",
+     "-1/216",
+     "-1/198",
+     "-5/936",
+     "1/432",
+     "23/14256",
+     "25/20592",
+     "1/1040"
+    ],
+    [
+     "-1/324",
+     "-131/35640",
+     "-157/38610",
+     "-61/14040",
+     "23/14256",
+     "3323/2779920",
+     "289/308880",
+     "1817/2386800"
+    ],
+    [
+     "-1/396",
+     "-157/51480",
+     "-307/90090",
+     "-227/61880",
+     "25/20592",
+     "289/308880",
+     "9223/12252240",
+     "22039/35271600"
+    ],
+    [
+     "-1/468",
+     "-61/23400",
+     "-227/77350",
+     "-504337/158722200",
+     "1/1040",
+     "1817/2386800",
+     "22039/35271600",
+     "835837/1587222000"
+    ]
+   ],
+   "S": [
+    [
+     "1/28",
+     "1/36",
+     "1/44",
+     "1/52",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "1/36",
+     "31/1188",
+     "41/1716",
+     "17/780",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "1/44",
+     "41/1716",
+     "11/468",
+     "23/1020",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "1/52",
+     "17/780",
+     "23/1020",
+     "29/1292",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/756",
+     "1/1188",
+     "1/1716",
+     "1/2340"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/1188",
+     "1/1716",
+     "1/2340",
+     "1/3060"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/1716",
+     "1/2340",
+     "1/3060",
+     "1/3876"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/2340",
+     "1/3060",
+     "1/3876",
+     "1/4788"
+    ]
+   ],
+   "first_psi_dot_ratio": "7/4",
+   "psi_dot_is": "extrinsic",
+   "psi_is": "metric",
+   "static_ratio_psi00": "16/9"
+  },
+  "odd": {
+   "Delta": {
+    "cross": {
+     "is_zero": false,
+     "matrix": [
+      [
+       "-1/252",
+       "-1/324",
+       "-1/396",
+       "-1/468"
+      ],
+      [
+       "-1/216",
+       "-131/35640",
+       "-157/51480",
+       "-61/23400"
+      ],
+      [
+       "-1/198",
+       "-157/38610",
+       "-307/90090",
+       "-227/77350"
+      ],
+      [
+       "-5/936",
+       "-61/14040",
+       "-227/61880",
+       "-504337/158722200"
+      ]
+     ]
+    },
+    "full": {
+     "eigenvalues_float": [
+      9.642499760207149e-10,
+      6.848522088067136e-08,
+      5.812443812308264e-07,
+      5.8253439322541375e-06,
+      7.154460716352209e-05,
+      0.0003126468855174195,
+      0.004512493180421663,
+      0.12383060083264412
+     ],
+     "is_zero": false,
+     "leading_minors": [
+      "1/36",
+      "1/19440",
+      "1/240810570",
+      "4/233498959068375",
+      "1/308919122847460125",
+      "1/118080936598090310719875",
+      "16/27707960406872652065875556465625",
+      "512/183200888406666097139003822720576330859375"
+     ],
+     "matrix": [
+      [
+       "1/36",
+       "1/36",
+       "1/36",
+       "1/36",
+       "-1/252",
+       "-1/324",
+       "-1/396",
+       "-1/468"
+      ],
+      [
+       "1/36",
+       "4/135",
+       "61/1980",
+       "37/1170",
+       "-1/216",
+       "-131/35640",
+       "-157/51480",
+       "-61/23400"
+      ],
+      [
+       "1/36",
+       "61/1980",
+       "657/20020",
+       "187/5460",
+       "-1/198",
+       "-157/38610",
+       "-307/90090",
+       "-227/77350"
+      ],
+      [
+       "1/36",
+       "37/1170",
+       "187/5460",
+       "7552/208845",
+       "-5/936",
+       "-61/14040",
+       "-227/61880",
+       "-504337/158722200"
+      ],
+      [
+       "-1/252",
+       "-1/216",
+       "-1/198",
+       "-5/936",
+       "1/1008",
+       "1/1296",
+       "1/1584",
+       "1/1872"
+      ],
+      [
+       "-1/324",
+       "-131/35640",
+       "-157/38610",
+       "-61/14040",
+       "1/1296",
+       "131/213840",
+       "157/308880",
+       "61/140400"
+      ],
+      [
+       "-1/396",
+       "-157/51480",
+       "-307/90090",
+       "-227/61880",
+       "1/1584",
+       "157/308880",
+       "307/720720",
+       "227/618800"
+      ],
+      [
+       "-1/468",
+       "-61/23400",
+       "-227/77350",
+       "-504337/158722200",
+       "1/1872",
+       "61/140400",
+       "227/618800",
+       "504337/1587222000"
+      ]
+     ],
+     "verdict": "positive definite"
+    },
+    "psi": {
+     "Q2_over_S_spectrum_float": [
+      1.0499716376888633,
+      1.1393460083773688,
+      1.4279979394276925,
+      3.1354319579679046
+     ],
+     "eigenvalues_float": [
+      4.902548583914117e-07,
+      6.667418008624669e-05,
+      0.004294895666908696,
+      0.12202331922470246
+     ],
+     "is_zero": false,
+     "leading_minors": [
+      "1/36",
+      "1/19440",
+      "1/240810570",
+      "4/233498959068375"
+     ],
+     "matrix": [
+      [
+       "1/36",
+       "1/36",
+       "1/36",
+       "1/36"
+      ],
+      [
+       "1/36",
+       "4/135",
+       "61/1980",
+       "37/1170"
+      ],
+      [
+       "1/36",
+       "61/1980",
+       "657/20020",
+       "187/5460"
+      ],
+      [
+       "1/36",
+       "37/1170",
+       "187/5460",
+       "7552/208845"
+      ]
+     ],
+     "verdict": "positive definite"
+    },
+    "psi_dot": {
+     "Q2_over_S_spectrum_float": [
+      1.0382461373460001,
+      1.0950045313586356,
+      1.290007374007057,
+      3.217317354113704
+     ],
+     "eigenvalues_float": [
+      1.637415303861164e-09,
+      3.20574666916103e-07,
+      3.228646836744623e-05,
+      0.002315773536525602
+     ],
+     "is_zero": false,
+     "leading_minors": [
+      "1/1008",
+      "1/80831520",
+      "1/260335491015600",
+      "2/50959519161433341834375"
+     ],
+     "matrix": [
+      [
+       "1/1008",
+       "1/1296",
+       "1/1584",
+       "1/1872"
+      ],
+      [
+       "1/1296",
+       "131/213840",
+       "157/308880",
+       "61/140400"
+      ],
+      [
+       "1/1584",
+       "157/308880",
+       "307/720720",
+       "227/618800"
+      ],
+      [
+       "1/1872",
+       "61/140400",
+       "227/618800",
+       "504337/1587222000"
+      ]
+     ],
+     "verdict": "positive definite"
+    }
+   },
+   "Q2": [
+    [
+     "4/63",
+     "1/18",
+     "5/99",
+     "11/234",
+     "-1/252",
+     "-1/324",
+     "-1/396",
+     "-1/468"
+    ],
+    [
+     "1/18",
+     "331/5940",
+     "32/585",
+     "25/468",
+     "-1/216",
+     "-131/35640",
+     "-157/51480",
+     "-61/23400"
+    ],
+    [
+     "5/99",
+     "32/585",
+     "2537/45045",
+     "1318/23205",
+     "-1/198",
+     "-157/38610",
+     "-307/90090",
+     "-227/77350"
+    ],
+    [
+     "11/234",
+     "25/468",
+     "1318/23205",
+     "930217/15872220",
+     "-5/936",
+     "-61/14040",
+     "-227/61880",
+     "-504337/158722200"
+    ],
+    [
+     "-1/252",
+     "-1/216",
+     "-1/198",
+     "-5/936",
+     "1/432",
+     "23/14256",
+     "25/20592",
+     "1/1040"
+    ],
+    [
+     "-1/324",
+     "-131/35640",
+     "-157/38610",
+     "-61/14040",
+     "23/14256",
+     "3323/2779920",
+     "289/308880",
+     "1817/2386800"
+    ],
+    [
+     "-1/396",
+     "-157/51480",
+     "-307/90090",
+     "-227/61880",
+     "25/20592",
+     "289/308880",
+     "9223/12252240",
+     "22039/35271600"
+    ],
+    [
+     "-1/468",
+     "-61/23400",
+     "-227/77350",
+     "-504337/158722200",
+     "1/1040",
+     "1817/2386800",
+     "22039/35271600",
+     "835837/1587222000"
+    ]
+   ],
+   "S": [
+    [
+     "1/28",
+     "1/36",
+     "1/44",
+     "1/52",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "1/36",
+     "31/1188",
+     "41/1716",
+     "17/780",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "1/44",
+     "41/1716",
+     "11/468",
+     "23/1020",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "1/52",
+     "17/780",
+     "23/1020",
+     "29/1292",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/756",
+     "1/1188",
+     "1/1716",
+     "1/2340"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/1188",
+     "1/1716",
+     "1/2340",
+     "1/3060"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/1716",
+     "1/2340",
+     "1/3060",
+     "1/3876"
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1/2340",
+     "1/3060",
+     "1/3876",
+     "1/4788"
+    ]
+   ],
+   "first_psi_dot_ratio": "7/4",
+   "psi_dot_is": "metric",
+   "psi_is": "extrinsic",
+   "static_ratio_psi00": "16/9"
+  }
+ },
+ "script": "ruler.py",
+ "static": {
+  "static electric tide (Newtonian gauge, K = 0)": "16/9",
+  "stationary magnetic tide h = 2tK": "16/9"
+ }
+}

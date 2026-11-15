@@ -1,0 +1,192 @@
+PASS even metric T_1: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even metric T_1: transverse and traceless
+PASS even metric T_1: linearised vacuum equations hold exactly
+PASS even metric T_1: the other parity's chain field vanishes identically
+   built even metric T_1 at 3 s
+PASS even metric T_2: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even metric T_2: transverse and traceless
+PASS even metric T_2: linearised vacuum equations hold exactly
+PASS even metric T_2: the other parity's chain field vanishes identically
+   built even metric T_2 at 4 s
+PASS even metric T_3: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even metric T_3: transverse and traceless
+PASS even metric T_3: linearised vacuum equations hold exactly
+PASS even metric T_3: the other parity's chain field vanishes identically
+   built even metric T_3 at 7 s
+PASS even metric T_4: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even metric T_4: transverse and traceless
+PASS even metric T_4: linearised vacuum equations hold exactly
+PASS even metric T_4: the other parity's chain field vanishes identically
+   built even metric T_4 at 12 s
+PASS even extrinsic T_1: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even extrinsic T_1: transverse and traceless
+PASS even extrinsic T_1: linearised vacuum equations hold exactly
+PASS even extrinsic T_1: the other parity's chain field vanishes identically
+   built even extrinsic T_1 at 14 s
+PASS even extrinsic T_2: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even extrinsic T_2: transverse and traceless
+PASS even extrinsic T_2: linearised vacuum equations hold exactly
+PASS even extrinsic T_2: the other parity's chain field vanishes identically
+   built even extrinsic T_2 at 16 s
+PASS even extrinsic T_3: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even extrinsic T_3: transverse and traceless
+PASS even extrinsic T_3: linearised vacuum equations hold exactly
+PASS even extrinsic T_3: the other parity's chain field vanishes identically
+   built even extrinsic T_3 at 19 s
+PASS even extrinsic T_4: the TT tensor with x.T.x = s^k phi is unique (the gauge mode has x.T.x != 0) | 0
+PASS even extrinsic T_4: transverse and traceless
+PASS even extrinsic T_4: linearised vacuum equations hold exactly
+PASS even extrinsic T_4: the other parity's chain field vanishes identically
+   built even extrinsic T_4 at 25 s
+PASS even: the eight data span the chain basis (psi, psi_dot; j = 0..3) | 747989738496
+   even Gram matrices at 49 s
+PASS even: Q_3 Gram equals c_l E_1 on the chain basis (slice entropy, block diagonal)
+PASS even: Q_3 of the first datum equals nc.entropy_slice
+
+[even] Delta on psi = metric data: positive definite; eigenvalues ['4.90255e-07', '6.66742e-05', '0.0042949', '0.122023']
+[1/36  1/36   1/36    1/36 ]
+[                          ]
+[              61      37  ]
+[1/36  4/135  ----    ---- ]
+[             1980    1170 ]
+[                          ]
+[       61     657    187  ]
+[1/36  ----   -----   ---- ]
+[      1980   20020   5460 ]
+[                          ]
+[       37    187     7552 ]
+[1/36  ----   ----   ------]
+[      1170   5460   208845]
+   spectrum of Q_2 relative to S on this block: ['1.04997', '1.13935', '1.428', '3.13543']
+
+[even] Delta on psi_dot = extrinsic data: positive definite; eigenvalues ['1.63742e-09', '3.20575e-07', '3.22865e-05', '0.00231577']
+[1/1008  1/1296  1/1584    1/1872  ]
+[                                  ]
+[         131     157        61    ]
+[1/1296  ------  ------    ------  ]
+[        213840  308880    140400  ]
+[                                  ]
+[         157     307       227    ]
+[1/1584  ------  ------    ------  ]
+[        308880  720720    618800  ]
+[                                  ]
+[          61     227      504337  ]
+[1/1872  ------  ------  ----------]
+[        140400  618800  1587222000]
+   spectrum of Q_2 relative to S on this block: ['1.03825', '1.095', '1.29001', '3.21732']
+
+[even] Delta cross block (psi x psi_dot): zero = False
+[-1/252  -1/324  -1/396   -1/468  ]
+[                                 ]
+[        -131    -157      -61    ]
+[-1/216  -----   -----     -----  ]
+[        35640   51480     23400  ]
+[                                 ]
+[        -157    -307      -227   ]
+[-1/198  -----   -----     -----  ]
+[        38610   90090     77350  ]
+[                                 ]
+[        -61     -227    -504337  ]
+[-5/936  -----   -----   ---------]
+[        14040   61880   158722200]
+
+[even] Delta on full 8x8: positive definite; eigenvalues ['9.6425e-10', '6.84852e-08', '5.81244e-07', '5.82534e-06', '7.15446e-05', '0.000312647', '0.00451249', '0.123831']
+
+[even] Q_2/S on psi = phi (metric datum): 16/9;  on psi_dot = phi (extrinsic datum): 7/4
+PASS odd metric O_1: transverse and traceless
+PASS odd metric O_1: linearised vacuum equations hold exactly
+PASS odd metric O_1: the other parity's chain field vanishes identically
+   built odd metric O_1 at 49 s
+PASS odd metric O_2: transverse and traceless
+PASS odd metric O_2: linearised vacuum equations hold exactly
+PASS odd metric O_2: the other parity's chain field vanishes identically
+   built odd metric O_2 at 50 s
+PASS odd metric O_3: transverse and traceless
+PASS odd metric O_3: linearised vacuum equations hold exactly
+PASS odd metric O_3: the other parity's chain field vanishes identically
+   built odd metric O_3 at 52 s
+PASS odd metric O_4: transverse and traceless
+PASS odd metric O_4: linearised vacuum equations hold exactly
+PASS odd metric O_4: the other parity's chain field vanishes identically
+   built odd metric O_4 at 57 s
+PASS odd extrinsic O_0: transverse and traceless
+PASS odd extrinsic O_0: linearised vacuum equations hold exactly
+PASS odd extrinsic O_0: the other parity's chain field vanishes identically
+   built odd extrinsic O_0 at 57 s
+PASS odd extrinsic O_1: transverse and traceless
+PASS odd extrinsic O_1: linearised vacuum equations hold exactly
+PASS odd extrinsic O_1: the other parity's chain field vanishes identically
+   built odd extrinsic O_1 at 57 s
+PASS odd extrinsic O_2: transverse and traceless
+PASS odd extrinsic O_2: linearised vacuum equations hold exactly
+PASS odd extrinsic O_2: the other parity's chain field vanishes identically
+   built odd extrinsic O_2 at 59 s
+PASS odd extrinsic O_3: transverse and traceless
+PASS odd extrinsic O_3: linearised vacuum equations hold exactly
+PASS odd extrinsic O_3: the other parity's chain field vanishes identically
+   built odd extrinsic O_3 at 61 s
+PASS odd: the eight data span the chain basis (psi, psi_dot; j = 0..3) | -161404379136
+   odd Gram matrices at 75 s
+PASS odd: Q_3 Gram equals c_l E_1 on the chain basis (slice entropy, block diagonal)
+PASS odd: Q_3 of the first datum equals nc.entropy_slice
+
+[odd] Delta on psi = extrinsic data: positive definite; eigenvalues ['4.90255e-07', '6.66742e-05', '0.0042949', '0.122023']
+[1/36  1/36   1/36    1/36 ]
+[                          ]
+[              61      37  ]
+[1/36  4/135  ----    ---- ]
+[             1980    1170 ]
+[                          ]
+[       61     657    187  ]
+[1/36  ----   -----   ---- ]
+[      1980   20020   5460 ]
+[                          ]
+[       37    187     7552 ]
+[1/36  ----   ----   ------]
+[      1170   5460   208845]
+   spectrum of Q_2 relative to S on this block: ['1.04997', '1.13935', '1.428', '3.13543']
+
+[odd] Delta on psi_dot = metric data: positive definite; eigenvalues ['1.63742e-09', '3.20575e-07', '3.22865e-05', '0.00231577']
+[1/1008  1/1296  1/1584    1/1872  ]
+[                                  ]
+[         131     157        61    ]
+[1/1296  ------  ------    ------  ]
+[        213840  308880    140400  ]
+[                                  ]
+[         157     307       227    ]
+[1/1584  ------  ------    ------  ]
+[        308880  720720    618800  ]
+[                                  ]
+[          61     227      504337  ]
+[1/1872  ------  ------  ----------]
+[        140400  618800  1587222000]
+   spectrum of Q_2 relative to S on this block: ['1.03825', '1.095', '1.29001', '3.21732']
+
+[odd] Delta cross block (psi x psi_dot): zero = False
+[-1/252  -1/324  -1/396   -1/468  ]
+[                                 ]
+[        -131    -157      -61    ]
+[-1/216  -----   -----     -----  ]
+[        35640   51480     23400  ]
+[                                 ]
+[        -157    -307      -227   ]
+[-1/198  -----   -----     -----  ]
+[        38610   90090     77350  ]
+[                                 ]
+[        -61     -227    -504337  ]
+[-5/936  -----   -----   ---------]
+[        14040   61880   158722200]
+
+[odd] Delta on full 8x8: positive definite; eigenvalues ['9.6425e-10', '6.84852e-08', '5.81244e-07', '5.82534e-06', '7.15446e-05', '0.000312647', '0.00451249', '0.123831']
+
+[odd] Q_2/S on psi = phi (extrinsic datum): 16/9;  on psi_dot = phi (metric datum): 7/4
+static electric tide (Newtonian gauge, K = 0): Q_2/S = 16/9
+PASS static electric tide (Newtonian gauge, K = 0): Q_2/S = 16/9 | 16/9
+stationary magnetic tide h = 2tK: Q_2/S = 16/9
+PASS stationary magnetic tide h = 2tK: Q_2/S = 16/9 | 16/9
+PASS even Gram [psi0, psi0] reproduces the static electric tide (gauge invariance; pure metric datum)
+PASS odd Gram [psi0, psi0] reproduces the stationary magnetic tide (pure extrinsic-curvature datum)
+PASS duality: even and odd chain-basis Gram matrices of Q_2 are identical
+PASS profile law: for C ~ v^(n-2), Q_2/Q_3 = ((n+2)/(n+1))^2 (symbolic n)
+
+plant=None checks=68 fail=0 time=75 s

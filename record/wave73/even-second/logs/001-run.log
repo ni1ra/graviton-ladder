@@ -1,0 +1,15 @@
+quantity           lower (rounded down)     upper (rounded up)       width     side
+Traceback (most recent call last):
+  File "record\wave73\even-second\scripts\second.py", line 227, in <module>
+    lo, hi = safe(x, "lower"), safe(x, "upper")
+             ~~~~^^^^^^^^^^^^
+  File "record\wave73\even-second\scripts\second.py", line 212, in safe
+    d = Decimal(mp.nstr(x.a, 45)) * (1 - Decimal("1e-40"))
+        ~~~~~~~^^^^^^^^^^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+--- flint check ---
+Traceback (most recent call last):
+  File "record\wave73\even-second\scripts\check_flint.py", line 11, in <module>
+    vals = json.load(open(os.path.join(HERE, "..", "out", "values.json")))
+                     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'record\\wave73\\even-second\\scripts\\..\\out\\values.json'

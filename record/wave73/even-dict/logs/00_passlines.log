@@ -1,0 +1,41 @@
+EVEN-DICT log 00: pass lines, fixed 2026-11-15 before any script of this lane was run.
+
+Dictionary under test (sector l, psi = f(r) Y, psidot = p(r) Y, integrals over the ball in units of N_Y = int Y^2):
+  r = tanh(rho/2), N = (1-r^2)/2 = 1/(1+cosh rho), dr = N drho, r = N sinh rho
+  q(rho)  = r f(r)        (psi    = q /(N sinh rho))
+  pi(rho) = N r p(r)      (psidot = pi/(N^2 sinh rho))
+Claims, each as a full Gram matrix on the data below:
+  (a1) (1/2) int_0^1 N p_i p_j r^2 dr                                   = (1/2) int pi_i pi_j drho
+  (a2) (1/2) int N (f_i' f_j' + lam^2 f_i f_j/r^2) r^2 dr + (1/2) int f_i f_j r^2 dr
+                                                                       = (1/2) int (q_i' q_j' + lam^2 q_i q_j/sinh^2 rho) drho
+  (a3) int p_i f_j r^2 dr                                               = int pi_i q_j drho      (non-symmetric matrix)
+  (b)  (1/2) int p_i (G_D p_j) r^2 dr, G_D from the 3D Dirichlet problem = (1/2) g <pi_i, W pi_j>, g = 1,
+       W(rho,rho') = t_<^(l+1) (t_>^(-l) - t_>^(l+1))/(2l+1), t = tanh(rho/2)
+Data: f, p in { r^(l+2k), k = 0,1,2,3 } and a fifth r^l (3 - 7s/2 + 5s^2/3 + 2s^3/7 - 11 s^4/13), s = r^2. l = 2, 3, 4.
+r side: exact rationals. rho side: composite Gauss-Legendre, 45 digits working precision, n = 60 nodes per panel,
+kernel integrated as a genuine double integral in rho (inner integral split at rho' = rho).
+
+MAIN (script even_dict_check.py)
+ L1  (a1): max over Gram of |rho - r| / max|r| <= 1e-30, each l.
+ L2  (a2): same line, each l.
+ L3  (a3): same line, each l, all 25 entries.
+ L4  (b):  same line with g = 1, each l.
+ L5  g read back: every entry ratio (rho side)/(r side) of (b) within 1e-28 of 1 (so g = 1, not another constant).
+ L6  quadrature self-check: (b) rho side with n = 60 and n = 80 nodes agree to 1e-32 relative.
+ L7  r-side definition check, exact: U = G_D p solves -(U'' + 2U'/r - lam^2 U/r^2) = p, U(1) = 0, for every datum.
+ L8  tie to EVEN-TOWER, exact: on the four monomials det(Z - nu A) = 0 at nu = 1/((j+1)(2l+2j+3)), j = 0..3.
+ PLANT P1: pi = N^2 r p (one power of N too many, psidot = pi/(N^3 sinh rho)). Must break L1 and L3 by > 1e-3 relative.
+ PLANT P2: q = N r f (conformal factor but not the sinh; psi = q/(N^2 sinh rho)). Must break L2 by > 1e-3 relative.
+ PLANT P3: Neumann-type kernel t_<^(l+1)(t_>^(-l) + (l/(l+1)) t_>^(l+1))/(2l+1). Must break L4 by > 1e-3 relative.
+
+SECONDARY (script thermal_check.py; outside the one decisive check, lower precision, l = 2 only)
+ The dictionary also asserts "the same thermal norm". Momentum-slot test on p in { r^2, r^4 }:
+   flat vacuum:   int int p_i(r) p_j(r') r r' Q_l((r^2+r'^2)/(2 r r'))/pi dr dr'   ( = <p_i, omega^-1 p_j>_{R^3}/N_Y )
+   thermal:       int_0^inf coth(pi k)/k  pihat_i(k) pihat_j(k) dk,  pihat = int pi(rho) u_k(rho) drho,
+                  u_k the delta-normalised regular solution of h^2 u = k^2 u.
+ L9  flat and thermal 2x2 Gram agree to 1e-7 relative.
+ L10 guard: u_k satisfies the ODE (finite difference residual <= 1e-8) and Parseval int pihat_i pihat_j dk = int pi_i pi_j drho to 1e-7.
+ PLANT P4: coth(pi k/2) (wrong temperature) must break L9 by > 1e-3.
+ Not tested: the q slot of the thermal norm.
+
+Any line that fails is reported as failed; lines are not edited after the first run.

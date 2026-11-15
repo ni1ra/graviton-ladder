@@ -1,0 +1,53 @@
+ODD-REMAINDER  pass lines, fixed 2026-11-15 BEFORE the first run of scripts\odd_remainder.py
+(hand arithmetic only; no script of this lane has been run yet)
+
+Notation. tau = pi, eps = 1.5, d = sqrt(2)|g|/lam, x = tau*d, lam = sqrt(l(l+1)).
+  D0(q,pi) = (0, -N q), N = 1/(1+cosh rho).  Cocycle S = exp(tau(X0+gD0)) exp(-tau X0), R2 = S - 1 - gT.
+  e_l = (q_l, 0), q_l = exp(-eps h^2) h^2 u;  psi_l = z_l = h^(1/2) q_l/sqrt(2) = h^(5/2) exp(-eps h^2) u/sqrt(2)  (REAL: q slot).
+  Spectral weights (derived for the q slot, mu = spectral measure of hu, mass A_l, int p^-2 dmu = ||u||^2 = 4*65536/109395):
+    ||e_l||^2            = (1/2) int p^3 coth(pi p)   e^(-2 eps p^2) dmu
+    ||coth^(3/2) psi||^2 = (1/2) int p^3 coth^3(pi p) e^(-2 eps p^2) dmu
+  N3_hi = min( sqrt((1/2) s3 A_16), sqrt((1/2) s5 ||u||^2) ),  s3 = sup (p coth pi p)^3 e^(-2 eps p^2),  s5 = sup p^2 (p coth pi p)^3 e^(-2 eps p^2)
+  E_lo  = J0_lo / sqrt(2 pi ||u||^2):  p coth(pi p) >= 1/pi, then Cauchy-Schwarz  int p^2 e^(-2 eps p^2) dmu >= (int e^(-eps p^2) dmu)^2 / int p^-2 dmu,
+          and J0 = int e^(-eps p^2) dmu >= J0_lo = A_inf exp(-eps G_hi^2/A_inf) (ODD-SIGN step 8).
+          (The even lane's Jensen step is NOT available: t e^(-2 eps t) is concave at the mean t = G^2/A ~ 0.63 < 1/eps.)
+  Rb = N3_hi/E_lo,  K = (1/2)(1+Rb),  C0 = K pi^2
+  rem_hi(l,g) = K (e^x - 1 - x) <= C0 e^x g^2/lam^2;   low(l,g) = c|g|/lam - rem_hi(l,g),  c = 2.038e-3 (ODD-SIGN, recomputed by its certified()).
+  l_1(g) = max(16, ceil(2*1.001*C0*|g|/c)).
+Hand estimates: s3 ~ 0.0859, A_16 = 0.93881, J0_lo = 0.36357, ||u||^2 = 2.39633:
+  N3_hi ~ 0.2008, E_lo ~ 0.0937, Rb ~ 2.143, K ~ 1.5716, C0 ~ 15.51, l_1(1) ~ 15,240.
+Grid: ODD-SIGN's discretisation of h_l, but on the box y in [max(-3, -ln 2 lam), 40] = [-3, 40] for every l >= 16 (chosen BEFORE running, because
+  EVEN-REMAINDER found the box [-4.8, 40] unresolved at the bottom: decay rate e^(-ybot) times dy must be below about 1; e^3 * 0.04 = 0.80,
+  e^3 * 0.02 = 0.40).  Fine grid dy = 0.02 for vector quantities; coarse grid dy = 0.04 for operator norms on H.
+l in {16, 64, 256, 1024, 16384}; g in {1, 8} (g = 8: bound predicted useless at every table l, since l_1(8) ~ 122,000).
+
+Certified constants
+  C1  all finite; 0.090 <= E_lo <= 0.097; 0.19 <= N3_hi <= 0.21; 1.50 <= K <= 1.65; 14.8 <= C0 <= 16.3.
+  C2  c recomputed equals 2.038e-3 to 4 digits (|c/2.038e-3 - 1| < 5e-4).
+
+Proved inequalities, tested on the grid (each must hold at every l, and for both g where g enters)
+  P1  E_lo <= ||e_l||_grid <= E_hi (ODD-SIGN, 0.23319)
+  P2  ||coth^(3/2) psi_l||_grid <= N3_hi
+  P3  actual remainder ||beta e - g beta1hat e||/||e||  <=  rem_hi(l,g)
+  P4  actual ||beta e||/||e||  >=  low(l,g)      (vacuous where low < 0; the script prints which)
+  P5  coarse grid, operator norms on H:  ||D0|| <= sqrt(2)/lam (Lemma A);  ||S|| <= e^x;  ||R2|| <= e^x - 1 - x
+  P6  coarse grid: ||beta e - g beta1hat e|| <= (1/2)||R2||_H,measured (||e|| + ||coth^(3/2) psi||)
+
+Numerical sanity
+  N1  remainder scales as g^2: rem(g=8)/rem(g=1) in [40, 90] at l >= 64 and in [25, 110] at l = 16;
+      lam^2*rem(g=1) at l = 1024 within 15% of its value at l = 256.
+  N2  first-order ratio lam||beta1hat e||/||e|| reproduces ODD-SIGN's table (0.297406, 0.303293, 0.304791, 0.305167 at l = 16..1024)
+      to 1e-4 relative (different box bottom; I expect about 1e-6).
+  N3  functional-calculus exp(tau(X0+gD0)) equals a Taylor scaling-and-squaring matrix exponential of the 2n x 2n generator
+      (dy = 0.2, l = 16 and 64, g = 1 and 8) to 1e-8 relative Frobenius.
+  N4  slack: rem_hi/actual remainder in [3, 2000] at every l for g = 1.
+  N5  l = 16384, g = 1: low > c/(2 lam) and actual >= low.  At l <= 1024, g = 1: low < 0 (vacuous there).
+  N6  g = 8: low < 0 at every table l, yet actual ||beta e||/||e|| >= c g/(2 lam) at every l (prediction about the true quantity).
+  N7  grid stability: at l = 1024, g = 1, halving dy changes the remainder by less than 2% and the full ratio by less than 1e-3 relative.
+
+Planted errors (each must be CAUGHT)
+  PLANT_A  cocycle factor dropped: S replaced by exp(tau(X0+gD0)) (no exp(-tau X0)).  Expected: the "remainder" then exceeds rem_hi (P3 violated)
+           at every l for g = 1.  Caught = violated at every l.
+  PLANT_B  wrong power: remainder bound C0 e^x g^2/lam^3.  Expected: violated by the actual remainder at l = 16384 (g = 1), probably also 1024.
+           Caught = violated at l = 16384.
+Exit code 0 only if every line holds.

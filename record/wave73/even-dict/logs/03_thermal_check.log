@@ -1,0 +1,6 @@
+   transforms done, 63 s
+   flat side done, 68 s
+PASS L10 guard: u_k solves h^2 u = k^2 u (finite differences) and Parseval int pihat_i pihat_j dk = int pi_i pi_j drho  | ODE residual 5.16e-11; Parseval rel err 2.11e-13
+PASS L9 l=2 momentum slot: <p, omega^-1 p>_flat = <pi, h^-1 coth(pi h) pi>_rho, 2x2 Gram  | rel err 1.45e-14; flat [['0.0265258238486', '0.0194522708223'], ['0.0194522708223', '0.0147365688048']]; thermal [['0.0265258238486', '0.0194522708223'], ['0.0194522708223', '0.0147365688048']]
+CAUGHT P4 coth(pi k/2) in place of coth(pi k)  | rel err 0.414
+FAILED LINES: none

@@ -1,0 +1,82 @@
+FAIL even metric T_1: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even metric T_1: transverse and traceless
+PASS even metric T_1: linearised vacuum equations hold exactly
+PASS even metric T_1: the other parity's chain field vanishes identically
+   built even metric T_1 at 3 s
+FAIL even metric T_2: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even metric T_2: transverse and traceless
+PASS even metric T_2: linearised vacuum equations hold exactly
+PASS even metric T_2: the other parity's chain field vanishes identically
+   built even metric T_2 at 5 s
+FAIL even metric T_3: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even metric T_3: transverse and traceless
+PASS even metric T_3: linearised vacuum equations hold exactly
+PASS even metric T_3: the other parity's chain field vanishes identically
+   built even metric T_3 at 8 s
+FAIL even metric T_4: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even metric T_4: transverse and traceless
+PASS even metric T_4: linearised vacuum equations hold exactly
+PASS even metric T_4: the other parity's chain field vanishes identically
+   built even metric T_4 at 14 s
+FAIL even extrinsic T_1: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even extrinsic T_1: transverse and traceless
+PASS even extrinsic T_1: linearised vacuum equations hold exactly
+PASS even extrinsic T_1: the other parity's chain field vanishes identically
+   built even extrinsic T_1 at 15 s
+FAIL even extrinsic T_2: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even extrinsic T_2: transverse and traceless
+PASS even extrinsic T_2: linearised vacuum equations hold exactly
+PASS even extrinsic T_2: the other parity's chain field vanishes identically
+   built even extrinsic T_2 at 17 s
+FAIL even extrinsic T_3: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even extrinsic T_3: transverse and traceless
+PASS even extrinsic T_3: linearised vacuum equations hold exactly
+PASS even extrinsic T_3: the other parity's chain field vanishes identically
+   built even extrinsic T_3 at 20 s
+FAIL even extrinsic T_4: one free parameter (the gauge mode Hess phi) in the TT solve | 0
+PASS even extrinsic T_4: transverse and traceless
+PASS even extrinsic T_4: linearised vacuum equations hold exactly
+PASS even extrinsic T_4: the other parity's chain field vanishes identically
+   built even extrinsic T_4 at 27 s
+PASS even: the eight data span the chain basis (psi, psi_dot; j = 0..3) | 747989738496
+   even Gram matrices at 51 s
+PASS even: Q_3 Gram equals c_l E_1 on the chain basis (slice entropy, block diagonal)
+PASS even: Q_3 of the first datum equals nc.entropy_slice
+
+[even] Delta on psi = metric data: positive definite; eigenvalues ['4.90255e-07', '6.66742e-05', '0.0042949', '0.122023']
+[1/36  1/36   1/36    1/36 ]
+[                          ]
+[              61      37  ]
+[1/36  4/135  ----    ---- ]
+[             1980    1170 ]
+[                          ]
+[       61     657    187  ]
+[1/36  ----   -----   ---- ]
+[      1980   20020   5460 ]
+[                          ]
+[       37    187     7552 ]
+[1/36  ----   ----   ------]
+[      1170   5460   208845]
+Traceback (most recent call last):
+  File "record\wave73\ruler\scripts\ruler.py", line 210, in <module>
+    rs = rel_spectrum(G2[:NB, :NB] if bn == "psi" else G2[NB:, NB:],
+                      G3[:NB, :NB] if bn == "psi" else G3[NB:, NB:])
+  File "record\wave73\ruler\scripts\ruler.py", line 162, in rel_spectrum
+    return sorted(float(sp.re(e)) for e in M.eigenvals(multiple=True))
+                                           ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<site-packages>\sympy\matrices\matrixbase.py", line 3331, in eigenvals
+    return _eigenvals(self, error_when_incomplete=error_when_incomplete, **flags)
+  File "<site-packages>\sympy\matrices\eigen.py", line 171, in _eigenvals
+    return _eigenvals_mpmath(M, multiple=multiple)
+  File "<site-packages>\sympy\matrices\eigen.py", line 61, in _eigenvals_mpmath
+    E, _ = _eigenvals_eigenvects_mpmath(M)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "<site-packages>\sympy\matrices\eigen.py", line 56, in _eigenvals_eigenvects_mpmath
+    raise PrecisionExhausted
+sympy.core.evalf.PrecisionExhausted
+
+--- note appended by the lane after run 01 ---
+Run 01 stopped on a script error (float eigenvalue routine, PrecisionExhausted) after the even psi block.
+The eight FAIL lines are a wrong check, not a wrong datum: fixing x.T.x = s^k phi already removes the gauge
+mode Hess phi (x.Hess.x = 2 phi), so the solve is unique (0 free parameters), not 1. Check restated; eigenvalues
+now from the exact characteristic polynomial. No change to data, forms or weights. Rerun is 02.

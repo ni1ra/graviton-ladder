@@ -1,0 +1,47 @@
+   transforms done, 64 s
+Traceback (most recent call last):
+  File "record\wave73\even-dict\scripts\thermal_check.py", line 127, in <module>
+    flatG = [[flat(i, j) for j in range(n)] for i in range(n)]
+              ~~~~^^^^^^
+  File "record\wave73\even-dict\scripts\thermal_check.py", line 124, in flat
+    return quad(outer, [0, mpf(1) / 2, 1]) / pi
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 746, in quad
+    v, err = rule.summation(f, points[0], prec, epsilon, m, verbose)
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 233, in summation
+    result = self.sum_next(f, nodes, degree, prec, results, verbose)
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 308, in sum_next
+    S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
+         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\mpmath\ctx_mp_python.py", line 938, in fdot
+    for a, b in A:
+                ^
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 308, in <genexpr>
+    S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
+                          ~^^^
+  File "record\wave73\even-dict\scripts\thermal_check.py", line 123, in outer
+    return quad(inner, [0, r / 2, r])
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 746, in quad
+    v, err = rule.summation(f, points[0], prec, epsilon, m, verbose)
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 233, in summation
+    result = self.sum_next(f, nodes, degree, prec, results, verbose)
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 308, in sum_next
+    S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
+         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\mpmath\ctx_mp_python.py", line 938, in fdot
+    for a, b in A:
+                ^
+  File "<site-packages>\mpmath\calculus\quadrature.py", line 308, in <genexpr>
+    S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
+                          ~^^^
+  File "record\wave73\even-dict\scripts\thermal_check.py", line 121, in inner
+    q = Q2((r * r + rp * rp) / (2 * r * rp))
+  File "record\wave73\even-dict\scripts\thermal_check.py", line 111, in Q2
+    return (3 * chi * chi - 1) / 4 * log((chi + 1) / (chi - 1)) - 3 * chi / 2
+                                         ~~~~~~~~~~^~~~~~~~~~~
+  File "<string>", line 7, in __div__
+  File "<site-packages>\mpmath\libmp\libmpf.py", line 960, in mpf_div
+    raise ZeroDivisionError
+ZeroDivisionError

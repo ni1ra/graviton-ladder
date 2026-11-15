@@ -1,0 +1,37 @@
+PASS L7 l=2 r-side G_D solves the 3D Dirichlet problem for every datum (exact)
+PASS L8 l=2 r-side spectrum of Z against (1/2)int N p^2 is 1/((j+1)(2l+2j+3)), j=0..3 (exact; 1/5 is not a root)
+PASS L1 l=2 (a1) momentum block, 5x5 Gram  | rel err 1.6538e-45; r-side [0][0]=1/126
+PASS L2 l=2 (a2) field block, 5x5 Gram (weight-1 term absorbed)  | rel err 2.6904e-45; r-side [0][0]=3/14
+PASS L3 l=2 (a3) symplectic pairing, 25 entries, non-symmetric  | rel err 1.9351e-45; r-side [0][0]=34/189
+PASS L4 l=2 (b) (1/2)<psidot,G_D psidot> = (1/2)<pi,W pi>, g=1, 5x5 Gram, double integral  | rel err 2.4237e-45; r-side [0][0]=1/882
+PASS L5 l=2 g read back entrywise: |Z_rho/Z_r - 1|  | max 2.4523e-45
+PASS L6 l=2 quadrature self-check n=60 against n=80 on (b)  | rel diff 1.3633e-45
+CAUGHT P1 l=2 pi = N^2 r p (psidot = pi/(N^3 sinh rho)) breaks (a1) and (a3)  | rel err 0.93595, 0.84561
+CAUGHT P2 l=2 q = N r f breaks (a2)  | rel err 0.91248
+CAUGHT P3 l=2 Neumann-type kernel breaks (b)  | rel err 1.8136
+   l=2 done, 51 s
+PASS L7 l=3 r-side G_D solves the 3D Dirichlet problem for every datum (exact)
+PASS L8 l=3 r-side spectrum of Z against (1/2)int N p^2 is 1/((j+1)(2l+2j+3)), j=0..3 (exact; 1/5 is not a root)
+PASS L1 l=3 (a1) momentum block, 5x5 Gram  | rel err 6.2201e-46; r-side [0][0]=1/198
+PASS L2 l=3 (a2) field block, 5x5 Gram (weight-1 term absorbed)  | rel err 1.4793e-45; r-side [0][0]=2/9
+PASS L3 l=3 (a3) symplectic pairing, 25 entries, non-symmetric  | rel err 2.6596e-45; r-side [0][0]=14/99
+PASS L4 l=3 (b) (1/2)<psidot,G_D psidot> = (1/2)<pi,W pi>, g=1, 5x5 Gram, double integral  | rel err 5.011e-46; r-side [0][0]=1/1782
+PASS L5 l=3 g read back entrywise: |Z_rho/Z_r - 1|  | max 1.5765e-45
+PASS L6 l=3 quadrature self-check n=60 against n=80 on (b)  | rel diff 7.7443e-46
+CAUGHT P1 l=3 pi = N^2 r p (psidot = pi/(N^3 sinh rho)) breaks (a1) and (a3)  | rel err 0.95232, 0.87515
+CAUGHT P2 l=3 q = N r f breaks (a2)  | rel err 0.93914
+CAUGHT P3 l=3 Neumann-type kernel breaks (b)  | rel err 1.6892
+   l=3 done, 101 s
+PASS L7 l=4 r-side G_D solves the 3D Dirichlet problem for every datum (exact)
+PASS L8 l=4 r-side spectrum of Z against (1/2)int N p^2 is 1/((j+1)(2l+2j+3)), j=0..3 (exact; 1/5 is not a root)
+PASS L1 l=4 (a1) momentum block, 5x5 Gram  | rel err 1.0345e-45; r-side [0][0]=1/286
+PASS L2 l=4 (a2) field block, 5x5 Gram (weight-1 term absorbed)  | rel err 1.217e-45; r-side [0][0]=5/22
+PASS L3 l=4 (a3) symplectic pairing, 25 entries, non-symmetric  | rel err 1.0103e-45; r-side [0][0]=50/429
+PASS L4 l=4 (b) (1/2)<psidot,G_D psidot> = (1/2)<pi,W pi>, g=1, 5x5 Gram, double integral  | rel err 1.1067e-45; r-side [0][0]=1/3146
+PASS L5 l=4 g read back entrywise: |Z_rho/Z_r - 1|  | max 1.9268e-45
+PASS L6 l=4 quadrature self-check n=60 against n=80 on (b)  | rel diff 1.5678e-45
+CAUGHT P1 l=4 pi = N^2 r p (psidot = pi/(N^3 sinh rho)) breaks (a1) and (a3)  | rel err 0.96334, 0.91617
+CAUGHT P2 l=4 q = N r f breaks (a2)  | rel err 0.95565
+CAUGHT P3 l=4 Neumann-type kernel breaks (b)  | rel err 1.7822
+   l=4 done, 151 s
+FAILED LINES: none
