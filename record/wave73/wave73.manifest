@@ -29,6 +29,12 @@
 
 # Checks are listed longest first; the runner starts them in this order, as many as the slots allow.
 
+check charge-ref-area
+run charge-ref scripts/ref_area.py {OUT}/area_formula.json
+slow
+need ^SUMMARY pass 8 fail 0 time [0-9.]+s$
+count checks 8 ^PASS[ ]
+
 check even-proof-ext
 run even-proof/scripts even_lemma_a_ext.py {OUT}/ext.json
 threads 2
@@ -37,8 +43,16 @@ need ^ALL LINES HELD$
 count checks 4 ^PASS[ ]
 count plants 1 ^PLANT CAUGHT[ ]
 
+check ss-lemma-direct
+run ss-lemma scripts/lemma_direct.py
+slow
+need ^SCRIPT B PASS$
+count checks 6 ^ +[A-Za-z0-9_]+ +PASS$ ::: plant
+count plants 1 ^ +[A-Za-z0-9_]*plant[A-Za-z0-9_]* +PASS$
+
 check even-dict-main
 run even-dict/scripts even_dict_check.py {OUT}/even_dict_check.json
+slow
 need ^FAILED LINES: none$
 count checks 24 ^PASS[ ]
 count plants 9 ^CAUGHT[ ]
@@ -46,6 +60,7 @@ count plants 9 ^CAUGHT[ ]
 check even-remainder
 run even-remainder/scripts even_remainder.py {OUT}/even_remainder.json
 threads 2
+slow
 rc 1
 need ^  P5: FAIL$
 need ^SOME LINES FAILED \([0-9]+ s\)$
@@ -85,6 +100,7 @@ need ^ +\([0-9.]+s\)  all sup checks agree: True$
 check odd-remainder
 run odd-remainder/scripts odd_remainder.py {OUT}/odd_remainder.json
 threads 2
+slow
 need ^ALL LINES HELD \([0-9]+ s\)$
 count checks 15 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
 count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
@@ -104,11 +120,23 @@ run ruler-l/scripts ruler_l.py --l none {OUT}/ruler_l.json
 need ^plant=None l=\[\] checks=8 fail=0 time=[0-9]+ s$
 count checks 8 ^PASS[ ]
 
+check beyond-normal
+run beyond-normal/scripts -X utf8 beyond_normal.py {OUT}/beyond_normal.json
+need ^FAILED LINES: none$
+need ^plants caught: P1 True, P2 True$
+count checks 37 ^PASS[ ]
+count plants 2 ^CAUGHT[ ]
+
 check modgen
 run modgen/scripts modgen_check.py {OUT}/modgen_check.json
 need ^FAILED LINES: none$
 count checks 10 ^PASS[ ]
 count plants 2 ^CAUGHT[ ]
+
+check ss-lemma-proof
+run ss-lemma scripts/lemma_proof.py
+need ^SCRIPT A PASS$
+same ss-lemma/logs/01_proof_run02.log
 
 check even-passage
 run even-passage/scripts even_passage.py {OUT}/even_passage.json
@@ -158,6 +186,12 @@ run ss-tension/scripts shear_curv.py {OUT}/shear_curv.json
 need ^13 lines, 0 unexpected, [0-9.]+ s$
 count checks 9 ^\[PASS\][ ]
 count plants 4 ^\[CAUGHT\][ ]
+
+check charge-all-l
+run charge-all-l scripts/charge_all_l.py 2 9 {OUT}/charge_all_l_2_9.json
+need ^SUMMARY pass 127 fail 0 plants caught 36 missed 0 FAILED LINES: none MISSED PLANTS: none time [0-9.]+s$
+count checks 127 ^PASS[ ]
+count plants 36 ^PLANT CAUGHT[ ]
 
 check even-tower-l6
 run even-tower/scripts even_tower.py 6 2
@@ -213,10 +247,27 @@ need ^DONE hl_gamma: fails = \[\]$
 count checks 6 ^PASS[ ]
 count plants 3 ^CAUGHT[ ]
 
+check odd-dict
+run odd-dict/scripts odd_dict_check.py {OUT}/odd_dict_check.json
+need ^FAILED LINES: none$
+count checks 42 ^L[0-9]+ +l=[0-9]+ +PASS
+count plants 15 ^P[0-9]+ +l=[0-9]+ +CAUGHT
+
+check charge-ref-16-exp
+run charge-ref scripts/ref_probe.py 16 exp {OUT}/probe_l16_exp.json
+need ^SUMMARY l=16 mode=exp pass 15 fail 0 plant CAUGHT time [0-9.]+s$
+count checks 15 ^PASS[ ]
+count plants 1 ^PLANT CAUGHT[ ]
+
 check charge-id-l4
 run charge-id/scripts charge_id.py 4 3
 need ^DONE l=4: 32/32 pass, fails=\[\], t=[0-9.]+s$
 count checks 32 ^PASS[ ]
+
+check chain-ref
+run chain-ref/scripts probe_chain_ref.py
+need ^DONE fails = 0$
+same chain-ref/logs/01_probe.log
 
 check subspace-l6
 run subspace/scripts subspace.py 6 2
@@ -308,6 +359,25 @@ run subspace/scripts subspace.py 3 3
 need ^DONE l=3: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
 count checks 21 ^PASS[ ]
 count plants 6 ^CAUGHT[ ]
+
+check cone-ref-bracket
+run cone-ref scripts/bracket_exact.py
+same cone-ref/logs/bracket_exact.log
+
+check cone-ref-probe2
+run cone-ref scripts/probe2.py
+same cone-ref/logs/probe2.log
+
+check charge-ref-15-poly
+run charge-ref scripts/ref_probe.py 15 poly {OUT}/probe_l15_poly.json
+need ^SUMMARY l=15 mode=poly pass 16 fail 0 plant CAUGHT time [0-9.]+s$
+count checks 16 ^PASS[ ]
+count plants 1 ^PLANT CAUGHT[ ]
+
+check charge-ref-slice
+run charge-ref scripts/ref_slice.py
+count checks 1 ^PASS[ ]
+count plants 1 ^PLANT CAUGHT[ ]
 
 check chain-all-l
 run chain-all-l/scripts chain_all_l.py 2 8
@@ -438,3 +508,5 @@ skip ss-second/scripts/s3_limit.py about 5 minutes with the report's arguments (
 skip even-tower/scripts/shale_check.py reads ../../hinge-e/out/e3_hyperbolic.json, a folder of the earlier record that is not published here
 skip even-second/scripts/run_all.ps1 a Windows PowerShell wrapper with a venv path; the same two scripts are run directly
 skip even-passage/scripts/scan_constants.py exploration only, prints no verdict
+skip beyond-ref/scripts/beyond_ref.py about 13 minutes (795 s in its second registered run against a ten-minute fence), and both registered runs exit 1 by the report's own account (one of the referee's thresholds was set wrong); there is no passing run to pin
+skip primary-sources no script: the list of primary sources that were read
