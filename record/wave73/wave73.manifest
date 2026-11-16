@@ -1,0 +1,435 @@
+# Manifest of the wave-73 checks that ./run_all.sh reruns (section 6), read by run_wave73.sh.
+#
+# One block per check. Keywords, one per line:
+#   check ID                  a short unique name
+#   after ID[,ID]             start only once these checks have finished: a check that reads what an earlier check
+#                             wrote (all-t reads even-second's values.json) names it here.
+#   threads N                 slots the check holds when JOBS > 1, and the BLAS threads it gets (default 1). The dense
+#                             linear-algebra checks are 4 to 6 times slower on one thread than on several, so they say 2.
+#   slow                      not part of the default run (kept out for time); SLOW_CHECKS=1 runs it. Its expected result
+#                             is still written here, and was reproduced when the manifest was made.
+#   run DIR/CWD ARGS...       working directory under record/wave73, then the arguments to `python3 -B`.
+#                             {OUT} is a per-check temporary directory for JSON output; nothing is written
+#                             into the repository (the whole of record/wave73 is copied to a temporary directory first).
+#   rc N                      expected exit code (default 0). Several scripts exit 1 BY DESIGN: one pre-registered line
+#                             failed and the folder's REPORT.md says which. They are listed with rc 1 and that exact line.
+#   need REGEX                a whole output line, as an extended regular expression, that must appear.
+#   count LABEL N REGEX [ ::: EXCLUDE]
+#                             exactly N lines must match REGEX (and not EXCLUDE). LABEL is `checks` or `plants`;
+#                             the totals are what the README quotes.
+#   same FILE                 the output must be identical to this stored file (path relative to record/wave73). Used for
+#                             the analyses of stored raw lattice rows: they must reproduce the committed result files.
+#   contains FILE             every line of this stored file must be reproduced, in order; the script may print more
+#   skip DIR[/SCRIPT] REASON  a folder or script that is not rerun, and why. Every folder under record/wave73 must be
+#                             checked or named here; the runner fails on a new folder nobody decided about.
+#
+# Any output line that mentions FAIL, FAILED, MISSED, MISMATCH, Traceback or Error is a failure unless one of the
+# check's own `need` regexes matches it. A by-design failure is therefore pinned exactly: a second failing line, or the
+# known one turning green, makes the run red.
+
+# Checks are listed longest first; the runner starts them in this order, as many as the slots allow.
+
+check even-proof-ext
+run even-proof/scripts even_lemma_a_ext.py {OUT}/ext.json
+threads 2
+slow
+need ^ALL LINES HELD$
+count checks 4 ^PASS[ ]
+count plants 1 ^PLANT CAUGHT[ ]
+
+check even-dict-main
+run even-dict/scripts even_dict_check.py {OUT}/even_dict_check.json
+need ^FAILED LINES: none$
+count checks 24 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check even-remainder
+run even-remainder/scripts even_remainder.py {OUT}/even_remainder.json
+threads 2
+rc 1
+need ^  P5: FAIL$
+need ^SOME LINES FAILED \([0-9]+ s\)$
+count checks 17 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
+
+check ruler
+run ruler/scripts ruler.py {OUT}/ruler.json
+slow
+need ^plant=None checks=68 fail=0 time=[0-9]+ s$
+count checks 68 ^PASS[ ]
+
+check even-dict-thermal
+run even-dict/scripts thermal_check.py {OUT}/thermal_check.json
+need ^FAILED LINES: none$
+count checks 2 ^PASS[ ]
+count plants 1 ^CAUGHT[ ]
+
+check even-limit
+run even-limit/scripts even_limit.py {OUT}/even_limit.json
+threads 2
+slow
+need ^ALL LINES HELD$
+count checks 6 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 1 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
+
+check hinge-proof
+run hinge-proof/scripts u1_uniformity.py {OUT}/u1.json
+threads 2
+slow
+need ^SUMMARY \{"checks": \{"U1": true, "U2": true, "U3": true, "U4": true, "U5": false, "C1": true\}
+
+check even-second
+run even-second/scripts second.py
+need ^ +\([0-9.]+s\)  all sup checks agree: True$
+
+check odd-remainder
+run odd-remainder/scripts odd_remainder.py {OUT}/odd_remainder.json
+threads 2
+need ^ALL LINES HELD \([0-9]+ s\)$
+count checks 15 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
+
+check all-t
+after even-second
+run all-t/scripts all_t.py {OUT}/all_t.json
+threads 2
+rc 1
+need ^  C2: FAIL$
+need ^SOME LINES FAILED \([0-9]+ s\)$
+count checks 15 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 1 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
+
+check ruler-l-part2
+run ruler-l/scripts ruler_l.py --l none {OUT}/ruler_l.json
+need ^plant=None l=\[\] checks=8 fail=0 time=[0-9]+ s$
+count checks 8 ^PASS[ ]
+
+check modgen
+run modgen/scripts modgen_check.py {OUT}/modgen_check.json
+need ^FAILED LINES: none$
+count checks 10 ^PASS[ ]
+count plants 2 ^CAUGHT[ ]
+
+check even-passage
+run even-passage/scripts even_passage.py {OUT}/even_passage.json
+threads 2
+rc 1
+need ^  C2: FAIL$
+need ^SOME LINES FAILED \([0-9]+ s\)$
+count checks 11 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
+
+check odd-sign
+run odd-sign/scripts odd_sign.py {OUT}/odd_sign.json
+threads 2
+need ^ALL LINES HELD \([0-9]+ s\)$
+count checks 13 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
+
+check even-const
+run even-const/scripts -X utf8 even_const.py {OUT}/even_const.json
+need ^FAILED LINES: none$
+count checks 13 ^PASS[ ] ::: PLANT
+count plants 1 ^PASS .*PLANT
+
+check even-tower-l5
+run even-tower/scripts even_tower.py 5 3
+slow
+need ^DONE l=5: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
+count checks 55 ^PASS[ ]
+count plants 10 ^CAUGHT[ ]
+
+check even-nonzero
+run even-nonzero/scripts even_nonzero.py {OUT}/even_nonzero.json
+threads 2
+slow
+rc 1
+need ^  N7: FAIL$
+need ^SOME LINES FAILED \([0-9]+ s\)$
+count checks 9 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+
+check ruler-why
+run ruler-why/scripts why.py {OUT}/why.json
+need ^plant=None checks=46 fail=0 time=[0-9]+ s$
+count checks 46 ^PASS[ ]
+
+check ss-tension-shear
+run ss-tension/scripts shear_curv.py {OUT}/shear_curv.json
+need ^13 lines, 0 unexpected, [0-9.]+ s$
+count checks 9 ^\[PASS\][ ]
+count plants 4 ^\[CAUGHT\][ ]
+
+check even-tower-l6
+run even-tower/scripts even_tower.py 6 2
+slow
+need ^DONE l=6: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=80, t=[0-9.]+s$
+count checks 55 ^PASS[ ]
+count plants 10 ^CAUGHT[ ]
+
+check modflow-s1
+run modflow-ref/scripts s1_invariance.py
+need ^a \{'BB_equals_EE': True, 'BE_equals_minus_EB': True, 'symmetric_each_pair': True, 'traceless_each_pair': True, 'transverse_each_pair': True, 'W_ab\(xi\)_equals_W_ba\(-xi\)': True, 'Edot_eq_curlB_first_slot': True, 'Bdot_eq_minus_curlE_first_slot': True, 'box_W_zero': True\} [0-9.]+$
+need ^c \{'pairs': 105, 'failing_pairs': \[\]\}$
+need ^b_pass True plants \{'w=2': True, 'w=4': True, 'opposite_boost_sign': True\} [0-9.]+$
+
+check charge-id-l6
+run charge-id/scripts charge_id.py 6 2
+slow
+need ^DONE l=6: 31/31 pass, fails=\[\], t=[0-9.]+s$
+count checks 31 ^PASS[ ]
+
+check jss-id-5-1
+run jss-id/scripts jss_id.py 5 1
+slow
+need ^DONE l=5: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
+count checks 34 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check ss-second-s4
+run ss-second/scripts s4_moments.py
+need ^S4 PASS$
+
+check charge-id-l5
+run charge-id/scripts charge_id.py 5 3
+slow
+need ^DONE l=5: 32/32 pass, fails=\[\], t=[0-9.]+s$
+count checks 32 ^PASS[ ]
+
+check even-tower-l4
+run even-tower/scripts even_tower.py 4 3
+need ^DONE l=4: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
+count checks 55 ^PASS[ ]
+count plants 10 ^CAUGHT[ ]
+
+check jss-id-4-2
+run jss-id/scripts jss_id.py 4 2
+need ^DONE l=4: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
+count checks 34 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check subspace-hl
+run subspace/scripts hl_gamma.py
+need ^DONE hl_gamma: fails = \[\]$
+count checks 6 ^PASS[ ]
+count plants 3 ^CAUGHT[ ]
+
+check charge-id-l4
+run charge-id/scripts charge_id.py 4 3
+need ^DONE l=4: 32/32 pass, fails=\[\], t=[0-9.]+s$
+count checks 32 ^PASS[ ]
+
+check subspace-l6
+run subspace/scripts subspace.py 6 2
+slow
+need ^DONE l=6: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
+count checks 21 ^PASS[ ]
+count plants 6 ^CAUGHT[ ]
+
+check assembly
+run assembly/scripts assembly_check.py {OUT}/assembly_check.json
+need ^FAILED LINES: none; plants caught: A True, B True$
+count checks 13 ^PASS[ ]
+count plants 2 ^CAUGHT[ ]
+
+check even-tower-l2
+run even-tower/scripts even_tower.py 2 3
+need ^DONE l=2: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
+count checks 55 ^PASS[ ]
+count plants 10 ^CAUGHT[ ]
+
+check even-tower-l3
+run even-tower/scripts even_tower.py 3 3
+need ^DONE l=3: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
+count checks 55 ^PASS[ ]
+count plants 10 ^CAUGHT[ ]
+
+check subspace-l5
+run subspace/scripts subspace.py 5 3
+slow
+need ^DONE l=5: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
+count checks 21 ^PASS[ ]
+count plants 6 ^CAUGHT[ ]
+
+check jss-id-2-3
+run jss-id/scripts jss_id.py 2 3
+slow
+need ^DONE l=2: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
+count checks 34 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check subspace-l4
+run subspace/scripts subspace.py 4 3
+need ^DONE l=4: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
+count checks 21 ^PASS[ ]
+count plants 6 ^CAUGHT[ ]
+
+check even-remainder-diag
+run even-remainder/scripts diag_opnorm.py
+count checks 4 ^ *D[0-9]: PASS$
+
+check ss-tension-cone
+run ss-tension/scripts cone_sector.py {OUT}/cone_sector.json
+need ^8 lines, 0 unexpected, [0-9.]+ s$
+count checks 5 ^\[PASS\][ ]
+count plants 2 ^\[CAUGHT\][ ]
+
+check jss-id-3-2
+run jss-id/scripts jss_id.py 3 2
+need ^DONE l=3: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
+count checks 34 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check ss-second-s2
+run ss-second/scripts s2_kernel.py
+need ^S2 PASS$
+
+check even-blind-secondary
+run even-blind eanalyze.py 0 1e-2 1 1
+same even-blind/results/27_lead_rerun_secondary_all224.txt
+
+check charge-id-l2
+run charge-id/scripts charge_id.py 2 3
+need ^DONE l=2: 32/32 pass, fails=\[\], t=[0-9.]+s$
+count checks 32 ^PASS[ ]
+
+check charge-id-l3
+run charge-id/scripts charge_id.py 3 3
+need ^DONE l=3: 32/32 pass, fails=\[\], t=[0-9.]+s$
+count checks 32 ^PASS[ ]
+
+check jss-id-2-2
+run jss-id/scripts jss_id.py 2 2
+need ^DONE l=2: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
+count checks 34 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check subspace-l3
+run subspace/scripts subspace.py 3 3
+need ^DONE l=3: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
+count checks 21 ^PASS[ ]
+count plants 6 ^CAUGHT[ ]
+
+check chain-all-l
+run chain-all-l/scripts chain_all_l.py 2 8
+need ^MISSED l=2 P1 c_l with \(l-1\)! in place of \(l-2\)!  ratio seen/planted = 1$
+need ^DONE l=2\.\.8: fails=\[\] plants_missed=\[\(2, 'P1 c_l with \(l-1\)! in place of \(l-2\)!'\)\] total [0-9.]+ s$
+count checks 113 ^PASS[ ]
+count plants 27 ^CAUGHT[ ]
+
+check subspace-l2
+run subspace/scripts subspace.py 2 3
+need ^DONE l=2: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
+count checks 21 ^PASS[ ]
+count plants 6 ^CAUGHT[ ]
+
+check modflow-probe
+run modflow-ref/scripts probe_geometry.py
+need ^1 Dkappa\.zeta == X_W o kappa: True$
+need ^2 interval identity: True$
+need ^4a O -> wedge on 20000 samples: True$
+need ^4b sphere -> plane x1=1/2, t=0: True True$
+
+check hinge-blind-tables
+run hinge-blind analyze.py
+same hinge-blind/results/b2_tables_prereg.txt
+
+check even-blind-prereg
+run even-blind eanalyze.py 192
+contains even-blind/results/24_prereg_analysis.txt
+
+check even-canon-l2
+run even-tower/scripts even_canonical.py 2 2
+count checks 6 ^PASS[ ]
+
+check even-density
+run even-density/scripts even_density.py {OUT}/even_density.json
+need ^ALL LINES HELD$
+count checks 39 ^ *\[PASS\][ ] ::: PLANT
+count plants 1 ^ *\[PASS\][ ]PLANT
+
+check odd-second
+run odd-second/scripts odd_second.py
+need ^  Qodd_16 PLANT closed=.* -> MISMATCH$
+need ^  plant caught by self-check: True$
+
+check ss-second-s1
+run ss-second/scripts s1_sachs.py
+need ^C4 PASS$
+
+check hinge-blind-rule-all
+run hinge-blind addendum_rule.py mid D2 all
+same hinge-blind/results/b2_addendum_all_lattices.txt
+
+check hinge-blind-predict16
+run hinge-blind predict_check.py 16
+same hinge-blind/results/b2_predict_check_lfit16.txt
+
+check beta-def
+run beta-def/scripts beta_def.py {OUT}/beta_def.json
+count checks 11 ^PASS[ ] ::: plant
+count plants 3 ^PASS L1[234]_plant
+
+check even-canon-l3
+run even-tower/scripts even_canonical.py 3 2
+count checks 6 ^PASS[ ]
+
+check even-canon-l4
+run even-tower/scripts even_canonical.py 4 2
+count checks 6 ^PASS[ ]
+
+check modflow-s5
+run modflow-ref/scripts s5_wedge.py
+need ^\{'eigenvalues': \{'0': 4, '-1': 2, '1': 2, '-2': 2, '2': 2\}, 'diagonalisable': True, 'exp_i_pi_M_is_real': True, 'exp_i_pi_M_equals_R_conjugation': True, 'exp_i_pi_MT_equals_its_transpose_target': True\}$
+
+check ss-second-s5
+run ss-second/scripts s5_offplane.py
+need ^D=4 cfg A: cL-ab = 0 \| Maxwell kernel\*sigma\^p = 0 \(hand formula 0\) \| graviton kernel\*sigma\^p = 0$
+need ^D=5 cfg A: cL-ab = 0 \| Maxwell kernel\*sigma\^p = 0 \(hand formula 0\) \| graviton kernel\*sigma\^p = 0$
+need ^D=5 cfg B: cL-ab = -4/5 \| Maxwell kernel\*sigma\^p = 50/7 \(hand formula 50/7\) \| graviton kernel\*sigma\^p = 12500/49$
+need ^D=6 cfg A: cL-ab = 0 \| Maxwell kernel\*sigma\^p = 0 \(hand formula 0\) \| graviton kernel\*sigma\^p = 0$
+need ^D=6 cfg B: cL-ab = -4/5 \| Maxwell kernel\*sigma\^p = 400/21 \(hand formula 400/21\) \| graviton kernel\*sigma\^p = 160000/147$
+
+check hinge-blind-controls
+run hinge-blind controls.py
+same hinge-blind/logs/b2_controls.txt
+
+check hinge-blind-rule-prereg
+run hinge-blind addendum_rule.py mid D2 prereg
+same hinge-blind/results/b2_addendum_prereg_set.txt
+
+check hinge-blind-rule-all64
+run hinge-blind addendum_rule.py mid D2 all 64
+same hinge-blind/results/b2_addendum_all_lattices_lmax64.txt
+
+check hinge-blind-predict24
+run hinge-blind predict_check.py 24
+same hinge-blind/results/b2_predict_check_lfit24.txt
+
+check even-second-flint
+after even-second
+run even-second/scripts check_flint.py
+need ^all integrals agree: True; plant caught: True$
+
+check odd-second-compare
+after odd-second
+run odd-second/scripts compare.py
+need ^all sup checks agree: True$
+need ^planted sup mismatch caught: True$
+need ^      cover .* -> MISMATCH$
+
+# ---- not rerun, and why ------------------------------------------------------------------------------------
+skip phys-id no script: a note on the identification of the charge, nothing to run
+skip referee no script: the referee report on the assembled statement
+skip std-theorems no script: the list of standard theorems used and the conditions of their use
+skip even-blind/erun.py the scripts that compute new lattice rows or controls (erun*.py, evalidate*.py, validate.py, ectrl.py, ctrl_odd_compare.py): the report puts the whole campaign at hours and several GB; the analysis of the stored rows (eanalyze.py) is rerun
+skip hinge-blind/run.py the scripts that compute new lattice rows or controls (run.py, validate.py, far_region.py, planar_check.py, control_double.py, dev_*.py): the report gives about 75 minutes and 6 GB for the campaign; the analyses of the stored rows (analyze.py, controls.py, addendum_rule.py, predict_check.py) are rerun
+skip even-proof/scripts/even_lemma_a.py about 3.5 minutes, and exits 1 by design (C2 and C3, as its report says); its extension even_lemma_a_ext.py is in the manifest, marked slow (190 s on every core, 400 s on two)
+skip ruler-l/scripts/ruler_l.py l = 3 to 6 take 5 to 13 minutes each, and the plant run is not rerun; part 2 (the identity for every l) is rerun
+skip ruler/scripts/ruler.py the --plant w3 run is not rerun; the main run is in the manifest, marked slow (77 s)
+skip ruler-why/scripts/why.py the --plant k1 run is not rerun; the main run is in the manifest
+skip odd-second/scripts/sup_cover.py about 3.5 minutes; its stored output is compared with the fresh primary values by odd-second-compare
+skip ss-second/scripts/s3_limit.py about 4.5 minutes, and it ends S3 FAIL, a registered finding about a sign, not a pass
+skip even-tower/scripts/shale_check.py reads ../../hinge-e/out/e3_hyperbolic.json, a folder of the earlier record that is not published here
+skip even-second/scripts/run_all.ps1 a Windows PowerShell wrapper with a venv path; the same two scripts are run directly
+skip even-passage/scripts/scan_constants.py exploration only, prints no verdict
+skip chain-all-l/scripts/chain_all_l.py l = 9 to 12 (a stored log, not part of the registered run) is not rerun
