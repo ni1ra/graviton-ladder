@@ -29,22 +29,6 @@
 
 # Checks are listed longest first; the runner starts them in this order, as many as the slots allow.
 
-check even-passage
-run even-passage/scripts even_passage.py {OUT}/even_passage.json
-threads 2
-rc 1
-need ^  C2: FAIL$
-need ^SOME LINES FAILED \([0-9]+ s\)$
-count checks 11 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
-count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
-
-check odd-sign
-run odd-sign/scripts odd_sign.py {OUT}/odd_sign.json
-threads 2
-need ^ALL LINES HELD \([0-9]+ s\)$
-count checks 13 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
-count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
-
 check ss-lemma-proof
 run ss-lemma scripts/lemma_proof.py
 need ^SCRIPT A PASS$
@@ -73,6 +57,27 @@ need ^DONE hl_gamma: fails = \[\]$
 count checks 6 ^PASS[ ]
 count plants 3 ^CAUGHT[ ]
 
+check even-remainder-diag
+run even-remainder/scripts diag_opnorm.py
+count checks 4 ^ *D[0-9]: PASS$
+
+check charge-id-l4
+run charge-id/scripts charge_id.py 4 3
+need ^DONE l=4: 32/32 pass, fails=\[\], t=[0-9.]+s$
+count checks 32 ^PASS[ ]
+
+check ss-tension-cone
+run ss-tension/scripts cone_sector.py {OUT}/cone_sector.json
+need ^8 lines, 0 unexpected, [0-9.]+ s$
+count checks 5 ^\[PASS\][ ]
+count plants 2 ^\[CAUGHT\][ ]
+
+check odd-dict
+run odd-dict/scripts odd_dict_check.py {OUT}/odd_dict_check.json
+need ^FAILED LINES: none$
+count checks 42 ^L[0-9]+ +l=[0-9]+ +PASS
+count plants 15 ^P[0-9]+ +l=[0-9]+ +CAUGHT
+
 check ss-second-s4
 run ss-second/scripts s4_moments.py
 need ^S4 PASS$
@@ -82,34 +87,6 @@ run charge-all-l scripts/charge_all_l.py 2 9 {OUT}/charge_all_l_2_9.json
 need ^SUMMARY pass 127 fail 0 plants caught 36 missed 0 FAILED LINES: none MISSED PLANTS: none time [0-9.]+s$
 count checks 127 ^PASS[ ]
 count plants 36 ^PLANT CAUGHT[ ]
-
-check jss-id-4-2
-run jss-id/scripts jss_id.py 4 2
-need ^DONE l=4: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
-count checks 34 ^PASS[ ]
-count plants 9 ^CAUGHT[ ]
-
-check even-tower-l4
-run even-tower/scripts even_tower.py 4 3
-need ^DONE l=4: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
-count checks 55 ^PASS[ ]
-count plants 10 ^CAUGHT[ ]
-
-check odd-dict
-run odd-dict/scripts odd_dict_check.py {OUT}/odd_dict_check.json
-need ^FAILED LINES: none$
-count checks 42 ^L[0-9]+ +l=[0-9]+ +PASS
-count plants 15 ^P[0-9]+ +l=[0-9]+ +CAUGHT
-
-check even-remainder-diag
-run even-remainder/scripts diag_opnorm.py
-count checks 4 ^ *D[0-9]: PASS$
-
-check even-tower-l3
-run even-tower/scripts even_tower.py 3 3
-need ^DONE l=3: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
-count checks 55 ^PASS[ ]
-count plants 10 ^CAUGHT[ ]
 
 check chain-ref
 run chain-ref/scripts probe_chain_ref.py
@@ -122,10 +99,37 @@ need ^DONE l=4: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.
 count checks 21 ^PASS[ ]
 count plants 6 ^CAUGHT[ ]
 
-check charge-id-l4
-run charge-id/scripts charge_id.py 4 3
-need ^DONE l=4: 32/32 pass, fails=\[\], t=[0-9.]+s$
-count checks 32 ^PASS[ ]
+check jss-id-3-2
+run jss-id/scripts jss_id.py 3 2
+need ^DONE l=3: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
+count checks 34 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check even-tower-l3
+run even-tower/scripts even_tower.py 3 3
+need ^DONE l=3: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
+count checks 55 ^PASS[ ]
+count plants 10 ^CAUGHT[ ]
+
+check ss-second-s2
+run ss-second/scripts s2_kernel.py
+need ^S2 PASS$
+
+check even-tower-l4
+run even-tower/scripts even_tower.py 4 3
+need ^DONE l=4: 55/55 checks pass, 10/10 plants caught, fails=\[\], missed=\[\], R\^\(2\) evaluations=90, t=[0-9.]+s$
+count checks 55 ^PASS[ ]
+count plants 10 ^CAUGHT[ ]
+
+check jss-id-4-2
+run jss-id/scripts jss_id.py 4 2
+need ^DONE l=4: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
+count checks 34 ^PASS[ ]
+count plants 9 ^CAUGHT[ ]
+
+check even-blind-secondary
+run even-blind eanalyze.py 0 1e-2 1 1
+same even-blind/results/27_lead_rerun_secondary_all224.txt
 
 check charge-id-l3
 run charge-id/scripts charge_id.py 3 3
@@ -148,12 +152,6 @@ need ^DONE l=2: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s
 count checks 34 ^PASS[ ]
 count plants 9 ^CAUGHT[ ]
 
-check subspace-l3
-run subspace/scripts subspace.py 3 3
-need ^DONE l=3: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
-count checks 21 ^PASS[ ]
-count plants 6 ^CAUGHT[ ]
-
 check cone-ref-bracket
 run cone-ref scripts/bracket_exact.py
 same cone-ref/logs/bracket_exact.log
@@ -164,20 +162,16 @@ need ^DONE l=9\.\.12: fails=\[\] plants_missed=\[\] total [0-9.]+ s$
 count checks 65 ^PASS[ ]
 count plants 16 ^CAUGHT[ ]
 
-check ss-tension-cone
-run ss-tension/scripts cone_sector.py {OUT}/cone_sector.json
-need ^8 lines, 0 unexpected, [0-9.]+ s$
-count checks 5 ^\[PASS\][ ]
-count plants 2 ^\[CAUGHT\][ ]
-
-check even-blind-secondary
-run even-blind eanalyze.py 0 1e-2 1 1
-same even-blind/results/27_lead_rerun_secondary_all224.txt
-
 check charge-id-l2
 run charge-id/scripts charge_id.py 2 3
 need ^DONE l=2: 32/32 pass, fails=\[\], t=[0-9.]+s$
 count checks 32 ^PASS[ ]
+
+check subspace-l3
+run subspace/scripts subspace.py 3 3
+need ^DONE l=3: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
+count checks 21 ^PASS[ ]
+count plants 6 ^CAUGHT[ ]
 
 check charge-ref-15-poly
 run charge-ref scripts/ref_probe.py 15 poly {OUT}/probe_l15_poly.json
@@ -185,16 +179,16 @@ need ^SUMMARY l=15 mode=poly pass 16 fail 0 plant CAUGHT time [0-9.]+s$
 count checks 16 ^PASS[ ]
 count plants 1 ^PLANT CAUGHT[ ]
 
-check jss-id-3-2
-run jss-id/scripts jss_id.py 3 2
-need ^DONE l=3: 43/43 as expected \(9 plants/contrasts\), fails=\[\], t=[0-9.]+s$
-count checks 34 ^PASS[ ]
-count plants 9 ^CAUGHT[ ]
-
 check charge-ref-slice
 run charge-ref scripts/ref_slice.py
 count checks 1 ^PASS[ ]
 count plants 1 ^PLANT CAUGHT[ ]
+
+check subspace-l2
+run subspace/scripts subspace.py 2 3
+need ^DONE l=2: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
+count checks 21 ^PASS[ ]
+count plants 6 ^CAUGHT[ ]
 
 check chain-all-l
 run chain-all-l/scripts chain_all_l.py 2 8
@@ -203,15 +197,9 @@ need ^DONE l=2\.\.8: fails=\[\] plants_missed=\[\(2, 'P1 c_l with \(l-1\)! in pl
 count checks 113 ^PASS[ ]
 count plants 27 ^CAUGHT[ ]
 
-check subspace-l2
-run subspace/scripts subspace.py 2 3
-need ^DONE l=2: 27/27 lines as expected, fails=\[\], plants missed=\[\], t=[0-9.]+s$
-count checks 21 ^PASS[ ]
-count plants 6 ^CAUGHT[ ]
-
-check ss-second-s2
-run ss-second/scripts s2_kernel.py
-need ^S2 PASS$
+check even-blind-prereg
+run even-blind eanalyze.py 192
+contains even-blind/results/24_prereg_analysis.txt
 
 check modflow-probe
 run modflow-ref/scripts probe_geometry.py
@@ -219,10 +207,6 @@ need ^1 Dkappa\.zeta == X_W o kappa: True$
 need ^2 interval identity: True$
 need ^4a O -> wedge on 20000 samples: True$
 need ^4b sphere -> plane x1=1/2, t=0: True True$
-
-check even-blind-prereg
-run even-blind eanalyze.py 192
-contains even-blind/results/24_prereg_analysis.txt
 
 check even-density
 run even-density/scripts even_density.py {OUT}/even_density.json
@@ -233,6 +217,18 @@ count plants 1 ^ *\[PASS\][ ]PLANT
 check ss-second-s1
 run ss-second/scripts s1_sachs.py
 need ^C4 PASS$
+
+check hinge-blind-predict24
+run hinge-blind predict_check.py 24
+same hinge-blind/results/b2_predict_check_lfit24.txt
+
+check hinge-blind-rule-all
+run hinge-blind addendum_rule.py mid D2 all
+same hinge-blind/results/b2_addendum_all_lattices.txt
+
+check hinge-blind-predict16
+run hinge-blind predict_check.py 16
+same hinge-blind/results/b2_predict_check_lfit16.txt
 
 check modflow-s5
 run modflow-ref/scripts s5_wedge.py
@@ -246,10 +242,6 @@ need ^D=5 cfg B: cL-ab = -4/5 \| Maxwell kernel\*sigma\^p = 50/7 \(hand formula 
 need ^D=6 cfg A: cL-ab = 0 \| Maxwell kernel\*sigma\^p = 0 \(hand formula 0\) \| graviton kernel\*sigma\^p = 0$
 need ^D=6 cfg B: cL-ab = -4/5 \| Maxwell kernel\*sigma\^p = 400/21 \(hand formula 400/21\) \| graviton kernel\*sigma\^p = 160000/147$
 
-check hinge-blind-predict24
-run hinge-blind predict_check.py 24
-same hinge-blind/results/b2_predict_check_lfit24.txt
-
 check hinge-blind-tables
 run hinge-blind analyze.py
 same hinge-blind/results/b2_tables_prereg.txt
@@ -258,18 +250,14 @@ check even-canon-l2
 run even-tower/scripts even_canonical.py 2 2
 count checks 6 ^PASS[ ]
 
+check hinge-blind-rule-all64
+run hinge-blind addendum_rule.py mid D2 all 64
+same hinge-blind/results/b2_addendum_all_lattices_lmax64.txt
+
 check odd-second
 run odd-second/scripts odd_second.py
 need ^  Qodd_16 PLANT closed=.* -> MISMATCH$
 need ^  plant caught by self-check: True$
-
-check hinge-blind-rule-all
-run hinge-blind addendum_rule.py mid D2 all
-same hinge-blind/results/b2_addendum_all_lattices.txt
-
-check hinge-blind-predict16
-run hinge-blind predict_check.py 16
-same hinge-blind/results/b2_predict_check_lfit16.txt
 
 check even-canon-l3
 run even-tower/scripts even_canonical.py 3 2
@@ -278,10 +266,6 @@ count checks 6 ^PASS[ ]
 check hinge-blind-rule-prereg
 run hinge-blind addendum_rule.py mid D2 prereg
 same hinge-blind/results/b2_addendum_prereg_set.txt
-
-check hinge-blind-rule-all64
-run hinge-blind addendum_rule.py mid D2 all 64
-same hinge-blind/results/b2_addendum_all_lattices_lmax64.txt
 
 check beta-def
 run beta-def/scripts beta_def.py {OUT}/beta_def.json
@@ -307,6 +291,24 @@ run odd-second/scripts compare.py
 need ^all sup checks agree: True$
 need ^planted sup mismatch caught: True$
 need ^      cover .* -> MISMATCH$
+
+check even-passage
+run even-passage/scripts even_passage.py {OUT}/even_passage.json
+slow
+threads 2
+rc 1
+need ^  C2: FAIL$
+need ^SOME LINES FAILED \([0-9]+ s\)$
+count checks 11 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
+
+check odd-sign
+run odd-sign/scripts odd_sign.py {OUT}/odd_sign.json
+slow
+threads 2
+need ^ALL LINES HELD \([0-9]+ s\)$
+count checks 13 ^ *[A-Za-z0-9_]+: PASS$ ::: PLANT|plant
+count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
 
 check charge-ref-area
 run charge-ref scripts/ref_area.py {OUT}/area_formula.json
