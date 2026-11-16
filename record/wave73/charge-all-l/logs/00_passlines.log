@@ -1,0 +1,59 @@
+CHARGE-ALL-L pass lines, fixed Mon 16 Nov 2026 BEFORE the first run of scripts/charge_all_l.py.
+Conventions: d = 4, unit ball, N = (1-r^2)/2, 1/8G dropped, integrals per 4 pi, phi = r^l Y, N_Y = oint phi^2,
+c_l = 4/((l-1) l (l+1) (l+2)), Dq = q'/r, qt = q'' + (2l+2) q'/r.  Even TT T[q], odd TT S[eta] as in CHAIN-ALL-L (ii).2-3.
+Chain data.  Even: psi_E = x.Ric[h].x = -(1/2) qt_h phi ; psidot_E = x.Ric[2K].x = -qt_K phi.
+             Odd:  psi_B = -x.curl K.x = l(l+1) eta_K phi ; psidot_B = x.curl Ric[h].x = (1/2) l(l+1) etat_h phi.
+A line passes only if the stated difference is EXACTLY zero (rational arithmetic / symbolic cancel). No nsimplify anywhere.
+
+SYMBOLIC IN l (sympy; q, eta arbitrary functions, or monomials r^(2a), r^(2b) with symbolic a, b)
+S01  radial TT rows of T[q] (trace, two divergence rows) and of S[eta] (one row) vanish identically.
+S02  Laplacian: direct f-hat formulas equal the coefficients of T[qt]; same for S[etat].
+S03  (b) pointwise: <T[q],T[q]>_r - (c_l/2) qt^2 = r^(-2l-2) d/dr( r^(2l+2) U ),
+     U = ( (2l+1) q^2/r^3 + 2 q q'/r^2 + 2 q'^2/(r (l+1)(l+2)) ) / (l(l-1)).
+S04  (b) Gram on monomials, symbolic (l,a,b):  int N T_a.T_b - q_a(1) q_b(1) N_Y/(l(l-1))
+     = (c_l/2) [ int N psidot_a psidot_b + int grad u_a . grad u_b ],  u = (q - q(1)) phi  (= G_D psidot).
+S05  (c) potential (companion A8 Theorem 3 at n = 3): d_A - d_E = (2l+3) W + r W' and W(1) = -b, q arbitrary.
+S06  (c) Gram on monomials, symbolic (l,a,b): A_un + oint G_a G_b/((l-1)(l+2)) = c_l [ (1/2) int N grad psi_a . grad psi_b + (1/2) int psi_a psi_b ].
+S07  (a) odd K block, monomials, symbolic (l,a,b): int N S_a.S_b = c_l [ (1/2) int N grad psi_a . grad psi_b + int psi_a psi_b ]  (weight 2).
+S08  (a) odd h block, monomials: (1/4) int N dS_a.dS_b - (1/2) oint (S_a nu).(S_b nu) = c_l (1/2) int N psidot_a psidot_b.
+S09a (a) odd K potential: density difference = c_l l^2 (l+1)^2 d/dr( N r^(2l+1) eta^2 ), eta arbitrary.
+S09b (a) odd h potential (companion A8 Theorem 2 Step 2, V at n = 3), eta arbitrary.
+S10  (b) spectrum, symbolic l: det(A - lambda_j V) = 0 on q = s, s^2, s^3 for lambda_j = 1 + 1/((j+1)(2l+2j+3)), j = 0,1,2.
+S11  (a) spectrum, symbolic l: det(A - lambda_k V) = 0 on eta = 1, s, s^2 for lambda_k = 1 + 1/((2k+1)(l+k+1)), k = 0,1,2.
+S12  static electric datum, symbolic l: q* = -l(l-1) r^2/(2l+3): A_ext/N_Y = 2l(l-1)/((l+2)(2l+3));
+     stationary shape in the static gauge sigma_TT + xi.nu = 2/(l+2); unextremised value A_ext/N_Y - (l-1)(l+2)(2/(l+2))^2.
+S13  gauge null rows: q = 1 pairs to zero with every monomial in (b) and (c); eta = 1 pairs to zero in the odd h block.
+SP1  PLANT (c): edge shape scaled by (l+2)/(l+1) (i.e. 2/(l+1) for 2/(l+2)): S06 must become non-zero.  CAUGHT if non-zero.
+SP2  PLANT (b): corner coefficient 1/(l(l+1)) for 1/(l(l-1)): S04 non-zero.
+SP3  PLANT (a): weight 1 for weight 2 in S07: non-zero.
+SP4  PLANT: c_l scaled by (l+3)/(l+2) in S06: non-zero.
+
+CARTESIAN, EXACT, EACH l = 2..9 (phi = Re[(x+iy)^(l-1)] z; profiles 1, s, s^2, s^3 in s = r^2; full 4x4 Grams)
+C01  T[q_k] is trace-free, divergence-free, x.T.x = q_k phi.
+C02  x.Ric[T].x = -(1/2) qt phi computed from the full linearised Ricci tensor.
+C03  the ten sphere Gram entries of (Hess phi, P_phi, phi delta, phi X) equal the closed forms used in S03-S06.
+C04  (c) field Gram: every entry of [ (1/4) int N dT.dT - (1/2) oint Tnu.Tnu + (1/4) oint kappa kappa + oint G G/((l-1)(l+2)) ]
+     - c_l [ (1/2) int N grad psi.grad psi + (1/2) int psi psi ] is 0, all from Cartesian integrals; row q = 1 is zero.
+C05  (b) momentum Gram: every entry of [ int N T.T - oint kappa kappa/(l(l-1)) ] - c_l [ (1/2) int N psidot psidot + (1/2) int grad u.grad u ] is 0,
+     with -Lap u = psidot and u = 0 on the edge verified.
+C06  (b) spectrum on s, s^2, s^3: 1 + 1/((j+1)(2l+2j+3)), j = 0,1,2.
+C07  static datum: -2 phi delta + 2 sym grad xi* = T[q*] as tensors; A_ext/N_Y = 2l(l-1)/((l+2)(2l+3)); shape 2/(l+2).
+C08  S[eta_k] trace-free, divergence-free, S.x = eta v; psi_B = l(l+1) eta phi; psidot_B = (1/2) l(l+1) etat phi.
+C09  (a) odd K Gram: int N S.S - c_l [ (1/2) int N grad psi.grad psi + int psi psi ] = 0, all entries.
+C10  (a) odd h Gram: (1/4) int N dS.dS - (1/2) oint Snu.Snu + (1/4) oint (nu S nu)^2 - c_l (1/2) int N psidot psidot = 0; row eta = 1 zero.
+C11  K gauge move, X = (c0 + c1 s) phi: int N (K'.K' - (tr K')^2) = int N |T|^2 + 2 oint kappa tau + oint |grad_tan tau|^2 - 2 int |grad X|^2.
+C12  odd spectrum on eta = 1, s, s^2: 1 + 1/((2k+1)(l+k+1)); stationary magnetic c_l E_1/A = (l+1)/(l+2).
+CP1..CP4  the four plants on the Cartesian Grams: each must give a non-zero entry.  CAUGHT if non-zero.
+
+LOW l ONLY (l = 2, 3, 4; second-order scalar curvature from Christoffel symbols, no TT simplification)
+X01  -int N R2[h] - 2 (d2Area - 2 d2Vol) = (1/4) int N |dh|^2 - (1/2) oint |h nu|^2 + (1/4) oint (nu h nu)^2 on TT h (even and odd, incl. sums).
+X02  even gauge move xi = c1 grad phi + c2 phi x + c3 s grad phi: A_un(T + 2 sym grad xi) = A_un(T) - 2 sigma G N_Y - (l-1)(l+2) sigma^2 N_Y, sigma = xi.nu.
+X03  static datum h = -2 phi delta, unextremised: A_un/N_Y = 2l(l-1)/((l+2)(2l+3)) - 4(l-1)/(l+2).
+X04  odd gauge move xi = a(s) v: A_un(S + 2 sym grad xi) = A_un(S).
+
+REPRODUCTION OF EVEN-TOWER AT l = 2 (per N_Y; EVEN-TOWER's harmonic has N_Y = 4/15)
+R1  static electric datum A_ext/N_Y = 1/7 ; unextremised -6/7.
+R2  momentum datum T[s]: A_ext/N_Y = 8/27 (x 4/15 = 32/405), Z_E/N_Y = 1/27 (x 4/15 = 4/405), Z/vacuum = 1/7.
+R3  spectrum 8/7, 19/18, 34/33 (l = 2); 10/9, 23/22, 40/39 (l = 3); 12/11, 27/26, 46/45 (l = 4).
+
+Part (d) (cross block) is a symmetry statement (time reflection); it has no arithmetic line and none is claimed.

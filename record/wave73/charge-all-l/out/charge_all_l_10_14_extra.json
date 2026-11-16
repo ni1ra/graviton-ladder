@@ -1,0 +1,524 @@
+{
+ "lines": [
+  [
+   "C01[l=10]",
+   "PASS",
+   "T[q] TT, x.T.x = q phi"
+  ],
+  [
+   "C02[l=10]",
+   "PASS",
+   "x.Ric[T].x = -(1/2) qt phi"
+  ],
+  [
+   "C03[l=10]",
+   "PASS",
+   "sphere Gram of (Hess phi, P_phi, phi delta, phi X)"
+  ],
+  [
+   "C04[l=10]",
+   "PASS",
+   "(c) field Gram 4x4; A_ext[s,s]/N_Y = 23/540"
+  ],
+  [
+   "C05[l=10]",
+   "PASS",
+   "(b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 8/12375, Z_E/N_Y = 1/37125, Z/vac = 1/23"
+  ],
+  [
+   "C06[l=10]",
+   "PASS",
+   "(b) spectrum 24/23, 51/50, 82/81"
+  ],
+  [
+   "C07[l=10]",
+   "PASS",
+   "static datum: tensor identity True; A_ext/N_Y = 15/23; shape = 1/6; unextremised = -54/23"
+  ],
+  [
+   "C08[l=10]",
+   "PASS",
+   "S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True"
+  ],
+  [
+   "C09[l=10]",
+   "PASS",
+   "(a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)"
+  ],
+  [
+   "C10[l=10]",
+   "PASS",
+   "(a) odd h Gram 4x4; eta = 1 row zero"
+  ],
+  [
+   "C11[l=10]",
+   "PASS",
+   "K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext"
+  ],
+  [
+   "C12[l=10]",
+   "PASS",
+   "odd spectrum 12/11, 37/36, 66/65; stationary magnetic c_l E_1/A = 11/12"
+  ],
+  [
+   "CP1[l=10]",
+   "CAUGHT",
+   "(c) shape 2/(l+1): static datum A/N_Y = 38070/64009 against 15/23"
+  ],
+  [
+   "CP2[l=10]",
+   "CAUGHT",
+   "(b) corner coefficient 1/(l(l+1))"
+  ],
+  [
+   "CP3[l=10]",
+   "CAUGHT",
+   "(a) weight 1 on odd K"
+  ],
+  [
+   "CP4[l=10]",
+   "CAUGHT",
+   "c_l (l+3)/(l+2) in (c)"
+  ],
+  [
+   "C01[l=11]",
+   "PASS",
+   "T[q] TT, x.T.x = q phi"
+  ],
+  [
+   "C02[l=11]",
+   "PASS",
+   "x.Ric[T].x = -(1/2) qt phi"
+  ],
+  [
+   "C03[l=11]",
+   "PASS",
+   "sphere Gram of (Hess phi, P_phi, phi delta, phi X)"
+  ],
+  [
+   "C04[l=11]",
+   "PASS",
+   "(c) field Gram 4x4; A_ext[s,s]/N_Y = 5/143"
+  ],
+  [
+   "C05[l=11]",
+   "PASS",
+   "(b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 2/4455, Z_E/N_Y = 1/57915, Z/vac = 1/25"
+  ],
+  [
+   "C06[l=11]",
+   "PASS",
+   "(b) spectrum 26/25, 55/54, 88/87"
+  ],
+  [
+   "C07[l=11]",
+   "PASS",
+   "static datum: tensor identity True; A_ext/N_Y = 44/65; shape = 2/13; unextremised = -12/5"
+  ],
+  [
+   "C08[l=11]",
+   "PASS",
+   "S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True"
+  ],
+  [
+   "C09[l=11]",
+   "PASS",
+   "(a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)"
+  ],
+  [
+   "C10[l=11]",
+   "PASS",
+   "(a) odd h Gram 4x4; eta = 1 row zero"
+  ],
+  [
+   "C11[l=11]",
+   "PASS",
+   "K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext"
+  ],
+  [
+   "C12[l=11]",
+   "PASS",
+   "odd spectrum 13/12, 40/39, 71/70; stationary magnetic c_l E_1/A = 12/13"
+  ],
+  [
+   "CP1[l=11]",
+   "CAUGHT",
+   "(c) shape 2/(l+1): static datum A/N_Y = 99/160 against 44/65"
+  ],
+  [
+   "CP2[l=11]",
+   "CAUGHT",
+   "(b) corner coefficient 1/(l(l+1))"
+  ],
+  [
+   "CP3[l=11]",
+   "CAUGHT",
+   "(a) weight 1 on odd K"
+  ],
+  [
+   "CP4[l=11]",
+   "CAUGHT",
+   "c_l (l+3)/(l+2) in (c)"
+  ],
+  [
+   "C01[l=12]",
+   "PASS",
+   "T[q] TT, x.T.x = q phi"
+  ],
+  [
+   "C02[l=12]",
+   "PASS",
+   "x.Ric[T].x = -(1/2) qt phi"
+  ],
+  [
+   "C03[l=12]",
+   "PASS",
+   "sphere Gram of (Hess phi, P_phi, phi delta, phi X)"
+  ],
+  [
+   "C04[l=12]",
+   "PASS",
+   "(c) field Gram 4x4; A_ext[s,s]/N_Y = 9/308"
+  ],
+  [
+   "C05[l=12]",
+   "PASS",
+   "(b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 4/12441, Z_E/N_Y = 1/87087, Z/vac = 1/27"
+  ],
+  [
+   "C06[l=12]",
+   "PASS",
+   "(b) spectrum 28/27, 59/58, 94/93"
+  ],
+  [
+   "C07[l=12]",
+   "PASS",
+   "static datum: tensor identity True; A_ext/N_Y = 44/63; shape = 1/7; unextremised = -22/9"
+  ],
+  [
+   "C08[l=12]",
+   "PASS",
+   "S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True"
+  ],
+  [
+   "C09[l=12]",
+   "PASS",
+   "(a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)"
+  ],
+  [
+   "C10[l=12]",
+   "PASS",
+   "(a) odd h Gram 4x4; eta = 1 row zero"
+  ],
+  [
+   "C11[l=12]",
+   "PASS",
+   "K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext"
+  ],
+  [
+   "C12[l=12]",
+   "PASS",
+   "odd spectrum 14/13, 43/42, 76/75; stationary magnetic c_l E_1/A = 13/14"
+  ],
+  [
+   "CP1[l=12]",
+   "CAUGHT",
+   "(c) shape 2/(l+1): static datum A/N_Y = 8756/13689 against 44/63"
+  ],
+  [
+   "CP2[l=12]",
+   "CAUGHT",
+   "(b) corner coefficient 1/(l(l+1))"
+  ],
+  [
+   "CP3[l=12]",
+   "CAUGHT",
+   "(a) weight 1 on odd K"
+  ],
+  [
+   "CP4[l=12]",
+   "CAUGHT",
+   "c_l (l+3)/(l+2) in (c)"
+  ],
+  [
+   "C01[l=13]",
+   "PASS",
+   "T[q] TT, x.T.x = q phi"
+  ],
+  [
+   "C02[l=13]",
+   "PASS",
+   "x.Ric[T].x = -(1/2) qt phi"
+  ],
+  [
+   "C03[l=13]",
+   "PASS",
+   "sphere Gram of (Hess phi, P_phi, phi delta, phi X)"
+  ],
+  [
+   "C04[l=13]",
+   "PASS",
+   "(c) field Gram 4x4; A_ext[s,s]/N_Y = 29/1170"
+  ],
+  [
+   "C05[l=13]",
+   "PASS",
+   "(b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 2/8463, Z_E/N_Y = 1/126945, Z/vac = 1/29"
+  ],
+  [
+   "C06[l=13]",
+   "PASS",
+   "(b) spectrum 30/29, 63/62, 100/99"
+  ],
+  [
+   "C07[l=13]",
+   "PASS",
+   "static datum: tensor identity True; A_ext/N_Y = 104/145; shape = 2/15; unextremised = -72/29"
+  ],
+  [
+   "C08[l=13]",
+   "PASS",
+   "S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True"
+  ],
+  [
+   "C09[l=13]",
+   "PASS",
+   "(a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)"
+  ],
+  [
+   "C10[l=13]",
+   "PASS",
+   "(a) odd h Gram 4x4; eta = 1 row zero"
+  ],
+  [
+   "C11[l=13]",
+   "PASS",
+   "K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext"
+  ],
+  [
+   "C12[l=13]",
+   "PASS",
+   "odd spectrum 15/14, 46/45, 81/80; stationary magnetic c_l E_1/A = 14/15"
+  ],
+  [
+   "CP1[l=13]",
+   "CAUGHT",
+   "(c) shape 2/(l+1): static datum A/N_Y = 108459/164836 against 104/145"
+  ],
+  [
+   "CP2[l=13]",
+   "CAUGHT",
+   "(b) corner coefficient 1/(l(l+1))"
+  ],
+  [
+   "CP3[l=13]",
+   "CAUGHT",
+   "(a) weight 1 on odd K"
+  ],
+  [
+   "CP4[l=13]",
+   "CAUGHT",
+   "c_l (l+3)/(l+2) in (c)"
+  ],
+  [
+   "C01[l=14]",
+   "PASS",
+   "T[q] TT, x.T.x = q phi"
+  ],
+  [
+   "C02[l=14]",
+   "PASS",
+   "x.Ric[T].x = -(1/2) qt phi"
+  ],
+  [
+   "C03[l=14]",
+   "PASS",
+   "sphere Gram of (Hess phi, P_phi, phi delta, phi X)"
+  ],
+  [
+   "C04[l=14]",
+   "PASS",
+   "(c) field Gram 4x4; A_ext[s,s]/N_Y = 31/1456"
+  ],
+  [
+   "C05[l=14]",
+   "PASS",
+   "(b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 8/45045, Z_E/N_Y = 1/180180, Z/vac = 1/31"
+  ],
+  [
+   "C06[l=14]",
+   "PASS",
+   "(b) spectrum 32/31, 67/66, 106/105"
+  ],
+  [
+   "C07[l=14]",
+   "PASS",
+   "static datum: tensor identity True; A_ext/N_Y = 91/124; shape = 1/8; unextremised = -78/31"
+  ],
+  [
+   "C08[l=14]",
+   "PASS",
+   "S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True"
+  ],
+  [
+   "C09[l=14]",
+   "PASS",
+   "(a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)"
+  ],
+  [
+   "C10[l=14]",
+   "PASS",
+   "(a) odd h Gram 4x4; eta = 1 row zero"
+  ],
+  [
+   "C11[l=14]",
+   "PASS",
+   "K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext"
+  ],
+  [
+   "C12[l=14]",
+   "PASS",
+   "odd spectrum 16/15, 49/48, 86/85; stationary magnetic c_l E_1/A = 15/16"
+  ],
+  [
+   "CP1[l=14]",
+   "CAUGHT",
+   "(c) shape 2/(l+1): static datum A/N_Y = 16198/24025 against 91/124"
+  ],
+  [
+   "CP2[l=14]",
+   "CAUGHT",
+   "(b) corner coefficient 1/(l(l+1))"
+  ],
+  [
+   "CP3[l=14]",
+   "CAUGHT",
+   "(a) weight 1 on odd K"
+  ],
+  [
+   "CP4[l=14]",
+   "CAUGHT",
+   "c_l (l+3)/(l+2) in (c)"
+  ]
+ ],
+ "fails": [],
+ "plants_missed": [],
+ "table": {
+  "10": {
+   "c_l": "1/2970",
+   "N_Y": "32768/4849845",
+   "field_s_s_over_NY": "23/540",
+   "mom_s_s_over_NY": "8/12375",
+   "Z_s_s_over_NY": "1/37125",
+   "static_over_NY": "15/23",
+   "shape": "1/6",
+   "oddK_1_1_over_NY": "220/207",
+   "oddh_s_s_over_NY": "253/135",
+   "spectrum_even": [
+    "24/23",
+    "51/50",
+    "82/81"
+   ],
+   "spectrum_odd": [
+    "12/11",
+    "37/36",
+    "66/65"
+   ],
+   "seconds": 0.6
+  },
+  "11": {
+   "c_l": "1/4290",
+   "N_Y": "131072/22309287",
+   "field_s_s_over_NY": "5/143",
+   "mom_s_s_over_NY": "2/4455",
+   "Z_s_s_over_NY": "1/57915",
+   "static_over_NY": "44/65",
+   "shape": "2/13",
+   "oddK_1_1_over_NY": "132/125",
+   "oddh_s_s_over_NY": "220/117",
+   "spectrum_even": [
+    "26/25",
+    "55/54",
+    "88/87"
+   ],
+   "spectrum_odd": [
+    "13/12",
+    "40/39",
+    "71/70"
+   ],
+   "seconds": 0.9
+  },
+  "12": {
+   "c_l": "1/6006",
+   "N_Y": "262144/50702925",
+   "field_s_s_over_NY": "9/308",
+   "mom_s_s_over_NY": "4/12441",
+   "Z_s_s_over_NY": "1/87087",
+   "static_over_NY": "44/63",
+   "shape": "1/7",
+   "oddK_1_1_over_NY": "104/99",
+   "oddh_s_s_over_NY": "4212/2233",
+   "spectrum_even": [
+    "28/27",
+    "59/58",
+    "94/93"
+   ],
+   "spectrum_odd": [
+    "14/13",
+    "43/42",
+    "76/75"
+   ],
+   "seconds": 1.0
+  },
+  "13": {
+   "c_l": "1/8190",
+   "N_Y": "2097152/456326325",
+   "field_s_s_over_NY": "29/1170",
+   "mom_s_s_over_NY": "2/8463",
+   "Z_s_s_over_NY": "1/126945",
+   "static_over_NY": "104/145",
+   "shape": "2/15",
+   "oddK_1_1_over_NY": "91/87",
+   "oddh_s_s_over_NY": "2639/1395",
+   "spectrum_even": [
+    "30/29",
+    "63/62",
+    "100/99"
+   ],
+   "spectrum_odd": [
+    "15/14",
+    "46/45",
+    "81/80"
+   ],
+   "seconds": 0.8
+  },
+  "14": {
+   "c_l": "1/10920",
+   "N_Y": "4194304/1017958725",
+   "field_s_s_over_NY": "31/1456",
+   "mom_s_s_over_NY": "8/45045",
+   "Z_s_s_over_NY": "1/180180",
+   "static_over_NY": "91/124",
+   "shape": "1/8",
+   "oddK_1_1_over_NY": "420/403",
+   "oddh_s_s_over_NY": "1085/572",
+   "spectrum_even": [
+    "32/31",
+    "67/66",
+    "106/105"
+   ],
+   "spectrum_odd": [
+    "16/15",
+    "49/48",
+    "86/85"
+   ],
+   "seconds": 0.8
+  }
+ },
+ "summary": {
+  "pass": 60,
+  "fail": 0,
+  "caught": 20,
+  "missed": 0
+ }
+}

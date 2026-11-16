@@ -1,0 +1,12 @@
+PASS S01 radial TT rows, even (3 rows + x.T.x) and odd (1 row)
+PASS S02 Lap T[q] = T[qt], Lap S[eta] = S[etat]
+PASS S03 (b) pointwise potential U, q arbitrary
+FAIL S04 (b) momentum Gram on r^(2a), r^(2b), symbolic (l,a,b)
+PASS S05 (c) potential W: bulk True, boundary W(1) = -b True, q arbitrary
+FAIL S06 (c) field Gram on r^(2a), r^(2b), symbolic (l,a,b)
+FAIL S07 (a) odd K Gram, weight 2, symbolic (l,a,b)
+FAIL S08 (a) odd h Gram, symbolic (l,a,b)
+PASS S09a (a) odd K: difference = c_l l^2(l+1)^2 (N r^(2l+1) eta^2)'
+PASS S09b (a) odd h: companion A8 potential V at n = 3: bulk True, V(1) = eta(1)^2 N_v/2 True
+
+[run 01 stopped by the lane after about 6 min at S10: S04, S06, S07, S08 printed FAIL because of a bug in the script's monomial integrator (coefficient/power split), not in the identities: the pointwise lines S03, S05, S09a, S09b had passed. Integrator fixed; see run 02.]

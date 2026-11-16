@@ -1,0 +1,86 @@
+PASS C01[l=10] T[q] TT, x.T.x = q phi
+PASS C02[l=10] x.Ric[T].x = -(1/2) qt phi
+PASS C03[l=10] sphere Gram of (Hess phi, P_phi, phi delta, phi X)
+PASS C04[l=10] (c) field Gram 4x4; A_ext[s,s]/N_Y = 23/540
+PASS C05[l=10] (b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 8/12375, Z_E/N_Y = 1/37125, Z/vac = 1/23
+PASS C06[l=10] (b) spectrum 24/23, 51/50, 82/81
+PASS C07[l=10] static datum: tensor identity True; A_ext/N_Y = 15/23; shape = 1/6; unextremised = -54/23
+PASS C08[l=10] S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True
+PASS C09[l=10] (a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)
+PASS C10[l=10] (a) odd h Gram 4x4; eta = 1 row zero
+PASS C11[l=10] K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext
+PASS C12[l=10] odd spectrum 12/11, 37/36, 66/65; stationary magnetic c_l E_1/A = 11/12
+PLANT CAUGHT CP1[l=10] (c) shape 2/(l+1): static datum A/N_Y = 38070/64009 against 15/23
+PLANT CAUGHT CP2[l=10] (b) corner coefficient 1/(l(l+1))
+PLANT CAUGHT CP3[l=10] (a) weight 1 on odd K
+PLANT CAUGHT CP4[l=10] c_l (l+3)/(l+2) in (c)
+   l=10 c_l=1/2970 N_Y=32768/4849845 done in 0.6s
+PASS C01[l=11] T[q] TT, x.T.x = q phi
+PASS C02[l=11] x.Ric[T].x = -(1/2) qt phi
+PASS C03[l=11] sphere Gram of (Hess phi, P_phi, phi delta, phi X)
+PASS C04[l=11] (c) field Gram 4x4; A_ext[s,s]/N_Y = 5/143
+PASS C05[l=11] (b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 2/4455, Z_E/N_Y = 1/57915, Z/vac = 1/25
+PASS C06[l=11] (b) spectrum 26/25, 55/54, 88/87
+PASS C07[l=11] static datum: tensor identity True; A_ext/N_Y = 44/65; shape = 2/13; unextremised = -12/5
+PASS C08[l=11] S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True
+PASS C09[l=11] (a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)
+PASS C10[l=11] (a) odd h Gram 4x4; eta = 1 row zero
+PASS C11[l=11] K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext
+PASS C12[l=11] odd spectrum 13/12, 40/39, 71/70; stationary magnetic c_l E_1/A = 12/13
+PLANT CAUGHT CP1[l=11] (c) shape 2/(l+1): static datum A/N_Y = 99/160 against 44/65
+PLANT CAUGHT CP2[l=11] (b) corner coefficient 1/(l(l+1))
+PLANT CAUGHT CP3[l=11] (a) weight 1 on odd K
+PLANT CAUGHT CP4[l=11] c_l (l+3)/(l+2) in (c)
+   l=11 c_l=1/4290 N_Y=131072/22309287 done in 0.9s
+PASS C01[l=12] T[q] TT, x.T.x = q phi
+PASS C02[l=12] x.Ric[T].x = -(1/2) qt phi
+PASS C03[l=12] sphere Gram of (Hess phi, P_phi, phi delta, phi X)
+PASS C04[l=12] (c) field Gram 4x4; A_ext[s,s]/N_Y = 9/308
+PASS C05[l=12] (b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 4/12441, Z_E/N_Y = 1/87087, Z/vac = 1/27
+PASS C06[l=12] (b) spectrum 28/27, 59/58, 94/93
+PASS C07[l=12] static datum: tensor identity True; A_ext/N_Y = 44/63; shape = 1/7; unextremised = -22/9
+PASS C08[l=12] S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True
+PASS C09[l=12] (a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)
+PASS C10[l=12] (a) odd h Gram 4x4; eta = 1 row zero
+PASS C11[l=12] K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext
+PASS C12[l=12] odd spectrum 14/13, 43/42, 76/75; stationary magnetic c_l E_1/A = 13/14
+PLANT CAUGHT CP1[l=12] (c) shape 2/(l+1): static datum A/N_Y = 8756/13689 against 44/63
+PLANT CAUGHT CP2[l=12] (b) corner coefficient 1/(l(l+1))
+PLANT CAUGHT CP3[l=12] (a) weight 1 on odd K
+PLANT CAUGHT CP4[l=12] c_l (l+3)/(l+2) in (c)
+   l=12 c_l=1/6006 N_Y=262144/50702925 done in 1.0s
+PASS C01[l=13] T[q] TT, x.T.x = q phi
+PASS C02[l=13] x.Ric[T].x = -(1/2) qt phi
+PASS C03[l=13] sphere Gram of (Hess phi, P_phi, phi delta, phi X)
+PASS C04[l=13] (c) field Gram 4x4; A_ext[s,s]/N_Y = 29/1170
+PASS C05[l=13] (b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 2/8463, Z_E/N_Y = 1/126945, Z/vac = 1/29
+PASS C06[l=13] (b) spectrum 30/29, 63/62, 100/99
+PASS C07[l=13] static datum: tensor identity True; A_ext/N_Y = 104/145; shape = 2/15; unextremised = -72/29
+PASS C08[l=13] S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True
+PASS C09[l=13] (a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)
+PASS C10[l=13] (a) odd h Gram 4x4; eta = 1 row zero
+PASS C11[l=13] K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext
+PASS C12[l=13] odd spectrum 15/14, 46/45, 81/80; stationary magnetic c_l E_1/A = 14/15
+PLANT CAUGHT CP1[l=13] (c) shape 2/(l+1): static datum A/N_Y = 108459/164836 against 104/145
+PLANT CAUGHT CP2[l=13] (b) corner coefficient 1/(l(l+1))
+PLANT CAUGHT CP3[l=13] (a) weight 1 on odd K
+PLANT CAUGHT CP4[l=13] c_l (l+3)/(l+2) in (c)
+   l=13 c_l=1/8190 N_Y=2097152/456326325 done in 0.8s
+PASS C01[l=14] T[q] TT, x.T.x = q phi
+PASS C02[l=14] x.Ric[T].x = -(1/2) qt phi
+PASS C03[l=14] sphere Gram of (Hess phi, P_phi, phi delta, phi X)
+PASS C04[l=14] (c) field Gram 4x4; A_ext[s,s]/N_Y = 31/1456
+PASS C05[l=14] (b) momentum Gram 4x4, G_D verified True; T[s]: A_ext/N_Y = 8/45045, Z_E/N_Y = 1/180180, Z/vac = 1/31
+PASS C06[l=14] (b) spectrum 32/31, 67/66, 106/105
+PASS C07[l=14] static datum: tensor identity True; A_ext/N_Y = 91/124; shape = 1/8; unextremised = -78/31
+PASS C08[l=14] S[eta] TT, S.x = eta v: True; psi_B = l(l+1) eta phi: True; psidot_B = (1/2) l(l+1) etat phi: True
+PASS C09[l=14] (a) odd K Gram 4x4 = c_l (E_1 + (1/2) int psi_B^2)
+PASS C10[l=14] (a) odd h Gram 4x4; eta = 1 row zero
+PASS C11[l=14] K gauge move formula; stationary representative has kappa = 0 on the edge and int N |K~|^2 = A_ext
+PASS C12[l=14] odd spectrum 16/15, 49/48, 86/85; stationary magnetic c_l E_1/A = 15/16
+PLANT CAUGHT CP1[l=14] (c) shape 2/(l+1): static datum A/N_Y = 16198/24025 against 91/124
+PLANT CAUGHT CP2[l=14] (b) corner coefficient 1/(l(l+1))
+PLANT CAUGHT CP3[l=14] (a) weight 1 on odd K
+PLANT CAUGHT CP4[l=14] c_l (l+3)/(l+2) in (c)
+   l=14 c_l=1/10920 N_Y=4194304/1017958725 done in 0.8s
+SUMMARY pass 60 fail 0 plants caught 20 missed 0 FAILED LINES: none MISSED PLANTS: none time 4.0s
