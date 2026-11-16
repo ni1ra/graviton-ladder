@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# One command reruns every exact check behind the paper.
-#   ./run_all.sh          about nine minutes (the last section, wave 73, runs several checks at once and is about six of them)
+# One command reruns every exact check behind the paper, and the quick deterministic checks of wave 73
+# (what that section leaves out, and why, is in record/wave73/wave73.manifest).
+#   ./run_all.sh          about eight minutes in a Linux container with eight CPUs; the wave 73 section is four of them
 #   FULL=1 ./run_all.sh   also reruns the slow numerical search for the extremal surface (about 30 minutes)
 # Exit code 0 means every check passed and every planted error was caught.
 set -euo pipefail
@@ -24,7 +25,7 @@ echo "### 5. The blind reader's own scripts, written from the paper's text alone
 
 echo "### 6. Wave 73: the quick deterministic checks, and the stored lattice analyses rederived from their stored rows"
 echo "###    (what is rerun and what is not: record/wave73/wave73.manifest)"
-# FULL=1 also runs the checks the manifest marks slow (about six more minutes)
+# FULL=1 also runs the checks the manifest marks slow (about ten more minutes)
 SLOW_CHECKS="$([ "${FULL:-0}" = "1" ] && echo 1 || true)" bash "$ROOT/record/wave73/run_wave73.sh"
 
 echo "### ALL CHECKS PASSED"

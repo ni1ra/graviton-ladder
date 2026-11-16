@@ -27,5 +27,6 @@ One result and everything needed to check it: the exact comparison of graviton r
 
 - `paper/`: the short paper.
 - `record/<wave>/<name>/`: one piece of work each, with its pre-registration, report, `scripts/` and `out/`. Folder names are those of the working record, kept so scripts and the ledger run unchanged.
-- `run_all.sh`: the single entry point. It calls `record/wave69/final/scripts/run_all.sh` (the theorem's bundle and ledger audit) and the `wave72` scripts.
+- `run_all.sh`: the single entry point. It calls `record/wave69/final/scripts/run_all.sh` (the theorem's bundle and ledger audit), the `wave72` scripts, and `record/wave73/run_wave73.sh`.
+- `record/wave73/wave73.manifest`: the part of wave 73 that `run_all.sh` reruns, with each script's expected exit code, the output lines it must print and exact counts of its pass lines and planted errors, and a reason for everything left out. The run fails on any other failing line and on a folder of `record/wave73/` that is neither listed as a check nor named in a `skip` line, so new work there comes with that decision.
 - `record/wave69/final/scripts/s5_ledger.py`: the audit. It holds every premise of the theorem as a typed graph and fails on a cycle, a dangling dependency, a missing or failing output, or a script without a caught plant.
