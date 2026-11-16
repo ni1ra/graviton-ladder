@@ -6,6 +6,7 @@
 #   JOBS=4 ...run_wave73.sh                     slots (default: the number of cores, at most 8). A check holds its `threads`
 #                                               slots (default 1) and gets that many BLAS threads. JOBS=1: one check at a time,
 #                                               each on every core
+#   SECTION_BUDGET=600 ...run_wave73.sh         fail, naming what still ran, if the section takes longer than this many seconds
 #   SLOW_CHECKS=1 ...run_wave73.sh              also the checks marked `slow` in the manifest (kept out of the default run for time)
 #   KEEP=1 ...run_wave73.sh                     keep the temporary directory and print where it is
 #   MANIFEST=/path ...run_wave73.sh             another manifest (used to prove that a wrong one turns red)
@@ -48,7 +49,7 @@ export PYTHONDONTWRITEBYTECODE=1 PYTHONUTF8=1 PYTHONIOENCODING=utf-8 LC_ALL="${L
 
 # ---- parse the manifest ------------------------------------------------------------------------------
 n=0
-declare -a ID AFTER THREADS SLOW CWD CMD RC NEED COUNT SAME STARTS
+declare -a ID AFTER THREADS SLOW PID CWD CMD RC NEED COUNT SAME STARTS
 declare -a SKIPDIRS=()
 cur=-1
 lineno=0
@@ -145,10 +146,10 @@ evaluate() {
   done < <(grep -E -- "$BAD" "$out" || true)
   ran=$((ran + 1)); sum_checks=$((sum_checks + nchk)); sum_plants=$((sum_plants + npl))
   if [ -z "$why" ]; then
-    printf 'ok    %-22s %4ss  checks=%s plants=%s\n' "$id" "$sec" "$nchk" "$npl"
+    printf 'ok    %-22s %4ss  checks=%s plants=%s  [section %ss]\n' "$id" "$sec" "$nchk" "$npl" "$((SECONDS - t_start))"
   else
     failed=$((failed + 1))
-    printf 'FAIL  %-22s %4ss%s\n' "$id" "$sec" "$why"
+    printf 'FAIL  %-22s %4ss  [section %ss]%s\n' "$id" "$sec" "$((SECONDS - t_start))" "$why"
     echo "    --- last lines of its output ---"; tail -n 12 "$out" | cut -c1-200 | sed 's/^/    | /'
   fi
 }
@@ -175,18 +176,29 @@ ready() {   # all selected dependencies of check $1 have finished
 }
 active=()   # checks that have been started and not yet seen finished
 used=0      # slots they hold (a check holds `threads` of the JOBS slots)
-refresh() {
+refresh() {   # a check that has finished is judged and printed at once, so a timeout shows where the time went
   local keep=() a
   used=0
   for a in ${active[@]+"${active[@]}"}; do
-    [ -f "$TMP/res/${ID[$a]}.sec" ] && continue
+    if [ -f "$TMP/res/${ID[$a]}.sec" ]; then evaluate "$a"; continue; fi
     keep+=("$a"); used=$((used + THREADS[a]))
   done
   active=(${keep[@]+"${keep[@]}"})
 }
+over_budget() {   # SECTION_BUDGET seconds: fail with names instead of being cancelled silently by the caller
+  [ -n "${SECTION_BUDGET:-}" ] && [ $((SECONDS - t_start)) -ge "$SECTION_BUDGET" ] || return 1
+  echo "FAIL budget: the section passed its budget of ${SECTION_BUDGET} s ($((SECONDS - t_start)) s in)"
+  local a names=""
+  for a in ${active[@]+"${active[@]}"}; do names+=" ${ID[$a]}"; pkill -P "${PID[$a]}" 2>/dev/null; kill "${PID[$a]}" 2>/dev/null; done
+  echo "  still running:${names:- none}"
+  names=""; for a in ${pending[@]+"${pending[@]}"}; do names+=" ${ID[$a]}"; done
+  echo "  not started:${names:- none}"
+  return 0
+}
 while :; do
   refresh
   [ ${#pending[@]} -eq 0 ] && [ ${#active[@]} -eq 0 ] && break
+  if over_budget; then exit 1; fi
   launched=0
   for k in "${!pending[@]}"; do
     i="${pending[$k]}"
@@ -194,6 +206,7 @@ while :; do
     if [ $((used + THREADS[i])) -le "$JOBS" ] || [ "$used" -eq 0 ]; then
       if ready "$i"; then
         run_one "$i" &
+        PID[$i]=$!
         active+=("$i"); launched=1
         unset 'pending[k]'; pending=(${pending[@]+"${pending[@]}"})
         break
@@ -202,14 +215,9 @@ while :; do
   done
   if [ $launched = 0 ]; then
     [ ${#active[@]} -gt 0 ] || { echo "run_wave73: circular or unknown 'after' in the manifest" >&2; exit 2; }
-    wait -n
+    sleep 0.5   # polling, not wait -n, so the budget is checked even while one check hangs
   fi
 done
-for ((i = 0; i < n; i++)); do
-  [ -n "$ONLY" ] && ! [[ "${ID[$i]}" =~ $ONLY ]] && continue
-  [ -f "$TMP/res/${ID[$i]}.sec" ] && evaluate "$i"
-done
-
 [ "$skipped_slow" -gt 0 ] && echo "wave73: $skipped_slow slow checks listed in the manifest were not run (SLOW_CHECKS=1 runs them)"
 echo "wave73: $ran checks run in $((SECONDS - t_start)) s; $sum_checks check lines and $sum_plants planted errors as the manifest requires; $failed failed"
 if [ "$failed" -ne 0 ] || [ "$uncovered" -ne 0 ]; then exit 1; fi

@@ -75,6 +75,7 @@ count checks 68 ^PASS[ ]
 
 check even-dict-thermal
 run even-dict/scripts thermal_check.py {OUT}/thermal_check.json
+slow
 need ^FAILED LINES: none$
 count checks 2 ^PASS[ ]
 count plants 1 ^CAUGHT[ ]
@@ -95,6 +96,7 @@ need ^SUMMARY \{"checks": \{"U1": true, "U2": true, "U3": true, "U4": true, "U5"
 
 check even-second
 run even-second/scripts second.py
+slow
 need ^ +\([0-9.]+s\)  all sup checks agree: True$
 
 check odd-remainder
@@ -108,6 +110,7 @@ count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
 check all-t
 after even-second
 run all-t/scripts all_t.py {OUT}/all_t.json
+slow
 threads 2
 rc 1
 need ^  C2: FAIL$
@@ -117,11 +120,13 @@ count plants 1 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
 
 check ruler-l-part2
 run ruler-l/scripts ruler_l.py --l none {OUT}/ruler_l.json
+slow
 need ^plant=None l=\[\] checks=8 fail=0 time=[0-9]+ s$
 count checks 8 ^PASS[ ]
 
 check beyond-normal
 run beyond-normal/scripts -X utf8 beyond_normal.py {OUT}/beyond_normal.json
+slow
 need ^FAILED LINES: none$
 need ^plants caught: P1 True, P2 True$
 count checks 37 ^PASS[ ]
@@ -129,6 +134,7 @@ count plants 2 ^CAUGHT[ ]
 
 check modgen
 run modgen/scripts modgen_check.py {OUT}/modgen_check.json
+slow
 need ^FAILED LINES: none$
 count checks 10 ^PASS[ ]
 count plants 2 ^CAUGHT[ ]
@@ -156,6 +162,7 @@ count plants 2 ^ *[A-Za-z0-9_]*(PLANT|plant)[A-Za-z0-9_]*: PASS$
 
 check even-const
 run even-const/scripts -X utf8 even_const.py {OUT}/even_const.json
+slow
 need ^FAILED LINES: none$
 count checks 13 ^PASS[ ] ::: PLANT
 count plants 1 ^PASS .*PLANT
@@ -183,6 +190,7 @@ count checks 46 ^PASS[ ]
 
 check ss-tension-shear
 run ss-tension/scripts shear_curv.py {OUT}/shear_curv.json
+slow
 need ^13 lines, 0 unexpected, [0-9.]+ s$
 count checks 9 ^\[PASS\][ ]
 count plants 4 ^\[CAUGHT\][ ]
@@ -255,6 +263,7 @@ count plants 15 ^P[0-9]+ +l=[0-9]+ +CAUGHT
 
 check charge-ref-16-exp
 run charge-ref scripts/ref_probe.py 16 exp {OUT}/probe_l16_exp.json
+slow
 need ^SUMMARY l=16 mode=exp pass 15 fail 0 plant CAUGHT time [0-9.]+s$
 count checks 15 ^PASS[ ]
 count plants 1 ^PLANT CAUGHT[ ]
