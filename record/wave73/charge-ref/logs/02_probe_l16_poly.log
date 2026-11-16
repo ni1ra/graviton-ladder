@@ -1,0 +1,27 @@
+odd null space dimension 6 of 12 unknowns (0.0s)
+PASS P00o[l=16,poly] odd A, B trace-free, divergence-free, x.S.x = 0; null space dim 6
+   psi_B/(w phi) for A: ['4080', '-7344', '110160/11', '1530', '-36720/13', '12240/7'] ok True
+PASS P01[l=16,poly] odd K AA: lhs/N_Y = 1381150129368015081/2279417900653894  lhs - rhs = 0  Z/N_Y = 1355797377133416059/41029522211770092
+PASS P02[l=16,poly] odd h AA: lhs/N_Y = 21094772408487221467/4558835801307788  lhs - rhs = 0
+PASS P01[l=16,poly] odd K AB: lhs/N_Y = 763192195731189698/3419126850980841  lhs - rhs = 0  Z/N_Y = 1975388578717707059/153860708294137845
+PASS P02[l=16,poly] odd h AB: lhs/N_Y = -33372853343192959251/7977962652288629  lhs - rhs = 0
+PASS P01[l=16,poly] odd K BB: lhs/N_Y = 2452287028731323624/23933887956865887  lhs - rhs = 0  Z/N_Y = 822730859911594196/153860708294137845
+PASS P02[l=16,poly] odd h BB: lhs/N_Y = 108972329129473476/26504859309929  lhs - rhs = 0
+   odd done (1.5s)
+even null space dimension 6 of 24 unknowns (1.6s)
+PASS P00e[l=16,poly] even A, B trace-free, divergence-free; null space dim 6
+   q for A (x.T.x = q w phi): ['240', '-17/2', '459/4', '51/8', '-51/8', '51/20'] ok True
+   q for B: ['80', '17/4', '-153/4', '51/2', '255/56', '-459/40'] ok True
+PASS P03[l=16,poly] even K AA: lhs/N_Y = 7349333332583383/1490492133748800  lhs - rhs = 0  Z/N_Y = 1046575517886389/7665388116422400  radial form verified True
+PASS P06[l=16,poly] Z/vac on A = 7326028625204723/257249971347797065  (0 < . < 1/(2l+3) = 1/35)
+   plant AA: free-space Green function gives lhs - rhs = -750321664/18864101086875
+PASS P04[l=16,poly] even h AA: lhs/N_Y = 30881620053484927/36483234278400  lhs - rhs = 0
+PASS P03[l=16,poly] even K AB: lhs/N_Y = -2469572016870901/3477814978747200  lhs - rhs = 0  Z/N_Y = -7363641877061399/375604017704697600  radial form verified True
+   plant AB: free-space Green function gives lhs - rhs = 7012352/1148249631375
+PASS P04[l=16,poly] even h AB: lhs/N_Y = -4799098661663297/36483234278400  lhs - rhs = 0
+PASS P03[l=16,poly] even K BB: lhs/N_Y = 835043208127251/8114901617076800  lhs - rhs = 0  Z/N_Y = 2474163684013577/876409374644294400  radial form verified True
+   plant BB: free-space Green function gives lhs - rhs = -1507328/1607549483925
+PASS P04[l=16,poly] even h BB: lhs/N_Y = 758189353380703/36483234278400  lhs - rhs = 0
+PLANT CAUGHT PL1[l=16,poly] free-space Green function in P03
+PASS P05[l=16,poly] corner identity, generic non-harmonic X: lhs - rhs = 0; 2 oint kappa X / N_Y = 6976/15
+SUMMARY l=16 mode=poly pass 16 fail 0 plant CAUGHT time 2.9s

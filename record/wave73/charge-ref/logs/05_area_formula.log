@@ -1,0 +1,13 @@
+PASS A01[l=2] area side = four-term TT formula; even0: -17201/7200 vs -17201/7200; even1: -329/288 vs -329/288; odd0: 28/675 vs 28/675; odd1: 28/27 vs 28/27; even+odd: -91/864 vs -91/864
+   A02[l=2] even1 terms / N_Y: (1/4) int N |dh|^2 = 33/32, -(1/2) oint |h nu|^2 = -1421/576, (1/4) oint (nu h nu)^2 = 169/576; formula without the last term misses the area side by 169/576
+PASS A03[l=2] off TT: T + 2 sym grad(phi x): area side -3161/288, four-term formula -35711/2016; h = -2 phi delta: area side -6/7 (lane's X03 value -6/7: True), four-term formula -1/7
+PASS A04 int N R_lin[h'] = -2/105 = -2 dF[h'] = -2/105
+PASS A00 unregistered: curvature code gives R = 0 through e^2 on an exactly flat pulled-back metric
+PASS A05[l=2] sigma = 2/105 Y; even0: G = 187/60 Y, change/N_Y = -53/441; even1: G = 35/12 Y, change/N_Y = -1241/11025
+   l=2 done (65.5s)
+PASS A01[l=3] area side = four-term TT formula; even0: -457/40 vs -457/40; even1: -3 vs -3; odd0: 432/2695 vs 432/2695; odd1: 2160/539 vs 2160/539; even+odd: 543/539 vs 543/539
+   A02[l=3] even1 terms / N_Y: (1/4) int N |dh|^2 = 13/6, -(1/2) oint |h nu|^2 = -37/6, (1/4) oint (nu h nu)^2 = 1; formula without the last term misses the area side by 1
+PASS A03[l=3] off TT: T + 2 sym grad(phi x): area side -25, four-term formula -103/3; h = -2 phi delta: area side -4/3 (lane's X03 value -4/3: True), four-term formula 0
+PASS A05[l=3] sigma = -6/35 Y; even0: G = 107/10 Y, change/N_Y = 4134/1225; even1: G = 6 Y, change/N_Y = 432/245
+   l=3 done (238.5s)
+SUMMARY pass 8 fail 0 time 238.5s

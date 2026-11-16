@@ -2,7 +2,9 @@
 
 ## Lead's check and grade
 
-**Grade: 386 of 420.** Accepted. Outcome: all four parts proved for every l ≥ 2, given two inherited items the lane names.
+**Grade: 386 of 420.** Accepted.
+
+**Regraded 398 of 420 on 16 Nov 2026** (was 386) after its referee (`charge-ref/REPORT.md`): every part holds; the gauge-move step is now proved there, not inherited. Remaining defects: the stationary point is a saddle over three freedoms (edge shape, corner time shift, slice) and the text names two (-8); the cross-block argument is stated too narrowly (-4); run 01's false failures (-4); completeness of the data family is inherited (-6). Outcome: all four parts proved for every l ≥ 2, given two inherited items the lane names.
 
 **Checked by the lead.** (1) Re-ran `C:\Python314\python.exe -u scripts\charge_all_l.py 2 9 <out.json>` from the lane's folder: "pass 127 fail 0 plants caught 36 missed 0", 24 s, exit 0. (2) Arithmetic of the table by hand at l = 2: c_2 = 4·0!/4! = 1/6; static value 2l(l−1)/((l+2)(2l+3)) = 4/28 = 1/7; shape 2/(l+2) = 1/2; these are EVEN-TOWER's values. (3) Step 10's logic by reading: a pointwise total derivative, integrated against N with N′ = −r, leaves exactly the boundary term the corner cancels and the Dirichlet-Green form.
 

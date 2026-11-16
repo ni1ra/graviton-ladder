@@ -1,0 +1,48 @@
+{
+ "lines": [
+  [
+   "A01[l=2]",
+   "PASS",
+   "area side = four-term TT formula; even0: -17201/7200 vs -17201/7200; even1: -329/288 vs -329/288; odd0: 28/675 vs 28/675; odd1: 28/27 vs 28/27; even+odd: -91/864 vs -91/864"
+  ],
+  [
+   "A03[l=2]",
+   "PASS",
+   "off TT: T + 2 sym grad(phi x): area side -3161/288, four-term formula -35711/2016; h = -2 phi delta: area side -6/7 (lane's X03 value -6/7: True), four-term formula -1/7"
+  ],
+  [
+   "A04",
+   "PASS",
+   "int N R_lin[h'] = -2/105 = -2 dF[h'] = -2/105"
+  ],
+  [
+   "A00",
+   "PASS",
+   "unregistered: curvature code gives R = 0 through e^2 on an exactly flat pulled-back metric"
+  ],
+  [
+   "A05[l=2]",
+   "PASS",
+   "sigma = 2/105 Y; even0: G = 187/60 Y, change/N_Y = -53/441; even1: G = 35/12 Y, change/N_Y = -1241/11025"
+  ],
+  [
+   "A01[l=3]",
+   "PASS",
+   "area side = four-term TT formula; even0: -457/40 vs -457/40; even1: -3 vs -3; odd0: 432/2695 vs 432/2695; odd1: 2160/539 vs 2160/539; even+odd: 543/539 vs 543/539"
+  ],
+  [
+   "A03[l=3]",
+   "PASS",
+   "off TT: T + 2 sym grad(phi x): area side -25, four-term formula -103/3; h = -2 phi delta: area side -4/3 (lane's X03 value -4/3: True), four-term formula 0"
+  ],
+  [
+   "A05[l=3]",
+   "PASS",
+   "sigma = -6/35 Y; even0: G = 107/10 Y, change/N_Y = 4134/1225; even1: G = 6 Y, change/N_Y = 432/245"
+  ]
+ ],
+ "summary": {
+  "pass": 8,
+  "fail": 0
+ }
+}

@@ -1,0 +1,26 @@
+odd null space dimension 5 of 12 unknowns (0.1s)
+PASS P00o[l=15,exp] odd A, B trace-free, divergence-free, x.S.x = 0; null space dim 5
+   psi_B/(w phi) for A: ['385110180', '40540920', '3855600', '342720', '28560'] ok True
+PASS P01[l=15,exp] odd K AA: lhs/N_Y = 504141003900.978565186138  lhs - rhs = 2.088097429759527848547294e-53  Z/N_Y = 29504380023.41777791708566
+PASS P02[l=15,exp] odd h AA: lhs/N_Y = 717701472707.4865014211115  lhs - rhs = -3.487122707698411507073981e-51
+PASS P01[l=15,exp] odd K AB: lhs/N_Y = -465331344982.5262854483857  lhs - rhs = -2.088097429759527848547294e-53  Z/N_Y = -27233070070.13448611375884
+PASS P02[l=15,exp] odd h AB: lhs/N_Y = -662508289119.056093533272  lhs - rhs = 4.050909013733484026181751e-51
+PASS P01[l=15,exp] odd K BB: lhs/N_Y = 429509321713.9366261801199  lhs - rhs = 3.132146144639291772820941e-53  Z/N_Y = 25136610390.3222456938377
+PASS P02[l=15,exp] odd h BB: lhs/N_Y = 611559610637.4482001258047  lhs - rhs = -4.25971875670943681103648e-51
+   odd done (1.9s)
+even null space dimension 4 of 24 unknowns (2.1s)
+PASS P00e[l=15,exp] even A, B trace-free, divergence-free; null space dim 4
+   q for A (x.T.x = q w phi): ['1836', '1292', '408', '34'] ok True
+   q for B: ['9044/3', '2244', '748', '136'] ok True
+PASS P03[l=15,exp] even K AA: lhs/N_Y = 34.49265951127121708985805  lhs - rhs = 4.225653288369893363791867e-50  Z/N_Y = 1.014454688428521303501921  radial form verified True
+PASS P06[l=15,exp] Z/vac on A = 0.03030194401989987272316808  (0 < . < 1/(2l+3) = 1/33)
+   plant AA: free-space Green function gives lhs - rhs = -0.000311362962837019033829136
+PASS P04[l=15,exp] even h AA: lhs/N_Y = 4628.363978626012017168589  lhs - rhs = 4.605031305617244863286607e-59
+PASS P03[l=15,exp] even K AB: lhs/N_Y = 50.47300838193859434553806  lhs - rhs = 1.355020049667464623621631e-49  Z/N_Y = 1.4844669569201158141141  radial form verified True
+   plant AB: free-space Green function gives lhs - rhs = -0.0004566656788276279162827327
+PASS P04[l=15,exp] even h AB: lhs/N_Y = 6787.912191381531117801154  lhs - rhs = 1.594647664951917562455666e-58
+PASS P03[l=15,exp] even K BB: lhs/N_Y = 73.85762825927054820805089  lhs - rhs = 1.11286845971228746139335e-49  Z/N_Y = 2.172251784448353900778953  radial form verified True
+   plant BB: free-space Green function gives lhs - rhs = -0.000669776328947187610548008
+PASS P04[l=15,exp] even h BB: lhs/N_Y = 9955.271850823143182168188  lhs - rhs = 2.408306912532261840664753e-58
+PLANT CAUGHT PL1[l=15,exp] free-space Green function in P03
+SUMMARY l=15 mode=exp pass 15 fail 0 plant CAUGHT time 7.7s

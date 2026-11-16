@@ -1,0 +1,58 @@
+CHARGE-REF referee notes (hand derivations behind the verdicts), Mon 16 Nov 2026.  Tags as in QUEUE.md.
+Units: d = 4, unit ball, N = (1-r^2)/2, grad N = -x, Lap N = -3, F = Area - 2 Vol, A = -2 x (second-order part of F).
+
+1. Area formula on TT data, re-derived.                                                               [P] + [C logs 05]
+ a. dF[h'] = (1/2) oint (tr h' - nu.h'.nu) - int tr h'.  Two integrations by parts with N = 0 on the edge:
+    int N d_i d_j h'_ij = oint nu.h'.nu - int tr h',  int N Lap tr h' = oint tr h' - 3 int tr h'
+    => int N R_lin[h'] = -2 dF[h'].   [C: A04, generic non-TT h']
+ b. Second-order Hamiltonian constraint R_lin[h2] + R2[h] = K.K - (tr K)^2, smeared with N:
+    A = int N (K.K - (tr K)^2) - int N R2[h] - 2 d2F[h].  This line is gauge-free; everything after it uses TT.
+ c. TT: R2 = h.Lap h + (3/4)|dh|^2 - (1/2) d_k h_ij d_i h_kj.
+    int N h.Lap h = - int N |dh|^2 + (1/2) oint |h|^2 - (3/2) int |h|^2
+    int N d_k h_ij d_i h_kj = oint |h.nu|^2 - int |h|^2            (div h = 0 used twice)
+    => - int N R2 = (1/4) int N |dh|^2 - (1/2) oint |h|^2 + int |h|^2 + (1/2) oint |h.nu|^2.
+ d. d2Vol = -(1/4) int |h|^2;  d2Area = oint [ (1/8)(nu.h.nu)^2 - (1/4)(|h|^2 - 2|h.nu|^2 + (nu.h.nu)^2) ]
+    (also from the coarea form sqrt(det g) sqrt(nu.g^-1.nu): tr^2/8 - |h|^2/4 - tr a/4 + b/2 - a^2/8, a = nu.h.nu, b = |h.nu|^2).
+    -2 d2F = (1/4) oint (nu.h.nu)^2 + (1/2) oint |h|^2 - oint |h.nu|^2 - int |h|^2.
+ e. Sum: A_un = int N K.K + (1/4) int N |dh|^2 - (1/2) oint |h.nu|^2 + (1/4) oint (nu.h.nu)^2.   Every coefficient confirmed.
+ f. Off TT the four-term form is false (A03: -2 phi delta at l = 2 gives -1/7 against the true -6/7); line b is the object.
+
+2. "Moving the region is a gauge move", proved rather than inherited.                                   [P] + [C logs 05, 06, P05]
+ a. Space: under x -> x + e xi the scalar curvature is a scalar and vanishes at orders 0 and 1, so its e^2 coefficient
+    R_lin[h2'] + R2[h'] is unchanged pointwise; line 1b then holds on the pulled-back data with the coordinate ball.
+    Direct route: on r = 1 + sigma, linear part of -(1/2) oint_Sigma nu_Sigma.h.nu_Sigma is oint sigma (1/2)(psi' + 2 psi)
+    (terms: -(1/2)(2 psi + psi' - 2 psi) from area element and radial transport, + (psi' + psi) from the tilt and div(h.x) = 0);
+    stiffness (1/2) oint |grad sigma|^2 - oint sigma^2 = (1/2)(l-1)(l+2) oint sigma^2.  Gauge route = direct route: A05, l = 2, 3.
+ b. Time: slice t = e X.  Induced metric delta + e h + e^2 (h2 + 2XK - dX dX).  Pointwise
+    R_lin[2XK - dXdX] = 2 K.Hess X + |Hess X|^2 - (Lap X)^2   [C: E01], so the moved slice obeys line 1b with K + Hess X.
+    Integrated: 2 oint kappa tau + oint |grad_tan tau|^2 - 2 int |grad X|^2  [P by hand; C: P05 with a generic X at l = 15, 16],
+    which is -2 x ( - oint tau kappa - (1/2) oint |grad_tan tau|^2 + int |grad X|^2 ), the direct area and volume elements
+    sqrt(1 - |d tau|^2), sqrt(1 - |dX|^2) and d_t Area = oint tr_tan K = - oint kappa.  Drive - oint tau kappa: right.
+ c. Fixed volume: with no l = 0 part at first order the radial rescaling needed to hold the volume is O(e^2), and
+    F is stationary under it at order 0, so Area at fixed true volume and F agree through e^2.            [P]
+ d. Freedoms at this order: sigma, tau AND the slice X in the bulk (three, not two).  Stationary in X <=> Lap X = 0
+    <=> tr K' = 0: the maximal slice.  Tangential moves act trivially.  l = 0 sigma is removed by the volume constraint;
+    l = 1 sigma and l = 0, 1 tau are isometries (kernel of the form), undriven for l >= 2.
+ e. Character: in A, maximum over sigma (+G^2/((l-1)(l+2))), maximum over the slice (-2 int |dX|^2 at fixed tau), minimum
+    over tau (+l(l-1) tau^2).  A saddle.  The value is unique because the form is non-degenerate on the driven degree.
+    It matters only for wording: no "maximal area" or "minimal area" sentence is available; Z >= 0 is not a variational fact.
+
+3. Step 6 (cross block).  t -> -t maps (h, K; sigma, tau, X) to (h, -K; sigma, -tau, -X) and fixes F, so every bilinear term
+   with an odd number of (K, tau, X) vanishes: hK, h tau, hX, K sigma, sigma tau, sigma X.  The form splits into (h, sigma) and
+   (K, tau, X) blocks and so does its stationary value.  Holds with the edge moving in time.               [P]
+   Not said by the lane: even-odd and m-m' cross terms vanish by parity and Schur (real-type irreps); X01 covers one even+odd datum.
+
+4. Step 10.  r^(2l+3) U l(l-1) = (r^(2l+1) q^2)' + 2 r^(2l+2) q'^2/((l+1)(l+2)), so
+   int_0^1 r^(2l+3) U = q(1)^2/(l(l-1)) + (c_l/2) int r^(2l+2) q'^2, and [N r^(2l+2) U]_0^1 = 0 for q bounded at 0
+   (r^(2l-1) q^2 -> 0).  Corner term - q(1)^2 N_Y/(l(l-1)) cancels exactly.                                [P]
+   G_D = (-Lap_D)^-1: u = (q - q(1)) phi has -Lap u = - qt phi = psidot_E, u = 0 on the edge, and
+   int |grad u|^2 = N_Y int r^(2l+2) q'^2 + l [r^(2l+1) (q - q(1))^2]_0^1 = N_Y int r^(2l+2) q'^2.          [P]
+   Machine: P03 with the textbook kernel r_<^l (r_>^(-l-1) - r_>^l)/(2l+1), plant (free-space kernel) caught.
+
+5. Class of data.  The potentials (S03, S05, S09) are identities for arbitrary q, so parts (a)-(c) hold for every
+   profile of class C^3 on [0,1] bounded at 0, not only polynomials; no density argument is needed for smooth data.  [P]
+   Completeness of T[q], S[eta] among smooth TT tensors of a sector: inherited (A8 Lemma 7, CHAIN-ALL-L (ii)).       [I]
+   Beyond smooth data A_ext is not defined geometrically; it extends by closure, and the closure is consistent:
+   Z_odd <= c_l E_1 trivially, and Z_E <= C c_l E_1 by Cauchy-Schwarz on r^(2l+2) q' = int_0^r t^(2l+2) qt dt,
+   C = int_0^1 r^(-2l-2) int_0^r t^(2l+2)/N(t) dt dr < infinity (log singularity at r = 1, integrable).           [P, sketch]
+   The exp probe (logs 03, 04) sits outside every finite monomial span and passes.

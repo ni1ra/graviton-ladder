@@ -1,0 +1,53 @@
+CHARGE-REF (hostile referee of CHARGE-ALL-L) pass lines, fixed Mon 16 Nov 2026 01:40 Oslo, BEFORE the first run of
+scripts/ref_probe.py and scripts/ref_area.py.  Own code, written from the definitions; the lane's script is not imported.
+
+Conventions (as the lane): d = 4, unit ball, N = (1-r^2)/2, integrals per 4 pi, phi = r^l Y harmonic, N_Y = oint phi^2,
+c_l = 4/((l-1) l (l+1) (l+2)), curl(T)_ij = eps_ikl d_k T_lj, Ric[h]_ij = (1/2)(d_k d_i h_kj + d_k d_j h_ki - Lap h_ij - d_i d_j tr h).
+Chain fields from their definitions: psi_E = x.Ric[h].x, psidot_E = x.Ric[2K].x, psi_B = -x.curl K.x, psidot_B = x.curl Ric[h].x.
+
+PROBE (ref_probe.py L MODE), L = 15 and L = 16 (the lane's Cartesian runs stop at 14), each in two modes.
+  Harmonic: phi = Im[(x+iy)^(L-2)] (z^2 - (x^2+y^2)/(2(L-1)))   (order m = L-2; the lane uses Re[(x+iy)^(L-1)] z, m = L-1).
+  Data are NOT built from the lane's f1..f4 / g1, g2 formulas: the ansatz
+     even  T = w(s) sum_k [a_k s^k Hess phi + b_k s^k P_phi + c_k s^k phi delta + d_k s^k phi x x],
+     odd   S = w(s) sum_k [a_k s^k (x v + v x) + b_k s^k (grad v + grad v^T)],  v = x cross grad phi,  k = 0..5,
+  is solved for trace = 0 and divergence = 0 by exact rational elimination; two fixed combinations A, B of the null space are used.
+  MODE poly: w = 1 (profiles are polynomials of degree up to 5 in s, with all powers mixed; the lane's Cartesian family is 1, s, s^2, s^3).
+  MODE exp : w = exp(-s) (profile = polynomial x exp(-r^2): outside the span of every finite set of monomials).
+  Every integral is taken from the Cartesian tensors: angular part exact (rational), radial part exact (poly) or
+  incomplete gamma functions at 60 digits (exp).
+  P00  A and B are trace-free and divergence-free exactly (polynomial identity); odd: x.S.x = 0.            PASS iff exact.
+  P01  odd K block, 3 entries (AA, AB, BB):  int N S.S' = c_l [ (1/2) int N grad psi_B . grad psi_B' + int psi_B psi_B' ].
+  P02  odd h block, 3 entries:  (1/4) int N dS.dS' - (1/2) oint (S nu).(S' nu) + (1/4) oint (nu S nu)(nu S' nu) = c_l (1/2) int N psidot_B psidot_B'.
+  P03  even K block, 3 entries:  int N T.T' - oint kappa kappa'/(l(l-1)) = c_l [ (1/2) int N psidot_E psidot_E' + (1/2) <psidot_E, G_D psidot_E'> ],
+       with <f Y, G_D g Y> computed from the TEXTBOOK radial Dirichlet Green function of -Lap on the unit ball,
+       g_l(r,r') = r_<^l (r_>^(-l-1) - r_>^l)/(2l+1), by a double radial integral (exact in poly mode, quadrature in exp mode),
+       NOT from the lane's u = (q - q(1)) phi.  The radial factor of psidot_E is read off the Cartesian tensor on a ray and
+       psidot_E = F(s) w(s) phi is verified as an exact polynomial identity.
+  P04  even h block, 3 entries:  (1/4) int N dT.dT' - (1/2) oint (T nu).(T' nu) + (1/4) oint kappa kappa' + oint G G'/((l-1)(l+2))
+       = c_l [ (1/2) int N grad psi_E . grad psi_E' + (1/2) int psi_E psi_E' ],  G = (1/2)(x.grad + 2)(x.T.x) at r = 1.
+  P05  corner identity (step 4) for an X that is NOT of the form c(s) phi and not harmonic:
+       X = x^2 y + z^3 - 2 x y z + s x + y^4 + (1/3)(1 + s) phi   (poly mode only; K = T_A):
+       int N (|K + Hess X|^2 - (Lap X)^2) = int N |K|^2 + 2 oint kappa X + oint (|grad X|^2 - (x.grad X)^2) - 2 int |grad X|^2.
+  P06  expected scale: the exact (b) excess Z/vac on this non-monomial datum lies strictly between 0 and 1/(2l+3)  (the lane's top eigenvalue).
+  Thresholds: poly mode: difference EXACTLY 0 (Fractions).  exp mode: |lhs - rhs| <= 1e-30 |lhs| for P01, P02, P04 and
+  <= 1e-20 |lhs| for P03 (outer quadrature).  A line also fails if lhs = 0 (vacuous datum).
+  PLANT (one): in P03 the Dirichlet Green function is replaced by the free-space one (image term - r^l r'^l/(2l+1) dropped).
+       CAUGHT iff the three P03 differences are non-zero (poly: != 0 exactly; exp: relative size > 1e-6).
+  Expected by me before running: all pass (I could not break the radial identities by hand); if P03 fails with the
+  textbook Green function but passes with the plant, the lane's G_D identification is BROKEN.
+
+AREA FORMULA (ref_area.py), l = 2 and 3, own route, different from the lane's Christoffel expansion:
+  second-order scalar curvature from the Ricci tensor of g = delta + e h with the inverse metric as a truncated series
+  (sympy polynomials in e), area of the coordinate sphere from the coarea form  dA = sqrt(det g) sqrt(nu.g^-1.nu) dOmega,
+  volume from sqrt(det g); second-order coefficients extracted by series, integrated exactly.
+  Data built by the same null-space solve (own code).
+  A01  on TT data (even, odd, even + odd):  - int N R2 - 2 (d2Area - 2 d2Vol) = (1/4) int N |dh|^2 - (1/2) oint |h nu|^2 + (1/4) oint (nu h nu)^2.  PASS iff exact.
+  A02  each of the three terms matters: dropping the (1/4) oint (nu h nu)^2 term breaks A01 on even data (recorded, not a pass line).
+  A03  off TT gauge (h = T + 2 sym grad xi, xi = phi x, and h = -2 phi delta): the four-term formula is NOT the area side; record both numbers.
+       Expected: they differ.  PASS iff they differ (the formula must not be quoted off TT gauge).
+  A04  first-order identity  int N R_lin[h'] = -2 dF[h']  for a generic non-TT polynomial h' (Green's identity of step 2).  PASS iff exact.
+  A05  gauge route against the direct route for the edge: A_un(T + 2 sym grad xi) - A_un(T) = -2 sigma G N_Y - (l-1)(l+2) sigma^2 N_Y
+       with G from MY hand derivation G = (1/2)(d_r psi + 2 psi) and sigma = xi.nu, xi = (2/5) phi x - (1/3) grad phi + (1/7) s grad phi.  PASS iff exact.
+  A06  time shift, gauge route against the direct area/volume elements: the step-4 identity's X-quadratic part
+       oint |grad_tan tau|^2 - 2 int |grad X|^2 equals -2 x ( -(1/2) oint |grad_tan tau|^2 + int |grad s|^2 ), the second-order
+       part of Area - 2 Vol for the corner at t = tau and the slice t = s in flat space (hand derivation; recorded as [P], no arithmetic).

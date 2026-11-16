@@ -1,0 +1,2 @@
+PASS E01 (unregistered) K TT: True; R_lin[2XK - dXdX] - (2 K.HessX + |HessX|^2 - (LapX)^2) = 0; S2 non-trivial: True
+PLANT CAUGHT EP1 induced metric with + dX dX
