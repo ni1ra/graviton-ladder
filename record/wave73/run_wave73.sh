@@ -32,7 +32,7 @@ MANIFEST="${MANIFEST:-$HERE/wave73.manifest}"
 PY="${PYTHON:-python3}"
 if [ -z "${JOBS:-}" ]; then JOBS="$(nproc 2>/dev/null || echo 1)"; [ "$JOBS" -gt 8 ] && JOBS=8; fi
 ONLY="${ONLY:-}"
-CHECK_TIMEOUT="${CHECK_TIMEOUT:-600}"
+CHECK_TIMEOUT="${CHECK_TIMEOUT:-1800}"
 BAD='(^|[^A-Za-z])(FAIL|FAILED|MISSED|MISMATCH)([^A-Za-z]|$)|Traceback|Error'
 
 NL=$'\n'

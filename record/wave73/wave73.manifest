@@ -37,7 +37,7 @@ count checks 8 ^PASS[ ]
 
 check even-proof-ext
 run even-proof/scripts even_lemma_a_ext.py {OUT}/ext.json
-threads 2
+threads 4
 slow
 need ^ALL LINES HELD$
 count checks 4 ^PASS[ ]
