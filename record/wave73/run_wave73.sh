@@ -31,7 +31,12 @@ set -uo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MANIFEST="${MANIFEST:-$HERE/wave73.manifest}"
 PY="${PYTHON:-python3}"
-if [ -z "${JOBS:-}" ]; then JOBS="$(nproc 2>/dev/null || echo 1)"; [ "$JOBS" -gt 8 ] && JOBS=8; fi
+if [ -z "${JOBS:-}" ]; then
+  JOBS="$(nproc 2>/dev/null || echo 1)"; [ "$JOBS" -gt 8 ] && JOBS=8
+  # a container limited with `docker run --cpus N` still reports every CPU of the host to nproc
+  quota="$(awk '$1 != "max" && $2 > 0 { print int(($1 + $2 - 1) / $2) }' /sys/fs/cgroup/cpu.max 2>/dev/null || true)"
+  if [ -n "$quota" ] && [ "$quota" -ge 1 ] && [ "$quota" -lt "$JOBS" ]; then JOBS="$quota"; fi
+fi
 ONLY="${ONLY:-}"
 CHECK_TIMEOUT="${CHECK_TIMEOUT:-1800}"
 BAD='(^|[^A-Za-z])(FAIL|FAILED|MISSED|MISMATCH)([^A-Za-z]|$)|Traceback|Error'
