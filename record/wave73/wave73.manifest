@@ -369,6 +369,12 @@ run beta-def/scripts beta_def.py {OUT}/beta_def.json
 count checks 11 ^PASS[ ] ::: plant
 count plants 3 ^PASS L1[234]_plant
 
+check chain-all-l-9-12
+run chain-all-l/scripts chain_all_l.py 9 12
+need ^DONE l=9\.\.12: fails=\[\] plants_missed=\[\] total [0-9.]+ s$
+count checks 65 ^PASS[ ]
+count plants 16 ^CAUGHT[ ]
+
 check even-canon-l3
 run even-tower/scripts even_canonical.py 3 2
 count checks 6 ^PASS[ ]
@@ -428,8 +434,7 @@ skip ruler-l/scripts/ruler_l.py l = 3 to 6 take 5 to 13 minutes each, and the pl
 skip ruler/scripts/ruler.py the --plant w3 run is not rerun; the main run is in the manifest, marked slow (77 s)
 skip ruler-why/scripts/why.py the --plant k1 run is not rerun; the main run is in the manifest
 skip odd-second/scripts/sup_cover.py about 3.5 minutes; its stored output is compared with the fresh primary values by odd-second-compare
-skip ss-second/scripts/s3_limit.py about 4.5 minutes, and it ends S3 FAIL, a registered finding about a sign, not a pass
+skip ss-second/scripts/s3_limit.py about 5 minutes with the report's arguments (8001 0.04,0.02,0.01,0.005); with the script's own default arguments (a coarser grid) it ends S3 FAIL, which the report does not claim, so a rerun needs the report's arguments
 skip even-tower/scripts/shale_check.py reads ../../hinge-e/out/e3_hyperbolic.json, a folder of the earlier record that is not published here
 skip even-second/scripts/run_all.ps1 a Windows PowerShell wrapper with a venv path; the same two scripts are run directly
 skip even-passage/scripts/scan_constants.py exploration only, prints no verdict
-skip chain-all-l/scripts/chain_all_l.py l = 9 to 12 (a stored log, not part of the registered run) is not rerun
