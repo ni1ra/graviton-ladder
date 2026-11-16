@@ -1,0 +1,12 @@
+BEYOND-REF fix round (the one allowed), 16 Nov 2026, written before run 2.
+
+Run 1 (logs\02_run1.log): exit 1, one failed line, plant caught.
+  FAIL R2 even l=256: q-slot max 1.00000363 (bound 1 + 1e-8), pi-slot min 0.99999992 (bound 1 - 1e-8).
+Diagnosis: not a counterexample. The bound is an exact matrix theorem (W sampled from a positive kernel is positive semidefinite).
+  At l = 256 the grid matrix h^2 has diagonal entries lambda^2/sinh^2(0.025) ~ 1.05e8 against lambda_min ~ 1.2e-3, condition ~ 1e11,
+  so eigh loses about 1e-8 absolute, i.e. ~1e-5 relative, on the low eigenvalues. The excess grows with l exactly so (1e-8 at l = 64, 128; 3.6e-6 at 256).
+Repair (changes the discretisation, not the pass lines): an inner Dirichlet wall at rho_in, the first grid point with
+  lambda^2/sinh^2(rho_in) <= 5000; grid rho_in + 0.025 j, j = 1..2000. Active only for l = 128 (rho_in ~ 1.36) and l = 256 (rho_in ~ 2.0);
+  modes of frequency ~1 are suppressed there by exp(-lambda |ln tanh(rho_in/2)|) ~ e^-67, e^-70.
+Pass lines for run 2: all of 01_pass_lines.log unchanged (R2 tolerance stays 1e-8), plus
+R10 (the wall is harmless) l = 64 recomputed with cap 1000 (rho_in ~ 1.46): Q and 1-A, both parities, within 1e-5 relative of the uncapped l = 64 values of the same run.

@@ -1,0 +1,13 @@
+BEYOND-REF note on run 2 (logs\05_run2.log), 16 Nov 2026. No further run: the one fix round is used.
+
+Run 2: exit 1. Plant caught (slope -1.97). R1 lane-claim failed as predicted (min 0.296968 < 1/pi). One unpredicted failed line:
+  FAIL R10 wall harmless l=64: relative change of Q odd, 1-A odd, Q even, 1-A even = 1.25e-03, 8.23e-04, 4.96e-03, 4.40e-03 (threshold 1e-5).
+Reading of R10: my threshold was wrong, not the repair. The inner wall removes the modes living at rho < rho_in, i.e. frequencies
+  above ~ lambda/sinh(rho_in) (31 at cap 1000, 70 at cap 5000). Q and 1-A are NOT thermally cut off in the ultraviolet (they contain the
+  zero-temperature difference of the two complex structures), so they have a power-law tail; R8 shows the same size effect from the grid
+  step (even: 3.9e-3 between step 0.05 and 0.025). So per-sector values are ultraviolet-converged to about 0.5 % only, and the walled
+  l = 128, 256 values are slight underestimates (run 1 uncapped / run 2 walled, lambda^2 Q: odd 0.137630/0.137573, 0.139481/0.139351;
+  even 0.046448/0.046299, 0.047761/0.047365). The divergence verdict does not depend on this: a cutoff only lowers Q.
+R2 (the line that failed in run 1 at l = 256 through conditioning) passes at every l with tolerance 1e-8 in run 2.
+Run 2 took 795 s wall (run 1: 301 s); the machine was loaded. This exceeds the ~10 minute fence by about 3 minutes; disclosed.
+All other lines passed in both runs. Outputs: out\beyond_ref.json (run 2).

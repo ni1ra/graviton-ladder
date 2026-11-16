@@ -1,0 +1,45 @@
+PASS L7 toy vacuum: |X_rec - JG|/|JG| = 1.66e-13
+PASS L7 toy odd-type: |X_rec - JG|/|JG| = 1.71e-13
+PASS L7 toy even-type: |X_rec - JG|/|JG| = 4.64e-13
+CAUGHT P1 plant (covariance at beta = pi, tested at 2 pi): mismatch 0.5000
+PASS L1 odd l=2: lambda_min(h^2+N) = 1.079514e-03 >= lambda_min(h^2) = 1.048395e-03 > 0
+PASS L1b odd g=-1 l=2: lambda_min(h^2-N) = 9.945002e-04
+PASS L2o l=2: C_l = lambda_max(h^-1 N h^-1) = 0.333339 (lambda*C_l = 0.8165)
+PASS L3o l=2: q-slot ratio in [1.000000000, 1.088855], pi-slot in [0.816637, 1.000000000]
+PASS L4 odd l=2: mu_g drift 2.89e-15 (<=1e-9); mu_0 drift 9.291e-03 (>=1e-8)
+PASS L5 odd l=2 q-data: r(5,10,15,20,30) = 1.0091, 1.0000, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = +2.6490e-02
+PASS L5 odd l=2 pi-data: r(5,10,15,20,30) = 0.9926, 1.0000, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = -1.1275e-01
+CAUGHT P2 plant (target at beta = pi): r(20) = 0.35440
+PASS L6 odd l=2: l^2 mean(1-A) = 0.02514 vs HINGE 0.0251 (ratio 1.0018); g=+1: l^2(1-A) = 0.01661, lambda^2(1-A) = 0.02492; g=-1: 0.03368
+PASS L2e l=2: ||W|| = 0.14286661, (2l+3)||W|| = 1.000066
+PASS L1 even l=2: lambda_min(A h^2 A) = 1.048491e-03 >= lambda_min(h^2) = 1.048395e-03 > 0
+PASS L3e l=2: q-slot ratio in [0.931565, 1.000000], pi-slot in [1.000000, 1.061121]; 1+w = 1.142857
+PASS L4 even l=2: mu_g drift 4.00e-15 (<=1e-9); mu_0 drift 5.319e-03 (>=1e-8)
+PASS L5 even l=2 q-data: r(5,10,15,20,30) = 0.9948, 1.0000, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = -2.5186e-02
+PASS L5 even l=2 pi-data: r(5,10,15,20,30) = 1.0360, 1.0003, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = +1.5676e-02
+PASS L6 even l=2: 1-A = 7.825418e-04; lambda^2(1-A) = 0.00470, l^2(1-A) = 0.00313 (reported)
+  [l=2 done, 16 s]
+PASS L1 odd l=16: lambda_min(h^2+N) = 1.141515e-03 >= lambda_min(h^2) = 1.134664e-03 > 0
+PASS L1b odd g=-1 l=16: lambda_min(h^2-N) = 1.127159e-03
+PASS L2o l=16: C_l = lambda_max(h^-1 N h^-1) = 0.058824 (lambda*C_l = 0.9702)
+PASS L3o l=16: q-slot ratio in [1.000000000, 1.017584], pi-slot in [0.961051, 1.000000000]
+PASS L4 odd l=16: mu_g drift 5.55e-16 (<=1e-9); mu_0 drift 2.425e-03 (>=1e-8)
+PASS L5 odd l=16 q-data: r(5,10,15,20,30) = 1.0015, 1.0000, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = +6.9487e-03
+PASS L5 odd l=16 pi-data: r(5,10,15,20,30) = 0.9993, 1.0000, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = -1.9137e-02
+PASS L6 odd l=16: l^2 mean(1-A) = 0.04600 vs HINGE 0.046 (ratio 1.0001); g=+1: l^2(1-A) = 0.04331, lambda^2(1-A) = 0.04602; g=-1: 0.04870
+PASS L2e l=16: ||W|| = 0.02857410, (2l+3)||W|| = 1.000093
+PASS L1 even l=16: lambda_min(A h^2 A) = 1.134683e-03 >= lambda_min(h^2) = 1.134664e-03 > 0
+PASS L3e l=16: q-slot ratio in [0.985542, 1.000000], pi-slot in [1.000000, 1.012902]; 1+w = 1.028571
+PASS L4 even l=16: mu_g drift 3.11e-15 (<=1e-9); mu_0 drift 2.891e-03 (>=1e-8)
+PASS L5 even l=16 q-data: r(5,10,15,20,30) = 0.9946, 1.0000, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = -6.8798e-03
+PASS L5 even l=16 pi-data: r(5,10,15,20,30) = 1.0109, 1.0000, 1.0000, 1.0000, 1.0000; (mu_g-mu_0)/mu_0 = +3.4654e-03
+PASS L6 even l=16: 1-A = 3.885959e-05; lambda^2(1-A) = 0.01057, l^2(1-A) = 0.00995 (reported)
+  [l=16 done, 32 s]
+PASS L1 odd l=64: lambda_min(h^2+N) = 1.206023e-03 >= lambda_min(h^2) = 1.204026e-03 > 0
+PASS L1b odd g=-1 l=64: lambda_min(h^2-N) = 1.201981e-03
+PASS L2o l=64: C_l = lambda_max(h^-1 N h^-1) = 0.015385 (lambda*C_l = 0.9923)
+PASS L6 odd l=64 (extra): l^2 mean(1-A) = 0.05102 vs HINGE 0.051 (ratio 1.0005); g=+1: l^2(1-A) = 0.05026, lambda^2(1-A) = 0.05104; g=-1: 0.05179
+  [l=64 done, 39 s]
+FAILED LINES: none
+plants caught: P1 True, P2 True
+exit 0

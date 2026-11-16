@@ -1,0 +1,33 @@
+BEYOND-NORMAL (Q11) - pass lines fixed BEFORE the first run of scripts\beyond_normal.py
+Written Mon 16 Nov 2026, before any run. Bulletin read (B1-B27); no steer.
+
+Setting. Sector l, lambda^2 = l(l+1), grid rho_j = j*0.025, j = 1..2000 (rho_max = 50),
+Dirichlet at 0, Neumann outer wall (HINGE's grid). h^2 = -d^2/drho^2 + lambda^2/sinh^2 rho,
+N = 1/(1+cosh rho), W = Dirichlet Green kernel of EVEN-DICT. g = 1.
+  odd : H = 1/2<pi,pi> + 1/2<q,(h^2+gN)q>          (X_0 + gD, D = (0,-Nq))
+  even: H = 1/2<pi,(1+gW)pi> + 1/2<q,h^2 q>        (X_0 + gD, D = (W pi,0))
+KMS covariance at inverse temperature beta (flow parameter): mu = 1/2 E(k, coth(beta|X|/2)/|X| k),
+built in normal coordinates q' = A^-1 q, pi' = A pi, A = (1+gW)^(1/2) (A = 1 for odd), Omega^2 = A h_g^2 A.
+Sectors tested: l = 2 and l = 16, both parities; l = 64 odd only for line L6 (extra).
+
+L1  stability: lambda_min(Omega_g^2) >= lambda_min(h^2)*(1-1e-9) > 0, each l, each parity (g=+1).
+L1b odd, g = -1 (needed only for the mean in L6): lambda_min(h^2 - N) > 0.
+L2o odd: C_l = lambda_max(h^-1 N h^-1) <= 3.52 (Hardy bound of the argument). Value reported.
+L2e even: ||W_l|| within 1% of 1/(2l+3) (exact eigenfunction pi = r^(l+1)(1-r^2)).
+L3o odd: generalized eigenvalues of (mu_g, mu_0) per slot: q-slot in [1-1e-9, 4.52], pi-slot in [1/4.52, 1+1e-9].
+L3e even: both slots within [1/(pi(1+w)), pi(1+w)], w = 1/(2l+3). Extremes reported.
+L4  invariance: |mu_g(U^g(1.7)k)/mu_g(k) - 1| <= 1e-9; and mu_0 is NOT invariant:
+    |mu_0(U^g(1.7)k)/mu_0(k) - 1| >= 1e-8.
+L5  return to equilibrium (what is verified in place of the card's cocycle wording):
+    r(tau) = [mu_0(U^g(tau)k) - mu_0(k)] / [mu_g(k) - mu_0(k)], data k = (q,0) and k = (0,pi) with
+    profile tanh(rho)^3 (rho-rho_c) exp(-(rho-rho_c)^2/2), rho_c = ln(2 lambda)+1.
+    Pass: |r(20) - 1| <= 0.10 for each of the 8 cases (2 l x 2 parities x 2 data). r(5,10,15,30) reported.
+L6  affinity of the sector's 2pi-KMS state with the vacuum's sector state, A_l = tr(rho_0^1/2 rho_g^1/2),
+    from -ln A = 1/2 sum ln((1+r)/(2 sqrt r)) over generalized eigenvalues r at half temperature.
+    odd: l^2 * mean_{g=+1,-1}(1-A_l) within 4% of HINGE's table: 0.0251 (l=2), 0.0460 (l=16), 0.0510 (l=64, extra).
+    even: 0 < 1-A_l; lambda^2(1-A_l) reported, no numerical line (no finite-l table read).
+L7  toy (n = 6, same builder): the modular generator read off the covariance alone,
+    X_rec = (2/(i beta)) arccoth(-2i V J^-1), equals J G to relative 1e-8, for vacuum, odd-type and even-type.
+P1  PLANT wrong temperature (covariance built at beta = pi, tested at 2 pi) in L7: mismatch >= 0.2 (expected 0.5).
+P2  PLANT wrong temperature target in L5 (l = 2, odd, q-data; target mu_g built at beta = pi): |r(20)-1| >= 0.5.
+Exit 0 iff no L line fails and both plants are caught. Every failed line is printed under FAILED LINES.

@@ -1,0 +1,28 @@
+BEYOND-REF pass lines, fixed 16 Nov 2026 before the first run of scripts\beyond_ref.py.
+Grid as the lane's (rho <= 50, step 0.025, Dirichlet at 0, Neumann wall) unless stated. Sweep l = 2,4,8,16,32,64,128,256.
+Disclosure: LANE-TEXT.md was missing; the fallback read of beyond-normal\REPORT.md returned the lead's header too.
+
+R0  (my code reproduces the lane) odd g=+1 lambda^2(1-A) at l=16 within 0.5% of 0.04602; even 1-A at l=2 within 0.1% of 7.825418e-04
+    and at l=16 within 0.1% of 3.885959e-05 (even built by a different formula: Mp = h^-1 f(h(1+W)h) h^-1, Mq = h g(h(1+W)h) h).
+R1  (scalar bracket, EXPECT THE LANE'S CLAIM TO FAIL) m = min_x x coth(pi x)/(1+x). Lane claims m >= 1/pi = 0.3183.
+    Line "R1 lane-claim" passes iff m >= 1/pi - 1e-6. I expect m ~ 0.297 at x ~ 0.15, i.e. this line FAILS (a defect of the lane, harmless for equivalence).
+R2  (operator-monotone bounds, every l in the sweep, tolerance 1e-8)
+    odd: q-slot ratio mu_g/mu_0 in [1, 1+C_l], pi-slot in [1/(1+C_l), 1], C_l = lambda_max(h^-1 N h^-1);
+    even: pi-slot in [1, 1+w], q-slot in [1/(1+w), 1], w = ||W||.
+R3  (constants, every l) C_l <= 3.52; |(l+1) C_l - 1| <= 1e-3 (my proof: h^2 u = (l+1) N u for u = tanh^(l+1)(rho/2) > 0);
+    |(2l+3)||W|| - 1| <= 1e-3.
+R4  (states are states) lambda_min of S-hat_g >= -1e-9, both parities, every l.
+R5  (Araki-Yamagami quantity, reference inner product = vacuum's) Q_l = || S0^(1/2) - Sg^(1/2) ||_HS^2 per sector.
+    Fit slope s of log(lambda^2 Q_l) against log l over l = 32..256. DIVERGES iff |s| <= 0.15 and lambda^2 Q_256 >= 1e-3.
+    Expected: DIVERGES for both parities (sum over (l,m) of (2l+1) Q_l grows like log L). A slope <= -0.5 would contradict the lane's claim.
+R6  (same with the reference inner product of psi_g) same verdict as R5, and Q_l(ref g)/Q_l(ref 0) within [0.5, 2] at every l.
+R7  (relation to the record's affinity) Q_l/(1-A_l) stable: max/min over l = 32..256 <= 1.10, both parities; value reported.
+    lambda^2 (1-A_l) at l = 256: odd within 3% of 7 zeta(3)/(16 pi^2) = 0.053285, even within 5% of 0.0135994.
+R8  (discretisation, l = 16, both parities) Q changes by <= 2% between step 0.025 and 0.05 (rho <= 50),
+    and by <= 2% between rho <= 50 and rho <= 100 (step 0.05).
+R9  (non-uniqueness on localised data) zero-mode functional ell(k) = <phi, pi>, phi the regular zero-energy solution
+    (even: of h^2; odd: of h^2+N). l = 2: (a) drift of ell under the area-side flow at tau = 1.7 and 10, Gaussian data at rho = 5, 6:
+    relative drift <= 1e-6, both parities; (b) sup ell^2/mu = 2 <phi, Mp^-1 phi> grows by a factor >= 1.7 per doubling of the box
+    (25 -> 50 -> 100, step 0.05), i.e. ell is unbounded in the thermal norm, both parities.
+PLANT (one): odd coupling replaced by g_l = 4/l. The R5 detector must return NOT-DIVERGES with slope <= -1.5. CAUGHT iff so.
+Exit 0 iff every line except "R1 lane-claim" passes, R1 lane-claim FAILS as predicted or passes (reported either way), and the plant is caught.

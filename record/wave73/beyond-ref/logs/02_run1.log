@@ -1,0 +1,94 @@
+FAIL(predicted) R1 lane-claim: min x coth(pi x)/(1+x) = 0.296968 at x = 0.1457; lane's constant 1/pi = 0.318310; sup = 0.909091
+PASS R3 l=2: C_l = 0.3333391, (l+1)C_l = 1.000017, (2l+3)||W|| = 1.000066
+PASS R2 odd l=2: q-slot [1.00000000, 1.08885477] in [1.00000000, 1.33333912]; pi-slot [0.81663715, 1.00000000] in [0.74999674, 1.00000000]
+PASS R4 odd l=2: lambda_min(S-hat) = -5.254e-15
+PASS R6b odd l=2: lambda^2 Q (ref vac) = 0.059668, (ref g) = 0.066846, ratio 1.12030; lambda^2 (1-A) = 0.024916; Q/(1-A) = 2.39479
+PASS R2 even l=2: q-slot [0.93156456, 1.00000000] in [0.87499275, 1.00000000]; pi-slot [1.00000000, 1.06112064] in [1.00000000, 1.14286661]
+PASS R4 even l=2: lambda_min(S-hat) = -5.888e-15
+PASS R6b even l=2: lambda^2 Q (ref vac) = 0.015528, (ref g) = 0.015703, ratio 1.01122; lambda^2 (1-A) = 0.004695; Q/(1-A) = 3.30724
+  plant l=2: lambda^2 Q = 1.850761e-01
+PASS R9a even l=2: ell(0) = 7.89759; relative drift at tau = 1.7, 10: 1.40e-12, 2.55e-11
+PASS R9a odd l=2: ell(0) = 6.72689; relative drift at tau = 1.7, 10: 2.43e-13, 3.89e-11
+  [l=2 done, 34 s]
+PASS R3 l=4: C_l = 0.2000030, (l+1)C_l = 1.000015, (2l+3)||W|| = 1.000076
+PASS R2 odd l=4: q-slot [1.00000000, 1.05628011] in [1.00000000, 1.20000299]; pi-slot [0.88023097, 1.00000000] in [0.83333126, 1.00000000]
+PASS R4 odd l=4: lambda_min(S-hat) = -6.418e-15
+PASS R6b odd l=4: lambda^2 Q (ref vac) = 0.083294, (ref g) = 0.089233, ratio 1.07129; lambda^2 (1-A) = 0.033677; Q/(1-A) = 2.47333
+PASS R2 even l=4: q-slot [0.95540676, 1.00000000] in [0.91666083, 1.00000000]; pi-slot [1.00000000, 1.03988973] in [1.00000000, 1.09091604]
+PASS R4 even l=4: lambda_min(S-hat) = -6.197e-15
+PASS R6b even l=4: lambda^2 Q (ref vac) = 0.023206, (ref g) = 0.023347, ratio 1.00609; lambda^2 (1-A) = 0.006847; Q/(1-A) = 3.38901
+  plant l=4: lambda^2 Q = 8.329437e-02
+  [l=4 done, 69 s]
+PASS R3 l=8: C_l = 0.1111127, (l+1)C_l = 1.000014, (2l+3)||W|| = 1.000086
+PASS R2 odd l=8: q-slot [1.00000000, 1.03246645] in [1.00000000, 1.11111266]; pi-slot [0.92921835, 1.00000000] in [0.89999875, 1.00000000]
+PASS R4 odd l=8: lambda_min(S-hat) = -5.324e-15
+PASS R6b odd l=8: lambda^2 Q (ref vac) = 0.103873, (ref g) = 0.107930, ratio 1.03906; lambda^2 (1-A) = 0.040940; Q/(1-A) = 2.53720
+PASS R2 even l=8: q-slot [0.97369442, 1.00000000] in [0.94999591, 1.00000000]; pi-slot [1.00000000, 1.02350962] in [1.00000000, 1.05263611]
+PASS R4 even l=8: lambda_min(S-hat) = -5.733e-15
+PASS R6b even l=8: lambda^2 Q (ref vac) = 0.030769, (ref g) = 0.030863, ratio 1.00308; lambda^2 (1-A) = 0.008909; Q/(1-A) = 3.45362
+  plant l=8: lambda^2 Q = 2.745802e-02
+  [l=8 done, 102 s]
+PASS R3 l=16: C_l = 0.0588243, (l+1)C_l = 1.000013, (2l+3)||W|| = 1.000093
+PASS R2 odd l=16: q-slot [1.00000000, 1.01758391] in [1.00000000, 1.05882432]; pi-slot [0.96105066, 1.00000000] in [0.94444374, 1.00000000]
+PASS R4 odd l=16: lambda_min(S-hat) = -5.883e-15
+PASS R6b odd l=16: lambda^2 Q (ref vac) = 0.118860, (ref g) = 0.121283, ratio 1.02039; lambda^2 (1-A) = 0.046021; Q/(1-A) = 2.58275
+PASS R2 even l=16: q-slot [0.98554209, 1.00000000] in [0.97221970, 1.00000000]; pi-slot [1.00000000, 1.01290220] in [1.00000000, 1.02857410]
+PASS R4 even l=16: lambda_min(S-hat) = -5.280e-15
+PASS R6b even l=16: lambda^2 Q (ref vac) = 0.036984, (ref g) = 0.037040, ratio 1.00151; lambda^2 (1-A) = 0.010570; Q/(1-A) = 3.49902
+  plant l=16: lambda^2 Q = 7.773075e-03
+  [l=16 done, 133 s]
+PASS R3 l=32: C_l = 0.0303034, (l+1)C_l = 1.000013, (2l+3)||W|| = 1.000098
+PASS R2 odd l=32: q-slot [1.00000000, 1.00917341] in [1.00000000, 1.03030343]; pi-slot [0.97949141, 1.00000000] in [0.97058786, 1.00000000]
+PASS R4 odd l=32: lambda_min(S-hat) = -5.797e-15
+PASS R6b odd l=32: lambda^2 Q (ref vac) = 0.128522, (ref g) = 0.129855, ratio 1.01037; lambda^2 (1-A) = 0.049192; Q/(1-A) = 2.61265
+PASS R2 even l=32: q-slot [0.99239261, 1.00000000] in [0.98529269, 1.00000000]; pi-slot [1.00000000, 1.00678106] in [1.00000000, 1.01492684]
+PASS R4 even l=32: lambda_min(S-hat) = -6.348e-15
+PASS R6b even l=32: lambda^2 Q (ref vac) = 0.041477, (ref g) = 0.041507, ratio 1.00073; lambda^2 (1-A) = 0.011753; Q/(1-A) = 3.52894
+  plant l=32: lambda^2 Q = 2.063738e-03
+  [l=32 done, 165 s]
+PASS R3 l=64: C_l = 0.0153848, (l+1)C_l = 1.000013, (2l+3)||W|| = 1.000101
+PASS R2 odd l=64: q-slot [1.00000000, 1.00468839] in [1.00000000, 1.01538482]; pi-slot [0.98946561, 1.00000000] in [0.98484829, 1.00000000]
+PASS R4 odd l=64: lambda_min(S-hat) = -5.496e-15
+PASS R6b odd l=64: lambda^2 Q (ref vac) = 0.134309, (ref g) = 0.135010, ratio 1.00522; lambda^2 (1-A) = 0.051043; Q/(1-A) = 2.63130
+PASS R2 even l=64: q-slot [0.99609391, 1.00000001] in [0.99242348, 1.00000000]; pi-slot [1.00000000, 1.00347936] in [1.00000000, 1.00763436]
+PASS R4 even l=64: lambda_min(S-hat) = -5.078e-15
+PASS R6b even l=64: lambda^2 Q (ref vac) = 0.044486, (ref g) = 0.044502, ratio 1.00036; lambda^2 (1-A) = 0.012538; Q/(1-A) = 3.54815
+  plant l=64: lambda^2 Q = 5.324770e-04
+  [l=64 done, 201 s]
+PASS R3 l=128: C_l = 0.0077520, (l+1)C_l = 1.000013, (2l+3)||W|| = 1.000103
+PASS R2 odd l=128: q-slot [1.00000000, 1.00237047] in [1.00000000, 1.00775204]; pi-slot [0.99465981, 1.00000000] in [0.99230759, 1.00000000]
+PASS R4 odd l=128: lambda_min(S-hat) = -5.403e-15
+PASS R6b odd l=128: lambda^2 Q (ref vac) = 0.137630, (ref g) = 0.137989, ratio 1.00261; lambda^2 (1-A) = 0.052082; Q/(1-A) = 2.64257
+PASS R2 even l=128: q-slot [0.99802028, 1.00000001] in [0.99615345, 1.00000000]; pi-slot [1.00000000, 1.00176275] in [1.00000000, 1.00386140]
+PASS R4 even l=128: lambda_min(S-hat) = -5.592e-15
+PASS R6b even l=128: lambda^2 Q (ref vac) = 0.046448, (ref g) = 0.046457, ratio 1.00017; lambda^2 (1-A) = 0.013045; Q/(1-A) = 3.56064
+  plant l=128: lambda^2 Q = 1.354662e-04
+  [l=128 done, 238 s]
+PASS R3 l=256: C_l = 0.0038911, (l+1)C_l = 1.000013, (2l+3)||W|| = 1.000103
+PASS R2 odd l=256: q-slot [1.00000000, 1.00119191] in [1.00000000, 1.00389110]; pi-slot [0.99731127, 1.00000000] in [0.99612398, 1.00000000]
+PASS R4 odd l=256: lambda_min(S-hat) = -5.549e-15
+PASS R6b odd l=256: lambda^2 Q (ref vac) = 0.139481, (ref g) = 0.139663, ratio 1.00130; lambda^2 (1-A) = 0.052651; Q/(1-A) = 2.64918
+FAIL R2 even l=256: q-slot [0.99900336, 1.00000363] in [0.99806182, 1.00000000]; pi-slot [0.99999992, 1.00088725] in [1.00000000, 1.00194195]
+PASS R4 even l=256: lambda_min(S-hat) = -5.832e-15
+PASS R6b even l=256: lambda^2 Q (ref vac) = 0.047761, (ref g) = 0.047765, ratio 1.00009; lambda^2 (1-A) = 0.013381; Q/(1-A) = 3.56923
+  plant l=256: lambda^2 Q = 3.336431e-05
+  [l=256 done, 277 s]
+PASS R0: odd lambda^2(1-A) l=16 = 0.04602 (lane 0.04602); even 1-A l=2 = 7.825418e-04 (lane 7.825418e-04), l=16 = 3.885959e-05 (lane 3.885959e-05)
+PASS R5 odd: slope of log(lambda^2 Q) on l=32..256 = +0.0389; lambda^2 Q = 0.128522, 0.134309, 0.137630, 0.139481 -> DIVERGES
+PASS R6 odd: slope of log(lambda^2 Q) on l=32..256 = +0.0347; lambda^2 Q = 0.129855, 0.135010, 0.137989, 0.139663 -> DIVERGES
+PASS R7 odd: Q/(1-A) on l=32..256 = 2.61265, 2.63130, 2.64257, 2.64918; lambda^2(1-A) at 256 = 0.052651 vs record 0.053285
+PASS R5 even: slope of log(lambda^2 Q) on l=32..256 = +0.0673; lambda^2 Q = 0.041477, 0.044486, 0.046448, 0.047761 -> DIVERGES
+PASS R6 even: slope of log(lambda^2 Q) on l=32..256 = +0.0670; lambda^2 Q = 0.041507, 0.044502, 0.046457, 0.047765 -> DIVERGES
+PASS R7 even: Q/(1-A) on l=32..256 = 3.52894, 3.54815, 3.56064, 3.56923; lambda^2(1-A) at 256 = 0.013381 vs record 0.013599
+CAUGHT PLANT (odd coupling 4/l): slope -1.9827 -> NOT-DIVERGES
+PASS R8 odd l=16: Q fine/coarse/wide = 4.369839e-04, 4.371897e-04, 4.371897e-04; step change 4.71e-04, box change 5.92e-10
+PASS R8 even l=16: Q fine/coarse/wide = 1.359706e-04, 1.364966e-04, 1.364966e-04; step change 3.87e-03, box change 5.32e-09
+PASS R9b even/vacuum l=2: sup ell^2/mu at box 25, 50, 100 = 137.096, 294.176, 608.335 (ratios 2.146, 2.068)
+PASS R9b odd l=2: sup ell^2/mu at box 25, 50, 100 = 132.658, 289.738, 603.897 (ratios 2.184, 2.084)
+Tower partial sums of (2l+1) Q_l are not formed (8 sample l only); per-decade growth of the sum = 2 ln(10) * lim lambda^2 Q:
+  odd: lambda^2 Q_256 = 0.139481; growth per decade of L ~ 0.64233
+  even: lambda^2 Q_256 = 0.047761; growth per decade of L ~ 0.21995
+FAILED LINES: 
+  R2 even l=256: q-slot [0.99900336, 1.00000363] in [0.99806182, 1.00000000]; pi-slot [0.99999992, 1.00088725] in [1.00000000, 1.00194195]
+plant caught: True; total 301 s
+exit 1

@@ -1,0 +1,10 @@
+BEYOND-REF side check, 16 Nov 2026 (sympy, inline command, no script file).
+Claim [P]: u = tanh^(l+1)(rho/2) > 0 solves h^2 u = (l+1) N u, N = 1/(1+cosh rho).
+Hand proof (r = tanh(rho/2), d/drho = N d/dr, N' = -r, sinh rho = r/N):
+  u'' = (l+1) N [ -r^(l+1) + l N r^(l-1) ],  lambda^2 u / sinh^2 = l(l+1) N^2 r^(l-1),
+  so -u'' + lambda^2 u/sinh^2 = (l+1) N r^(l+1) = (l+1) N u.
+Consequence (ground-state representation): <v,(h^2 - (l+1)N) v> = int u^2 |(v/u)'|^2 >= 0 on the form domain,
+  hence N <= h^2/(l+1), i.e. C_l = 1/(l+1) exactly-bounded for every l (the lane's "observation, not proved").
+Symbolic residual -u'' + l(l+1)u/sinh^2 - (l+1)Nu evaluated at (rho, l) = (0.7, 2), (2.3, 5), (5.1, 17), 30 digits:
+  [-0.e-166, -0.e-166, -0.e-166]
+Command: C:\Python314\python.exe -c "import sympy as sp; r,l=sp.symbols('rho l',positive=True); u=sp.tanh(r/2)**(l+1); N=1/(1+sp.cosh(r)); e=-sp.diff(u,r,2)+l*(l+1)/sp.sinh(r)**2*u-(l+1)*N*u; print([sp.N(e.subs({r:a,l:b}),30) for a,b in ((sp.Rational(7,10),2),(sp.Rational(23,10),5),(sp.Rational(51,10),17))])"
