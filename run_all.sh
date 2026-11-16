@@ -25,7 +25,7 @@ echo "### 5. The blind reader's own scripts, written from the paper's text alone
 
 echo "### 6. Wave 73: the quick deterministic checks, and the stored lattice analyses rederived from their stored rows"
 echo "###    (what is rerun and what is not: record/wave73/wave73.manifest)"
-# FULL=1 also runs the checks the manifest marks slow (about ten more minutes)
+# FULL=1 also runs the checks the manifest marks slow (between fifteen and forty more minutes depending on the load)
 SLOW_CHECKS="$([ "${FULL:-0}" = "1" ] && echo 1 || true)" bash "$ROOT/record/wave73/run_wave73.sh"
 
 echo "### ALL CHECKS PASSED"
